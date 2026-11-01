@@ -1,0 +1,7 @@
+{
+  "name": "EthioPrep",
+  "description": "Ethiopian entrance exam preparation platform with ESSLCE past exams, curriculum units, analytics, and AI tutoring master coach.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
