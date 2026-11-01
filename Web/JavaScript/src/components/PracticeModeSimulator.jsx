@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { apiRequest } from "../services/api.js";
 import {
   formatMathText,
@@ -6,6 +6,14 @@ import {
   parseQuestionSegments,
   splitPassageAndQuestion
 } from "../utils/questionContentParser.js";
+import {
+  filterExamQuestionsByGradeAndSubject,
+  filterSubjectsForPractice,
+  findMatchingExamForSubject,
+  findMatchingExamsForSubject,
+  getExamQuestionCountForGrade,
+  getSubjectDiscipline
+} from "../utils/practiceStreamFilter.js";
 
 function formatMinSec(s = 0) {
   const m = Math.floor(s / 60);
@@ -13,9 +21,31 @@ function formatMinSec(s = 0) {
   return `${m < 10 ? "0" : ""}${m}:${sec < 10 ? "0" : ""}${sec}`;
 }
 
+export function extractOptionKeyAndText(opt, oIdx = 0) {
+  let key = String.fromCharCode(65 + oIdx);
+  let text = "";
+
+  if (typeof opt === "object" && opt !== null) {
+    key = opt.key || opt.letter || key;
+    text = opt.text || opt.label || opt.content || opt.value || "";
+  } else if (typeof opt === "string") {
+    const match = opt.match(/^([A-Da-d])[\.\)\:\-]\s*(.*)$/);
+    if (match) {
+      key = match[1].toUpperCase();
+      text = match[2];
+    } else {
+      text = opt;
+    }
+  }
+
+  return { key: String(key).toUpperCase(), text: String(text).trim() };
+}
+
 export function PracticeModeSimulator({
   subjects = [],
   exams = [],
+  currentUser,
+  userStream,
   COLORS,
   onAskAiFromQuestion,
   setZoomedUri
@@ -34,40 +64,100 @@ export function PracticeModeSimulator({
   const [practicePassageExpanded, setPracticePassageExpanded] = useState(true);
   const [practiceSelectedSubjectId, setPracticeSelectedSubjectId] = useState("");
   const [practiceGrade, setPracticeGrade] = useState("all");
+  // The student's stream is selected exclusively during registration and is strictly enforced
+  const studentStream = String(userStream || currentUser?.stream || "natural").toLowerCase();
   const [practiceQuestionCountChoice, setPracticeQuestionCountChoice] = useState(10);
   const [practiceModeChoice, setPracticeModeChoice] = useState("learn"); // 'learn' | 'exam'
+  const [practiceExamYearChoice, setPracticeExamYearChoice] = useState("all");
+  const [practiceExamAttemptId, setPracticeExamAttemptId] = useState(null);
+  const [submittingReview, setSubmittingReview] = useState(false);
   const [practiceLoading, setPracticeLoading] = useState(false);
+  const [practiceError, setPracticeError] = useState("");
   const [practiceSessionCompleted, setPracticeSessionCompleted] = useState(false);
   const [practiceResultsSummary, setPracticeResultsSummary] = useState(null);
   const [practiceReviewFilter, setPracticeReviewFilter] = useState("all");
 
-  // Timer interval
-  useEffect(() => {
-    let interval = null;
-    if (practiceActive && !practiceSessionCompleted && !practiceIsPaused) {
-      interval = setInterval(() => {
-        setPracticeElapsedSeconds((prev) => prev + 1);
-      }, 1000);
-    }
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [practiceActive, practiceSessionCompleted, practiceIsPaused]);
+  // Subjects filtered strictly by the student's registered stream and selected grade
+  const visibleSubjects = useMemo(() => {
+    return filterSubjectsForPractice(subjects, studentStream, practiceGrade);
+  }, [subjects, studentStream, practiceGrade]);
 
-  // Set default subject
-  useEffect(() => {
-    if (subjects.length > 0 && !practiceSelectedSubjectId) {
-      setPracticeSelectedSubjectId(subjects[0]._id);
-    }
-  }, [subjects]);
+  const selectedSubject = useMemo(() => {
+    return visibleSubjects.find((s) => String(s._id) === String(practiceSelectedSubjectId)) || visibleSubjects[0] || null;
+  }, [visibleSubjects, practiceSelectedSubjectId]);
 
-  const finishSession = () => {
+  const effectiveGrade = useMemo(() => {
+    if (practiceGrade && practiceGrade !== "all") {
+      return String(practiceGrade).replace(/^grade-?/i, "");
+    }
+    if (selectedSubject?.gradeLevel && selectedSubject.gradeLevel !== "all") {
+      return String(selectedSubject.gradeLevel).replace(/^grade-?/i, "");
+    }
+    return "all";
+  }, [practiceGrade, selectedSubject]);
+
+  const matchingExams = useMemo(() => {
+    return findMatchingExamsForSubject(exams, selectedSubject, effectiveGrade);
+  }, [exams, selectedSubject, effectiveGrade]);
+
+  // Automatically select a valid subject when stream or grade filter changes
+  useEffect(() => {
+    if (visibleSubjects.length > 0) {
+      const stillValid = visibleSubjects.some((s) => String(s._id) === String(practiceSelectedSubjectId));
+      if (!stillValid) {
+        setPracticeSelectedSubjectId(visibleSubjects[0]._id);
+      }
+    } else {
+      setPracticeSelectedSubjectId("");
+    }
+  }, [visibleSubjects, practiceSelectedSubjectId]);
+
+  const finishSession = async () => {
+    setSubmittingReview(true);
+    let finalReviews = { ...practiceInstantReviews };
+
+    // In Exam Mode, retrieve authoritative answers and explanations
+    if (practiceModeChoice === "exam") {
+      try {
+        const answersPayload = practiceQuestions.map((q) => ({
+          questionId: q._id,
+          selectedAnswer: practiceAnswers[q._id] || null
+        }));
+
+        const res = await apiRequest("/exams/practice/check-answers", {
+          method: "POST",
+          body: JSON.stringify({ answers: answersPayload })
+        });
+
+        if (res?.results) {
+          finalReviews = { ...finalReviews, ...res.results };
+          setPracticeInstantReviews(finalReviews);
+        }
+
+        if (practiceExamAttemptId) {
+          apiRequest(`/exams/attempts/${practiceExamAttemptId}/submit`, {
+            method: "POST",
+            body: JSON.stringify({
+              answers: Object.entries(practiceAnswers).map(([questionId, key]) => ({
+                questionId,
+                selectedOptionKeys: [key]
+              }))
+            })
+          }).catch((err) => console.warn("Background exam attempt submit non-fatal:", err?.message));
+        }
+      } catch (err) {
+        console.warn("Answer review check non-fatal:", err?.message);
+      } finally {
+        setSubmittingReview(false);
+      }
+    }
+
     const totalQ = practiceQuestions.length;
     let corr = 0, mis = 0, skp = 0;
     const detailed = practiceQuestions.map((q) => {
       const sel = practiceAnswers[q._id];
       const isSkp = Boolean(practiceSkipped[q._id] || !sel);
-      const rev = practiceInstantReviews[q._id];
+      const rev = finalReviews[q._id];
       let isCor = false;
       if (rev) isCor = rev.isCorrect;
       else if (sel && q.correctAnswer) {
@@ -81,6 +171,7 @@ export function PracticeModeSimulator({
         selectedAnswer: sel,
         isCorrect: isCor,
         isSkipped: isSkp,
+        correctAnswer: rev?.correctAnswer || q.correctAnswer,
         explanation: q.explanation || rev?.explanation
       };
     });
@@ -533,8 +624,8 @@ export function PracticeModeSimulator({
           {/* Options List */}
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {(curQ.options || []).map((opt, oIdx) => {
-              const parsed = parseOptionContent(opt, oIdx, curQ);
-              const isSelected = practiceAnswers[qId] === parsed.key;
+              const parsed = extractOptionKeyAndText(opt, oIdx);
+              const isSelected = Boolean(practiceAnswers[qId] && practiceAnswers[qId] === parsed.key);
 
               let optBg = COLORS.surface;
               let optBorder = COLORS.border;
@@ -768,6 +859,7 @@ export function PracticeModeSimulator({
           ) : (
             <button
               type="button"
+              disabled={submittingReview}
               onClick={finishSession}
               style={{
                 flex: 1.2,
@@ -778,10 +870,11 @@ export function PracticeModeSimulator({
                 color: COLORS.onPrimary,
                 fontSize: 13,
                 fontWeight: 800,
-                cursor: "pointer"
+                cursor: submittingReview ? "not-allowed" : "pointer",
+                opacity: submittingReview ? 0.7 : 1
               }}
             >
-              Finish 🏁
+              {submittingReview ? "Grading..." : "Finish 🏁"}
             </button>
           )}
         </div>
@@ -1069,9 +1162,26 @@ export function PracticeModeSimulator({
           ⚡
         </div>
         <div style={{ flex: 1 }}>
-          <div style={{ fontSize: 17, fontWeight: 900, color: COLORS.text }}>Practice Mode</div>
+          <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+            <span style={{ fontSize: 17, fontWeight: 900, color: COLORS.text }}>Practice Mode</span>
+            <span
+              style={{
+                fontSize: 11,
+                fontWeight: 800,
+                padding: "2px 8px",
+                borderRadius: 999,
+                background: studentStream === "social" ? "rgba(14, 165, 233, 0.12)" : "rgba(0, 200, 150, 0.12)",
+                color: studentStream === "social" ? "#0284c7" : COLORS.primaryDark,
+                border: `1px solid ${studentStream === "social" ? "#38bdf8" : COLORS.primaryLight}`
+              }}
+            >
+              {studentStream === "social" ? "🏛️ Social Science Stream" : "🔬 Natural Science Stream"}
+            </span>
+          </div>
           <div style={{ fontSize: 12, color: COLORS.textMuted, marginTop: 2, lineHeight: 1.4 }}>
-            Distraction-free, focused question drills designed for Ethiopian entrance exam mastery.
+            {studentStream === "social"
+              ? "Distraction-free question drills customized for your registered Social Science curriculum."
+              : "Distraction-free question drills customized for your registered Natural Science curriculum."}
           </div>
         </div>
       </div>
@@ -1087,7 +1197,10 @@ export function PracticeModeSimulator({
             <button
               key={g}
               type="button"
-              onClick={() => setPracticeGrade(g)}
+              onClick={() => {
+                setPracticeGrade(g);
+                setPracticeError("");
+              }}
               style={{
                 flex: 1,
                 padding: "8px 4px",
@@ -1106,37 +1219,74 @@ export function PracticeModeSimulator({
         })}
       </div>
 
-      {/* Subject Selector */}
-      <div style={{ fontSize: 12, fontWeight: 800, color: COLORS.textMuted, textTransform: "uppercase", marginBottom: 6 }}>
-        Choose Subject
+      {/* Stream-Filtered Subject Selector */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+        <span style={{ fontSize: 12, fontWeight: 800, color: COLORS.textMuted, textTransform: "uppercase" }}>
+          Choose Subject ({visibleSubjects.length} Available)
+        </span>
       </div>
-      <div style={{ display: "flex", gap: 6, overflowX: "auto", paddingBottom: 8, marginBottom: 14 }}>
-        {subjects
-          .filter((s) => practiceGrade === "all" || s.gradeLevel === `grade-${practiceGrade}`)
-          .map((sub) => {
-            const active = (practiceSelectedSubjectId || subjects[0]?._id) === sub._id;
+      {visibleSubjects.length === 0 ? (
+        <div
+          style={{
+            background: COLORS.warningBg,
+            border: `1px solid ${COLORS.warning}`,
+            borderRadius: 10,
+            padding: "10px 12px",
+            fontSize: 12,
+            color: "#92400e",
+            marginBottom: 14
+          }}
+        >
+          No subjects match Grade {practiceGrade} in your registered {studentStream === "social" ? "Social Science" : "Natural Science"} curriculum. Try selecting <b>All Grades</b>.
+        </div>
+      ) : (
+        <div style={{ display: "flex", gap: 6, overflowX: "auto", paddingBottom: 8, marginBottom: 14 }}>
+          {visibleSubjects.map((sub) => {
+            const active = (practiceSelectedSubjectId || visibleSubjects[0]?._id) === sub._id;
             return (
               <button
                 key={sub._id}
                 type="button"
-                onClick={() => setPracticeSelectedSubjectId(sub._id)}
+                onClick={() => {
+                  setPracticeSelectedSubjectId(sub._id);
+                  setPracticeError("");
+                }}
                 style={{
                   padding: "8px 12px",
                   borderRadius: 10,
-                  border: `1px solid ${active ? COLORS.primary : COLORS.border}`,
+                  border: `1.5px solid ${active ? COLORS.primary : COLORS.border}`,
                   background: active ? COLORS.primary : COLORS.surface,
                   color: active ? COLORS.onPrimary : COLORS.text,
                   fontSize: 12,
                   fontWeight: 700,
                   whiteSpace: "nowrap",
-                  cursor: "pointer"
+                  cursor: "pointer",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 4
                 }}
               >
-                {sub.name}
+                <span>{sub.name}</span>
+                {sub.stream && sub.stream !== "both" && (
+                  <span
+                    style={{
+                      fontSize: 9,
+                      fontWeight: 800,
+                      opacity: 0.85,
+                      textTransform: "uppercase",
+                      padding: "1px 4px",
+                      borderRadius: 4,
+                      background: active ? "rgba(255,255,255,0.2)" : COLORS.surfaceMuted
+                    }}
+                  >
+                    {sub.stream === "natural" ? "Nat" : "Soc"}
+                  </span>
+                )}
               </button>
             );
           })}
-      </div>
+        </div>
+      )}
 
       {/* Session Length Choice */}
       <div style={{ fontSize: 12, fontWeight: 800, color: COLORS.textMuted, textTransform: "uppercase", marginBottom: 6 }}>
@@ -1172,7 +1322,7 @@ export function PracticeModeSimulator({
       <div style={{ fontSize: 12, fontWeight: 800, color: COLORS.textMuted, textTransform: "uppercase", marginBottom: 6 }}>
         Study Mode
       </div>
-      <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
+      <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
         <div
           onClick={() => setPracticeModeChoice("learn")}
           style={{
@@ -1207,10 +1357,104 @@ export function PracticeModeSimulator({
             ⏱ Exam Mode
           </div>
           <div style={{ fontSize: 11, color: COLORS.textMuted, marginTop: 4 }}>
-            Realistic simulation. Answers &amp; analytics revealed at end.
+            Realistic simulation. Sourced from entrance exams.
           </div>
         </div>
       </div>
+
+      {/* Official Exam Paper Selector (Visible in Exam Mode) */}
+      {practiceModeChoice === "exam" && matchingExams.length > 0 && (
+        <div style={{ marginBottom: 16 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+            <span style={{ fontSize: 12, fontWeight: 800, color: COLORS.textMuted, textTransform: "uppercase" }}>
+              Exam Paper / Year ({matchingExams.length} Available)
+            </span>
+            <span style={{ fontSize: 11, fontWeight: 700, color: COLORS.primaryDark }}>
+              ✓ National Entrance Exams
+            </span>
+          </div>
+          <div style={{ display: "flex", gap: 6, overflowX: "auto", paddingBottom: 6 }}>
+            <button
+              type="button"
+              onClick={() => setPracticeExamYearChoice("all")}
+              style={{
+                padding: "8px 12px",
+                borderRadius: 10,
+                border: `1.5px solid ${practiceExamYearChoice === "all" ? COLORS.primary : COLORS.border}`,
+                background: practiceExamYearChoice === "all" ? COLORS.primary : COLORS.surface,
+                color: practiceExamYearChoice === "all" ? COLORS.onPrimary : COLORS.text,
+                fontSize: 12,
+                fontWeight: 700,
+                whiteSpace: "nowrap",
+                cursor: "pointer"
+              }}
+            >
+              All Exam Years
+            </button>
+            {matchingExams.map((ex) => {
+              const active = String(practiceExamYearChoice) === String(ex.examYear);
+              const qCount = getExamQuestionCountForGrade(ex, selectedSubject, effectiveGrade);
+              return (
+                <button
+                  key={ex._id}
+                  type="button"
+                  onClick={() => setPracticeExamYearChoice(ex.examYear)}
+                  style={{
+                    padding: "8px 12px",
+                    borderRadius: 10,
+                    border: `1.5px solid ${active ? COLORS.primary : COLORS.border}`,
+                    background: active ? COLORS.primary : COLORS.surface,
+                    color: active ? COLORS.onPrimary : (qCount > 0 ? COLORS.text : COLORS.textMuted),
+                    fontSize: 12,
+                    fontWeight: 700,
+                    whiteSpace: "nowrap",
+                    cursor: "pointer",
+                    opacity: qCount > 0 ? 1 : 0.65
+                  }}
+                >
+                  {ex.examYear ? `${ex.examYear} E.C.` : ex.title} {qCount > 0 ? `(${qCount} Qs)` : `(0 Qs)`}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Inline Practice Error (Safe alternative to alert) */}
+      {practiceError && (
+        <div
+          style={{
+            background: COLORS.dangerBg,
+            border: `1.5px solid ${COLORS.danger}`,
+            borderRadius: 12,
+            padding: "10px 14px",
+            color: COLORS.danger,
+            fontSize: 13,
+            fontWeight: 700,
+            marginBottom: 14,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between"
+          }}
+        >
+          <span>⚠️ {practiceError}</span>
+          <button
+            type="button"
+            onClick={() => setPracticeError("")}
+            style={{
+              background: "none",
+              border: "none",
+              color: COLORS.danger,
+              fontWeight: 900,
+              fontSize: 16,
+              cursor: "pointer",
+              padding: "0 4px"
+            }}
+          >
+            ✕
+          </button>
+        </div>
+      )}
 
       {/* Start Practice Button */}
       <button
@@ -1218,30 +1462,148 @@ export function PracticeModeSimulator({
         disabled={practiceLoading}
         onClick={async () => {
           setPracticeLoading(true);
+          setPracticeError("");
+          setPracticeExamAttemptId(null);
           try {
-            const targetSubId = practiceSelectedSubjectId || subjects[0]?._id;
-            const targetExam = exams.find((e) => String(e.subjectId) === String(targetSubId)) || exams[0];
-
-            if (!targetExam) {
-              alert("No published exams found for this selection.");
+            const targetSub = visibleSubjects.find((s) => String(s._id) === String(practiceSelectedSubjectId)) || visibleSubjects[0] || subjects[0];
+            if (!targetSub) {
+              setPracticeError("Please choose an available subject to start practice.");
               setPracticeLoading(false);
               return;
             }
 
-            const examData = await apiRequest(`/exams/${targetExam._id}/start`, { method: "POST" });
-            let qList = examData?.exam?.questions || [];
+            const targetSubId = targetSub._id;
+            const gradeToUse = (practiceGrade && practiceGrade !== "all")
+              ? String(practiceGrade).replace(/^grade-?/i, "")
+              : (targetSub.gradeLevel && targetSub.gradeLevel !== "all"
+                  ? String(targetSub.gradeLevel).replace(/^grade-?/i, "")
+                  : "all");
 
-            if (practiceQuestionCountChoice !== "all" && Number(practiceQuestionCountChoice) > 0) {
-              qList = qList.slice(0, Number(practiceQuestionCountChoice));
+            const targetCount = practiceQuestionCountChoice === "all" ? 500 : Number(practiceQuestionCountChoice);
+            let qList = [];
+            let activeAttemptId = null;
+
+            // 1. Retrieve questions directly from published entrance exams
+            const relevantExams = findMatchingExamsForSubject(exams, targetSub, gradeToUse);
+
+            if (relevantExams.length > 0) {
+              let primaryExam = null;
+              if (practiceExamYearChoice && practiceExamYearChoice !== "all") {
+                primaryExam = relevantExams.find((e) => String(e.examYear) === String(practiceExamYearChoice));
+              }
+              if (!primaryExam) {
+                // Select the most recent exam that has questions for this grade
+                primaryExam = relevantExams.find((e) => getExamQuestionCountForGrade(e, targetSub, gradeToUse) > 0) || relevantExams[0];
+              }
+
+              if (primaryExam?._id) {
+                try {
+                  const querySuffix = gradeToUse !== "all" ? `?gradeLevel=grade-${gradeToUse}` : "";
+                  const examData = await apiRequest(`/exams/${primaryExam._id}/start${querySuffix}`, {
+                    method: "POST",
+                    body: JSON.stringify({
+                      gradeLevel: gradeToUse !== "all" ? `grade-${gradeToUse}` : undefined
+                    })
+                  });
+
+                  if (examData?.attempt?._id) {
+                    activeAttemptId = examData.attempt._id;
+                  }
+
+                  let rawExamQs = examData?.exam?.questions || [];
+                  let filtered = filterExamQuestionsByGradeAndSubject(rawExamQs, targetSub, gradeToUse);
+
+                  for (const q of filtered) {
+                    if (!qList.some((existing) => String(existing._id) === String(q._id))) {
+                      qList.push(q);
+                    }
+                  }
+
+                  // If user selected "All Exam Years" and wants more questions than are in this single exam,
+                  // pool additional grade-matched questions from other exams of the same subject discipline
+                  if (qList.length < targetCount && practiceExamYearChoice === "all" && relevantExams.length > 1) {
+                    for (const otherExam of relevantExams) {
+                      if (String(otherExam._id) === String(primaryExam._id)) continue;
+                      if (qList.length >= targetCount) break;
+                      try {
+                        const otherData = await apiRequest(`/exams/${otherExam._id}/start${querySuffix}`, {
+                          method: "POST",
+                          body: JSON.stringify({
+                            gradeLevel: gradeToUse !== "all" ? `grade-${gradeToUse}` : undefined
+                          })
+                        });
+                        const otherQs = otherData?.exam?.questions || [];
+                        const otherFiltered = filterExamQuestionsByGradeAndSubject(otherQs, targetSub, gradeToUse);
+                        for (const q of otherFiltered) {
+                          if (!qList.some((existing) => String(existing._id) === String(q._id))) {
+                            qList.push(q);
+                            if (qList.length >= targetCount) break;
+                          }
+                        }
+                      } catch {
+                        // ignore additional exam pooling errors (e.g. premium check)
+                      }
+                    }
+                  }
+                } catch (startErr) {
+                  console.warn("Direct exam start not accessible, querying question bank fallback:", startErr?.message);
+                }
+              }
+            }
+
+            // 2. Question Bank Fallback (Ensures questions always load if exam attempt was restricted or returned fewer questions)
+            if (qList.length < targetCount) {
+              try {
+                const qbParams = new URLSearchParams({ subjectId: targetSubId });
+                if (gradeToUse !== "all") {
+                  qbParams.set("gradeLevel", `grade-${gradeToUse}`);
+                }
+                const qbData = await apiRequest(`/question-bank/questions?${qbParams.toString()}`);
+                if (Array.isArray(qbData?.questions) && qbData.questions.length > 0) {
+                  const qbMapped = qbData.questions.map((q, idx) => ({
+                    ...q,
+                    bookletOrder: idx,
+                    subjectName: targetSub.name,
+                    gradeLevel: targetSub.gradeLevel || `grade-${gradeToUse}`,
+                    options: (q.options || []).map((opt, oIdx) => {
+                      const key = typeof opt === "object" && opt?.key ? String(opt.key) : String.fromCharCode(65 + oIdx);
+                      return {
+                        ...(typeof opt === "object" && opt !== null ? opt : { text: String(opt) }),
+                        key,
+                        imageUrl: opt?.imageUrl || q.optionImages?.[key] || undefined
+                      };
+                    })
+                  }));
+
+                  for (const q of qbMapped) {
+                    if (!qList.some((existing) => String(existing._id) === String(q._id))) {
+                      qList.push(q);
+                      if (qList.length >= targetCount) break;
+                    }
+                  }
+                }
+              } catch (qbErr) {
+                console.warn("Question bank query fallback error:", qbErr?.message);
+              }
             }
 
             if (qList.length === 0) {
-              alert("No questions found in this exam set.");
+              const gradeMsg = gradeToUse !== "all" ? ` for Grade ${gradeToUse}` : "";
+              setPracticeError(`No exam questions currently found for ${targetSub.name}${gradeMsg}. Please try selecting another grade or All Grades.`);
               setPracticeLoading(false);
               return;
             }
 
-            setPracticeQuestions(qList);
+            // Shuffle for a fresh practice experience
+            const randomized = [...qList].sort(() => Math.random() - 0.5);
+
+            let selectedList = randomized;
+            if (practiceQuestionCountChoice !== "all" && Number(practiceQuestionCountChoice) > 0) {
+              selectedList = randomized.slice(0, Number(practiceQuestionCountChoice));
+            }
+
+            setPracticeExamAttemptId(activeAttemptId);
+            setPracticeQuestions(selectedList);
             setPracticeCurrentIndex(0);
             setPracticeAnswers({});
             setPracticeSkipped({});
@@ -1253,7 +1615,7 @@ export function PracticeModeSimulator({
             setPracticeResultsSummary(null);
             setPracticeActive(true);
           } catch (err) {
-            alert("Failed to start practice: " + (err.message || "Network error."));
+            setPracticeError("Failed to start practice session: " + (err.message || "Network error."));
           } finally {
             setPracticeLoading(false);
           }

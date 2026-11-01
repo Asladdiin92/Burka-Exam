@@ -506,7 +506,8 @@ export async function startExamAttempt(request, response) {
     const questions = questionsRaw
       .map((q) => {
         const ch = q.chapterId ? chapterById.get(String(q.chapterId)) : chapterDoc;
-        const chSubj = ch?.subjectId ? subjectById.get(String(ch.subjectId)) : examSubj;
+        const qSubj = q.subjectId ? subjectById.get(String(q.subjectId)) : null;
+        const chSubj = ch?.subjectId ? subjectById.get(String(ch.subjectId)) : (qSubj || examSubj);
         const resolvedYear = questionYearMap.get(String(q._id)) || q.examYear || exam.examYear || 2016;
         const resolvedTopic = q.topic || ch?.title || chapterDoc?.title || "General Topic";
         const parsedText = extractEmbeddedPassageAndStem(q.prompt || q.stem || "", q.passage || "");
@@ -522,8 +523,9 @@ export async function startExamAttempt(request, response) {
           chapterId: q.chapterId ? String(q.chapterId) : (validChapterId ? String(validChapterId) : ""),
           chapterTitle: ch?.title || resolvedTopic,
           chapterOrder: ch?.order ?? 999,
-          gradeLevel: chSubj?.gradeLevel || examSubj?.gradeLevel || "grade-12",
-          subjectName: chSubj?.name || examSubj?.name || "",
+          gradeLevel: chSubj?.gradeLevel || qSubj?.gradeLevel || examSubj?.gradeLevel || "grade-12",
+          subjectName: chSubj?.name || qSubj?.name || examSubj?.name || "",
+          subjectCode: chSubj?.code || qSubj?.code || examSubj?.code || "",
           options: (q.options || []).map((opt, idx) =>
             (() => {
               const key = typeof opt === "object" && opt !== null && opt.key
@@ -550,6 +552,25 @@ export async function startExamAttempt(request, response) {
         return (a.chapterOrder ?? 999) - (b.chapterOrder ?? 999);
       });
 
+    const rawGrade = request.query.gradeLevel || request.body?.gradeLevel;
+    const requestedGrade = rawGrade && rawGrade !== "all"
+      ? (String(rawGrade).startsWith("grade-") ? String(rawGrade).toLowerCase() : `grade-${String(rawGrade).toLowerCase()}`)
+      : null;
+
+    let finalQuestions = questions;
+    if (requestedGrade) {
+      const gradeNum = requestedGrade.replace(/^grade-?/i, "");
+      finalQuestions = questions.filter((q) => {
+        const qG = String(q.gradeLevel || "").toLowerCase();
+        if (qG === requestedGrade || qG === gradeNum) return true;
+        const topic = String(q.topic || q.chapterTitle || "").toLowerCase();
+        if (topic.includes(`grade ${gradeNum}`) || topic.includes(`g${gradeNum}`)) return true;
+        const sCode = String(q.subjectCode || "").toUpperCase();
+        if (sCode.endsWith(`_${gradeNum}`) || sCode.includes(`_${gradeNum}_`)) return true;
+        return false;
+      });
+    }
+
     const examObj = exam.toObject();
     if (chapterDoc) {
       examObj.title = allYears
@@ -560,7 +581,7 @@ export async function startExamAttempt(request, response) {
       examObj.allYears = Boolean(allYears);
     }
 
-    return response.status(201).json({ attempt, exam: { ...examObj, questions } });
+    return response.status(201).json({ attempt, exam: { ...examObj, questions: finalQuestions } });
   } catch (error) {
     console.error(error);
     return response.status(500).json({ error: "Failed to start exam attempt." });
@@ -723,4 +744,51 @@ export async function checkPracticeAnswer(request, response) {
     return response.status(500).json({ error: "Failed to check practice answer." });
   }
 }
+
+export async function checkPracticeAnswers(request, response) {
+  try {
+    const { answers } = request.body;
+    if (!Array.isArray(answers)) {
+      return response.status(400).json({ error: "answers must be an array." });
+    }
+    const qIds = answers.map((a) => a.questionId).filter((id) => mongoose.isValidObjectId(id));
+    const questions = await Question.find({ _id: { $in: qIds } }).lean();
+    const questionsById = new Map(questions.map((q) => [String(q._id), q]));
+    const norm = (v) => String(v || "").trim().toUpperCase();
+
+    const results = {};
+    for (const item of answers) {
+      const q = questionsById.get(String(item.questionId));
+      if (!q) continue;
+      const isCorrect = Boolean(item.selectedAnswer && norm(q.correctAnswer) === norm(item.selectedAnswer));
+      const options = q.options || [];
+      const getOptText = (key) => {
+        const idx = options.findIndex((opt, i) => {
+          const k = typeof opt === "object" && opt?.key ? String(opt.key) : String.fromCharCode(65 + i);
+          return norm(k) === norm(key);
+        });
+        if (idx < 0) return key;
+        const opt = options[idx];
+        return typeof opt === "object" ? opt.text || opt.label : String(opt);
+      };
+
+      results[String(item.questionId)] = {
+        questionId: String(q._id),
+        isCorrect,
+        correctAnswer: q.correctAnswer,
+        correctAnswerText: getOptText(q.correctAnswer),
+        selectedAnswer: item.selectedAnswer || null,
+        selectedAnswerText: getOptText(item.selectedAnswer),
+        explanation: q.explanation || "",
+        explanationImageUrl: q.explanationImageUrl
+      };
+    }
+
+    return response.json({ results });
+  } catch (error) {
+    console.error("checkPracticeAnswers error:", error);
+    return response.status(500).json({ error: "Failed to check practice answers." });
+  }
+}
+
 

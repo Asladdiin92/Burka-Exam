@@ -576,6 +576,14 @@ export function MobileAppSimulator({ onBackToPortal }) {
         setLeaderboard(leadRes.value.leaderboard);
         if (leadRes.value.currentUserRank) setUserRank(leadRes.value.currentUserRank);
       }
+      try {
+        const prof = await apiRequest("/auth/profile");
+        if (prof?.user) {
+          setCurrentUser((prev) => ({ ...prev, ...prof.user }));
+        }
+      } catch {
+        // ignore profile fetch error
+      }
     } catch {
       // keep existing state
     } finally {
@@ -3902,6 +3910,8 @@ export function MobileAppSimulator({ onBackToPortal }) {
                 <PracticeModeSimulator
                   subjects={subjects}
                   exams={exams}
+                  currentUser={currentUser}
+                  userStream={currentUser?.stream || "natural"}
                   COLORS={COLORS}
                   onAskAiFromQuestion={handleAskAiFromQuestion}
                   setZoomedUri={setZoomedUri}

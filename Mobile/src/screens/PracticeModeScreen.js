@@ -90,24 +90,55 @@ export function PracticeModeScreen({
   // Active question memo
   const currentQuestion = questions[currentIndex] || null;
 
-  // Filter subjects based on grade
+  // Filter subjects based on student registered stream and grade
+  const studentStream = String(user?.stream || "natural").toLowerCase();
   const filteredSubjects = useMemo(() => {
-    if (selectedGrade === "all") return subjects;
-    return subjects.filter((s) => s.gradeLevel === `grade-${selectedGrade}`);
-  }, [subjects, selectedGrade]);
+    return subjects.filter((s) => {
+      const sStream = String(s.stream || "").toLowerCase();
+      const code = String(s.code || "").toUpperCase();
+      const name = String(s.name || "").toLowerCase();
 
-  // Available exams for the selected subject
+      if (studentStream === "natural") {
+        if (sStream === "social") return false;
+        if (["HIST", "GEOG", "ECON", "MATH_SOC"].some((k) => code.includes(k))) return false;
+        if (name.includes("history") || name.includes("geography") || name.includes("economics") || name.includes("social studies")) return false;
+      } else if (studentStream === "social") {
+        if (sStream === "natural") return false;
+        if (["BIO", "CHEM", "PHYS", "MATH_NAT"].some((k) => code.includes(k))) return false;
+        if (name.includes("biology") || name.includes("chemistry") || name.includes("physics")) return false;
+      }
+
+      if (selectedGrade !== "all" && s.gradeLevel !== `grade-${selectedGrade}`) {
+        return false;
+      }
+      return true;
+    });
+  }, [subjects, selectedGrade, studentStream]);
+
+  // Available exams for the selected subject (matching ID or subject discipline)
   const availableExams = useMemo(() => {
     if (!selectedSubjectId) return exams;
-    return exams.filter((e) => String(e.subjectId) === String(selectedSubjectId));
-  }, [exams, selectedSubjectId]);
+    const targetSub = subjects.find((s) => String(s._id) === String(selectedSubjectId));
+    const targetCode = String(targetSub?.code || "").toUpperCase();
+    const discMatch = targetCode.split("_")[0];
+    return exams.filter((e) => {
+      const eSubId = String(e.subjectId?._id || e.subjectId || "");
+      if (eSubId === String(selectedSubjectId)) return true;
+      const eCode = String(e.subjectId?.code || e.code || "").toUpperCase();
+      if (discMatch && eCode.includes(discMatch)) return true;
+      return false;
+    });
+  }, [exams, selectedSubjectId, subjects]);
 
-  // Set default subject on load
+  // Set default subject on load or when filteredSubjects changes
   useEffect(() => {
-    if (subjects.length > 0 && !selectedSubjectId) {
-      setSelectedSubjectId(subjects[0]._id);
+    if (filteredSubjects.length > 0) {
+      const stillValid = filteredSubjects.some((s) => String(s._id) === String(selectedSubjectId));
+      if (!stillValid) {
+        setSelectedSubjectId(filteredSubjects[0]._id);
+      }
     }
-  }, [subjects]);
+  }, [filteredSubjects, selectedSubjectId]);
 
   // Timer loop
   useEffect(() => {
@@ -161,27 +192,136 @@ export function PracticeModeScreen({
 
     setLoadingQuestions(true);
     try {
+      const targetSub = subjects.find((s) => String(s._id) === String(selectedSubjectId)) || filteredSubjects[0] || subjects[0];
+      const targetSubId = targetSub?._id;
+      const targetGrade = (selectedGrade && selectedGrade !== "all")
+        ? String(selectedGrade).replace(/^grade-?/i, "")
+        : (targetSub?.gradeLevel && targetSub.gradeLevel !== "all"
+            ? String(targetSub.gradeLevel).replace(/^grade-?/i, "")
+            : "all");
+
+      const targetCount = questionCountChoice === "all" ? 500 : Number(questionCountChoice);
+      let qList = [];
+
+      // Look for exam with questions for this grade
+      const candidateExams = (availableExams.length > 0 ? availableExams : exams);
       let targetExam = null;
       if (selectedExamId) {
-        targetExam = exams.find((e) => String(e._id) === String(selectedExamId));
-      } else if (availableExams.length > 0) {
-        targetExam = availableExams[0];
-      } else if (exams.length > 0) {
-        targetExam = exams[0];
+        targetExam = candidateExams.find((e) => String(e._id) === String(selectedExamId));
       }
-
+      if (!targetExam && targetGrade !== "all") {
+        targetExam = candidateExams.find((e) => {
+          if (!Array.isArray(e.chapterBreakdown)) return false;
+          return e.chapterBreakdown.some((c) => {
+            const cg = String(c.gradeLevel || "").toLowerCase().replace(/^grade-?/i, "");
+            return cg === targetGrade && (c.questionCount || 0) > 0;
+          });
+        });
+      }
       if (!targetExam) {
-        alert("No entrance exams found. Please check back shortly.");
-        setLoadingQuestions(false);
-        return;
+        targetExam = candidateExams[0];
       }
 
-      // Fetch questions from the target exam
-      const examData = await request(`/exams/${targetExam._id}/start`, { method: "POST" });
-      let qList = examData?.exam?.questions || [];
+      if (targetExam?._id) {
+        try {
+          const querySuffix = targetGrade !== "all" ? `?gradeLevel=grade-${targetGrade}` : "";
+          const examData = await request(`/exams/${targetExam._id}/start${querySuffix}`, {
+            method: "POST",
+            body: JSON.stringify({
+              gradeLevel: targetGrade !== "all" ? `grade-${targetGrade}` : undefined
+            })
+          });
+
+          let rawExamQs = examData?.exam?.questions || [];
+          if (targetGrade !== "all" && rawExamQs.length > 0) {
+            const gradeNum = targetGrade;
+            const expectedGrade = `grade-${gradeNum}`;
+            const targetCode = String(targetSub?.code || "").toUpperCase();
+            const discMatch = targetCode.split("_")[0];
+
+            rawExamQs = rawExamQs.filter((q) => {
+              const qCode = String(q.subjectCode || "").toUpperCase();
+              if (discMatch && qCode && !qCode.includes(discMatch)) return false;
+              const qGrade = String(q.gradeLevel || "").toLowerCase();
+              if (qGrade === expectedGrade || qGrade === gradeNum) return true;
+              const topic = String(q.topic || q.chapterTitle || "").toLowerCase();
+              if (topic.includes(`grade ${gradeNum}`) || topic.includes(`g${gradeNum}`)) return true;
+              if (qCode.endsWith(`_${gradeNum}`)) return true;
+              return false;
+            });
+          }
+
+          for (const q of rawExamQs) {
+            if (!qList.some((existing) => String(existing._id) === String(q._id))) {
+              qList.push(q);
+            }
+          }
+
+          // Pool from other exams if fewer than target count
+          if (qList.length < targetCount && !selectedExamId && candidateExams.length > 1) {
+            for (const otherExam of candidateExams) {
+              if (String(otherExam._id) === String(targetExam._id)) continue;
+              if (qList.length >= targetCount) break;
+              try {
+                const otherData = await request(`/exams/${otherExam._id}/start${querySuffix}`, {
+                  method: "POST",
+                  body: JSON.stringify({
+                    gradeLevel: targetGrade !== "all" ? `grade-${targetGrade}` : undefined
+                  })
+                });
+                let otherQs = otherData?.exam?.questions || [];
+                if (targetGrade !== "all") {
+                  otherQs = otherQs.filter((q) => {
+                    const qG = String(q.gradeLevel || "").toLowerCase();
+                    return qG === `grade-${targetGrade}` || qG === targetGrade;
+                  });
+                }
+                for (const q of otherQs) {
+                  if (!qList.some((existing) => String(existing._id) === String(q._id))) {
+                    qList.push(q);
+                    if (qList.length >= targetCount) break;
+                  }
+                }
+              } catch {
+                // ignore additional exam pooling errors
+              }
+            }
+          }
+        } catch (startErr) {
+          console.warn("Direct exam attempt error in mobile practice:", startErr?.message);
+        }
+      }
+
+      // Question Bank Fallback
+      if (qList.length < targetCount && targetSubId) {
+        try {
+          const qbParams = new URLSearchParams({ subjectId: targetSubId });
+          if (targetGrade !== "all") {
+            qbParams.set("gradeLevel", `grade-${targetGrade}`);
+          }
+          const qbData = await request(`/question-bank/questions?${qbParams.toString()}`);
+          if (Array.isArray(qbData?.questions) && qbData.questions.length > 0) {
+            const mapped = qbData.questions.map((q, idx) => ({
+              ...q,
+              bookletOrder: idx,
+              subjectName: targetSub?.name,
+              gradeLevel: targetSub?.gradeLevel || `grade-${targetGrade}`
+            }));
+            for (const q of mapped) {
+              if (!qList.some((existing) => String(existing._id) === String(q._id))) {
+                qList.push(q);
+                if (qList.length >= targetCount) break;
+              }
+            }
+          }
+        } catch {
+          // ignore question bank fallback errors
+        }
+      }
 
       if (qList.length === 0) {
-        alert("No questions found for this selection.");
+        const gradeMsg = targetGrade !== "all" ? ` for Grade ${targetGrade}` : "";
+        alert(`No exam questions currently found for ${targetSub?.name || "this subject"}${gradeMsg}. Please try selecting another grade or All Grades.`);
         setLoadingQuestions(false);
         return;
       }
@@ -325,6 +465,26 @@ export function PracticeModeScreen({
   async function handleFinishSession() {
     recordQuestionTime();
 
+    let finalReviews = { ...instantReviews };
+    if (modeChoice === "exam") {
+      try {
+        const payload = questions.map((q) => ({
+          questionId: q._id,
+          selectedAnswer: answers[q._id] || null
+        }));
+        const checkRes = await request("/exams/practice/check-answers", {
+          method: "POST",
+          body: JSON.stringify({ answers: payload })
+        });
+        if (checkRes?.results) {
+          finalReviews = { ...finalReviews, ...checkRes.results };
+          setInstantReviews(finalReviews);
+        }
+      } catch (e) {
+        console.warn("Mobile answer verification fallback:", e?.message);
+      }
+    }
+
     // Compute metrics
     const totalQ = questions.length;
     let correctCount = 0;
@@ -337,11 +497,11 @@ export function PracticeModeScreen({
       const q = questions[i];
       const selected = answers[q._id];
       const isSkp = Boolean(skipped[q._id] || !selected);
-      const rev = instantReviews[q._id];
+      const rev = finalReviews[q._id];
 
       let isCorrect = false;
-      let correctAnswer = q.correctAnswer || rev?.correctAnswer;
-      let explanation = q.explanation || rev?.explanation || "";
+      let correctAnswer = rev?.correctAnswer || q.correctAnswer;
+      let explanation = rev?.explanation || q.explanation || "";
 
       if (rev) {
         isCorrect = rev.isCorrect;

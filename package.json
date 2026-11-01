@@ -17,7 +17,7 @@
     "mobile:start": "npm --prefix Mobile start",
     "check": "npm --workspace=Backend run check",
     "lint": "npm run check",
-    "test": "node --test Backend/src/config/jwt.test.js Web/src/utils/questionContentParser.test.js"
+    "test": "node --test Backend/src/config/jwt.test.js Web/src/utils/questionContentParser.test.js Web/JavaScript/src/utils/practiceStreamFilter.test.js"
   },
   "dependencies": {
     "@google/genai": "^2.32.0",
