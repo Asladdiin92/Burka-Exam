@@ -19,7 +19,7 @@ export function Header({ user, onLogout, onNavigateProfile, queueCount = 0 }) {
         </View>
         <View style={styles.userText}>
           <Text style={styles.brand}>
-            Ethio<Text style={styles.brandAccent}>Prep</Text>
+            Burka <Text style={styles.brandAccent}>Exam</Text>
           </Text>
           <Text numberOfLines={1} style={styles.userRole}>
             {user?.displayName || "Student"} · {user?.role || "student"}

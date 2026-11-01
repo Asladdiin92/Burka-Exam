@@ -7,7 +7,7 @@ try {
 import { GoogleGenAI, ThinkingLevel } from "@google/genai";
 
 const SYSTEM_ROLES = {
-  exam_coach: `You are "EthioPrep ESSLCE Exam Master Coach", an elite, motivating tutor specializing in Ethiopian University Entrance Examinations (ESSLCE / EUEE) and Regional Model Exams for Grades 9, 10, 11, and 12.
+  exam_coach: `You are "Burka Exam ESSLCE Exam Master Coach", an elite, motivating tutor specializing in Ethiopian University Entrance Examinations (ESSLCE / EUEE) and Regional Model Exams for Grades 9, 10, 11, and 12.
 Your mission is to guide Ethiopian high school students to top entrance exam scores across Biology, Chemistry, Physics, Mathematics (Natural and Social), English, SAT (Aptitude), History, Geography, and Economics.
 
 Guidelines:
@@ -19,25 +19,25 @@ Guidelines:
 3. Language: Respond in the student's language (English, Afaan Oromoo, or Amharic). Keep standard scientific and academic terminology clear.
 4. Format with clean markdown, bold key terms, and bulleted lists formatted cleanly for mobile phone screens.`,
 
-  fast_tutor: `You are "EthioPrep Rapid Study Assistant", optimized for speed and clarity for Ethiopian secondary students (Grades 9–12).
+  fast_tutor: `You are "Burka Exam Rapid Study Assistant", optimized for speed and clarity for Ethiopian secondary students (Grades 9–12).
 Provide instant, crisp, accurate answers (strictly under 100 words).
 Focus directly on the definition, key formula, or direct solution without unnecessary pleasantries or filler.`,
 
-  stem_solver: `You are "EthioPrep Advanced STEM & Math Solver", specializing in rigorous step-by-step problem solving across Mathematics, Physics, and Chemistry for Ethiopian High School students (Grades 9–12).
+  stem_solver: `You are "Burka Exam Advanced STEM & Math Solver", specializing in rigorous step-by-step problem solving across Mathematics, Physics, and Chemistry for Ethiopian High School students (Grades 9–12).
 Guidelines:
 1. Write all equations, derivations, and chemical formulas with precision.
 2. Show every intermediate mathematical step clearly.
 3. State all physical units, constants, and coordinate conventions explicitly.
 4. Conclude with a clear, boxed or highlighted final answer.`,
 
-  multilingual_tutor: `You are "EthioPrep Multilingual Curriculum Tutor", fluent in Afaan Oromoo, Amharic (አማርኛ), and English.
+  multilingual_tutor: `You are "Burka Exam Multilingual Curriculum Tutor", fluent in Afaan Oromoo, Amharic (አማርኛ), and English.
 You excel at explaining difficult Ethiopian curriculum concepts (Grades 9–12) in the student's mother tongue.
 Guidelines:
 1. If the student writes in Afaan Oromoo, explain thoroughly in grammatically sound Afaan Oromoo while preserving international scientific formulas and names.
 2. If the student writes in Amharic, explain thoroughly in clear Amharic script while keeping standard formulas intact.
 3. Always bridge local language explanations back to the terms used in the national ESSLCE exam booklets.`,
 
-  concept_explainer: `You are "EthioPrep Study Notes & Concept Explainer".
+  concept_explainer: `You are "Burka Exam Study Notes & Concept Explainer".
 Your purpose is to transform textbook chapters and lecture notes into high-yield, memorable revision summaries.
 Provide:
 - Core 3-point takeaway
@@ -126,7 +126,7 @@ function buildCurriculumTutorFallback(userPrompt, rawContext) {
 
   if (qPrompt) {
     if (isOromo) {
-      return `### 📚 Ibsa Gafii Qormaataa (EthioPrep AI Tutor)
+      return `### 📚 Ibsa Gafii Qormaataa (Burka Exam AI Tutor)
 
 **Gaffii:** ${qPrompt}
 
@@ -141,7 +141,7 @@ ${explanation ? `**Ibsa Barsiisaa:**\n${explanation}\n` : ""}
     }
 
     if (isAmharic) {
-      return `### 📚 የፈተና ጥያቄ ማብራሪያ (EthioPrep AI Tutor)
+      return `### 📚 የፈተና ጥያቄ ማብራሪያ (Burka Exam AI Tutor)
 
 **ጥያቄ:** ${qPrompt}
 
@@ -172,7 +172,7 @@ ${explanation ? `**Official Explanation:**\n${explanation}\n` : ""}
 
   if (noteTitle || noteContent) {
     if (isOromo) {
-      return `### 📝 Ibsa Yaadannoo Barnootaa (EthioPrep AI Tutor)
+      return `### 📝 Ibsa Yaadannoo Barnootaa (Burka Exam AI Tutor)
 
 **Mata-duree:** ${noteTitle || "Yaadannoo Barnootaa"} ${subjectName ? `(${subjectName})` : ""}
 
@@ -201,18 +201,18 @@ ${noteContent ? `${noteContent.slice(0, 450)}...\n` : "This study unit contains 
   }
 
   if (isOromo) {
-    return `Akkam jirtu! Ani **EthioPrep AI Tutor** dha. Gafiilee qormaataa (ESSLCE / Regional Model exams), yaadannoowwan barnootaa (Study Notes), faarmulaa, fi yaada barnootaa Grade 9–12 kamiyyuu akka gaariitti siif ibsuuf qophiidha.
+    return `Akkam jirtu! Ani **Burka Exam AI Tutor** dha. Gafiilee qormaataa (ESSLCE / Regional Model exams), yaadannoowwan barnootaa (Study Notes), faarmulaa, fi yaada barnootaa Grade 9–12 kamiyyuu akka gaariitti siif ibsuuf qophiidha.
 
 Gafii qabdu kamiyyuu as irratti na gaafachuu dandeessa!`;
   }
 
   if (isAmharic) {
-    return `ሰላም! እኔ **የEthioPrep AI አስተማሪ** ነኝ። ለኢትዮጵያ ዩኒቨርሲቲ መግቢያ ፈተና (ESSLCE) እና ለ9–12ኛ ክፍል ትምህርት በማንኛውም ጥያቄ፣ ማስታወሻና ቀመር ልረዳዎ ዝግጁ ነኝ።
+    return `ሰላም! እኔ **የBurka Exam AI አስተማሪ** ነኝ። ለኢትዮጵያ ዩኒቨርሲቲ መግቢያ ፈተና (ESSLCE) እና ለ9–12ኛ ክፍል ትምህርት በማንኛውም ጥያቄ፣ ማስታወሻና ቀመር ልረዳዎ ዝግጁ ነኝ።
 
 ምን እንድተነትንልዎ ይፈልጋሉ?`;
   }
 
-  return `Hello! I am your **EthioPrep AI Tutor**. I'm here to help you excel in your Ethiopian High School curriculum (Grades 9–12) and National Entrance Exams (ESSLCE / EUEE / Regional Models).
+  return `Hello! I am your **Burka Exam AI Tutor**. I'm here to help you excel in your Ethiopian High School curriculum (Grades 9–12) and National Entrance Exams (ESSLCE / EUEE / Regional Models).
 
 You can ask me to:
 - Explain any exam question step-by-step
@@ -284,7 +284,7 @@ export async function chatWithTutor(request, response) {
     if (contents.length === 0) {
       contents.push({
         role: "user",
-        parts: [{ text: userPrompt || "Hello EthioPrep AI Tutor" }]
+        parts: [{ text: userPrompt || "Hello Burka Exam AI Tutor" }]
       });
     }
 

@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "EthioPrep - Ethiopian Entrance Exam Prep",
-  "short_name": "EthioPrep",
-  "description": "Study, track progress, and practice offline for Ethiopian ESSLCE & Regional Model entrance exams with EthioPrep.",
+  "name": "Burka Exam - Ethiopian Entrance Exam Prep",
+  "short_name": "Burka Exam",
+  "description": "Study, track progress, and practice offline for Ethiopian ESSLCE & Regional Model entrance exams with Burka Exam.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

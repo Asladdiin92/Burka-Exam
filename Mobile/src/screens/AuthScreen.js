@@ -96,7 +96,7 @@ export function AuthScreen({ onLoginSuccess }) {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        <Text style={styles.brand}>EthioPrep</Text>
+        <Text style={styles.brand}>Burka Exam</Text>
         <Text style={styles.subtitle}>
           {isRegister ? "Create your preparation account" : "Sign in to continue your preparation"}
         </Text>

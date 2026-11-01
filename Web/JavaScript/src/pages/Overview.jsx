@@ -16,7 +16,7 @@ export function Overview({ user, stats }) {
       <div className="page-header">
         <div className="breadcrumb"><span>Dashboard</span></div>
         <h1>Good {getGreeting()}, {user.displayName.split(" ")[0]}</h1>
-        <p className="page-desc">Here's what's happening on EthioPrep right now.</p>
+        <p className="page-desc">Here's what's happening on Burka Exam right now.</p>
       </div>
       <div className="content-body">
         <div className="stats-grid">

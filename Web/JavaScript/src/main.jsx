@@ -124,7 +124,7 @@ function Auth({ onLogin, theme, onToggleTheme, onOpenMobileSimulator }) {
       if (result.user.role === "student") {
         clearSession();
         setStudentNotice(true);
-        setError("Student accounts must use the EthioPrep Mobile Application. Please open the EthioPrep app on your mobile phone to practice, study offline, take mock exams, and manage payments.");
+        setError("Student accounts must use the Burka Exam Mobile Application. Please open the Burka Exam app on your mobile phone to practice, study offline, take mock exams, and manage payments.");
         return;
       }
 
@@ -158,7 +158,7 @@ function Auth({ onLogin, theme, onToggleTheme, onOpenMobileSimulator }) {
         clearSession();
         setStudentNotice(true);
         setStep("login");
-        setError("Student accounts must use the EthioPrep Mobile Application.");
+        setError("Student accounts must use the Burka Exam Mobile Application.");
         return;
       }
 
@@ -193,9 +193,9 @@ function Auth({ onLogin, theme, onToggleTheme, onOpenMobileSimulator }) {
       <div className="auth-panel">
         <div className="auth-logo" style={{ justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div className="logo-mark">E</div>
+            <div className="logo-mark">B</div>
             <div>
-              <div className="auth-logo-text">Ethio<span>Prep</span></div>
+              <div className="auth-logo-text">Burka <span>Exam</span></div>
               <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 1 }}>Staff &amp; Management Portal</div>
             </div>
           </div>
@@ -360,7 +360,7 @@ function Auth({ onLogin, theme, onToggleTheme, onOpenMobileSimulator }) {
           lineHeight: 1.5
         }}>
           <SmartphoneIcon size={14} style={{ verticalAlign: "-2px", marginRight: 4 }} /><strong>Are you an entrance examination student?</strong><br />
-          Students must use the <strong>EthioPrep Mobile Application</strong> to practice questions, study offline, take mock exams, and rank on the leaderboard.
+          Students must use the <strong>Burka Exam Mobile Application</strong> to practice questions, study offline, take mock exams, and rank on the leaderboard.
           {onOpenMobileSimulator && (
             <div style={{ marginTop: 10 }}>
               <button
@@ -2441,8 +2441,8 @@ function Dashboard({ user, onLogout, theme, onToggleTheme }) {
           <MenuIcon size={20} />
         </button>
         <div className="mobile-brand">
-          <div className="sidebar-logo">E</div>
-          <span>Ethio<b>Prep</b></span>
+          <div className="sidebar-logo">B</div>
+          <span>Burka <b>Exam</b></span>
         </div>
         <ThemeToggleSwitch theme={theme} onToggle={onToggleTheme} compact />
         <div className="user-avatar" title={user.displayName}>{user.displayName[0].toUpperCase()}</div>
@@ -2452,9 +2452,9 @@ function Dashboard({ user, onLogout, theme, onToggleTheme }) {
       {/* ── Sidebar ── */}
       <aside className={`sidebar ${navOpen ? "open" : ""}`} aria-label="Main navigation">
         <div className="sidebar-header">
-          <div className="sidebar-logo">E</div>
+          <div className="sidebar-logo">B</div>
           <div>
-            <div className="sidebar-title">EthioPrep</div>
+            <div className="sidebar-title">Burka Exam</div>
             <div className="sidebar-subtitle">Staff Portal</div>
           </div>
           <button className="icon-btn drawer-close" aria-label="Close navigation" onClick={() => setNavOpen(false)}>

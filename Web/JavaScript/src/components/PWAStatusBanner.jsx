@@ -258,7 +258,7 @@ export function PWAInstallButton() {
           fontSize: 12,
           fontWeight: 700
         }}
-        title="Install EthioPrep for offline access"
+        title="Install Burka Exam for offline access"
       >
         <DownloadIcon size={14} />
         <span>Install App</span>
@@ -283,7 +283,7 @@ export function PWAInstallButton() {
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-            <strong style={{ fontSize: 13 }}>Install EthioPrep PWA</strong>
+            <strong style={{ fontSize: 13 }}>Install Burka Exam PWA</strong>
             <button
               type="button"
               onClick={() => setShowInstructions(false)}
@@ -301,7 +301,7 @@ export function PWAInstallButton() {
           </div>
           {inIframe ? (
             <p style={{ margin: 0, color: "#CBD5E1" }}>
-              Open EthioPrep in a standalone browser tab to trigger the one-click install prompt.
+              Open Burka Exam in a standalone browser tab to trigger the one-click install prompt.
             </p>
           ) : isIOS ? (
             <p style={{ margin: 0, color: "#CBD5E1" }}>
@@ -309,7 +309,7 @@ export function PWAInstallButton() {
             </p>
           ) : (
             <p style={{ margin: 0, color: "#CBD5E1" }}>
-              Click the install icon in your browser&apos;s address bar or menu to install EthioPrep for offline study.
+              Click the install icon in your browser&apos;s address bar or menu to install Burka Exam for offline study.
             </p>
           )}
         </div>

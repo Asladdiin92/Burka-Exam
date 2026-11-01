@@ -497,7 +497,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
     {
       id: "welcome",
       role: "assistant",
-      text: "👋 Akkam! Hello! I'm your **EthioPrep AI Tutor** powered by Gemini.\n\nI can help you master the Ethiopian Entrance Exam (Grade 9–12 ESSLCE / EUEE / Regional Models). Ask me:\n• To explain difficult concepts or formulas step-by-step\n• Why specific answer choices are correct or incorrect\n• For explanations in **English**, **Afaan Oromoo**, or **Amharic**\n• To review questions from exams or your study notes!",
+      text: "👋 Akkam! Hello! I'm your **Burka Exam AI Tutor** powered by Gemini.\n\nI can help you master the Ethiopian Entrance Exam (Grade 9–12 ESSLCE / EUEE / Regional Models). Ask me:\n• To explain difficult concepts or formulas step-by-step\n• Why specific answer choices are correct or incorrect\n• For explanations in **English**, **Afaan Oromoo**, or **Amharic**\n• To review questions from exams or your study notes!",
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
       source: "gemini"
     }
@@ -1432,7 +1432,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
       {onBackToPortal && (
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", maxWidth: 430, margin: "0 auto 14px" }}>
           <span style={{ fontSize: 13, fontWeight: 700, color: "var(--text-2)" }}>
-            EthioPrep Student Mobile App
+            Burka Exam Student Mobile App
           </span>
           <button type="button" className="btn btn-secondary btn-sm" onClick={onBackToPortal}>
             Staff Portal Sign In →
@@ -1495,7 +1495,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
               </div>
               <div>
                 <div style={{ fontSize: 20, fontWeight: 900, color: COLORS.text, letterSpacing: -0.5 }}>
-                  EthioPrep
+                  Burka Exam
                 </div>
                 <div style={{ fontSize: 12, color: COLORS.textMuted, marginTop: 2 }}>
                   {currentUser?.displayName || "Student"} · {currentUser?.role || "student"}
@@ -3297,7 +3297,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
                         </div>
                         <div>
                           <div style={{ fontSize: 17, fontWeight: 900, letterSpacing: -0.3 }}>
-                            EthioPrep AI Tutor
+                            Burka Exam AI Tutor
                           </div>
                           <div style={{ fontSize: 11, color: "rgba(255, 255, 255, 0.85)", marginTop: 1 }}>
                             Powered by Gemini 3.8 Flash · Grade 9–12 ESSLCE
@@ -3311,7 +3311,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
                             {
                               id: "welcome",
                               role: "assistant",
-                              text: "👋 Akkam! Hello! I'm your **EthioPrep AI Tutor** powered by Gemini.\n\nI can help you master the Ethiopian Entrance Exam (Grade 9–12 ESSLCE / EUEE / Regional Models). Ask me:\n• To explain difficult concepts or formulas step-by-step\n• Why specific answer choices are correct or incorrect\n• For explanations in **English**, **Afaan Oromoo**, or **Amharic**\n• To review questions from exams or your study notes!",
+                              text: "👋 Akkam! Hello! I'm your **Burka Exam AI Tutor** powered by Gemini.\n\nI can help you master the Ethiopian Entrance Exam (Grade 9–12 ESSLCE / EUEE / Regional Models). Ask me:\n• To explain difficult concepts or formulas step-by-step\n• Why specific answer choices are correct or incorrect\n• For explanations in **English**, **Afaan Oromoo**, or **Amharic**\n• To review questions from exams or your study notes!",
                               timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
                               source: "gemini"
                             }
@@ -3601,7 +3601,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
                               >
                                 <span style={{ fontSize: 13 }}>✨</span>
                                 <span style={{ fontSize: 11, fontWeight: 800, color: COLORS.primaryDark }}>
-                                  EthioPrep AI Tutor
+                                  Burka Exam AI Tutor
                                 </span>
                                 <span
                                   style={{
@@ -3684,7 +3684,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
                       >
                         <span style={{ fontSize: 14 }}>✨</span>
                         <span style={{ fontSize: 12, fontWeight: 700, color: COLORS.textMuted }}>
-                          EthioPrep AI ({aiRole === "fast_tutor" ? "Flash Lite" : aiRole === "stem_solver" ? "Argon / STEM" : "Flash"}) is thinking...
+                          Burka Exam AI ({aiRole === "fast_tutor" ? "Flash Lite" : aiRole === "stem_solver" ? "Argon / STEM" : "Flash"}) is thinking...
                         </span>
                       </div>
                     )}

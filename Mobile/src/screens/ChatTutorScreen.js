@@ -75,11 +75,11 @@ What concept, definition, formula, or exam trap can I clarify for you today?`;
   }
 
   if (roleId === "multilingual_tutor") {
-    return `Akkam jirtu! ሰላም! 👋 Ani barsiisaa keessan **EthioPrep Multilingual AI Tutor** dha.
+    return `Akkam jirtu! ሰላም! 👋 Ani barsiisaa keessan **Burka Exam Multilingual AI Tutor** dha.
 Gafiilee fi yaada barnootaa Grade 9–12 Afaan Oromootiin ykn በአማርኛ ማብራሪያ ማግኘት ትችላላችሁ!`;
   }
 
-  return `Hello ${name}! 👋 I am your **EthioPrep AI Tutor** powered by Gemini.
+  return `Hello ${name}! 👋 I am your **Burka Exam AI Tutor** powered by Gemini.
 
 I'm here to help you conquer the Ethiopian Entrance Exam (ESSLCE / EUEE / Model Exams) across Grades 9–12 curriculum subjects.
 
@@ -297,7 +297,7 @@ export function ChatTutorScreen({ user, initialContext = null, onClearContext })
             <Icon color={COLORS.onPrimary} name="sparkles" size={17} />
           </View>
           <View>
-            <Text style={styles.headerTitle}>EthioPrep AI Tutor</Text>
+            <Text style={styles.headerTitle}>Burka Exam AI Tutor</Text>
             <Text style={styles.headerSubtitle}>Multi-Turn Gemini Entrance Exam Assistant</Text>
           </View>
         </View>
@@ -427,7 +427,7 @@ export function ChatTutorScreen({ user, initialContext = null, onClearContext })
               >
                 {!isUser && (
                   <View style={styles.modelHeader}>
-                    <Text style={styles.modelName}>EthioPrep AI</Text>
+                    <Text style={styles.modelName}>Burka Exam AI</Text>
                     {item.source && (
                       <View style={styles.modelSourceTag}>
                         <Text style={styles.modelBadge}>{item.source}</Text>
