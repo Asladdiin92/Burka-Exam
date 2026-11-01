@@ -1,0 +1,1922 @@
+[
+  {
+    "questionNumber": 1,
+    "section": "Part I: Grammar",
+    "grade": "Grade 9",
+    "topic": "Quantifiers (Countable vs. Uncountable Nouns)",
+    "difficulty": "easy",
+    "prompt": "I like __________ sugar in my tea. Do have some, please?",
+    "options": [
+      "a little",
+      "any",
+      "many",
+      "a few"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Sugar is an uncountable noun. In affirmative sentences, we use a little with uncountable nouns to mean \"a small amount.\" Many and a few are only used with plural countable nouns, while any is primarily used in negative sentences and questions."
+  },
+  {
+    "questionNumber": 2,
+    "section": "Part I: Grammar",
+    "grade": "Grade 9",
+    "topic": "Modal Verbs of Possibility",
+    "difficulty": "easy",
+    "prompt": "Take your umbrella with you. It __________ rain in the afternoon.",
+    "options": [
+      "must",
+      "might",
+      "has to",
+      "should"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Predicting future weather when taking a precaution (\"Take your umbrella\") expresses a possibility, not a certainty or obligation. Might correctly expresses future possibility."
+  },
+  {
+    "questionNumber": 3,
+    "section": "Part I: Grammar",
+    "grade": "Grade 9",
+    "topic": "Wh-Questions (Asking for Reason/Purpose)",
+    "difficulty": "easy",
+    "prompt": "I think I saw you coming out of the Director's office. __________ did you go there?",
+    "options": [
+      "Who",
+      "What",
+      "For how",
+      "Why"
+    ],
+    "correctAnswer": "D",
+    "explanation": "The speaker is asking for the reason or purpose behind the listener's visit to the Director's office. Why is the interrogative adverb used to ask for reasons."
+  },
+  {
+    "questionNumber": 4,
+    "section": "Part I: Grammar",
+    "grade": "Grade 11",
+    "topic": "Discourse Markers (Topic Shifting / Reference)",
+    "difficulty": "medium",
+    "prompt": "I eat nearly all kinds of food. __________ drinks, I only like soft drinks and fruit juices.",
+    "options": [
+      "For",
+      "As far as",
+      "With respect to",
+      "In spite of"
+    ],
+    "correctAnswer": "C",
+    "explanation": "With respect to (meaning concerning or regarding) is a prepositional phrase followed directly by a noun phrase (drinks). As far as requires a completing verb phrase (e.g., As far as drinks are concerned)."
+  },
+  {
+    "questionNumber": 5,
+    "section": "Part I: Grammar",
+    "grade": "Grade 9",
+    "topic": "Adverbs of Frequency / Question Formation",
+    "difficulty": "easy",
+    "prompt": "Bekalu: How __________ do you watch television?\nDinku: Every evening.",
+    "options": [
+      "often",
+      "much",
+      "happy",
+      "relaxed"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Dinku's response (\"Every evening\") states the frequency of the action. We use How often to ask about frequency."
+  },
+  {
+    "questionNumber": 6,
+    "section": "Part I: Grammar",
+    "grade": "Grade 9",
+    "topic": "Past Simple Tense (Narrative Sequence)",
+    "difficulty": "easy",
+    "prompt": "He __________ something at the roadside and started running as fast as he could.",
+    "options": [
+      "sees",
+      "saw",
+      "was seen",
+      "has seen"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The second verb in the compound predicate is in the simple past tense (started). For parallel sequential actions in the past, the first active verb must also be in the simple past tense (saw)."
+  },
+  {
+    "questionNumber": 7,
+    "section": "Part I: Grammar",
+    "grade": "Grade 9",
+    "topic": "Wh-Questions & Past Simple",
+    "difficulty": "easy",
+    "prompt": "You say your friend has not been around for some time. __________ did you last see him?",
+    "options": [
+      "Who",
+      "Why",
+      "Wherever",
+      "When"
+    ],
+    "correctAnswer": "D",
+    "explanation": "The word last in \"did you last see him\" points to a specific time in the past. Therefore, When is the appropriate question word."
+  },
+  {
+    "questionNumber": 8,
+    "section": "Part I: Grammar",
+    "grade": "Grade 9",
+    "topic": "Coordinating Conjunctions (Result)",
+    "difficulty": "easy",
+    "prompt": "We didn't like the talk show, __________ we switched to a movie channel.",
+    "options": [
+      "as",
+      "because",
+      "so",
+      "since"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Not liking the talk show is the cause, and switching to a movie channel is the result. So introduces a clause of result, whereas as, because, and since introduce clauses of reason."
+  },
+  {
+    "questionNumber": 9,
+    "section": "Part I: Grammar",
+    "grade": "Grade 12",
+    "topic": "Conjunctive Adverbs of Contrast",
+    "difficulty": "medium",
+    "prompt": "My friend is sometimes hard to convince, but I like him __________.",
+    "options": [
+      "even",
+      "although",
+      "likewise",
+      "nonetheless"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Nonetheless is an adverb meaning in spite of that or nevertheless, and it can stand at the end of a clause to reinforce contrast (\"I like him nonetheless\")."
+  },
+  {
+    "questionNumber": 10,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Future Continuous Tense",
+    "difficulty": "medium",
+    "prompt": "Tomorrow, Sofanit __________ her assignments the whole day.",
+    "options": [
+      "have been doing",
+      "does",
+      "would have done",
+      "will be doing"
+    ],
+    "correctAnswer": "D",
+    "explanation": "To describe an ongoing action that will be in progress over a period of time in the future (\"Tomorrow... the whole day\"), we use the future continuous tense (will be doing)."
+  },
+  {
+    "questionNumber": 11,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Adverbs of Degree (Modifying Adjectives)",
+    "difficulty": "easy",
+    "prompt": "Members of the team sat down under a tree and rested because they were __________ tired after the long journey on foot.",
+    "options": [
+      "extremely",
+      "[hardly /barely]",
+      "quickly",
+      "fast"
+    ],
+    "correctAnswer": "A",
+    "explanation": "After a \"long journey on foot,\" the team members rested because they were very tired. Extremely is an adverb of degree meaning very, which logically modifies the adjective tired."
+  },
+  {
+    "questionNumber": 12,
+    "section": "Part I: Grammar",
+    "grade": "Grade 11",
+    "topic": "Prepositions of Contrast (Despite vs. Although)",
+    "difficulty": "medium",
+    "prompt": "The country was able to register a significant economic growth __________ the negative impacts of both internal and external factors.",
+    "options": [
+      "in spite",
+      "although",
+      "despite",
+      "even though"
+    ],
+    "correctAnswer": "C",
+    "explanation": "The blank is followed by a noun phrase (\"the negative impacts...\") rather than a subject-verb clause. Despite is a preposition that takes a noun phrase directly. (In spite requires of; although and even though require a full clause)."
+  },
+  {
+    "questionNumber": 13,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Prepositions of Time (During vs. While)",
+    "difficulty": "easy",
+    "prompt": "I hate going out for a walk __________ the rainy season.",
+    "options": [
+      "at",
+      "during",
+      "at the same time as",
+      "while"
+    ],
+    "correctAnswer": "B",
+    "explanation": "During is a preposition used before a noun phrase (\"the rainy season\") to indicate a period of time throughout which something happens. While is a conjunction that requires a clause."
+  },
+  {
+    "questionNumber": 14,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Prepositions of Comparison (Like vs. As)",
+    "difficulty": "medium",
+    "prompt": "Our housemaid is really a nice woman. She __________ a mother.",
+    "options": [
+      "is as",
+      "is like",
+      "acts",
+      "looks"
+    ],
+    "correctAnswer": "B",
+    "explanation": "To compare someone's character or behavior to a noun (\"a mother\"), we use be + like + noun (\"She is like a mother\"). Acts and looks would require like after them (acts like a mother)."
+  },
+  {
+    "questionNumber": 15,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Passive Voice (Future Simple Passive)",
+    "difficulty": "medium",
+    "prompt": "Many more books __________ for the school library next year.",
+    "options": [
+      "buy",
+      "will buy",
+      "will be bought",
+      "are bought"
+    ],
+    "correctAnswer": "C",
+    "explanation": "The subject Many more books is the receiver of the action (books cannot buy themselves), and the time marker next year indicates the future. Thus, the future simple passive (will be bought) is required."
+  },
+  {
+    "questionNumber": 16,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Passive Voice (Past Simple Passive)",
+    "difficulty": "medium",
+    "prompt": "All the participants of the meeting __________ to express their opinions freely.",
+    "options": [
+      "allowed",
+      "were allowed",
+      "[are allowing]",
+      "[have allowed]"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The participants received permission to express their opinions. In the passive voice, we use were allowed + to-infinitive."
+  },
+  {
+    "questionNumber": 17,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Future Intentions (Be going to)",
+    "difficulty": "easy",
+    "prompt": "I think they __________ the issue at the next meeting.",
+    "options": [
+      "are going to discuss",
+      "will be going to discuss",
+      "discussing",
+      "going to discuss"
+    ],
+    "correctAnswer": "A",
+    "explanation": "To express a future plan or prediction (\"at the next meeting\"), the correct grammatical structure is am/is/are + going to + base verb (are going to discuss)."
+  },
+  {
+    "questionNumber": 18,
+    "section": "Part I: Grammar",
+    "grade": "Grade 11",
+    "topic": "Gerunds after Aspectual Verbs (Stop + -ing)",
+    "difficulty": "medium",
+    "prompt": "Although the doctor has warned him several times, he hasn't stopped __________ yet.",
+    "options": [
+      "to drink",
+      "drinks",
+      "to get drunk",
+      "drinking"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Stop + gerund (-ing) means to quit an ongoing habit or activity altogether (\"stopped drinking\"). Stop + to-infinitive means to pause one activity in order to do another."
+  },
+  {
+    "questionNumber": 19,
+    "section": "Part I: Grammar",
+    "grade": "Grade 11",
+    "topic": "Conditional Sentences (Type III / Past Unreal)",
+    "difficulty": "medium",
+    "prompt": "If he __________ more carefully, he wouldn't have had the accident.",
+    "options": [
+      "drove",
+      "had driven",
+      "would drive",
+      "has driven"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The main clause uses wouldn't have had (would have + past participle), which indicates a Type III conditional sentence referring to an unreal past situation. The if-clause must therefore use the past perfect tense (had driven)."
+  },
+  {
+    "questionNumber": 20,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Modal Verbs of Advice (Should)",
+    "difficulty": "easy",
+    "prompt": "The place is a long way from here. I think we __________ take a taxi.",
+    "options": [
+      "should",
+      "should have",
+      "ought",
+      "had"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Present/future advice or recommendation is expressed using should + bare infinitive (should take). Ought requires to (ought to take), and had requires better (had better take)."
+  },
+  {
+    "questionNumber": 21,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Participial Adjectives (-ing vs. -ed)",
+    "difficulty": "easy",
+    "prompt": "The new park is really __________. You should go and see it.",
+    "options": [
+      "fascinated",
+      "fascinates",
+      "fascinating",
+      "fascination"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Present participial adjectives (-ing) describe the thing or place that causes a feeling (\"The new park is fascinating\"), while past participial adjectives (-ed) describe how a person feels."
+  },
+  {
+    "questionNumber": 22,
+    "section": "Part I: Grammar",
+    "grade": "Grade 11",
+    "topic": "Correlative Conjunctions (Neither... nor)",
+    "difficulty": "medium",
+    "prompt": "We remained idle yesterday; we __________ played football __________ watched television.",
+    "options": [
+      "neither... nor",
+      "both... and",
+      "either... or",
+      "haven't..."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Because they \"remained idle yesterday\" (did nothing), both activities were not performed. The correlative conjunction neither... nor negates both actions."
+  },
+  {
+    "questionNumber": 23,
+    "section": "Part I: Grammar",
+    "grade": "Grade 9",
+    "topic": "Mental State Verbs (Expressing Opinion)",
+    "difficulty": "easy",
+    "prompt": "Many people do not __________ it is easy to find jobs these days.",
+    "options": [
+      "count",
+      "think",
+      "mean",
+      "dare"
+    ],
+    "correctAnswer": "B",
+    "explanation": "To express a belief or opinion followed by a that-clause (\"it is easy to find jobs these days\"), the verb think is the natural choice."
+  },
+  {
+    "questionNumber": 24,
+    "section": "Part I: Grammar",
+    "grade": "Grade 12",
+    "topic": "Past Modals of Possibility (Might have + V3)",
+    "difficulty": "hard",
+    "prompt": "My mobile phone is missing. I __________ dropped it somewhere.",
+    "options": [
+      "would have",
+      "might have",
+      "couldn't have",
+      "much"
+    ],
+    "correctAnswer": "B",
+    "explanation": "When speculating about a possible past event that explains a present state (\"My mobile phone is missing\"), we use might have + past participle (might have dropped)."
+  },
+  {
+    "questionNumber": 25,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Conditional Sentences (Type I / Real Future)",
+    "difficulty": "easy",
+    "prompt": "If you practice regularly, there is no doubt that your English __________ better.",
+    "options": [
+      "has been",
+      "is",
+      "was",
+      "will be"
+    ],
+    "correctAnswer": "D",
+    "explanation": "In a Type I conditional sentence, the if-clause is in the simple present (If you practice), and the result clause predicting a certain future outcome takes will + base verb (will be)."
+  },
+  {
+    "questionNumber": 26,
+    "section": "Part I: Grammar",
+    "grade": "Grade 11",
+    "topic": "Verb Patterns (Forget + to-infinitive)",
+    "difficulty": "medium",
+    "prompt": "Next time you come to class, don't forget __________ your textbook.",
+    "options": [
+      "to bring",
+      "bringing",
+      "having brought",
+      "bring"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Forget + to-infinitive refers to remembering/forgetting to perform a future duty or action (\"don't forget to bring\"). Forget + -ing refers to forgetting a past memory."
+  },
+  {
+    "questionNumber": 27,
+    "section": "Part I: Grammar",
+    "grade": "Grade 11",
+    "topic": "Expressing Certainty and Optimism",
+    "difficulty": "medium",
+    "prompt": "There is a lot of dissatisfaction at present, but __________ that things will improve in the coming years.",
+    "options": [
+      "[I'm doubtful]",
+      "[I'm unlikely]",
+      "I'm certain",
+      "I'm worried"
+    ],
+    "correctAnswer": "C",
+    "explanation": "The conjunction but introduces a positive contrast to \"dissatisfaction at present,\" leading into the positive prediction \"that things will improve\". I'm certain fits both the meaning and the that-clause structure."
+  },
+  {
+    "questionNumber": 28,
+    "section": "Part I: Grammar",
+    "grade": "Grade 11",
+    "topic": "Expressing Regret/Wish (Wish + Past Simple)",
+    "difficulty": "medium",
+    "prompt": "Mihiret: I wish I __________ the time. I have a lot of work to do today.",
+    "options": [
+      "have",
+      "had",
+      "have had",
+      "will have"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Wishes about an unreal present situation (\"I have a lot of work to do today\") are expressed with wish + simple past (I wish I had)."
+  },
+  {
+    "questionNumber": 29,
+    "section": "Part I: Grammar",
+    "grade": "Grade 9",
+    "topic": "Indefinite Pronouns (Something / Anything / Nothing)",
+    "difficulty": "easy",
+    "prompt": "You have __________ to do at home this afternoon, so you can't go out.",
+    "options": [
+      "nothing",
+      "anything",
+      "not",
+      "something"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Because the person \"can't go out,\" they must have work/tasks at home. In an affirmative clause, something means an unspecified task or duty."
+  },
+  {
+    "questionNumber": 30,
+    "section": "Part I: Grammar",
+    "grade": "Grade 12",
+    "topic": "Unreal Past Expressions (It is about time + Past Simple)",
+    "difficulty": "hard",
+    "prompt": "Have all the committee members arrived? __________ the meeting.",
+    "options": [
+      "They have started",
+      "It is not possible to conduct",
+      "It is about time we started",
+      "It is the chairman who called"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Asking if everyone has arrived implies the meeting should begin now. The idiomatic structure It is (about/high) time + subject + past simple verb (\"It is about time we started\") is used to say that something should be happening right now."
+  },
+  {
+    "questionNumber": 31,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Adjective + Preposition Collocations (Interested in)",
+    "difficulty": "easy",
+    "prompt": "My younger brother is very much interested __________ studying robotics.",
+    "options": [
+      "on",
+      "in",
+      "for",
+      "at"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The adjective interested always collocates with the preposition in (interested in doing something)."
+  },
+  {
+    "questionNumber": 32,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Clauses and Phrases of Purpose (In order to)",
+    "difficulty": "easy",
+    "prompt": "Muktar went to Jimma __________ see his old friends.",
+    "options": [
+      "for",
+      "because",
+      "as to",
+      "in order to"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Before a bare infinitive (see) to express purpose, we use to, so as to, or in order to. (As to means regarding; for takes a noun/gerund; because takes a clause)."
+  },
+  {
+    "questionNumber": 33,
+    "section": "Part I: Grammar",
+    "grade": "Grade 11",
+    "topic": "Subjunctive Mood (Wish + were)",
+    "difficulty": "medium",
+    "prompt": "I wish I __________ a pilot so that I can travel to different parts of the world.",
+    "options": [
+      "have been",
+      "am",
+      "were",
+      "can be"
+    ],
+    "correctAnswer": "C",
+    "explanation": "After I wish, to express a counterfactual present desire, we use the past subjunctive were (\"I wish I were a pilot\")."
+  },
+  {
+    "questionNumber": 34,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Modal Verbs of Advice (Ought to + base verb)",
+    "difficulty": "medium",
+    "prompt": "If you don't want to be broke, you __________ your money wisely.",
+    "options": [
+      "ought to do",
+      "has used",
+      "ought to use",
+      "ought have used"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Giving advice about managing money requires the modal expression ought to + base verb (ought to use your money wisely)."
+  },
+  {
+    "questionNumber": 35,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Passive Voice in Past Contexts",
+    "difficulty": "medium",
+    "prompt": "Students who came late this morning __________ to report to the Unit Leader's office.",
+    "options": [
+      "have told",
+      "told",
+      "would tell",
+      "were told"
+    ],
+    "correctAnswer": "D",
+    "explanation": "The students did not tell someone else; rather, they were instructed by school authorities. Also, the time phrase this morning paired with came indicates past simple passive (were told)."
+  },
+  {
+    "questionNumber": 36,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Adjective Placement with Enough (Old enough to)",
+    "difficulty": "easy",
+    "prompt": "The girl is __________ to take care of herself.",
+    "options": [
+      "young",
+      "enough old",
+      "old enough",
+      "old"
+    ],
+    "correctAnswer": "C",
+    "explanation": "As an adverb modifying an adjective, enough always comes after the adjective it modifies (old enough + to-infinitive)."
+  },
+  {
+    "questionNumber": 37,
+    "section": "Part I: Grammar",
+    "grade": "Grade 11",
+    "topic": "Clauses of Certainty (I am sure that)",
+    "difficulty": "easy",
+    "prompt": "They are working very hard on the project, and __________ they will complete it in time.",
+    "options": [
+      "surprised",
+      "I am sure that",
+      "hesitate",
+      "I have no point"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Working very hard on a project leads to confidence that it will be completed on time. I am sure that grammatically introduces the noun clause they will complete it in time."
+  },
+  {
+    "questionNumber": 38,
+    "section": "Part I: Grammar",
+    "grade": "Grade 10",
+    "topic": "Present Perfect Tense with Already",
+    "difficulty": "easy",
+    "prompt": "My friend says that she __________ all her assignments already.",
+    "options": [
+      "has done",
+      "will be doing",
+      "will be done",
+      "will do"
+    ],
+    "correctAnswer": "A",
+    "explanation": "The reporting verb says is in the present tense, and the adverb already indicates an action completed prior to the present moment. Thus, the present perfect tense (has done) is required."
+  },
+  {
+    "questionNumber": 39,
+    "section": "Part II: Sentence Comprehension",
+    "grade": "Grade 11",
+    "topic": "Sentence Comprehension (Cause and Effect Paraphrasing)",
+    "difficulty": "medium",
+    "prompt": "Choose the sentence that is closest in meaning to the sentence given:\n\n\"Rapid population growth is likely to lead to high cost of living.\"",
+    "options": [
+      "It is important to control population growth.",
+      "It is important to control cost of living.",
+      "Rapid population growth is a threat to our survival.",
+      "High cost of living may result from rapid population growth."
+    ],
+    "correctAnswer": "D",
+    "explanation": "\"X is likely to lead to Y\" means X is the probable cause and Y is the probable effect. Option D (\"Y may result from X\") accurately preserves both the probability (is likely to = may) and the cause-and-effect relationship (lead to = result from)."
+  },
+  {
+    "questionNumber": 40,
+    "section": "Part II: Sentence Comprehension",
+    "grade": "Grade 11",
+    "topic": "Sentence Comprehension (Past Regret / Wish + Past Perfect)",
+    "difficulty": "medium",
+    "prompt": "Choose the sentence that is closest in meaning to the sentence given:\n\n\"I wish I had talked to him when I saw him yesterday.\"",
+    "options": [
+      "When I saw him yesterday, I should have talked to him.",
+      "I talked to him when I saw him yesterday.",
+      "I saw him yesterday and avoided speaking to him.",
+      "I saw him yesterday and was not interested to talk to him."
+    ],
+    "correctAnswer": "A",
+    "explanation": "\"I wish I had talked to him\" expresses regret that the speaker did not talk to him in the past. I should have talked to him expresses the exact same past regret and unfulfilled action."
+  },
+  {
+    "questionNumber": 41,
+    "section": "Part II: Reading Comprehension (Passage I)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Inference / Nature of Air)",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Air Pollution]\n\n1. Air pollution is an issue which concerns us all alike. One can willingly choose or reject a food, a drink or a life comfort, but unfortunately there is little choice for the air we breathe. All, what is there in the air is inhaled by one and all living in those surroundings.\n\n2. Air pollutant is defined as a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations. It could either be gaseous or a particulate matter. The major harmful polluting gases are carbon monoxide, carbon dioxide, ozone and oxides of sulphur and nitrogen. The common particulate pollutants are the dusts of various inorganic or organic origins. Although we often talk of the outdoor air pollution caused by industrial and vehicular exhausts, the indoor pollution may prove to be as or a more serious cause of health problems.\n\n3. Recognition of air pollution is relatively recent. It is not uncommon to experience a feeling of 'suffocation' in a closed environment, which is often ascribed to the lack of oxygen. Fortunately, however, the composition of air is remarkably constant all over the world. There is about 79 per cent nitrogen and 21 per cent oxygen in the air, the other gases forming a very small fraction. It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight. Exposure to poisonous gases such as carbon monoxide may occur in a closed room, heated by burning coal inside. This may also prove to be fatal.\n\n4. What is more common in a poorly ventilated home is a vague constellation of symptoms described as the sick building syndrome. It is characterized by a general feeling of malaise, headache, dizziness and irritation of mucous membranes. It may also be accompanied by nausea, itching, aches, pains and depression. Sick building syndrome is getting commoner in big cities with small houses which are generally over-furnished. Some of the major pollutants whose indoor concentrations exceed those of the outdoor include gases such as carbon monoxide, carbon dioxide, oxides of nitrogen and organic substances like spores, formaldehydes, hydrocarbon aerosols and allergens. The sources are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products.\n\n5. Obviously, the spectrum of pollution is very wide and our options are limited. Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house.\n\n(Adapted from https://www.learncbse.in/reading-comprehension)\n\nQuestion:\nThe fact that the composition of air is constant all over the world is an indicator of how __________",
+    "options": [
+      "nature is uniform.",
+      "nature works.",
+      "we should change the nature.",
+      "nature is stagnant."
+    ],
+    "correctAnswer": "B",
+    "explanation": "In Paragraph 3, the author notes that despite localized indoor environments feeling stuffy, \"Fortunately, however, the composition of air is remarkably constant all over the world\" (79% nitrogen, 21% oxygen), illustrating how nature works (or maintains uniformity) to keep atmospheric gases balanced globally."
+  },
+  {
+    "questionNumber": 42,
+    "section": "Part II: Reading Comprehension (Passage I)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Detail / Definition of Pollutant)",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Air Pollution]\n\n1. Air pollution is an issue which concerns us all alike. One can willingly choose or reject a food, a drink or a life comfort, but unfortunately there is little choice for the air we breathe. All, what is there in the air is inhaled by one and all living in those surroundings.\n\n2. Air pollutant is defined as a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations. It could either be gaseous or a particulate matter. The major harmful polluting gases are carbon monoxide, carbon dioxide, ozone and oxides of sulphur and nitrogen. The common particulate pollutants are the dusts of various inorganic or organic origins. Although we often talk of the outdoor air pollution caused by industrial and vehicular exhausts, the indoor pollution may prove to be as or a more serious cause of health problems.\n\n3. Recognition of air pollution is relatively recent. It is not uncommon to experience a feeling of 'suffocation' in a closed environment, which is often ascribed to the lack of oxygen. Fortunately, however, the composition of air is remarkably constant all over the world. There is about 79 per cent nitrogen and 21 per cent oxygen in the air, the other gases forming a very small fraction. It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight. Exposure to poisonous gases such as carbon monoxide may occur in a closed room, heated by burning coal inside. This may also prove to be fatal.\n\n4. What is more common in a poorly ventilated home is a vague constellation of symptoms described as the sick building syndrome. It is characterized by a general feeling of malaise, headache, dizziness and irritation of mucous membranes. It may also be accompanied by nausea, itching, aches, pains and depression. Sick building syndrome is getting commoner in big cities with small houses which are generally over-furnished. Some of the major pollutants whose indoor concentrations exceed those of the outdoor include gases such as carbon monoxide, carbon dioxide, oxides of nitrogen and organic substances like spores, formaldehydes, hydrocarbon aerosols and allergens. The sources are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products.\n\n5. Obviously, the spectrum of pollution is very wide and our options are limited. Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house.\n\n(Adapted from https://www.learncbse.in/reading-comprehension)\n\nQuestion:\nAir pollutant is said to be present when __________",
+    "options": [
+      "We release carbon dioxide",
+      "There is excess nitrogen",
+      "There is excess oxygen",
+      "We feel suffocated during breathing"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Paragraph 2 defines an air pollutant as \"a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations\" (and lists oxides of nitrogen among major pollutants, while Paragraph 3 notes suffocation is often mistakenly ascribed to lack of oxygen). Having a substance in excess of normal concentrations fits the definition of a pollutant."
+  },
+  {
+    "questionNumber": 43,
+    "section": "Part II: Reading Comprehension (Passage I)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Author's Viewpoint)",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage I — Air Pollution]\n\n1. Air pollution is an issue which concerns us all alike. One can willingly choose or reject a food, a drink or a life comfort, but unfortunately there is little choice for the air we breathe. All, what is there in the air is inhaled by one and all living in those surroundings.\n\n2. Air pollutant is defined as a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations. It could either be gaseous or a particulate matter. The major harmful polluting gases are carbon monoxide, carbon dioxide, ozone and oxides of sulphur and nitrogen. The common particulate pollutants are the dusts of various inorganic or organic origins. Although we often talk of the outdoor air pollution caused by industrial and vehicular exhausts, the indoor pollution may prove to be as or a more serious cause of health problems.\n\n3. Recognition of air pollution is relatively recent. It is not uncommon to experience a feeling of 'suffocation' in a closed environment, which is often ascribed to the lack of oxygen. Fortunately, however, the composition of air is remarkably constant all over the world. There is about 79 per cent nitrogen and 21 per cent oxygen in the air, the other gases forming a very small fraction. It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight. Exposure to poisonous gases such as carbon monoxide may occur in a closed room, heated by burning coal inside. This may also prove to be fatal.\n\n4. What is more common in a poorly ventilated home is a vague constellation of symptoms described as the sick building syndrome. It is characterized by a general feeling of malaise, headache, dizziness and irritation of mucous membranes. It may also be accompanied by nausea, itching, aches, pains and depression. Sick building syndrome is getting commoner in big cities with small houses which are generally over-furnished. Some of the major pollutants whose indoor concentrations exceed those of the outdoor include gases such as carbon monoxide, carbon dioxide, oxides of nitrogen and organic substances like spores, formaldehydes, hydrocarbon aerosols and allergens. The sources are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products.\n\n5. Obviously, the spectrum of pollution is very wide and our options are limited. Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house.\n\n(Adapted from https://www.learncbse.in/reading-comprehension)\n\nQuestion:\nThe writer of the passage thinks that __________",
+    "options": [
+      "we can fully control air pollution.",
+      "our understanding of air pollution is low.",
+      "the scale of pollution is too wide to handle in our present capacity.",
+      "individuals can contribute to handling indoor air pollution."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Paragraph 5 explicitly states: \"Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house\"."
+  },
+  {
+    "questionNumber": 44,
+    "section": "Part II: Reading Comprehension (Passage I)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Detail / Suffocation & Pollution)",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Air Pollution]\n\n1. Air pollution is an issue which concerns us all alike. One can willingly choose or reject a food, a drink or a life comfort, but unfortunately there is little choice for the air we breathe. All, what is there in the air is inhaled by one and all living in those surroundings.\n\n2. Air pollutant is defined as a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations. It could either be gaseous or a particulate matter. The major harmful polluting gases are carbon monoxide, carbon dioxide, ozone and oxides of sulphur and nitrogen. The common particulate pollutants are the dusts of various inorganic or organic origins. Although we often talk of the outdoor air pollution caused by industrial and vehicular exhausts, the indoor pollution may prove to be as or a more serious cause of health problems.\n\n3. Recognition of air pollution is relatively recent. It is not uncommon to experience a feeling of 'suffocation' in a closed environment, which is often ascribed to the lack of oxygen. Fortunately, however, the composition of air is remarkably constant all over the world. There is about 79 per cent nitrogen and 21 per cent oxygen in the air, the other gases forming a very small fraction. It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight. Exposure to poisonous gases such as carbon monoxide may occur in a closed room, heated by burning coal inside. This may also prove to be fatal.\n\n4. What is more common in a poorly ventilated home is a vague constellation of symptoms described as the sick building syndrome. It is characterized by a general feeling of malaise, headache, dizziness and irritation of mucous membranes. It may also be accompanied by nausea, itching, aches, pains and depression. Sick building syndrome is getting commoner in big cities with small houses which are generally over-furnished. Some of the major pollutants whose indoor concentrations exceed those of the outdoor include gases such as carbon monoxide, carbon dioxide, oxides of nitrogen and organic substances like spores, formaldehydes, hydrocarbon aerosols and allergens. The sources are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products.\n\n5. Obviously, the spectrum of pollution is very wide and our options are limited. Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house.\n\n(Adapted from https://www.learncbse.in/reading-comprehension)\n\nQuestion:\nA feeling of suffocation __________",
+    "options": [
+      "has nothing to do with pollution.",
+      "is a human nature.",
+      "is an indication of pollution.",
+      "is a rare occurrence."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Paragraph 3 explains that experiencing a feeling of 'suffocation' in a closed environment is not uncommon, and rather than a global lack of oxygen, it results from accumulated indoor gases/pollutants in unventilated spaces."
+  },
+  {
+    "questionNumber": 45,
+    "section": "Part II: Reading Comprehension (Passage I)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Negative Fact Identification)",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Air Pollution]\n\n1. Air pollution is an issue which concerns us all alike. One can willingly choose or reject a food, a drink or a life comfort, but unfortunately there is little choice for the air we breathe. All, what is there in the air is inhaled by one and all living in those surroundings.\n\n2. Air pollutant is defined as a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations. It could either be gaseous or a particulate matter. The major harmful polluting gases are carbon monoxide, carbon dioxide, ozone and oxides of sulphur and nitrogen. The common particulate pollutants are the dusts of various inorganic or organic origins. Although we often talk of the outdoor air pollution caused by industrial and vehicular exhausts, the indoor pollution may prove to be as or a more serious cause of health problems.\n\n3. Recognition of air pollution is relatively recent. It is not uncommon to experience a feeling of 'suffocation' in a closed environment, which is often ascribed to the lack of oxygen. Fortunately, however, the composition of air is remarkably constant all over the world. There is about 79 per cent nitrogen and 21 per cent oxygen in the air, the other gases forming a very small fraction. It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight. Exposure to poisonous gases such as carbon monoxide may occur in a closed room, heated by burning coal inside. This may also prove to be fatal.\n\n4. What is more common in a poorly ventilated home is a vague constellation of symptoms described as the sick building syndrome. It is characterized by a general feeling of malaise, headache, dizziness and irritation of mucous membranes. It may also be accompanied by nausea, itching, aches, pains and depression. Sick building syndrome is getting commoner in big cities with small houses which are generally over-furnished. Some of the major pollutants whose indoor concentrations exceed those of the outdoor include gases such as carbon monoxide, carbon dioxide, oxides of nitrogen and organic substances like spores, formaldehydes, hydrocarbon aerosols and allergens. The sources are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products.\n\n5. Obviously, the spectrum of pollution is very wide and our options are limited. Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house.\n\n(Adapted from https://www.learncbse.in/reading-comprehension)\n\nQuestion:\nIt is NOT stated in the passage that __________",
+    "options": [
+      "choosing what we eat or drink can give us life comfort.",
+      "we have no role in the air we breathe.",
+      "air pollution affects us all in different ways.",
+      "we can choose or reject a food, a drink or a life comfort when we have the chance."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Paragraph 1 states the exact opposite of C: \"Air pollution is an issue which concerns us all alike... All, what is there in the air is inhaled by one and all living in those surroundings\"."
+  },
+  {
+    "questionNumber": 46,
+    "section": "Part II: Reading Comprehension (Passage I)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Cause & Effect in Airtight Rooms)",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Air Pollution]\n\n1. Air pollution is an issue which concerns us all alike. One can willingly choose or reject a food, a drink or a life comfort, but unfortunately there is little choice for the air we breathe. All, what is there in the air is inhaled by one and all living in those surroundings.\n\n2. Air pollutant is defined as a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations. It could either be gaseous or a particulate matter. The major harmful polluting gases are carbon monoxide, carbon dioxide, ozone and oxides of sulphur and nitrogen. The common particulate pollutants are the dusts of various inorganic or organic origins. Although we often talk of the outdoor air pollution caused by industrial and vehicular exhausts, the indoor pollution may prove to be as or a more serious cause of health problems.\n\n3. Recognition of air pollution is relatively recent. It is not uncommon to experience a feeling of 'suffocation' in a closed environment, which is often ascribed to the lack of oxygen. Fortunately, however, the composition of air is remarkably constant all over the world. There is about 79 per cent nitrogen and 21 per cent oxygen in the air, the other gases forming a very small fraction. It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight. Exposure to poisonous gases such as carbon monoxide may occur in a closed room, heated by burning coal inside. This may also prove to be fatal.\n\n4. What is more common in a poorly ventilated home is a vague constellation of symptoms described as the sick building syndrome. It is characterized by a general feeling of malaise, headache, dizziness and irritation of mucous membranes. It may also be accompanied by nausea, itching, aches, pains and depression. Sick building syndrome is getting commoner in big cities with small houses which are generally over-furnished. Some of the major pollutants whose indoor concentrations exceed those of the outdoor include gases such as carbon monoxide, carbon dioxide, oxides of nitrogen and organic substances like spores, formaldehydes, hydrocarbon aerosols and allergens. The sources are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products.\n\n5. Obviously, the spectrum of pollution is very wide and our options are limited. Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house.\n\n(Adapted from https://www.learncbse.in/reading-comprehension)\n\nQuestion:\nThe accumulation of carbon dioxide exhaled from lungs __________",
+    "options": [
+      "is the same in all places.",
+      "could result in serious illness and death.",
+      "increases in an airtight room and could cause suffocation.",
+      "is smaller and temporary in airtight rooms."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Paragraph 3 states: \"It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight\". Therefore, in an airtight room, it increases significantly and causes a feeling of suffocation."
+  },
+  {
+    "questionNumber": 47,
+    "section": "Part II: Reading Comprehension (Passage I)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Main Idea / Title Selection)",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Air Pollution]\n\n1. Air pollution is an issue which concerns us all alike. One can willingly choose or reject a food, a drink or a life comfort, but unfortunately there is little choice for the air we breathe. All, what is there in the air is inhaled by one and all living in those surroundings.\n\n2. Air pollutant is defined as a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations. It could either be gaseous or a particulate matter. The major harmful polluting gases are carbon monoxide, carbon dioxide, ozone and oxides of sulphur and nitrogen. The common particulate pollutants are the dusts of various inorganic or organic origins. Although we often talk of the outdoor air pollution caused by industrial and vehicular exhausts, the indoor pollution may prove to be as or a more serious cause of health problems.\n\n3. Recognition of air pollution is relatively recent. It is not uncommon to experience a feeling of 'suffocation' in a closed environment, which is often ascribed to the lack of oxygen. Fortunately, however, the composition of air is remarkably constant all over the world. There is about 79 per cent nitrogen and 21 per cent oxygen in the air, the other gases forming a very small fraction. It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight. Exposure to poisonous gases such as carbon monoxide may occur in a closed room, heated by burning coal inside. This may also prove to be fatal.\n\n4. What is more common in a poorly ventilated home is a vague constellation of symptoms described as the sick building syndrome. It is characterized by a general feeling of malaise, headache, dizziness and irritation of mucous membranes. It may also be accompanied by nausea, itching, aches, pains and depression. Sick building syndrome is getting commoner in big cities with small houses which are generally over-furnished. Some of the major pollutants whose indoor concentrations exceed those of the outdoor include gases such as carbon monoxide, carbon dioxide, oxides of nitrogen and organic substances like spores, formaldehydes, hydrocarbon aerosols and allergens. The sources are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products.\n\n5. Obviously, the spectrum of pollution is very wide and our options are limited. Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house.\n\n(Adapted from https://www.learncbse.in/reading-comprehension)\n\nQuestion:\nAn appropriate title for the passage could be __________",
+    "options": [
+      "How to tackle air pollution",
+      "Human contribution to air pollution",
+      "Causes and effects of air pollution",
+      "Types of pollution"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Throughout the passage, the author defines air pollution, identifies its outdoor and indoor sources/causes (exhausts, coal, construction materials, cosmetics), and explains its health effects (suffocation, fatal poisoning, sick building syndrome)."
+  },
+  {
+    "questionNumber": 48,
+    "section": "Part II: Reading Comprehension (Passage I)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Evaluating True/False Statements)",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage I — Air Pollution]\n\n1. Air pollution is an issue which concerns us all alike. One can willingly choose or reject a food, a drink or a life comfort, but unfortunately there is little choice for the air we breathe. All, what is there in the air is inhaled by one and all living in those surroundings.\n\n2. Air pollutant is defined as a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations. It could either be gaseous or a particulate matter. The major harmful polluting gases are carbon monoxide, carbon dioxide, ozone and oxides of sulphur and nitrogen. The common particulate pollutants are the dusts of various inorganic or organic origins. Although we often talk of the outdoor air pollution caused by industrial and vehicular exhausts, the indoor pollution may prove to be as or a more serious cause of health problems.\n\n3. Recognition of air pollution is relatively recent. It is not uncommon to experience a feeling of 'suffocation' in a closed environment, which is often ascribed to the lack of oxygen. Fortunately, however, the composition of air is remarkably constant all over the world. There is about 79 per cent nitrogen and 21 per cent oxygen in the air, the other gases forming a very small fraction. It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight. Exposure to poisonous gases such as carbon monoxide may occur in a closed room, heated by burning coal inside. This may also prove to be fatal.\n\n4. What is more common in a poorly ventilated home is a vague constellation of symptoms described as the sick building syndrome. It is characterized by a general feeling of malaise, headache, dizziness and irritation of mucous membranes. It may also be accompanied by nausea, itching, aches, pains and depression. Sick building syndrome is getting commoner in big cities with small houses which are generally over-furnished. Some of the major pollutants whose indoor concentrations exceed those of the outdoor include gases such as carbon monoxide, carbon dioxide, oxides of nitrogen and organic substances like spores, formaldehydes, hydrocarbon aerosols and allergens. The sources are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products.\n\n5. Obviously, the spectrum of pollution is very wide and our options are limited. Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house.\n\n(Adapted from https://www.learncbse.in/reading-comprehension)\n\nQuestion:\nWhich one of the following is NOT true according to the passage?",
+    "options": [
+      "Our indoor activities contribute to air pollution.",
+      "Industrial and vehicular exhausts are the main sources of indoor air pollution.",
+      "Indoor pollution is relatively less recognized than outdoor pollution.",
+      "Human beings cannot fully avoid breathing polluted air in their surroundings."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Paragraph 2 explicitly states that industrial and vehicular exhausts cause outdoor air pollution (\"the outdoor air pollution caused by industrial and vehicular exhausts\"), not indoor air pollution."
+  },
+  {
+    "questionNumber": 49,
+    "section": "Part II: Reading Comprehension (Passage I)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Specific Detail / Indoor Pollutants)",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage I — Air Pollution]\n\n1. Air pollution is an issue which concerns us all alike. One can willingly choose or reject a food, a drink or a life comfort, but unfortunately there is little choice for the air we breathe. All, what is there in the air is inhaled by one and all living in those surroundings.\n\n2. Air pollutant is defined as a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations. It could either be gaseous or a particulate matter. The major harmful polluting gases are carbon monoxide, carbon dioxide, ozone and oxides of sulphur and nitrogen. The common particulate pollutants are the dusts of various inorganic or organic origins. Although we often talk of the outdoor air pollution caused by industrial and vehicular exhausts, the indoor pollution may prove to be as or a more serious cause of health problems.\n\n3. Recognition of air pollution is relatively recent. It is not uncommon to experience a feeling of 'suffocation' in a closed environment, which is often ascribed to the lack of oxygen. Fortunately, however, the composition of air is remarkably constant all over the world. There is about 79 per cent nitrogen and 21 per cent oxygen in the air, the other gases forming a very small fraction. It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight. Exposure to poisonous gases such as carbon monoxide may occur in a closed room, heated by burning coal inside. This may also prove to be fatal.\n\n4. What is more common in a poorly ventilated home is a vague constellation of symptoms described as the sick building syndrome. It is characterized by a general feeling of malaise, headache, dizziness and irritation of mucous membranes. It may also be accompanied by nausea, itching, aches, pains and depression. Sick building syndrome is getting commoner in big cities with small houses which are generally over-furnished. Some of the major pollutants whose indoor concentrations exceed those of the outdoor include gases such as carbon monoxide, carbon dioxide, oxides of nitrogen and organic substances like spores, formaldehydes, hydrocarbon aerosols and allergens. The sources are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products.\n\n5. Obviously, the spectrum of pollution is very wide and our options are limited. Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house.\n\n(Adapted from https://www.learncbse.in/reading-comprehension)\n\nQuestion:\nWhich one of the following is mentioned as a source of indoor pollutants?",
+    "options": [
+      "Industrial exhausts",
+      "Particulate matters",
+      "Car exhausts",
+      "Cosmetics"
+    ],
+    "correctAnswer": "D",
+    "explanation": "The last sentence of Paragraph 4 states: \"The sources [of indoor pollutants] are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products\"."
+  },
+  {
+    "questionNumber": 50,
+    "section": "Part II: Reading Comprehension (Passage I)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Negative Fact / Sick Building Syndrome)",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Air Pollution]\n\n1. Air pollution is an issue which concerns us all alike. One can willingly choose or reject a food, a drink or a life comfort, but unfortunately there is little choice for the air we breathe. All, what is there in the air is inhaled by one and all living in those surroundings.\n\n2. Air pollutant is defined as a substance which is present while normally it is not there or present in an amount exceeding the normal concentrations. It could either be gaseous or a particulate matter. The major harmful polluting gases are carbon monoxide, carbon dioxide, ozone and oxides of sulphur and nitrogen. The common particulate pollutants are the dusts of various inorganic or organic origins. Although we often talk of the outdoor air pollution caused by industrial and vehicular exhausts, the indoor pollution may prove to be as or a more serious cause of health problems.\n\n3. Recognition of air pollution is relatively recent. It is not uncommon to experience a feeling of 'suffocation' in a closed environment, which is often ascribed to the lack of oxygen. Fortunately, however, the composition of air is remarkably constant all over the world. There is about 79 per cent nitrogen and 21 per cent oxygen in the air, the other gases forming a very small fraction. It is true that carbon dioxide exhaled out of lungs may accumulate in a closed and overcrowded place. But such an increase is usually small and temporary unless the room is really airtight. Exposure to poisonous gases such as carbon monoxide may occur in a closed room, heated by burning coal inside. This may also prove to be fatal.\n\n4. What is more common in a poorly ventilated home is a vague constellation of symptoms described as the sick building syndrome. It is characterized by a general feeling of malaise, headache, dizziness and irritation of mucous membranes. It may also be accompanied by nausea, itching, aches, pains and depression. Sick building syndrome is getting commoner in big cities with small houses which are generally over-furnished. Some of the major pollutants whose indoor concentrations exceed those of the outdoor include gases such as carbon monoxide, carbon dioxide, oxides of nitrogen and organic substances like spores, formaldehydes, hydrocarbon aerosols and allergens. The sources are attributed to a variety of construction materials, insulations, furnishings, adhesives, cosmetics, house dusts, fungi and other indoor products.\n\n5. Obviously, the spectrum of pollution is very wide and our options are limited. Indoor pollution may be handled relatively easily by an individual. Moreover, the good work must start from one's own house.\n\n(Adapted from https://www.learncbse.in/reading-comprehension)\n\nQuestion:\nWhich one of the following is NOT characteristic of the sick building syndrome?",
+    "options": [
+      "It is the result of the combined effect of various diseases.",
+      "It commonly occurs in homes with little or no ventilation.",
+      "It is an indistinct collection of symptoms.",
+      "It is becoming more common in big cities with small but over-furnished houses."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Paragraph 4 describes sick building syndrome as \"a vague constellation of symptoms\" (matching C) occurring in \"a poorly ventilated home\" (matching B) and \"getting commoner in big cities with small houses which are generally over-furnished\" (matching D) caused by indoor pollutants—not a combination of various diseases."
+  },
+  {
+    "questionNumber": 51,
+    "section": "Part II: Reading Comprehension (Passage II)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Concept Definition / Spirituality)",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage II — What Makes People Happier]\n\n1. Research suggests that our level of happiness depends partly on factors we cannot control – our genes and our life circumstances. But our level of happiness is also shaped by the choices we make. If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places. According to psychologists, the following are some of the factors which make people happier.\n\n2. To begin with, people who form close relationships tend to be happier than those who do not. The number of friends we have is not important. What matters is the quality of our relationships. Relationships that bring happiness usually involve the sharing of feelings, mutual respect, acceptance, trust, fun and empathy. As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis.\n\n3. People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence. Some people do this by going to a place of worship or praying. Some people practice yoga or meditation. Some people go for long walks in nature.\n\n4. In addition, people who think positively by being grateful, mindful, and optimistic are more likely to be happy. Being grateful means being thankful. Being mindful means being open to, focusing on, and enjoying the experiences of the present moment. Being optimistic means being hopeful about the future.\n\n(Adapted from https://continuingstudies.uvic.ca/elc/studyzone/410/reading/happy-brain1)\n\nQuestion:\nAs discussed in the passage, spirituality is about __________",
+    "options": [
+      "how devotion to religion is the source of happiness.",
+      "how we can lead our life properly.",
+      "getting happiness by understanding the beauty of nature.",
+      "recognizing and knowing more about the environment in which we live."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Paragraph 3 states: \"People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence\"."
+  },
+  {
+    "questionNumber": 52,
+    "section": "Part II: Reading Comprehension (Passage II)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Author's Argument / Happiness)",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — What Makes People Happier]\n\n1. Research suggests that our level of happiness depends partly on factors we cannot control – our genes and our life circumstances. But our level of happiness is also shaped by the choices we make. If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places. According to psychologists, the following are some of the factors which make people happier.\n\n2. To begin with, people who form close relationships tend to be happier than those who do not. The number of friends we have is not important. What matters is the quality of our relationships. Relationships that bring happiness usually involve the sharing of feelings, mutual respect, acceptance, trust, fun and empathy. As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis.\n\n3. People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence. Some people do this by going to a place of worship or praying. Some people practice yoga or meditation. Some people go for long walks in nature.\n\n4. In addition, people who think positively by being grateful, mindful, and optimistic are more likely to be happy. Being grateful means being thankful. Being mindful means being open to, focusing on, and enjoying the experiences of the present moment. Being optimistic means being hopeful about the future.\n\n(Adapted from https://continuingstudies.uvic.ca/elc/studyzone/410/reading/happy-brain1)\n\nQuestion:\nThe writer believes that __________",
+    "options": [
+      "people always look for happiness in the wrong places.",
+      "wealth, fame, and power are some of the factors that make us happy.",
+      "wealth, fame, and power are not necessarily the right sources of happiness.",
+      "the sources of happiness do not vary according to individuals."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Paragraph 1 states: \"If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places\"."
+  },
+  {
+    "questionNumber": 53,
+    "section": "Part II: Reading Comprehension (Passage II)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Negative Detail / Positive Thinking)",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — What Makes People Happier]\n\n1. Research suggests that our level of happiness depends partly on factors we cannot control – our genes and our life circumstances. But our level of happiness is also shaped by the choices we make. If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places. According to psychologists, the following are some of the factors which make people happier.\n\n2. To begin with, people who form close relationships tend to be happier than those who do not. The number of friends we have is not important. What matters is the quality of our relationships. Relationships that bring happiness usually involve the sharing of feelings, mutual respect, acceptance, trust, fun and empathy. As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis.\n\n3. People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence. Some people do this by going to a place of worship or praying. Some people practice yoga or meditation. Some people go for long walks in nature.\n\n4. In addition, people who think positively by being grateful, mindful, and optimistic are more likely to be happy. Being grateful means being thankful. Being mindful means being open to, focusing on, and enjoying the experiences of the present moment. Being optimistic means being hopeful about the future.\n\n(Adapted from https://continuingstudies.uvic.ca/elc/studyzone/410/reading/happy-brain1)\n\nQuestion:\nWhich one of the following is NOT an aspect of thinking positively?",
+    "options": [
+      "Being concerned about your position",
+      "Being thankful",
+      "Enjoying the present experience",
+      "Expecting good in the future"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Paragraph 4 defines positive thinking as being grateful (\"being thankful\" - B), mindful (\"enjoying the experiences of the present moment\" - C), and optimistic (\"being hopeful about the future\" - D). \"Being concerned about your position\" (A) is not mentioned."
+  },
+  {
+    "questionNumber": 54,
+    "section": "Part II: Reading Comprehension (Passage II)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Main Idea / Factors of Happiness)",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — What Makes People Happier]\n\n1. Research suggests that our level of happiness depends partly on factors we cannot control – our genes and our life circumstances. But our level of happiness is also shaped by the choices we make. If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places. According to psychologists, the following are some of the factors which make people happier.\n\n2. To begin with, people who form close relationships tend to be happier than those who do not. The number of friends we have is not important. What matters is the quality of our relationships. Relationships that bring happiness usually involve the sharing of feelings, mutual respect, acceptance, trust, fun and empathy. As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis.\n\n3. People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence. Some people do this by going to a place of worship or praying. Some people practice yoga or meditation. Some people go for long walks in nature.\n\n4. In addition, people who think positively by being grateful, mindful, and optimistic are more likely to be happy. Being grateful means being thankful. Being mindful means being open to, focusing on, and enjoying the experiences of the present moment. Being optimistic means being hopeful about the future.\n\n(Adapted from https://continuingstudies.uvic.ca/elc/studyzone/410/reading/happy-brain1)\n\nQuestion:\nAccording to the passage:",
+    "options": [
+      "The choices we make are partly responsible for our level of happiness.",
+      "Our genes do not influence our level of happiness.",
+      "We have no control over the things that make us happy.",
+      "We have full control over the things that make us happy."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Paragraph 1 states that happiness depends partly on factors we cannot control (genes and life circumstances) and is also shaped by the choices we make. Thus, our choices are partly responsible."
+  },
+  {
+    "questionNumber": 55,
+    "section": "Part II: Reading Comprehension (Passage II)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Author's Purpose)",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage II — What Makes People Happier]\n\n1. Research suggests that our level of happiness depends partly on factors we cannot control – our genes and our life circumstances. But our level of happiness is also shaped by the choices we make. If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places. According to psychologists, the following are some of the factors which make people happier.\n\n2. To begin with, people who form close relationships tend to be happier than those who do not. The number of friends we have is not important. What matters is the quality of our relationships. Relationships that bring happiness usually involve the sharing of feelings, mutual respect, acceptance, trust, fun and empathy. As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis.\n\n3. People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence. Some people do this by going to a place of worship or praying. Some people practice yoga or meditation. Some people go for long walks in nature.\n\n4. In addition, people who think positively by being grateful, mindful, and optimistic are more likely to be happy. Being grateful means being thankful. Being mindful means being open to, focusing on, and enjoying the experiences of the present moment. Being optimistic means being hopeful about the future.\n\n(Adapted from https://continuingstudies.uvic.ca/elc/studyzone/410/reading/happy-brain1)\n\nQuestion:\nWhich of the following is NOT the writer's purpose in this passage?",
+    "options": [
+      "advise people that they need to form close relationships in order to be happy.",
+      "explain why people should be happy in life.",
+      "tell people that they have full control over their happiness.",
+      "inform people about the choices they have to make themselves happy."
+    ],
+    "correctAnswer": "C",
+    "explanation": "The writer explicitly begins Paragraph 1 by noting that \"our level of happiness depends partly on factors we cannot control – our genes and our life circumstances\". Therefore, telling people they have full control over their happiness is false and NOT the writer's purpose."
+  },
+  {
+    "questionNumber": 56,
+    "section": "Part II: Reading Comprehension (Passage II)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Inference / Empathy in Relationships)",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage II — What Makes People Happier]\n\n1. Research suggests that our level of happiness depends partly on factors we cannot control – our genes and our life circumstances. But our level of happiness is also shaped by the choices we make. If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places. According to psychologists, the following are some of the factors which make people happier.\n\n2. To begin with, people who form close relationships tend to be happier than those who do not. The number of friends we have is not important. What matters is the quality of our relationships. Relationships that bring happiness usually involve the sharing of feelings, mutual respect, acceptance, trust, fun and empathy. As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis.\n\n3. People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence. Some people do this by going to a place of worship or praying. Some people practice yoga or meditation. Some people go for long walks in nature.\n\n4. In addition, people who think positively by being grateful, mindful, and optimistic are more likely to be happy. Being grateful means being thankful. Being mindful means being open to, focusing on, and enjoying the experiences of the present moment. Being optimistic means being hopeful about the future.\n\n(Adapted from https://continuingstudies.uvic.ca/elc/studyzone/410/reading/happy-brain1)\n\nQuestion:\nThe writer of the passage believes that in order to be happy one __________",
+    "options": [
+      "should have as many friends as possible.",
+      "should have deeper understanding of friends' feelings.",
+      "should be able to make others accept his/her thoughts.",
+      "should give priority to the benefits of others."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Paragraph 2 states that \"The number of friends we have is not important\" (eliminating A) and that quality relationships involve \"the sharing of feelings, mutual respect, acceptance, trust, fun and empathy\". Empathy means having a deep understanding of others' feelings."
+  },
+  {
+    "questionNumber": 57,
+    "section": "Part II: Reading Comprehension (Passage II)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Negative Detail / Sources of Happiness)",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — What Makes People Happier]\n\n1. Research suggests that our level of happiness depends partly on factors we cannot control – our genes and our life circumstances. But our level of happiness is also shaped by the choices we make. If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places. According to psychologists, the following are some of the factors which make people happier.\n\n2. To begin with, people who form close relationships tend to be happier than those who do not. The number of friends we have is not important. What matters is the quality of our relationships. Relationships that bring happiness usually involve the sharing of feelings, mutual respect, acceptance, trust, fun and empathy. As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis.\n\n3. People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence. Some people do this by going to a place of worship or praying. Some people practice yoga or meditation. Some people go for long walks in nature.\n\n4. In addition, people who think positively by being grateful, mindful, and optimistic are more likely to be happy. Being grateful means being thankful. Being mindful means being open to, focusing on, and enjoying the experiences of the present moment. Being optimistic means being hopeful about the future.\n\n(Adapted from https://continuingstudies.uvic.ca/elc/studyzone/410/reading/happy-brain1)\n\nQuestion:\nWhich one of the following is NOT mentioned as a source of happiness?",
+    "options": [
+      "Mutual respect",
+      "Material things",
+      "Helping others",
+      "Sharing of feelings"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Paragraph 1 explicitly states that chasing material things is \"looking for happiness in all the wrong places,\" whereas mutual respect (A), helping/caring for others (C), and sharing of feelings (D) are all listed in Paragraph 2 as true sources of happiness."
+  },
+  {
+    "questionNumber": 58,
+    "section": "Part II: Reading Comprehension (Passage II)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Negative Detail / Practicing Spirituality)",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — What Makes People Happier]\n\n1. Research suggests that our level of happiness depends partly on factors we cannot control – our genes and our life circumstances. But our level of happiness is also shaped by the choices we make. If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places. According to psychologists, the following are some of the factors which make people happier.\n\n2. To begin with, people who form close relationships tend to be happier than those who do not. The number of friends we have is not important. What matters is the quality of our relationships. Relationships that bring happiness usually involve the sharing of feelings, mutual respect, acceptance, trust, fun and empathy. As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis.\n\n3. People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence. Some people do this by going to a place of worship or praying. Some people practice yoga or meditation. Some people go for long walks in nature.\n\n4. In addition, people who think positively by being grateful, mindful, and optimistic are more likely to be happy. Being grateful means being thankful. Being mindful means being open to, focusing on, and enjoying the experiences of the present moment. Being optimistic means being hopeful about the future.\n\n(Adapted from https://continuingstudies.uvic.ca/elc/studyzone/410/reading/happy-brain1)\n\nQuestion:\nBased on the passage, which one of the following is NOT a way of practicing spirituality?",
+    "options": [
+      "Engaging in meditation",
+      "Going to a place of worship / Praying",
+      "Political leadership",
+      "Appreciating nature"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Paragraph 3 lists going to a place of worship, praying, practicing yoga or meditation (A), and going for long walks in nature / understanding the beauty of existence (D). Political leadership is never mentioned as a spiritual practice."
+  },
+  {
+    "questionNumber": 59,
+    "section": "Part II: Reading Comprehension (Passage II)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Logical Inference / Relationships)",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — What Makes People Happier]\n\n1. Research suggests that our level of happiness depends partly on factors we cannot control – our genes and our life circumstances. But our level of happiness is also shaped by the choices we make. If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places. According to psychologists, the following are some of the factors which make people happier.\n\n2. To begin with, people who form close relationships tend to be happier than those who do not. The number of friends we have is not important. What matters is the quality of our relationships. Relationships that bring happiness usually involve the sharing of feelings, mutual respect, acceptance, trust, fun and empathy. As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis.\n\n3. People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence. Some people do this by going to a place of worship or praying. Some people practice yoga or meditation. Some people go for long walks in nature.\n\n4. In addition, people who think positively by being grateful, mindful, and optimistic are more likely to be happy. Being grateful means being thankful. Being mindful means being open to, focusing on, and enjoying the experiences of the present moment. Being optimistic means being hopeful about the future.\n\n(Adapted from https://continuingstudies.uvic.ca/elc/studyzone/410/reading/happy-brain1)\n\nQuestion:\nPeople who do NOT have close relationships are __________",
+    "options": [
+      "not concerned about happiness in life.",
+      "happier than those who have.",
+      "not as happy as those who have.",
+      "care more about happiness in life."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Paragraph 2 states: \"people who form close relationships tend to be happier than those who do not\". Logically, those who do not form close relationships are not as happy as those who have."
+  },
+  {
+    "questionNumber": 60,
+    "section": "Part II: Reading Comprehension (Passage II)",
+    "grade": "Grade 12",
+    "topic": "Reading Comprehension (Detail / Supporting Others)",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — What Makes People Happier]\n\n1. Research suggests that our level of happiness depends partly on factors we cannot control – our genes and our life circumstances. But our level of happiness is also shaped by the choices we make. If you've been chasing wealth, fame, good looks, material things, and power, you may be looking for happiness in all the wrong places. According to psychologists, the following are some of the factors which make people happier.\n\n2. To begin with, people who form close relationships tend to be happier than those who do not. The number of friends we have is not important. What matters is the quality of our relationships. Relationships that bring happiness usually involve the sharing of feelings, mutual respect, acceptance, trust, fun and empathy. As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis.\n\n3. People who include spirituality in their daily life also tend to be happier. Practicing spirituality is a way of recognizing and trying to understand the wonder and beauty of existence. Some people do this by going to a place of worship or praying. Some people practice yoga or meditation. Some people go for long walks in nature.\n\n4. In addition, people who think positively by being grateful, mindful, and optimistic are more likely to be happy. Being grateful means being thankful. Being mindful means being open to, focusing on, and enjoying the experiences of the present moment. Being optimistic means being hopeful about the future.\n\n(Adapted from https://continuingstudies.uvic.ca/elc/studyzone/410/reading/happy-brain1)\n\nQuestion:\nCaring for the wellbeing of others can be done by __________",
+    "options": [
+      "chasing wealth and material things.",
+      "volunteering for an organization or supporting friends and family.",
+      "isolating oneself from society.",
+      "focusing only on personal achievements."
+    ],
+    "correctAnswer": "B",
+    "explanation": "The last two sentences of Paragraph 2 state: \"As well as forming intimate relationships, caring for the wellbeing of others can be a source of happiness. This might involve volunteering for an organization or reaching out to support friends and family on a regular basis\"."
+  },
+  {
+    "questionNumber": 61,
+    "section": "Part III: Vocabulary (Substitution)",
+    "grade": "Grade 10",
+    "topic": "Contextual Vocabulary (Synonyms: motion)",
+    "difficulty": "easy",
+    "prompt": "Choose the alternative that best substitutes the underlined or italicized word in the sentence:\n\nWe need additional fuel to keep the machine in motion, or it will stop suddenly.",
+    "options": [
+      "effect",
+      "control",
+      "movement",
+      "travel"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Keeping a machine \"in motion\" means keeping it moving or operating. Movement is the direct synonym for motion in mechanical/physical contexts."
+  },
+  {
+    "questionNumber": 62,
+    "section": "Part III: Vocabulary (Substitution)",
+    "grade": "Grade 10",
+    "topic": "Contextual Vocabulary (Synonyms: murderer)",
+    "difficulty": "easy",
+    "prompt": "Choose the alternative that best substitutes the underlined or italicized word in the sentence:\n\nThe police are still looking for the murderer who fatally shot three people and disappeared.",
+    "options": [
+      "contender",
+      "killer",
+      "burglar",
+      "loser"
+    ],
+    "correctAnswer": "B",
+    "explanation": "A murderer is someone who unlawfully kills another person (\"fatally shot three people\"). Killer is the direct synonym. (Burglar is a thief who breaks into buildings)."
+  },
+  {
+    "questionNumber": 63,
+    "section": "Part III: Vocabulary (Substitution)",
+    "grade": "Grade 10",
+    "topic": "Contextual Vocabulary (Synonyms: job)",
+    "difficulty": "easy",
+    "prompt": "Choose the alternative that best substitutes the underlined or italicized word in the sentence:\n\nHis job is to guide invited guests to their seats in the hall.",
+    "options": [
+      "attention",
+      "responsibility",
+      "focus",
+      "position"
+    ],
+    "correctAnswer": "B",
+    "explanation": "When describing a specific duty or task assigned to someone (\"His job is to guide...\"), responsibility (or duty) is the closest synonym."
+  },
+  {
+    "questionNumber": 64,
+    "section": "Part III: Vocabulary (Substitution)",
+    "grade": "Grade 11",
+    "topic": "Contextual Vocabulary (Word Formation & Synonyms: immobile)",
+    "difficulty": "easy",
+    "prompt": "Choose the alternative that best substitutes the underlined or italicized word in the sentence:\n\nThe patient who was in an accident remained immobile on the stretcher for about two hours.",
+    "options": [
+      "helpless",
+      "restless",
+      "motionless",
+      "hopeless"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Immobile (im- = not + mobile = able to move) means not moving or unable to move. Motionless (without motion) is its exact synonym."
+  },
+  {
+    "questionNumber": 65,
+    "section": "Part III: Vocabulary (Substitution)",
+    "grade": "Grade 11",
+    "topic": "Phrasal Verbs (Synonyms: make up)",
+    "difficulty": "medium",
+    "prompt": "Choose the alternative that best substitutes the underlined or italicized word in the sentence:\n\nA father, a mother and children who live together make up a family.",
+    "options": [
+      "form",
+      "start",
+      "conserve",
+      "join"
+    ],
+    "correctAnswer": "A",
+    "explanation": "The phrasal verb make up (in the sense of parts combining into a whole) means to constitute, compose, or form."
+  },
+  {
+    "questionNumber": 66,
+    "section": "Part III: Vocabulary (Substitution)",
+    "grade": "Grade 11",
+    "topic": "Idiomatic Prepositional Phrases (under pressure)",
+    "difficulty": "medium",
+    "prompt": "Choose the alternative that best substitutes the underlined or italicized word in the sentence:\n\nThey wasted some time at the beginning and now they are under pressure to complete the work in the time given.",
+    "options": [
+      "tension",
+      "struggle",
+      "fever",
+      "strength"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Being under pressure due to a tight deadline means experiencing stress or mental tension."
+  },
+  {
+    "questionNumber": 67,
+    "section": "Part III: Vocabulary (Substitution)",
+    "grade": "Grade 11",
+    "topic": "Contextual Vocabulary (Synonyms: cowardly)",
+    "difficulty": "medium",
+    "prompt": "Choose the alternative that best substitutes the underlined or italicized word in the sentence:\n\nThe man says that he can beat anybody in a fight, but actually he is a cowardly bully.",
+    "options": [
+      "brave",
+      "confident",
+      "dishonest",
+      "timid"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cowardly means lacking courage or being easily frightened. Timid (fearful, lacking courage or confidence) is the closest synonym among the choices, whereas brave and confident are antonyms."
+  },
+  {
+    "questionNumber": 68,
+    "section": "Part III: Vocabulary (Substitution)",
+    "grade": "Grade 12",
+    "topic": "Contextual Vocabulary (Verbs: heighten)",
+    "difficulty": "medium",
+    "prompt": "Choose the alternative that best substitutes the underlined or italicized word in the sentence:\n\nThe police should heighten the awareness of the community in order to put the rising criminal acts under control.",
+    "options": [
+      "legalize",
+      "realize",
+      "materialize",
+      "raise"
+    ],
+    "correctAnswer": "D",
+    "explanation": "To heighten awareness means to increase, intensify, or raise awareness."
+  },
+  {
+    "questionNumber": 69,
+    "section": "Part III: Vocabulary (Completion)",
+    "grade": "Grade 12",
+    "topic": "Academic & Formal Vocabulary (diversity)",
+    "difficulty": "medium",
+    "prompt": "Choose the word or phrase that best completes the sentence:\n\nAt the meeting, the Chairman allowed __________ of opinions for broader participation.",
+    "options": [
+      "description",
+      "perception",
+      "instability",
+      "diversity"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Allowing a diversity of opinions means welcoming a wide variety or range of different viewpoints so everyone can participate."
+  },
+  {
+    "questionNumber": 70,
+    "section": "Part III: Vocabulary (Completion)",
+    "grade": "Grade 11",
+    "topic": "Collocations with Programs/Projects (launched)",
+    "difficulty": "medium",
+    "prompt": "Choose the word or phrase that best completes the sentence:\n\nThe government __________ a new program which will help to solve the problem of over-flooding during the rainy season.",
+    "options": [
+      "reflected",
+      "advanced",
+      "launched",
+      "admitted"
+    ],
+    "correctAnswer": "C",
+    "explanation": "To officially start or introduce a new large-scale program, campaign, or project, the standard verb collocation is launched (\"launched a new program\")."
+  },
+  {
+    "questionNumber": 71,
+    "section": "Part III: Vocabulary (Completion)",
+    "grade": "Grade 10",
+    "topic": "Banking and Financial Vocabulary (loan)",
+    "difficulty": "easy",
+    "prompt": "Choose the word or phrase that best completes the sentence:\n\nMy friend took out a __________ from a bank to buy a house, but he could not pay it back in time.",
+    "options": [
+      "profit",
+      "saving",
+      "payment",
+      "loan"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Money borrowed from a bank that must be \"paid back\" is a loan (specifically, to take out a loan)."
+  },
+  {
+    "questionNumber": 72,
+    "section": "Part III: Vocabulary (Completion)",
+    "grade": "Grade 10",
+    "topic": "Social & Cultural Vocabulary (honeymoon)",
+    "difficulty": "easy",
+    "prompt": "Choose the word or phrase that best completes the sentence:\n\nThe newly married couple has just gone to Hawassa for their __________.",
+    "options": [
+      "honeymoon",
+      "tour",
+      "visit",
+      "lifestyle"
+    ],
+    "correctAnswer": "A",
+    "explanation": "A holiday taken by a newly married couple immediately after their wedding is called a honeymoon."
+  },
+  {
+    "questionNumber": 73,
+    "section": "Part III: Vocabulary (Completion)",
+    "grade": "Grade 11",
+    "topic": "Attitude Adjectives (pessimistic vs. optimistic)",
+    "difficulty": "medium",
+    "prompt": "Choose the word or phrase that best completes the sentence:\n\nAlthough we are facing many problems at present, we should not be __________ because I am sure that things will become better in the future.",
+    "options": [
+      "pessimistic",
+      "hopeful",
+      "optimistic",
+      "ridiculous"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Because the speaker is sure that \"things will become better in the future\" (optimistic/hopeful), we should not be pessimistic (expecting the worst / losing hope)."
+  },
+  {
+    "questionNumber": 74,
+    "section": "Part III: Vocabulary (Completion)",
+    "grade": "Grade 11",
+    "topic": "Formal Reporting Verbs (declare)",
+    "difficulty": "medium",
+    "prompt": "Choose the word or phrase that best completes the sentence:\n\nThe leader of the party will soon __________ that his party has won the recent national election.",
+    "options": [
+      "boast",
+      "lead",
+      "declare",
+      "advance"
+    ],
+    "correctAnswer": "C",
+    "explanation": "To officially and publicly announce an election result is to declare (\"declare that his party has won\")."
+  },
+  {
+    "questionNumber": 75,
+    "section": "Part III: Vocabulary (Completion)",
+    "grade": "Grade 10",
+    "topic": "Descriptive Adjectives (terrifying)",
+    "difficulty": "easy",
+    "prompt": "Choose the word or phrase that best completes the sentence:\n\nThe scene of the plane crash where all the passengers on board the plane lost their lives was really __________.",
+    "options": [
+      "terrifying",
+      "gigantic",
+      "boring",
+      "exhausting"
+    ],
+    "correctAnswer": "A",
+    "explanation": "A fatal plane crash scene where all passengers lost their lives is horrifying and terrifying (causing extreme fear and shock)."
+  },
+  {
+    "questionNumber": 76,
+    "section": "Part III: Vocabulary (Completion)",
+    "grade": "Grade 10",
+    "topic": "Cognitive Verbs (memorise)",
+    "difficulty": "easy",
+    "prompt": "Choose the word or phrase that best completes the sentence:\n\nI do not need to __________ the mobile numbers of my contacts because I have them all on my mobile phone.",
+    "options": [
+      "embrace",
+      "memorise",
+      "illicit",
+      "familiarise"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Because all contact numbers are saved on the mobile phone, there is no need to learn them by heart (memorise them)."
+  },
+  {
+    "questionNumber": 77,
+    "section": "Part III: Writing (Word Order)",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Writing & Grammar: Declarative Sentence Word Order, Modal Verbs ('must'), and Infinitive of Purpose ('to do')",
+    "difficulty": "easy",
+    "prompt": "The words below are given in the wrong order. When put in the right order, they form a correct sentence. Choose the alternative with the correct order:\n\nread / notes / you / to / the / must / your / test / do",
+    "options": [
+      "You must read your notes to do the test.",
+      "You must do read the test notes to your.",
+      "The test notes to read you must your do.",
+      "Read notes must to your do the test you."
+    ],
+    "correctAnswer": "A",
+    "explanation": "A standard English declarative sentence follows the Subject + Modal Auxiliary + Base Verb + Object + Infinitive of Purpose pattern. Here, 'You' (Subject) + 'must' (Modal) + 'read' (Base Verb) + 'your notes' (Object) + 'to do the test' (Infinitive phrase showing purpose) forms a grammatically accurate and meaningful sentence. Options B, C, and D violate basic English syntax."
+  },
+  {
+    "questionNumber": 78,
+    "section": "Part III: Writing (Word Order)",
+    "grade": "Grade 9",
+    "topic": "Writing & Grammar: Yes/No Interrogative Word Order (Present Continuous Tense & Adverbial Placement)",
+    "difficulty": "easy",
+    "prompt": "The words below are given in the wrong order. When put in the right order, they form a correct sentence. Choose the alternative with the correct order:\n\nthey / home / are / today / early / coming",
+    "options": [
+      "Coming are they early today home?",
+      "Are coming early home today they?",
+      "Are they coming home early today?",
+      "They are coming early home today?"
+    ],
+    "correctAnswer": "C",
+    "explanation": "To form a yes/no question in the present continuous tense, invert the auxiliary verb 'are' and the subject 'they', followed by the present participle 'coming'. When multiple adverbs follow a verb of motion, English follows the Place + Manner/Time order: 'home' (direction/place) + 'early' (manner/time) + 'today' (time) -> 'Are they coming home early today?' Option D uses declarative word order with a question mark and misplaces 'early' before 'home'."
+  },
+  {
+    "questionNumber": 79,
+    "section": "Part III: Writing (Word Order)",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Writing & Grammar: Conditional Sentences (Type III / Past Unreal Conditional Structure)",
+    "difficulty": "medium",
+    "prompt": "The words below are given in the wrong order. When put in the right order, they form a correct sentence. Choose the alternative with the correct order:\n\nif / they / have / us / phoned / we / joined / them / had / would",
+    "options": [
+      "We have if would them us had they joined phoned.",
+      "They would joined them have phoned if had we us.",
+      "If phoned them would they joined us have we had.",
+      "They would have joined us if we had phoned them."
+    ],
+    "correctAnswer": "D",
+    "explanation": "In a Type III (past unreal) conditional sentence where the main clause comes first, the structure is: Main Clause [Subject ('They') + 'would have' + Past Participle ('joined') + Object ('us')] + If-Clause ['if' + Subject ('we') + Past Perfect ('had phoned') + Object ('them')]. Thus, 'They would have joined us if we had phoned them' is the only grammatically valid arrangement."
+  },
+  {
+    "questionNumber": 80,
+    "section": "Part III: Writing (Spelling)",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Writing & Orthography: Spelling Rules (Suffixes '-ous' after '-ge', Prefixes 'im-', and High-Frequency Vocabulary)",
+    "difficulty": "easy",
+    "prompt": "Choose the word with the correct spelling:",
+    "options": [
+      "playright",
+      "courageous",
+      "approch",
+      "imature"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Option B ('courageous') is spelled correctly; words ending in '-ge' retain the 'e' before adding '-ous' to preserve the soft 'g' (/dʒ/) sound. The other options are misspelled: 'playright' should be 'playwright' (from 'wright', meaning maker/builder), 'approch' should be 'approach', and 'imature' should be 'immature' (double 'm' when adding the prefix 'im-' to 'mature')."
+  },
+  {
+    "questionNumber": 81,
+    "section": "Part III: Writing (Spelling)",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Writing & Orthography: Commonly Misspelled Academic Words",
+    "difficulty": "medium",
+    "prompt": "Choose the word with the correct spelling:",
+    "options": [
+      "lisence",
+      "accomodate",
+      "simultaneously",
+      "forcast"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Option C ('simultaneously') is spelled correctly. The other options contain classic spelling errors: 'lisence' should be 'licence' (BrE) or 'license' (AmE); 'accomodate' requires both double 'c' and double 'm' ('accommodate'); and 'forcast' is missing the 'e' in the prefix 'fore-' ('forecast')."
+  },
+  {
+    "questionNumber": 82,
+    "section": "Part III: Writing (Punctuation & Capitalization)",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Mechanics of Writing: Capitalization of Proper Nouns (Geographical Places, Monuments/Projects, and Months)",
+    "difficulty": "easy",
+    "prompt": "Choose the sentence with correct punctuation and capitalization:",
+    "options": [
+      "We are going to guba to see the great renaissance Dam In September.",
+      "We are going to guba to see the Great Renaissance Dam in september.",
+      "We are going to Guba to see the Great Renaissance Dam in September.",
+      "We are going to Guba to see the great renaissance Dam in september."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Proper nouns must always be capitalized in English. 'Guba' (the specific town/location in Benishangul-Gumuz), 'Great Renaissance Dam' (the official name of a major landmark/structure), and 'September' (a month of the year) must all begin with capital letters, while the preposition 'in' remains lowercase. Option C applies all capitalization rules accurately."
+  },
+  {
+    "questionNumber": 83,
+    "section": "Part III: Writing (Punctuation & Capitalization)",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Mechanics of Writing: Direct Speech Punctuation and Capitalization",
+    "difficulty": "easy",
+    "prompt": "Choose the sentence with correct punctuation and capitalization:",
+    "options": [
+      "The teacher said, \"Answer the questions in complete sentences.\"",
+      "The teacher said, Answer the questions in complete sentences.",
+      "The teacher said answer the questions in complete sentences.",
+      "The teacher said, \"answer the questions in complete sentences.\""
+    ],
+    "correctAnswer": "A",
+    "explanation": "When punctuating direct speech introduced by a reporting verb ('The teacher said'), a comma is placed after 'said', the exact spoken words are enclosed in quotation marks (\"...\"), the first word of the quoted complete sentence ('Answer') is capitalized, and a full stop is placed at the end. Option A satisfies all these requirements."
+  },
+  {
+    "questionNumber": 84,
+    "section": "Part III: Writing (Punctuation & Capitalization)",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Mechanics of Writing: End Punctuation in Indirect (Embedded) Questions",
+    "difficulty": "easy",
+    "prompt": "Choose the sentence with correct punctuation and capitalization:",
+    "options": [
+      "He wanted to find out how the accident occurred?",
+      "He wanted to find out how the accident occurred.",
+      "He wanted to find out how the accident occurred!",
+      "He wanted to find out how the accident occurred"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Although the clause 'how the accident occurred' relates to a question, the overall sentence ('He wanted to find out how the accident occurred.') is a declarative statement containing an indirect/embedded question. Indirect questions always end with a full stop (period), not a question mark or exclamation mark. Option D lacks end punctuation entirely."
+  },
+  {
+    "questionNumber": 85,
+    "section": "Part III: Writing (Punctuation & Capitalization)",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Mechanics of Writing: Commas in a Series (Listing Items)",
+    "difficulty": "easy",
+    "prompt": "Choose the sentence with correct punctuation and capitalization:",
+    "options": [
+      "She went to the shop and bought, a kilo of sugar, a litre of milk, a kilo of bananas and some vegetables.",
+      "She went to the shop and bought, a kilo of sugar a litre of milk a kilo of bananas and some vegetables.",
+      "She went to the shop and bought a kilo of sugar a litre of milk a kilo of bananas and some vegetables.",
+      "She went to the shop and bought a kilo of sugar, a litre of milk, a kilo of bananas and some vegetables."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Commas are used to separate three or more items in a list ('a kilo of sugar, a litre of milk, a kilo of bananas and some vegetables'). However, a comma must NEVER be placed immediately between a transitive verb ('bought') and its direct object. Option D correctly omits the comma after 'bought' while properly separating the items in the list."
+  },
+  {
+    "questionNumber": 86,
+    "section": "Part III: Writing (Topic Sentence)",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Paragraph Writing: Identifying the Topic Sentence vs. Supporting & Concluding Sentences",
+    "difficulty": "easy",
+    "prompt": "Read the paragraph carefully and choose the correct topic sentence:\n\nParagraph:\"There are several reasons why my father is in excellent health condition. First, he is very healthy because he has stopped smoking cigarettes. He quit smoking because whenever he climbed stairs, he would stop several times on his way and cough loudly. He also has good health as a result of stopping eating the wrong kinds of food. Third, he is in good physical shape for he does a lot of exercise. He swims three times a week at the local gym. In short, my father is in a better shape than some of his children.\"",
+    "options": [
+      "In short, my father is in a better shape than some of his children.",
+      "First, he is very healthy because he has stopped smoking cigarettes.",
+      "There are several reasons why my father is in excellent health condition.",
+      "He quit smoking because whenever he climbed stairs, he would stop several times on his way and cough loudly."
+    ],
+    "correctAnswer": "C",
+    "explanation": "A topic sentence states the overarching main idea of a paragraph and sets up what the rest of the sentences will explain. 'There are several reasons why my father is in excellent health condition' introduces the central theme, which is then supported by specific reasons ('First, he stopped smoking...', 'He also stopped eating wrong food...', 'Third, he does exercise...'). Option A is the concluding sentence, while B and D are supporting details."
+  },
+  {
+    "questionNumber": 87,
+    "section": "Part III: Writing (Topic Sentence)",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Paragraph Writing: Topic Sentence Identification in Expository Paragraphs",
+    "difficulty": "easy",
+    "prompt": "Read the paragraph carefully and choose the correct topic sentence:\n\nParagraph:\"Electric cars are the future in the automobile industry. As climate change gets worse, governments are going to start limiting the number of gasoline cars being produced. The cost of gas will continue to rise, which will make it harder for people to afford to run gas powered cars. As battery technology improves, electric cars will be able to travel longer distances and cost less to buy. Eventually most gas powered cars will be replaced by electric cars.\"",
+    "options": [
+      "Electric cars are the future in the automobile industry.",
+      "As climate change gets worse, governments are going to start limiting the number of gasoline cars being produced.",
+      "Eventually most gas powered cars will be replaced by electric cars.",
+      "The cost of gas will continue to rise, which will make it harder for people to afford to run gas powered cars."
+    ],
+    "correctAnswer": "A",
+    "explanation": "The opening sentence, 'Electric cars are the future in the automobile industry,' expresses the broad central claim of the paragraph. Every subsequent sentence provides supporting evidence for why electric cars represent the future (government limits on gasoline cars, rising fuel costs, and improving battery technology), while Option C serves as the concluding restatement."
+  },
+  {
+    "questionNumber": 88,
+    "section": "Part III: Writing (Letter Writing)",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Letter Writing: Salutations in Informal (Friendly) vs. Formal Letters",
+    "difficulty": "easy",
+    "prompt": "Which of the following is an appropriate opening salutation in an informal letter?",
+    "options": [
+      "Dear Dr. Jemal",
+      "Dear Mr. Samuel",
+      "Dear Mrs.",
+      "Dear Sarah"
+    ],
+    "correctAnswer": "D",
+    "explanation": "In an informal (friendly/personal) letter, the recipient is addressed by their first name only (e.g., 'Dear Sarah,'). Using academic or courtesy titles with a surname or full name ('Dear Dr. Jemal', 'Dear Mr. Samuel') is a convention of formal business/official letters, while 'Dear Mrs.' without a name is grammatically incomplete."
+  },
+  {
+    "questionNumber": 89,
+    "section": "Part III: Writing (Letter Writing)",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Letter Writing: Structure and Register of Informal Letters (Opening Remarks)",
+    "difficulty": "easy",
+    "prompt": "The sentence, \"I'm extremely delighted to hear that you are going to join the University next year\" is possibly taken from ________.",
+    "options": [
+      "the body of a formal letter",
+      "the end of a formal letter",
+      "the beginning of an informal letter",
+      "the closing remarks of an informal letter"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Informal letters typically begin with warm personal reactions to news received from a friend or relative (e.g., 'I'm extremely delighted to hear that...'). Furthermore, the use of the contraction ('I'm'), personal emotional tone ('extremely delighted'), and celebratory news about joining university clearly place this sentence at the beginning (opening paragraph) of an informal letter."
+  },
+  {
+    "questionNumber": 90,
+    "section": "Part III: Writing (Letter Writing)",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Letter Writing: Layout and Formatting of Informal Letters",
+    "difficulty": "easy",
+    "prompt": "The sender's address in an informal letter appears ________.",
+    "options": [
+      "near the right margin",
+      "below the closing salutation",
+      "near the left margin",
+      "below the date"
+    ],
+    "correctAnswer": "A",
+    "explanation": "In standard informal letter layout (taught across the Ethiopian secondary English curriculum), the sender's address is written at the top right-hand corner (near the right margin), with the date placed directly underneath it."
+  },
+  {
+    "questionNumber": 91,
+    "section": "Part III: Writing (Paragraph Coherence)",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Paragraph Coherence: Cause-and-Effect & Additive Discourse Markers ('One problem', 'Moreover', 'Unfortunately')",
+    "difficulty": "medium",
+    "prompt": "When put in the correct order, the sentences make a complete and coherent paragraph. Choose the alternative that shows the correct order:\n\na. One problem in relation to city buses is that a bus that should arrive at 7:30 in the morning may not arrive until 8:00 or later.b. Unfortunately, many people are often late for work or miss important appointments.c. Poor public transportation system is a big problem in our city.d. Moreover, bus drivers often pass up groups of people waiting for the bus at the bus stops.",
+    "options": [
+      "a c d b",
+      "c a d b",
+      "b c d a",
+      "a b c d"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Sentence (c) introduces the general topic ('Poor public transportation system is a big problem in our city'). Sentence (a) gives the first specific example ('One problem in relation to city buses is...'). Sentence (d) adds a second problem using the additive transition 'Moreover' ('Moreover, bus drivers often pass up...'). Finally, sentence (b) states the resulting consequence of these two problems ('Unfortunately, many people are often late for work...'). Thus, the coherent order is c - a - d - b."
+  },
+  {
+    "questionNumber": 92,
+    "section": "Part III: Writing (Paragraph Coherence)",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Paragraph Coherence: Chronological Ordering and Concluding Transitions ('At the beginning', 'Now', 'Thus')",
+    "difficulty": "medium",
+    "prompt": "When put in the correct order, the sentences make a complete and coherent paragraph. Choose the alternative that shows the correct order:\n\na. At the beginning, my elder sister used to go to gymnastics lessons and showed me how to do some gymnastics when she practiced at home.b. Now, I take part in gymnastics practice every Saturday.c. Thus, gymnastics is very special to me, especially because it is something I share with my sister.d. I started gymnastics when I was six years old and it has been my favourite hobby since then.",
+    "options": [
+      "d a b c",
+      "b a c d",
+      "b d c a",
+      "c a b d"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Sentence (d) serves as the topic sentence introducing the hobby ('I started gymnastics when I was six years old...'). Sentence (a) explains how it began in the past ('At the beginning, my elder sister used to...'). Sentence (b) shifts to the present ('Now, I take part in gymnastics practice every Saturday'). Sentence (c) concludes the paragraph with 'Thus' ('Thus, gymnastics is very special to me...'). Therefore, the correct order is d - a - b - c."
+  },
+  {
+    "questionNumber": 93,
+    "section": "Part III: Writing (Paragraph Coherence)",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Paragraph Coherence: Expository Progression and Transitional Links ('Similarly', 'In addition to lung diseases', 'Furthermore')",
+    "difficulty": "hard",
+    "prompt": "When put in the correct order, the sentences make a complete and coherent paragraph. Choose the alternative that shows the correct order:\n\na. Similarly, smoking is linked to other lung diseases such as bronchitis.b. Furthermore, there is substantial research evidence that even passive smoking can have long term effects on health.c. The link between smoking and cancer is well known.d. In addition to lung diseases, smokers have a greater risk of heart disease later in life.",
+    "options": [
+      "a c d b",
+      "b d c a",
+      "c a d b",
+      "c d b a"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Sentence (c) opens with a well-known fact ('The link between smoking and cancer is well known'). Sentence (a) connects directly to (c) using 'Similarly' and 'other lung diseases' ('Similarly, smoking is linked to other lung diseases such as bronchitis'). Sentence (d) explicitly bridges from (a) via the phrase 'In addition to lung diseases, smokers have a greater risk of heart disease...'. Finally, sentence (b) broadens the scope from active smokers to passive smoking ('Furthermore, there is substantial research evidence that even passive smoking...'). The logical sequence is c - a - d - b."
+  },
+  {
+    "questionNumber": 94,
+    "section": "Part III: Writing (Paragraph Coherence)",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Paragraph Coherence: Enumerative Transitions ('Some people...', 'Others...', 'Still others...')",
+    "difficulty": "easy",
+    "prompt": "When put in the correct order, the sentences make a complete and coherent paragraph. Choose the alternative that shows the correct order:\n\na. Some people move to find better jobs.b. Others want to move to a place with a lower cost of living.c. There are many reasons why people go to other places to live.d. Still others want to move to a place with less crime.",
+    "options": [
+      "c a b d",
+      "a d b c",
+      "d a b c",
+      "a b d c"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Sentence (c) is the topic sentence ('There are many reasons why people go to other places to live'). When listing groups of people in English, the fixed correlative sequence is 'Some people...' (a) -> 'Others...' (b) -> 'Still others...' (d). Therefore, the correct order is c - a - b - d."
+  },
+  {
+    "questionNumber": 95,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Communicative English: Expressing Likes, Dislikes, and Preferences (Genres of Films)",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nMiriam: What sort of films do you like to watch during your free time?Sara: ________________________________________________",
+    "options": [
+      "I sometimes watch science fiction, but I love romantic films.",
+      "Films are a good pass-time entertainment.",
+      "My favourite actress is Mulualem.",
+      "I haven't watched any films for a couple of weeks."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Miriam asks 'What sort of films' (i.e., what genres/types of movies) Sara likes to watch. Option A directly answers the question by specifying film genres ('science fiction' and 'romantic films'). Options B, C, and D talk about entertainment in general, an actress, or recent viewing frequency rather than film genres."
+  },
+  {
+    "questionNumber": 96,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Communicative English: Classroom Interaction — Asking for and Giving Examples",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nTeacher: ________________________________________________Student: Earthquake is one type of natural disaster.",
+    "options": [
+      "Where do natural disasters occur?",
+      "What do you meant by natural disaster?",
+      "Give an example of a natural disaster.",
+      "When natural disasters occur in Ethiopia?"
+    ],
+    "correctAnswer": "C",
+    "explanation": "The student responds by naming a specific instance ('Earthquake is one type of natural disaster'). This directly fulfills the prompt 'Give an example of a natural disaster.' Option B asks for a definition (and is grammatically incorrect: 'meant'), while A and D ask about place and time."
+  },
+  {
+    "questionNumber": 97,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Communicative English: Expressing Opinions and Agreeing on Constructive Solutions",
+    "difficulty": "medium",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nTariku: ________________________________________________Barnabas: I think that is what we need in order to get rid of poverty.",
+    "options": [
+      "There are a lot of challenges that our country is facing.",
+      "We must prevent conflicts and live together peacefully.",
+      "I do not understand why some people like to cause trouble to others.",
+      "Many young people are in need of jobs."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Barnabas's reply ('I think that is what we need in order to get rid of poverty') uses the demonstrative pronoun 'that' to refer to a positive prerequisite or action proposed by Tariku. Option B ('We must prevent conflicts and live together peacefully') presents the positive condition needed to eradicate poverty. Options A, C, and D describe problems rather than something we 'need' to overcome poverty."
+  },
+  {
+    "questionNumber": 98,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Communicative English: Clarifying and Rephrasing Meaning ('To put it another way...')",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nSeifu: Surely, the internet is not a perfect invention.Biruk: What do you mean?Seifu: ________________________________________________",
+    "options": [
+      "To put it another way, it has many shortcomings.",
+      "Using the internet speeds up our work.",
+      "If you want, I can show you how to use it.",
+      "The internet is the art of the technology."
+    ],
+    "correctAnswer": "A",
+    "explanation": "When Biruk asks 'What do you mean?', he is requesting clarification of Seifu's statement that the internet is 'not a perfect invention'. Option A uses a classic rephrasing discourse marker ('To put it another way...') and restates the exact meaning ('it has many shortcomings')."
+  },
+  {
+    "questionNumber": 99,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Communicative English: Making Promises and Responding to Requests",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nFather: Please let me know that you have arrived there safely.Daughter: ________________________________________________",
+    "options": [
+      "I will call you as soon as I reach there.",
+      "It is going to be a long journey.",
+      "I'm sure I will enjoy my flight.",
+      "I am sure we will be there by this time tomorrow."
+    ],
+    "correctAnswer": "A",
+    "explanation": "The father requests to be informed upon his daughter's safe arrival. Option A ('I will call you as soon as I reach there') directly reassures him and promises to fulfill his request immediately upon arrival."
+  },
+  {
+    "questionNumber": 100,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 9",
+    "topic": "Communicative English: Everyday Conversational Exchanges",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nDaughter: Are you ready, Mum?Mother: ________________________________________________",
+    "options": [
+      "Yes, we will ready to buy a lot of things.",
+      "No, there is no one else coming.",
+      "Yes, I am coming.",
+      "What are you doing there?"
+    ],
+    "correctAnswer": "C",
+    "explanation": "When someone asks 'Are you ready?' before leaving or starting an activity, the natural and grammatically sound response is 'Yes, I am coming.' Option A is ungrammatical ('will ready'), while B and D are contextually irrelevant."
+  },
+  {
+    "questionNumber": 101,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Communicative English: Giving Advice and Suggestions in Multi-Turn Dialogues",
+    "difficulty": "medium",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nGadissa: I'm very much in need of money, but I don't know who I can ask.Gemechu: ________________________________________________",
+    "options": [
+      "I asked my elder brother to give me some money, but he refused.",
+      "Why do you need the money?",
+      "Our father might give you some if you ask him.",
+      "I think we need to save some of the money that we earn every month."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Gadissa states that he urgently needs money but does not know whom he can ask ('I don't know who I can ask'). Gemechu responds directly to this dilemma by suggesting a specific person who might help: 'Our father might give you some if you ask him.' Option A repeats a first-person problem rather than advising Gadissa, Option B probes into why he needs it without helping him figure out whom to ask, and Option D gives general financial advice about monthly savings."
+  },
+  {
+    "questionNumber": 102,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Communicative English: Answering Yes/No Opinion Questions about Quantity and Sufficiency",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nJournalist: Do you think there is enough fish for you to catch every day in this lake?Fisherman: ________________________________________________",
+    "options": [
+      "The lake is home to different kinds of fish and other aquatic animals.",
+      "My livelihood depends on fishing, and I love fishing more than anything else.",
+      "Most of us who live around here do fishing both for food and sport.",
+      "There are more fishermen nowadays and there aren't enough for everyone."
+    ],
+    "correctAnswer": "D",
+    "explanation": "The journalist asks whether there is 'enough fish' to catch daily. Option D directly addresses sufficiency ('There are more fishermen nowadays and there aren't enough for everyone'), explaining that increased competition has made the fish supply insufficient."
+  },
+  {
+    "questionNumber": 103,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 10",
+    "topic": "Communicative English: Explaining Causes and Giving Supporting Reasons",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nAman: Talking on the mobile phone is not free from problems.Abdul: How?Aman: ________________________________________________",
+    "options": [
+      "There may be sudden connection problem.",
+      "Smart phones are expensive for many people.",
+      "Everybody has a mobile phone these days.",
+      "I don't pick up the phone if I don't want to."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Aman specifically states that 'Talking on the mobile phone' (the act of making a call/conversing) has problems. When Abdul asks 'How?', Option A ('There may be sudden connection problem') directly illustrates a problem experienced while talking on the phone, whereas Option B refers to purchasing a device rather than talking on it."
+  },
+  {
+    "questionNumber": 104,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Communicative English: Proposing Solutions and Expressing Obligation/Advice",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nDinku: Traffic accidents continue to be real problems in this city.Fikru: ________________________________________________",
+    "options": [
+      "The new roads that are being built in different parts of the city are very wide.",
+      "Many people use buses because they are cheaper.",
+      "The population of the city is growing fast and the city is expanding in all directions.",
+      "Both drivers and pedestrians must be much more careful on the road."
+    ],
+    "correctAnswer": "D",
+    "explanation": "In response to Dinku's concern about ongoing traffic accidents, Fikru offers a relevant recommendation/solution: 'Both drivers and pedestrians must be much more careful on the road.' The other options discuss road width, bus fares, or urban expansion without addressing traffic safety."
+  },
+  {
+    "questionNumber": 105,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Communicative English: Adding Points in a Group Discussion ('Plus the fact that...')",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nFarmer 1: Why are we not able to get enough crops from the land recently?Farmer 2: It is because we have been farming the land for many years without making any changes on it.Farmer 3: ________________________________________________",
+    "options": [
+      "We should continue to work as hard as we used to.",
+      "We always work very hard but we do not produce enough.",
+      "We may not even feed our families.",
+      "Plus the fact that we have never used fertilizers is another cause."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Farmer 1 asks for the causes ('Why...') of low crop yield, and Farmer 2 gives one cause (continuous farming without crop rotation/changes). Farmer 3 builds on Farmer 2's explanation by contributing an additional cause: 'Plus the fact that we have never used fertilizers is another cause.'"
+  },
+  {
+    "questionNumber": 106,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Communicative English: Comparing Experiences ('In my case...')",
+    "difficulty": "medium",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nMubarak: ________________________________________________Semir: In my case, there were more primary school teachers than in the secondary school.",
+    "options": [
+      "The teachers in my primary school were more helpful than those in my secondary school.",
+      "The number of teachers in my secondary school was greater than those in my primary school.",
+      "There are many differences between primary and secondary school teachers.",
+      "There were many more female teachers than male teachers in my primary school."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Semir starts with 'In my case, there were more primary school teachers than in the secondary school.' The phrase 'In my case' signals a contrast with Mubarak's personal experience regarding the total number of teachers in primary vs. secondary school. Option B ('The number of teachers in my secondary school was greater than those in my primary school') provides the exact counterpart statement."
+  },
+  {
+    "questionNumber": 107,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Communicative English: Expressing Objections / Excuses to Parental Directives",
+    "difficulty": "medium",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nFather: ________________________________________________Son: But Dad, I have agreed to study with my friends on Saturday.",
+    "options": [
+      "The weekend is approaching, and you must be looking forward to it.",
+      "What are you going to do next Saturday?",
+      "You know that your grandmother loves you very much and talks about you always.",
+      "I have decided that you will go and visit your grandmother on Saturday."
+    ],
+    "correctAnswer": "D",
+    "explanation": "The son's response begins with an objection ('But Dad, I have agreed to study with my friends on Saturday'). A speaker says 'But Dad, I already have plans on Saturday' only when the father has just instructed or decided that the son must do something else on Saturday ('I have decided that you will go and visit your grandmother on Saturday'). If the father had merely asked 'What are you going to do next Saturday?' (Option B), the son would not object with 'But Dad...'."
+  },
+  {
+    "questionNumber": 108,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Communicative English: Responding to Emotional Appeals and Requests Between Friends",
+    "difficulty": "medium",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nFikirte: ________________________________________________Hilina: I am your friend and I am always ready to do anything that makes you happy.",
+    "options": [
+      "If you like me, you will go to my parents' house with me tomorrow.",
+      "Is there anything I can do for you?",
+      "I have some good news to share with you, but don't be in a hurry.",
+      "Can you guess what I want you to do for me?"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Hilina reassures Fikirte of her friendship and willingness to fulfill her wish ('I am your friend and I am always ready to do anything that makes you happy'). This directly responds to Fikirte's conditional appeal to their friendship in Option A ('If you like me, you will go to my parents' house with me tomorrow')."
+  },
+  {
+    "questionNumber": 109,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Communicative English: Expressing Strong Agreement on Social Issues",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nGaroma: ________________________________________________Alambo: I am against all kinds of discrimination.",
+    "options": [
+      "Disability should not be a reason for discrimination.",
+      "There are people with disability all over the world.",
+      "Why do people discriminate against others?",
+      "When did you first hear about discrimination?"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Garoma condemns a specific type of discrimination ('Disability should not be a reason for discrimination'), and Alambo agrees while broadening the principle ('I am against all kinds of discrimination')."
+  },
+  {
+    "questionNumber": 110,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Communicative English: Formal Meeting Etiquette — Polite Interruption and Setting Agenda Priorities",
+    "difficulty": "medium",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nChairperson: Let us discuss how inflation in our country is affecting our work.Participant: ________________________________________________",
+    "options": [
+      "There is inflation all over the world and there is a need for global...",
+      "I think inflation is difficult to control.",
+      "Excuse me for interrupting, but we should first discuss the problems in our organization.",
+      "There is no doubt that inflation affects the lives of our citizens in many ways."
+    ],
+    "correctAnswer": "C",
+    "explanation": "In a formal meeting chaired by a Chairperson proposing an agenda item, Option C demonstrates proper meeting register ('Excuse me for interrupting, but we should first discuss the problems in our organization'). Options A, B, and D make general statements about national/global inflation rather than addressing how it affects their work or engaging appropriately with the meeting agenda."
+  },
+  {
+    "questionNumber": 111,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 9",
+    "topic": "Communicative English: Answering Wh-Questions ('Which...')",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nFekadu: Which radio station do you listen to?Alemu: ________________________________________________",
+    "options": [
+      "I didn't listen to any radio programmes these last two days.",
+      "These days there are many radio programmes to listen to.",
+      "Radio Fana programmes are my favourite.",
+      "I am not sure how many radio programmes there are at present."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Fekadu asks 'Which radio station' Alemu listens to. Option C names a specific station ('Radio Fana programmes are my favourite'), directly answering the question."
+  },
+  {
+    "questionNumber": 112,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Communicative English: Substantiating a Prediction with Evidence ('To give you an idea...')",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nTesfu: I think we are going to face serious social problems in our city.Bereket: How?Tesfu: ________________________________________________",
+    "options": [
+      "All of us have a responsibility to tackle our social problems.",
+      "To give you an idea, there are too many unemployed young people in the city.",
+      "The solution to our problems is for us to sit together and work towards a common goal.",
+      "The administration is doing its best to create jobs to reduce the number of unemployed people."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Bereket asks 'How?' to challenge or request evidence for Tesfu's prediction of serious social problems. Tesfu substantiates his claim in Option B by providing concrete evidence ('To give you an idea, there are too many unemployed young people in the city')."
+  },
+  {
+    "questionNumber": 113,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Communicative English: Using Proverbs and Idiomatic Expressions in Context",
+    "difficulty": "medium",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nAhmed: I was very hungry and actually ate a lot at lunch time.Muhaba: ________________________________________________",
+    "options": [
+      "Food has become expensive recently.",
+      "I and my best friend eat lunch together frequently.",
+      "They say hunger is the best sauce.",
+      "I usually can't find a good place to eat."
+    ],
+    "correctAnswer": "C",
+    "explanation": "'Hunger is the best sauce' is a well-known English proverb meaning that when you are very hungry, any food tastes delicious and you eat heartily. It is a witty and natural conversational response to Ahmed saying he was very hungry and ate a lot."
+  },
+  {
+    "questionNumber": 114,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Communicative English: Asking for and Giving Directions",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nForeigner: ________________________________________________Wolde: Oh, sorry, I don't know. I don't live in this part of the city.",
+    "options": [
+      "Can you tell me where the Capital Hotel is?",
+      "Excuse me. Do you live near here, if I may ask?",
+      "Can I talk to you for a minute, please?",
+      "How long have you been living here?"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Wolde apologizes for not knowing ('Oh, sorry, I don't know') and explains why ('I don't live in this part of the city'). This is the standard response when a stranger asks for directions to a specific landmark ('Can you tell me where the Capital Hotel is?')."
+  },
+  {
+    "questionNumber": 115,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 11 & Grade 12",
+    "topic": "Communicative English: Expanding on a Point and Expressing Concern in Discussions",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nThe Chairman: People who live in this Wereda face a lot of problems.Participant: ________________________________________________",
+    "options": [
+      "The awful thing is nobody seems to be concerned about solving any of their problems.",
+      "The population of this Wereda are hardworking.",
+      "I feel that it is not the best way of problem solving like this in the future, Mr. Chairman.",
+      "The people of this Wereda have respect for one another."
+    ],
+    "correctAnswer": "A",
+    "explanation": "The Chairman remarks that residents of the Wereda face many problems. The participant reinforces and elaborates on this concern in Option A: 'The awful thing is nobody seems to be concerned about solving any of their problems.'"
+  },
+  {
+    "questionNumber": 116,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Communicative English: Classroom Interaction — Expressing Lack of Understanding and Rephrasing",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nStudent: I am sorry, but I haven't understood your last point.Teacher: ________________________________________________",
+    "options": [
+      "I don't think you understand.",
+      "You will have some point about it.",
+      "Do you have any other questions?",
+      "Ok. Let me rephrase what I just said."
+    ],
+    "correctAnswer": "D",
+    "explanation": "When a student politely states that they have not understood a point, a supportive teacher responds by offering to explain it in simpler or different words: 'Ok. Let me rephrase what I just said.'"
+  },
+  {
+    "questionNumber": 117,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 10 & Grade 11",
+    "topic": "Communicative English: Expressing Consequences and Alternatives in Everyday Conversation",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nTemesgen: Modern health treatment has become far too expensive these days.Dilamo: ________________________________________________",
+    "options": [
+      "There are more medical doctors nowadays.",
+      "I have no option but go to a traditional healer because the treatment is less expensive.",
+      "If you cannot afford to pay, you better stay at home.",
+      "We need to get treatments when we become ill."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Temesgen highlights the high cost of modern healthcare. Dilamo responds logically by sharing how that high cost affects his choices: 'I have no option but go to a traditional healer because the treatment is less expensive.'"
+  },
+  {
+    "questionNumber": 118,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 9",
+    "topic": "Communicative English: Answering Yes/No Personal Questions Directly",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nDuressa: Are you the eldest in your family?Demitu: ________________________________________________",
+    "options": [
+      "My sister is older than me.",
+      "My brothers are all older than me.",
+      "No, I am the youngest of the children of my family.",
+      "We are a large family with four children."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Duressa asks a direct Yes/No superlative question about Demitu's birth order ('Are you the eldest in your family?'). Option C ('No, I am the youngest of the children of my family' — note that 'No, I' is partially covered by a stamp in the scanned booklet) directly answers the question and specifies her exact superlative position in the family ('the youngest of the children of my family'). Options A and B only compare her age to a sister or brothers without clarifying her overall position in the whole family, and Option D only states family size."
+  },
+  {
+    "questionNumber": 119,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Communicative English: Polite Requests for Location and Giving Precise Directions",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nBikila: Could you tell me where the Federal Ministry of Education building is?Olani: ________________________________________________",
+    "options": [
+      "The Ministry of Education has many offices.",
+      "It is at Arat Kilo, close to the Miazia 27 Monument.",
+      "Why do you want to know the location?",
+      "You mean the education bureau of Addis Ababa?"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Bikila politely asks for the location of the Federal Ministry of Education building. Olani gives the exact location using well-known Addis Ababa landmarks: 'It is at Arat Kilo, close to the Miazia 27 Monument.'"
+  },
+  {
+    "questionNumber": 120,
+    "section": "Part IV: Communicative Activities",
+    "grade": "Grade 9 & Grade 10",
+    "topic": "Communicative English: Expressing Frequency of Habits ('How often...')",
+    "difficulty": "easy",
+    "prompt": "Complete the dialogue with the most appropriate alternative:\n\nSihan: How often do you read in the library?Shewit: ________________________________________________",
+    "options": [
+      "The library is far from my dormitory.",
+      "I don't like reading in the library.",
+      "I spend most of my evenings reading in the library.",
+      "I like reading at home."
+    ],
+    "correctAnswer": "C",
+    "explanation": "'How often...' asks about the frequency of an action. Option C ('I spend most of my evenings reading in the library') expresses how frequently Shewit reads in the library, whereas Options A, B, and D state distance or personal preferences without answering the frequency question."
+  }
+]

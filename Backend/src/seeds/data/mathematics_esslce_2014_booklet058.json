@@ -1,0 +1,978 @@
+[
+  {
+    "questionNumber": 1,
+    "grade": "Grade 11",
+    "topic": "Unit 6: Conic Sections (Ellipse)",
+    "difficulty": "easy",
+    "prompt": "What is the locus of all points in the plane in which the sum of the distances from two fixed points is constant?",
+    "options": [
+      "Hyperbola",
+      "Parabola",
+      "Ellipse",
+      "Circle"
+    ],
+    "correctAnswer": "C",
+    "explanation": "By geometric definition, an ellipse is the locus of all points P(x, y) in a plane such that the sum of the distances from P to two fixed points F₁ and F₂ (called the foci) is a constant (d₁ + d₂ = 2a). A hyperbola has a constant difference of distances, a parabola is equidistant from a focus and a directrix, and a circle has a constant distance from a single center."
+  },
+  {
+    "questionNumber": 2,
+    "grade": "Grade 10",
+    "topic": "Unit 5: Trigonometric Functions",
+    "difficulty": "easy",
+    "prompt": "The radian measure of an angle of 120° is equal to:",
+    "options": [
+      "2π / 3",
+      "π / 4",
+      "π / 2",
+      "π / 8"
+    ],
+    "correctAnswer": "A",
+    "explanation": "To convert degrees to radians, multiply the degree measure by π / 180°:120° × (π / 180°) = 120π / 180 = 2π / 3 radians."
+  },
+  {
+    "questionNumber": 3,
+    "grade": "Grade 10",
+    "topic": "Unit 7: Measurement (Surface Area of Solids)",
+    "difficulty": "easy",
+    "prompt": "What is the surface area of a sphere with radius 6 cm?",
+    "options": [
+      "24π cm²",
+      "36π cm²",
+      "48π cm²",
+      "144π cm²"
+    ],
+    "correctAnswer": "D",
+    "explanation": "The surface area S of a sphere of radius r is given by the formula S = 4πr².Substituting r = 6 cm gives S = 4π(6)² = 4π(36) = 144π cm²."
+  },
+  {
+    "questionNumber": 4,
+    "grade": "Grade 9",
+    "topic": "Unit 5: Geometry and Measurement (Regular Polygons)",
+    "difficulty": "easy",
+    "prompt": "Which of the following is the measure of an exterior angle of a 10-sided regular polygon?",
+    "options": [
+      "72°",
+      "144°",
+      "180°",
+      "36°"
+    ],
+    "correctAnswer": "D",
+    "explanation": "The sum of the exterior angles of any convex polygon is 360°. For an n-sided regular polygon, each exterior angle measures 360° / n.For n = 10: Exterior angle = 360° / 10 = 36°."
+  },
+  {
+    "questionNumber": 5,
+    "grade": "Grade 10",
+    "topic": "Unit 7: Measurement (Volume of Cones)",
+    "difficulty": "easy",
+    "prompt": "If the volume of a right circular cone is 64π cm³ and the diameter of its base is 8 cm, what is the height of the cone?",
+    "options": [
+      "4 cm",
+      "12 cm",
+      "8 cm",
+      "3 cm"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Given diameter d = 8 cm, the radius of the base is r = d / 2 = 4 cm.The volume of a right circular cone is V = (1/3)πr²h.64π = (1/3)π(4)²h  ⇒  64π = (16/3)πh  ⇒  h = (64 × 3) / 16 = 12 cm."
+  },
+  {
+    "questionNumber": 6,
+    "grade": "Grade 9",
+    "topic": "Unit 1: The Number System (Division Algorithm)",
+    "difficulty": "easy",
+    "prompt": "What are the quotient and remainder respectively, when 75 is divided by 20?",
+    "options": [
+      "3 and 15",
+      "4 and 5",
+      "2 and 19",
+      "15 and 3"
+    ],
+    "correctAnswer": "A",
+    "explanation": "By Euclid's Division Lemma, a = bq + r where 0 ≤ r < b.Dividing 75 by 20: 75 = 20 × 3 + 15.Thus, the quotient is q = 3 and the remainder is r = 15."
+  },
+  {
+    "questionNumber": 7,
+    "grade": "Grade 10",
+    "topic": "Unit 2: Polynomial Functions (Location Theorem)",
+    "difficulty": "medium",
+    "prompt": "If f(x) = x² + px + 1, where f(0) and f(1) have opposite signs so that f has a root in (0, 1), then which one of the following numbers is a possible value of p?",
+    "options": [
+      "-3",
+      "-2",
+      "2",
+      "3"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Evaluate f(x) at the endpoints x = 0 and x = 1:f(0) = 0² + p(0) + 1 = 1 > 0.Since f(0) and f(1) have opposite signs and f(0) > 0, we must have f(1) < 0:f(1) = 1² + p(1) + 1 = p + 2 < 0  ⇒  p < -2.Among the given choices, only p = -3 satisfies p < -2."
+  },
+  {
+    "questionNumber": 8,
+    "grade": "Grade 9",
+    "topic": "Unit 6: Statistics and Probability",
+    "difficulty": "easy",
+    "prompt": "In rolling a fair die, what is the probability of obtaining 3 or 5?",
+    "options": [
+      "1/3",
+      "1/4",
+      "1/6",
+      "1/2"
+    ],
+    "correctAnswer": "A",
+    "explanation": "The sample space of rolling a fair 6-sided die is S = {1, 2, 3, 4, 5, 6}, so n(S) = 6.The event E of obtaining 3 or 5 is E = {3, 5}, so n(E) = 2.Therefore, P(E) = n(E) / n(S) = 2 / 6 = 1/3."
+  },
+  {
+    "questionNumber": 9,
+    "grade": "Grade 11",
+    "topic": "Unit 2: Rational Expressions and Inverse Trigonometric Functions",
+    "difficulty": "medium",
+    "prompt": "Which one of the following is true?",
+    "options": [
+      "The range of arctangent function is [-π, π].",
+      "The range of arcsine function is (-π/2, π/2).",
+      "The domain of arccosine function is [-1, 1].",
+      "The domain of arcsine function is [0, π]."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Let us check the domain and range of standard inverse trigonometric functions:• y = arctan(x): Domain = ℝ, Range = (-π/2, π/2).• y = arcsin(x): Domain = [-1, 1], Range = [-π/2, π/2].• y = arccos(x): Domain = [-1, 1], Range = [0, π].Hence, statement C is true."
+  },
+  {
+    "questionNumber": 10,
+    "grade": "Grade 10",
+    "topic": "Unit 5: Trigonometric Functions (Applications)",
+    "difficulty": "medium",
+    "prompt": "The angle of depression of the top of a flag pole from the top of a building that is 40√3 m away from the flag pole is 30°. If the height of the flag pole is 10 m, what is the height of the building?",
+    "options": [
+      "20√3 m",
+      "10(4√3 + 1) m",
+      "50 m",
+      "40 m"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Let h be the height of the building. The vertical height difference between the top of the building and the top of the 10 m flagpole is (h - 10) m, and the horizontal distance is 40√3 m.Using the angle of depression θ = 30°:tan(30°) = (h - 10) / (40√3)Since tan(30°) = 1 / √3:1 / √3 = (h - 10) / (40√3)  ⇒  h - 10 = 40  ⇒  h = 50 m."
+  },
+  {
+    "questionNumber": 11,
+    "grade": "Grade 11",
+    "topic": "Unit 1: Further on Relations and Functions",
+    "difficulty": "medium",
+    "prompt": "Let R = {(x, y) | y ≥ x² + 1 and y ≤ 5} be a relation. Then which one of the following defines the inverse of R?",
+    "options": [
+      "{(x, y) | x ≥ y² + 1, x ≤ 5}",
+      "{(x, y) | x ≥ y² + 1, x ≥ 5}",
+      "{(x, y) | x ≤ y² + 1, x ≥ 5}",
+      "{(x, y) | x > y² - 1, x ≤ 5}"
+    ],
+    "correctAnswer": "A",
+    "explanation": "To find the inverse relation R⁻¹ of a relation R, we interchange the variables x and y in the defining inequalities:Replacing y with x and x with y in (y ≥ x² + 1 and y ≤ 5) directly yields:R⁻¹ = {(x, y) | x ≥ y² + 1, x ≤ 5}."
+  },
+  {
+    "questionNumber": 12,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Matrices",
+    "difficulty": "easy",
+    "prompt": "Given matrices A = [[2, 0, 5], [3, 1, 4], [0, 6, -2]] and B = [[1, 3, 0], [6, 5, 2], [9, 7, 0]]. Which one of the following is A - B?",
+    "options": [
+      "[[1, 3, 5], [-3, -4, 2], [9, 1, 2]]",
+      "[[1, -3, -5], [-3, -4, 2], [9, 1, 2]]",
+      "[[1, 3, 5], [-3, -4, -2], [-9, 1, 2]]",
+      "[[1, -3, 5], [-3, -4, 2], [-9, -1, -2]]"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Matrix subtraction is performed entry-by-entry (a_ij - b_ij):Row 1: [2 - 1,  0 - 3,  5 - 0] = [1, -3, 5]Row 2: [3 - 6,  1 - 5,  4 - 2] = [-3, -4, 2]Row 3: [0 - 9,  6 - 7, -2 - 0] = [-9, -1, -2]Therefore, A - B = [[1, -3, 5], [-3, -4, 2], [-9, -1, -2]]."
+  },
+  {
+    "questionNumber": 13,
+    "grade": "Grade 11",
+    "topic": "Unit 3: Coordinate Geometry in 3D Space",
+    "difficulty": "easy",
+    "prompt": "In order to find point P in space one can start from the origin O(0, 0, 0); move 5 units in the direction of negative x-axis, then move 5 units in the direction of positive y-axis and finally move 5 units in the direction of negative z-axis. Which one of the following is the ordered triple of numbers represented by point P?",
+    "options": [
+      "(5, 5, 5)",
+      "(-5, 5, -5)",
+      "(5, -5, 5)",
+      "(-5, -5, 5)"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Starting from O(0, 0, 0):• 5 units along negative x-axis gives x = -5.• 5 units along positive y-axis gives y = 5.• 5 units along negative z-axis gives z = -5.Thus, the coordinates of point P are (-5, 5, -5)."
+  },
+  {
+    "questionNumber": 14,
+    "grade": "Grade 9",
+    "topic": "Unit 7: Vectors in Two Dimensions",
+    "difficulty": "easy",
+    "prompt": "Which one of the following quantities represents a vector?",
+    "options": [
+      "Weight of an object",
+      "Speed of a motorbike",
+      "Volume of a box",
+      "The width of your bedroom"
+    ],
+    "correctAnswer": "A",
+    "explanation": "A vector quantity has both magnitude and direction. Weight is the gravitational force acting on an object (W = mg), directed vertically downward toward the center of the Earth. Speed, volume, and width have magnitude only and are scalar quantities."
+  },
+  {
+    "questionNumber": 15,
+    "grade": "Grade 12",
+    "topic": "Unit 3: Introduction to Differential Calculus",
+    "difficulty": "easy",
+    "prompt": "Which one of the following is the derivative of f(x) = tan(x) + 3ˣ?",
+    "options": [
+      "sec²(x) + 3ˣ ln(x)",
+      "-csc²(x) + 3ˣ ln(x)",
+      "-tan(x) + 3ˣ ln(3)",
+      "sec²(x) + 3ˣ ln(3)"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Using standard differentiation rules:• d/dx [tan(x)] = sec²(x)• d/dx [aˣ] = aˣ ln(a), so d/dx [3ˣ] = 3ˣ ln(3).Combining both terms gives f'(x) = sec²(x) + 3ˣ ln(3)."
+  },
+  {
+    "questionNumber": 16,
+    "grade": "Grade 11",
+    "topic": "Unit 3: Coordinate Geometry in 3D Space (Spheres)",
+    "difficulty": "easy",
+    "prompt": "Which one of the following points is inside the sphere with equation x² + y² + z² = 5?",
+    "options": [
+      "(1, -2, 2)",
+      "(1, 1, 1)",
+      "(1, 2, 3)",
+      "(0, -2, 3)"
+    ],
+    "correctAnswer": "B",
+    "explanation": "A point (x, y, z) lies strictly inside the sphere x² + y² + z² = R² if x² + y² + z² < R² (here R² = 5):• For A(1, -2, 2): 1² + (-2)² + 2² = 1 + 4 + 4 = 9 > 5.• For B(1, 1, 1): 1² + 1² + 1² = 3 < 5 (Inside).• For C(1, 2, 3): 1² + 2² + 3² = 14 > 5.• For D(0, -2, 3): 0² + (-2)² + 3² = 13 > 5."
+  },
+  {
+    "questionNumber": 17,
+    "grade": "Grade 11",
+    "topic": "Unit 7: The Set of Complex Numbers",
+    "difficulty": "medium",
+    "prompt": "Which one of the following gives the polar form of the complex number z = 2 - 2√3 i?",
+    "options": [
+      "4(cos(5π/3) + i sin(5π/3))",
+      "4(cos(π/4) + i sin(π/4))",
+      "4(cos(3π/4) + i sin(3π/4))",
+      "4(cos(π/3) + i sin(π/3))"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Given z = x + yi = 2 - 2√3 i:1. Modulus: r = √(2² + (-2√3)²) = √(4 + 12) = √16 = 4.2. Argument θ: cos(θ) = 2/4 = 1/2 and sin(θ) = -2√3 / 4 = -√3/2.Since cos(θ) > 0 and sin(θ) < 0, θ lies in Quadrant IV: θ = 2π - π/3 = 5π/3.Thus, z = 4(cos(5π/3) + i sin(5π/3))."
+  },
+  {
+    "questionNumber": 18,
+    "grade": "Grade 11",
+    "topic": "Unit 8: Vectors and Transformation of the Plane / 3D Vectors",
+    "difficulty": "easy",
+    "prompt": "If a = (4, 3, 2) and b = (1, 2, -3) are two vectors in space, then which one of the following is NOT correct?",
+    "options": [
+      "a + b = (5, 5, -1)",
+      "a + 2b = (6, 7, -4)",
+      "b - a = (-3, -1, -5)",
+      "a - 2b = (2, 1, 8)"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Check each vector operation component-wise:• A: a + b = (4+1, 3+2, 2-3) = (5, 5, -1) [Correct]• B: a + 2b = (4+2, 3+4, 2-6) = (6, 7, -4) [Correct]• C: b - a = (1-4, 2-3, -3-2) = (-3, -1, -5) [Correct]• D: a - 2b = (4-2(1), 3-2(2), 2-2(-3)) = (2, -1, 8) ≠ (2, 1, 8) [NOT correct]."
+  },
+  {
+    "questionNumber": 19,
+    "grade": "Grade 11",
+    "topic": "Unit 7: The Set of Complex Numbers",
+    "difficulty": "easy",
+    "prompt": "What is the product of the two complex numbers z = 2 - 3i and w = 5 + 2i?",
+    "options": [
+      "16 - 11i",
+      "4 - 11i",
+      "16 + 11i",
+      "29"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Multiply using the distributive property and i² = -1:z · w = (2 - 3i)(5 + 2i) = 2(5) + 2(2i) - 3i(5) - 3i(2i)= 10 + 4i - 15i - 6i² = 10 - 11i - 6(-1) = 16 - 11i."
+  },
+  {
+    "questionNumber": 20,
+    "grade": "Grade 11",
+    "topic": "Unit 9: Further on Statistics",
+    "difficulty": "easy",
+    "prompt": "Which of the following is true about the Arithmetic Mean of a given data?",
+    "options": [
+      "It is affected by extreme values.",
+      "There can be two means for a given data.",
+      "It can also be used for qualitative data.",
+      "It can be obtained even in the absence of some of the values in the data."
+    ],
+    "correctAnswer": "A",
+    "explanation": "The arithmetic mean uses every value in a dataset (x̄ = ∑x_i / n). Because all values are summed directly, very large or very small outliers (extreme values) significantly pull the mean toward them. The mean is unique, requires quantitative data, and requires all data values to be known."
+  },
+  {
+    "questionNumber": 21,
+    "grade": "Grade 10",
+    "topic": "Unit 5: Trigonometric Functions (Heron's Formula / Area of Triangle)",
+    "difficulty": "medium",
+    "prompt": "In ΔABC, if AB = 10 units, BC = 14 units and AC = 8 units, then the area of the triangle is:",
+    "options": [
+      "16√6 square units",
+      "16√5 square units",
+      "16√3 square units",
+      "16√2 square units"
+    ],
+    "correctAnswer": "A",
+    "explanation": "By Heron's Formula, the semi-perimeter s of ΔABC with sides c = 10, a = 14, b = 8 is:s = (10 + 14 + 8) / 2 = 32 / 2 = 16.Area = √[s(s - a)(s - b)(s - c)] = √[16(16 - 14)(16 - 8)(16 - 10)]= √[16 × 2 × 8 × 6] = √[16 × 16 × 6] = 16√6 square units."
+  },
+  {
+    "questionNumber": 22,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Introduction to Integral Calculus",
+    "difficulty": "medium",
+    "prompt": "∫ (1/√x - e⁻³ˣ + 5/x²) dx is equal to:",
+    "options": [
+      "2√x + e⁻³ˣ/3 + 5/x + c",
+      "2√x + e⁻³ˣ/3 - 5/x + c",
+      "2√x - e⁻³ˣ/3 - 5/x + c",
+      "2√x - e⁻³ˣ/3 + 5/x + c"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Rewrite the integrand using powers and integrate term-by-term:∫ (x⁻¹/² - e⁻³ˣ + 5x⁻²) dx• ∫ x⁻¹/² dx = x¹/² / (1/2) = 2√x• ∫ (-e⁻³ˣ) dx = -e⁻³ˣ / (-3) = +e⁻³ˣ / 3• ∫ 5x⁻² dx = 5x⁻¹ / (-1) = -5/xCombining with the constant of integration c gives: 2√x + e⁻³ˣ/3 - 5/x + c."
+  },
+  {
+    "questionNumber": 23,
+    "grade": "Grade 9",
+    "topic": "Unit 4: Relations and Functions",
+    "difficulty": "medium",
+    "prompt": "The graph of a certain relation R is represented by the shaded region shown on the figure below. Which one of the following pairs of sets respectively gives the domain and range of this relation?",
+    "options": [
+      "{x | x ≤ 2} and {y | y ≤ 6}",
+      "{x | x ≤ 2} and ℝ",
+      "ℝ and {y | y ≤ 2}",
+      "ℝ and ℝ"
+    ],
+    "correctAnswer": "B",
+    "explanation": "From the graph, the shaded region is bounded on the right by two lines intersecting at (2, 0): one passing through (0, 6) and (2, 0), and the other passing through (0, -2) and (2, 0). Every point (x, y) in the shaded region lies to the left of x = 2, so the maximum x-value is 2 and x extends to -∞: Domain = {x | x ≤ 2}.Vertically, the shaded region extends infinitely upward (+∞) and infinitely downward (-∞): Range = ℝ.",
+    "imageUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgMzAwIiB3aWR0aD0iNDYwIiBoZWlnaHQ9IjMwMCI+CiAgICA8cmVjdCB3aWR0aD0iNDYwIiBoZWlnaHQ9IjMwMCIgcng9IjE0IiBmaWxsPSIjRjhGQUZDIiBzdHJva2U9IiNDQkQ1RTEiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMjMwIiB5PSIyNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzBGMTcyQSI+R3JhcGggb2YgUmVsYXRpb24gUiAoU2hhZGVkIFJlZ2lvbik8L3RleHQ+CiAgICA8IS0tIFNoYWRlZCByZWdpb24gdG8gdGhlIGxlZnQgb2YgKDIsMCkgYm91bmRlZCBieSBsaW5lcyB0aHJvdWdoICgwLDYpLSgyLDApIGFuZCAoMCwtMiktKDIsMCkgLS0+CiAgICA8IS0tIE9yaWdpbiAoMCwwKSBhdCAoMjMwLCAxODApLiBTY2FsZTogMSB1bml0ID0gMjBweCAtLT4KICAgIDwhLS0gKDIsMCkgLT4gKDI3MCwgMTgwKTsgKDAsNikgLT4gKDIzMCwgNjApOyAoMCwtMikgLT4gKDIzMCwgMjIwKSAtLT4KICAgIDwhLS0gRXh0ZW5kIHRvIGxlZnQgeCA9IC02IC0+IHhfcHggPSAxMTAgLS0+CiAgICA8cG9seWdvbiBwb2ludHM9IjI3MCwxODAgMjEwLDMwIDkwLDMwIDkwLDI3MCAxODAsMjcwIiBmaWxsPSIjOTNDNUZEIiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4KICAgIDwhLS0gQXhlcyAtLT4KICAgIDxsaW5lIHgxPSI3MCIgeTE9IjE4MCIgeDI9IjM5MCIgeTI9IjE4MCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSIyMzAiIHkxPSIzMCIgeDI9IjIzMCIgeTI9IjI3NSIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDx0ZXh0IHg9IjM5NiIgeT0iMTg0IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMEYxNzJBIj54PC90ZXh0PgogICAgPHRleHQgeD0iMjM1IiB5PSIyNiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzBGMTcyQSI+eTwvdGV4dD4KICAgIDwhLS0gQm91bmRhcnkgbGluZXMgaW50ZXJzZWN0aW5nIGF0ICgyLCAwKSAtLT4KICAgIDxsaW5lIHgxPSIyMDUiIHkxPSIyMi41IiB4Mj0iMjkwIiB5Mj0iMjQwIiBzdHJva2U9IiMxRDRFRDgiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgICA8bGluZSB4MT0iMTUwIiB5MT0iMjcwIiB4Mj0iMzEwIiB5Mj0iMTQwIiBzdHJva2U9IiMxRDRFRDgiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgICA8IS0tIEtleSBQb2ludHMgLS0+CiAgICA8Y2lyY2xlIGN4PSIyNzAiIGN5PSIxODAiIHI9IjQuNSIgZmlsbD0iI0RDMjYyNiIvPgogICAgPHRleHQgeD0iMjc4IiB5PSIxNzQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNEQzI2MjYiPigyLCAwKTwvdGV4dD4KICAgIDxjaXJjbGUgY3g9IjIzMCIgY3k9IjYwIiByPSI0IiBmaWxsPSIjMUU0MEFGIi8+CiAgICA8dGV4dCB4PSIyMzgiIHk9IjY0IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMUU0MEFGIj4oMCwgNik8L3RleHQ+CiAgICA8Y2lyY2xlIGN4PSIyMzAiIGN5PSIyMjAiIHI9IjQiIGZpbGw9IiMxRTQwQUYiLz4KICAgIDx0ZXh0IHg9IjIzOCIgeT0iMjI2IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMUU0MEFGIj4oMCwgLTIpPC90ZXh0PgogICAgPHRleHQgeD0iMTU1IiB5PSIxNTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxRTNBOEEiPlIgKHgg4omkIDIpPC90ZXh0PgogIDwvc3ZnPg=="
+  },
+  {
+    "questionNumber": 24,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Introduction to Integral Calculus (Definite Integrals)",
+    "difficulty": "easy",
+    "prompt": "Let f be a continuous function on [a, b]. Then which of the following is NOT true?",
+    "options": [
+      "∫_a^b f(x) dx = -∫_b^a f(x) dx",
+      "∫_a^b k f(x) dx = k ∫_a^b f(x) dx for any constant k.",
+      "∫_a^b f(x) dx = ∫_a^c f(x) dx - ∫_c^b f(x) dx for any c in (a, b).",
+      "∫_c^c f(x) dx = 0 for any c in (a, b)."
+    ],
+    "correctAnswer": "C",
+    "explanation": "By the interval additivity property of definite integrals, for any c ∈ (a, b):∫_a^b f(x) dx = ∫_a^c f(x) dx + ∫_c^b f(x) dx.Statement C has a minus sign instead of a plus sign, making it NOT true."
+  },
+  {
+    "questionNumber": 25,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Introduction to Integral Calculus (Integration by Parts)",
+    "difficulty": "medium",
+    "prompt": "What is the value of ∫₀¹ x eˣ dx?",
+    "options": [
+      "-e",
+      "e",
+      "1",
+      "-1"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Use integration by parts: ∫ u dv = u v - ∫ v du.Let u = x (so du = dx) and dv = eˣ dx (so v = eˣ):∫ x eˣ dx = x eˣ - ∫ eˣ dx = x eˣ - eˣ = eˣ(x - 1).Evaluating from 0 to 1:[eˣ(x - 1)]₀¹ = e¹(1 - 1) - e⁰(0 - 1) = 0 - 1(-1) = 1."
+  },
+  {
+    "questionNumber": 26,
+    "grade": "Grade 9",
+    "topic": "Unit 1: The Number System (Radicals)",
+    "difficulty": "easy",
+    "prompt": "The simplified form of the expression (6√20 - 3√45) / (3√75) is:",
+    "options": [
+      "√5",
+      "√15 / 15",
+      "1/5",
+      "5"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Simplify each radical term:• 6√20 = 6√(4 × 5) = 6(2√5) = 12√5• 3√45 = 3√(9 × 5) = 3(3√5) = 9√5• 3√75 = 3√(25 × 3) = 3(5√3) = 15√3Substitute into the fraction:(12√5 - 9√5) / (15√3) = (3√5) / (15√3) = √5 / (5√3).Rationalize the denominator by multiplying top and bottom by √3:(√5 × √3) / (5 × 3) = √15 / 15."
+  },
+  {
+    "questionNumber": 27,
+    "grade": "Grade 9",
+    "topic": "Unit 2: Solutions of Equations / Set Operations",
+    "difficulty": "easy",
+    "prompt": "Which one of the following sets is the symmetric difference, A Δ B, of the sets A = {1, 3, 5, 6, 8, 10} and B = {2, 5, 8, 11}?",
+    "options": [
+      "{1, 2, 3, 5, 6, 8, 10, 11}",
+      "{2, 11}",
+      "{1, 2, 3, 6, 10, 11}",
+      "{1, 3, 6, 10}"
+    ],
+    "correctAnswer": "C",
+    "explanation": "The symmetric difference A Δ B = (A \\ B) ∪ (B \\ A) = (A ∪ B) \\ (A ∩ B).• Common elements: A ∩ B = {5, 8}• Elements only in A: A \\ B = {1, 3, 6, 10}• Elements only in B: B \\ A = {2, 11}Taking their union gives A Δ B = {1, 2, 3, 6, 10, 11}."
+  },
+  {
+    "questionNumber": 28,
+    "grade": "Grade 11",
+    "topic": "Unit 9: Further on Statistics (Measures of Dispersion)",
+    "difficulty": "medium",
+    "prompt": "Which of the following is the variance of the data given as 2, 3, 4, 5, 7?",
+    "options": [
+      "2.46",
+      "2.96",
+      "3.06",
+      "3.70"
+    ],
+    "correctAnswer": "B",
+    "explanation": "First, compute the mean x̄ of the N = 5 values:x̄ = (2 + 3 + 4 + 5 + 7) / 5 = 21 / 5 = 4.2.Next, compute the sum of squared deviations ∑(x_i - x̄)²:(2 - 4.2)² + (3 - 4.2)² + (4 - 4.2)² + (5 - 4.2)² + (7 - 4.2)²= (-2.2)² + (-1.2)² + (-0.2)² + (0.8)² + (2.8)²= 4.84 + 1.44 + 0.04 + 0.64 + 7.84 = 14.80.Population variance σ² = 14.80 / 5 = 2.96."
+  },
+  {
+    "questionNumber": 29,
+    "grade": "Grade 11",
+    "topic": "Unit 9: Probability (Independent and Dependent Events)",
+    "difficulty": "easy",
+    "prompt": "Which of the following pairs of events are dependent?",
+    "options": [
+      "Tossing two coins simultaneously and obtaining head from one and tail from the other.",
+      "Drawing two cards one after the other from a well-shuffled pack of cards without replacement.",
+      "Drawing two balls successively from a box containing balls having the same size and shape with replacement.",
+      "Any events obtained from tossing a coin and rolling a die at the same time."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Two events are dependent if the occurrence of the first event changes the probability of the second event. When drawing two cards successively without replacement, the total number of cards in the deck decreases from 52 to 51, altering the probabilities for the second draw. All other options describe independent events."
+  },
+  {
+    "questionNumber": 30,
+    "grade": "Grade 12",
+    "topic": "Unit 2: Introduction to Limits and Continuity",
+    "difficulty": "easy",
+    "prompt": "If lim_{x→2} f(x) = 6 and lim_{x→2} g(x) = -9, then lim_{x→2} [(f - g) / (2f - 7)](x) =",
+    "options": [
+      "3",
+      "-3",
+      "15",
+      "-15"
+    ],
+    "correctAnswer": "A",
+    "explanation": "By the limit laws for sums, differences, and quotients:lim_{x→2} [(f(x) - g(x)) / (2f(x) - 7)] = (6 - (-9)) / (2(6) - 7) = (6 + 9) / (12 - 7) = 15 / 5 = 3."
+  },
+  {
+    "questionNumber": 31,
+    "grade": "Grade 12",
+    "topic": "Unit 3: Introduction to Differential Calculus",
+    "difficulty": "medium",
+    "prompt": "Let f and g be two functions. Which one of the following statements is true about f or g?",
+    "options": [
+      "The line y = 0 is a tangent line to the graph of f(x) = |x| at (0, 0).",
+      "If f is differentiable at a, then it is continuous at a.",
+      "If f'(a) = 0, then the tangent line to the graph of f at (a, f(a)) is y = a.",
+      "If f and g are differentiable at a, then f/g is differentiable at a."
+    ],
+    "correctAnswer": "B",
+    "explanation": "A fundamental theorem of calculus states that differentiability implies continuity: if a function f is differentiable at x = a, then f must be continuous at x = a.• A is false because f(x) = |x| has a sharp corner at (0, 0) and is not differentiable there.• C is false because the horizontal tangent line is y = f(a), not y = a.• D is false if g(a) = 0."
+  },
+  {
+    "questionNumber": 32,
+    "grade": "Grade 12",
+    "topic": "Unit 2: Introduction to Limits and Continuity",
+    "difficulty": "easy",
+    "prompt": "What is the value of a for which the piecewise function defined by f(x) = { ax + 3, for x ≥ 1;  x² - 2x + 3, for x < 1 } is continuous at 1?",
+    "options": [
+      "1",
+      "-1",
+      "3",
+      "4"
+    ],
+    "correctAnswer": "B",
+    "explanation": "For f(x) to be continuous at x = 1, the left-hand limit must equal the right-hand limit (and f(1)):• Left-hand limit: lim_{x→1⁻} (x² - 2x + 3) = 1² - 2(1) + 3 = 2.• Right-hand limit / value: f(1) = a(1) + 3 = a + 3.Setting them equal: a + 3 = 2  ⇒  a = -1."
+  },
+  {
+    "questionNumber": 33,
+    "grade": "Grade 12",
+    "topic": "Unit 3: Introduction to Differential Calculus",
+    "difficulty": "medium",
+    "prompt": "What is the derivative of the function f(x) = (x eˣ) / cos(x) at x = 0?",
+    "options": [
+      "2",
+      "-1",
+      "1",
+      "0"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Apply the quotient rule to f(x) = u(x) / v(x), where u(x) = x eˣ and v(x) = cos(x):• u(0) = 0, and u'(x) = eˣ + x eˣ  ⇒  u'(0) = 1 + 0 = 1.• v(0) = cos(0) = 1, and v'(x) = -sin(x)  ⇒  v'(0) = 0.Thus, f'(0) = [u'(0)v(0) - u(0)v'(0)] / [v(0)]² = [1(1) - 0(0)] / 1² = 1."
+  },
+  {
+    "questionNumber": 34,
+    "grade": "Grade 12",
+    "topic": "Unit 1: Sequences and Series (Monotone Convergence Theorem)",
+    "difficulty": "easy",
+    "prompt": "Which of the following is true about a bounded sequence?",
+    "options": [
+      "Every bounded sequence is convergent.",
+      "Every increasing bounded sequence converges to the greatest lower bound of the sequence.",
+      "Every decreasing bounded sequence converges to the least upper bound of the sequence.",
+      "Every monotone bounded sequence converges."
+    ],
+    "correctAnswer": "D",
+    "explanation": "By the Monotone Convergence Theorem, every bounded monotonic (increasing or decreasing) sequence converges.• A is false (e.g., a_n = (-1)ⁿ is bounded but diverges).• B is false (an increasing bounded sequence converges to its least upper bound / supremum).• C is false (a decreasing bounded sequence converges to its greatest lower bound / infimum)."
+  },
+  {
+    "questionNumber": 35,
+    "grade": "Grade 12",
+    "topic": "Unit 3: Introduction to Differential Calculus (Higher-Order Chain Rule)",
+    "difficulty": "medium",
+    "prompt": "Suppose f is a twice continuously differentiable function and f''(3) = 5. If g(x) = f(2x + 3), then the second derivative of g at 0 is equal to:",
+    "options": [
+      "40",
+      "20",
+      "5",
+      "10"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Differentiate g(x) = f(2x + 3) twice using the Chain Rule:1st derivative: g'(x) = f'(2x + 3) · (2) = 2 f'(2x + 3).2nd derivative: g''(x) = 2 f''(2x + 3) · (2) = 4 f''(2x + 3).Evaluating at x = 0:g''(0) = 4 f''(2(0) + 3) = 4 f''(3) = 4 × 5 = 20."
+  },
+  {
+    "questionNumber": 36,
+    "grade": "Grade 12",
+    "topic": "Unit 2: Introduction to Limits and Continuity",
+    "difficulty": "easy",
+    "prompt": "If f and g are continuous functions at a, then which of the following functions may NOT be continuous at a?",
+    "options": [
+      "2f + 3g",
+      "fg",
+      "f / g",
+      "f - 2g"
+    ],
+    "correctAnswer": "C",
+    "explanation": "If f and g are continuous at x = a, then linear combinations (2f + 3g, f - 2g) and products (fg) are always continuous at x = a. However, the quotient (f / g) fails to be continuous at x = a if g(a) = 0."
+  },
+  {
+    "questionNumber": 37,
+    "grade": "Grade 12",
+    "topic": "Unit 4: Applications of Differential Calculus (Extrema)",
+    "difficulty": "medium",
+    "prompt": "Let f be a continuous function on ℝ and c be a number in the domain of f. Which one of the following must be true about the function?",
+    "options": [
+      "An absolute maximum value of f which is attained at a critical number c is also a local maximum value of f.",
+      "If f''(c) = 0, then (c, f(c)) is an inflection point of f.",
+      "If f(c) is a local minimum value of f, then f'(c) = 0.",
+      "If c is a critical number of f, then f(c) is a local extreme value of f."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Since the domain of f is the open set ℝ = (-∞, ∞), any point c ∈ ℝ is an interior point. If f attains its absolute maximum at c (so f(c) ≥ f(x) for all x ∈ ℝ), then f(c) ≥ f(x) holds in any open neighborhood around c, which means f(c) is automatically a local maximum.• B is false: e.g., f(x) = x⁴ has f''(0) = 0 but no inflection point.• C is false: f'(c) might fail to exist (e.g., f(x) = |x| at c = 0).• D is false: e.g., f(x) = x³ has a critical number at c = 0 without a local extremum."
+  },
+  {
+    "questionNumber": 38,
+    "grade": "Grade 12",
+    "topic": "Unit 1: Sequences and Series (Arithmetic Progression)",
+    "difficulty": "easy",
+    "prompt": "What is the seventh term of an arithmetic sequence whose third term is -4 and common difference is 5?",
+    "options": [
+      "15",
+      "-15",
+      "16",
+      "-16"
+    ],
+    "correctAnswer": "C",
+    "explanation": "In an arithmetic sequence, the n-th term is related to the m-th term by A_n = A_m + (n - m)d.Given A₃ = -4 and d = 5:A₇ = A₃ + (7 - 3)d = -4 + 4(5) = -4 + 20 = 16."
+  },
+  {
+    "questionNumber": 39,
+    "grade": "Grade 12",
+    "topic": "Unit 4: Applications of Differential Calculus (Optimization)",
+    "difficulty": "easy",
+    "prompt": "If the perimeter of a rectangle is 120 m, what are the length l and width w of the rectangle that maximizes its area?",
+    "options": [
+      "l = 50 m and w = 10 m",
+      "l = 30 m and w = 30 m",
+      "l = 35 m and w = 25 m",
+      "l = 40 m and w = 20 m"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Given perimeter P = 2(l + w) = 120 m  ⇒  l + w = 60  ⇒  w = 60 - l.The area function is A(l) = l · w = l(60 - l) = 60l - l².To maximize A(l), set A'(l) = 0:A'(l) = 60 - 2l = 0  ⇒  l = 30 m, and w = 60 - 30 = 30 m (a square)."
+  },
+  {
+    "questionNumber": 40,
+    "grade": "Grade 12",
+    "topic": "Unit 1: Sequences and Series (Geometric Progression)",
+    "difficulty": "medium",
+    "prompt": "The sum of the first 8 terms of a geometric sequence with first term 0.3 and common ratio 1/10 is equal to:",
+    "options": [
+      "(3/10)((10⁸ - 1) / 10⁸)",
+      "(1/3)((10⁸ - 1) / 10⁸)",
+      "(1/3)((10⁸ - 1) / 10⁷)",
+      "(3/10)((10⁸ - 1) / 10⁷)"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The sum of the first n terms of a geometric series with G₁ = 0.3 = 3/10 and r = 1/10 is:S_n = G₁ (1 - rⁿ) / (1 - r).For n = 8:S₈ = (3/10) [1 - (1/10)⁸] / [1 - 1/10] = (3/10) [(10⁸ - 1)/10⁸] / (9/10)= (3/9) ((10⁸ - 1) / 10⁸) = (1/3) ((10⁸ - 1) / 10⁸)."
+  },
+  {
+    "questionNumber": 41,
+    "grade": "Grade 12",
+    "topic": "Unit 4: Applications of Differential Calculus (Rolle's Theorem)",
+    "difficulty": "easy",
+    "prompt": "Suppose f is a continuous function on an interval [a, b] and differentiable on (a, b) with the property f(a) = f(b). Which one of the following must be true?",
+    "options": [
+      "The function has a zero in (a, b).",
+      "The function has a minimum value in (a, b).",
+      "The function has a maximum value in (a, b).",
+      "The graph of f has a horizontal tangent line at (c, f(c)) for some c ∈ (a, b)."
+    ],
+    "correctAnswer": "D",
+    "explanation": "By Rolle's Theorem, if f is continuous on [a, b], differentiable on (a, b), and f(a) = f(b), then there exists at least one number c ∈ (a, b) such that f'(c) = 0. Geometrically, f'(c) = 0 means the graph of f has a horizontal tangent line at (c, f(c))."
+  },
+  {
+    "questionNumber": 42,
+    "grade": "Grade 10",
+    "topic": "Unit 4: Coordinate Geometry (Distance from a Point to a Line)",
+    "difficulty": "easy",
+    "prompt": "The distance from the point P(3, 4) to the line L with equation 3x + 4y - 5 = 0 is:",
+    "options": [
+      "5 units",
+      "6 units",
+      "4 units",
+      "7 units"
+    ],
+    "correctAnswer": "C",
+    "explanation": "The perpendicular distance d from a point (x₀, y₀) to a line Ax + By + C = 0 is:d = |Ax₀ + By₀ + C| / √(A² + B²).Substituting (x₀, y₀) = (3, 4) and A = 3, B = 4, C = -5:d = |3(3) + 4(4) - 5| / √(3² + 4²) = |9 + 16 - 5| / √25 = 20 / 5 = 4 units."
+  },
+  {
+    "questionNumber": 43,
+    "grade": "Grade 11",
+    "topic": "Unit 6: Conic Sections (Ellipse)",
+    "difficulty": "easy",
+    "prompt": "A line segment (chord) in an ellipse which passes through the center and is perpendicular to the major axis is called:",
+    "options": [
+      "Semi-major axis",
+      "Minor axis",
+      "Eccentricity",
+      "Latus rectum"
+    ],
+    "correctAnswer": "B",
+    "explanation": "In an ellipse, the chord passing through the center and perpendicular to the major axis is the minor axis (of length 2b). By contrast, a focal chord perpendicular to the major axis passing through a focus is the latus rectum."
+  },
+  {
+    "questionNumber": 44,
+    "grade": "Grade 11",
+    "topic": "Unit 5: Determinants and Their Properties",
+    "difficulty": "medium",
+    "prompt": "If A is a 3×3 matrix with det(A) = 5, then what is the determinant of 2Aᵀ?",
+    "options": [
+      "10",
+      "2/5",
+      "40",
+      "30"
+    ],
+    "correctAnswer": "C",
+    "explanation": "For an n×n matrix A and scalar k, the properties of determinants state that det(kB) = kⁿ det(B) and det(Aᵀ) = det(A).Since n = 3 and k = 2:det(2Aᵀ) = 2³ · det(Aᵀ) = 8 · det(A) = 8 × 5 = 40."
+  },
+  {
+    "questionNumber": 45,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Matrices (Systems of Linear Equations)",
+    "difficulty": "easy",
+    "prompt": "Which one of the following is the augmented matrix associated to the system of equations:  2x + y + 3z = 4  x - z = 1  -4x + y - 3 = 0 ?",
+    "options": [
+      "[[3, 2, 1 | 1], [-1, 1, -1 | 3], [-1, -4, 1 | 4]]",
+      "[[3, 1, 2 | 4], [-1, 0, 1 | 1], [-4, 1, -3 | 0]]",
+      "[[1, 2, 3 | 4], [-1, 1, -1 | 1], [1, -4, -1 | 3]]",
+      "[[2, 1, 3 | 4], [1, 0, -1 | 1], [-4, 1, 0 | 3]]"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Write the system in standard form ax + by + cz = d:1) 2x + 1y + 3z = 4   →  row 1: [2, 1, 3 | 4]2) 1x + 0y - 1z = 1   →  row 2: [1, 0, -1 | 1]3) -4x + 1y + 0z = 3  →  row 3: [-4, 1, 0 | 3]Thus, the augmented matrix is [[2, 1, 3 | 4], [1, 0, -1 | 1], [-4, 1, 0 | 3]]."
+  },
+  {
+    "questionNumber": 46,
+    "grade": "Grade 11",
+    "topic": "Unit 10: Mathematical Logic (Arguments and Validity)",
+    "difficulty": "easy",
+    "prompt": "Which of the following is NOT true about argument and validity?",
+    "options": [
+      "An argument which is not valid is a fallacy.",
+      "The validity of an argument can be checked by using a truth table.",
+      "In a valid argument, the conclusion may be true or false whenever all the premises are true.",
+      "In a valid argument, if all the premises are true then the conclusion must also be true."
+    ],
+    "correctAnswer": "C",
+    "explanation": "By definition, an argument is valid if and only if it is impossible for all the premises to be true while the conclusion is false. Therefore, whenever all premises are true in a valid argument, the conclusion MUST be true. Statement C contradicts this definition and is NOT true."
+  },
+  {
+    "questionNumber": 47,
+    "grade": "Grade 11",
+    "topic": "Unit 10: Mathematical Logic (Converse of Conditional Statements)",
+    "difficulty": "medium",
+    "prompt": "Which one of the following compound statements has a converse with truth value False?",
+    "options": [
+      "If 6 is a prime integer, then 4 is an even number.",
+      "If man is immortal, then the earth does not rotate around the sun.",
+      "If athlete Derartu Tulu was born on October 21, 1971, then 6 is prime.",
+      "If man is mortal, then the earth does not rotate around the sun."
+    ],
+    "correctAnswer": "A",
+    "explanation": "The converse of a conditional statement 'p ⇒ q' is 'q ⇒ p'. A conditional 'q ⇒ p' is False if and only if q is True and p is False:• In A: p = '6 is a prime integer' (False) and q = '4 is an even number' (True).The converse of A is q ⇒ p (True ⇒ False), which has truth value False.(In B, C, and D, q is False, so the converse q ⇒ p is vacuously True.)"
+  },
+  {
+    "questionNumber": 48,
+    "grade": "Grade 10",
+    "topic": "Unit 3: Exponential and Logarithmic Functions",
+    "difficulty": "medium",
+    "prompt": "The solution set of the equation given by log(x² - 3) = 2 log(x - 1) is:",
+    "options": [
+      "{1/2}",
+      "{2}",
+      "ℝ",
+      "∅"
+    ],
+    "correctAnswer": "B",
+    "explanation": "1. Domain restrictions: x² - 3 > 0 (x > √3 or x < -√3) and x - 1 > 0 (x > 1). Combined domain: x > √3 ≈ 1.732.2. Solve the equation: log(x² - 3) = log((x - 1)²)⇒ x² - 3 = (x - 1)² = x² - 2x + 1⇒ -3 = -2x + 1  ⇒  2x = 4  ⇒  x = 2.Since x = 2 > √3 satisfies the domain restriction, the solution set is {2}."
+  },
+  {
+    "questionNumber": 49,
+    "grade": "Grade 10",
+    "topic": "Unit 5: Trigonometric Functions",
+    "difficulty": "easy",
+    "prompt": "Which of the following is true about the trigonometric values of the given pairs of angles?",
+    "options": [
+      "cos(120°) = cos(60°)",
+      "sin(75°) = cos(105°)",
+      "tan(75°) = tan(105°)",
+      "sin(120°) = sin(60°)"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Using the supplementary angle identity sin(180° - θ) = sin(θ):sin(120°) = sin(180° - 60°) = sin(60°) = √3 / 2.(Note: cos(120°) = -cos(60°), cos(105°) = -sin(15°) < 0, and tan(105°) = -tan(75°))."
+  },
+  {
+    "questionNumber": 50,
+    "grade": "Grade 10",
+    "topic": "Unit 1: Relations and Functions / Quadratic Inequalities",
+    "difficulty": "easy",
+    "prompt": "Which one of the following intervals is the solution set of the inequality x² - 5x + 6 ≤ 0?",
+    "options": [
+      "[0, 2]",
+      "[2, 3]",
+      "[3, ∞)",
+      "(-∞, 2]"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Factor the quadratic expression:x² - 5x + 6 ≤ 0  ⇒  (x - 2)(x - 3) ≤ 0.The roots are x = 2 and x = 3. Since the parabola opens upward, the quadratic is non-positive between its roots: x ∈ [2, 3]."
+  },
+  {
+    "questionNumber": 51,
+    "grade": "Grade 10",
+    "topic": "Unit 4: Coordinate Geometry (Division of a Line Segment)",
+    "difficulty": "easy",
+    "prompt": "What are the coordinates of a point that divides the line segment with endpoints P(0, 1) and Q(5, 6) in the ratio 2:3 from P?",
+    "options": [
+      "(2, 3)",
+      "(0, 2)",
+      "(3, 2)",
+      "(0, 3)"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Using the internal section formula for P(x₁, y₁) = (0, 1), Q(x₂, y₂) = (5, 6), and ratio m:n = 2:3:x = (m x₂ + n x₁) / (m + n) = (2(5) + 3(0)) / (2 + 3) = 10 / 5 = 2.y = (m y₂ + n y₁) / (m + n) = (2(6) + 3(1)) / (2 + 3) = 15 / 5 = 3.Thus, the dividing point is (2, 3)."
+  },
+  {
+    "questionNumber": 52,
+    "grade": "Grade 10",
+    "topic": "Unit 5: Trigonometric Functions",
+    "difficulty": "easy",
+    "prompt": "Which one of the following trigonometric values is correct?",
+    "options": [
+      "sin(-120°) = 0.5",
+      "cos(-120°) = -0.5",
+      "tan(-120°) = -1",
+      "cos(-60°) = √3 / 2"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Since cosine is an even function, cos(-θ) = cos(θ):cos(-120°) = cos(120°) = -cos(60°) = -0.5.• A is false: sin(-120°) = -√3/2.• C is false: tan(-120°) = √3.• D is false: cos(-60°) = cos(60°) = 0.5."
+  },
+  {
+    "questionNumber": 53,
+    "grade": "Grade 11",
+    "topic": "Unit 1: Further on Relations and Functions (Surjective/Onto Functions)",
+    "difficulty": "easy",
+    "prompt": "Which one of the following is an onto function from ℝ onto [0, ∞)?",
+    "options": [
+      "f(x) = √(x²)",
+      "f(x) = |x| + 2",
+      "f(x) = x² + 1",
+      "f(x) = 2ˣ"
+    ],
+    "correctAnswer": "A",
+    "explanation": "A function f: ℝ → [0, ∞) is onto (surjective) if its range equals the entire codomain [0, ∞):• A: f(x) = √(x²) = |x| has range [0, ∞) — Onto.• B: f(x) = |x| + 2 has range [2, ∞).• C: f(x) = x² + 1 has range [1, ∞).• D: f(x) = 2ˣ has range (0, ∞) (0 is not attained)."
+  },
+  {
+    "questionNumber": 54,
+    "grade": "Grade 11",
+    "topic": "Unit 2: Rational Expressions and Rational Functions",
+    "difficulty": "easy",
+    "prompt": "Which one of the following is the simplified form of (4x⁴ - 64) / (2 - x) for x ≠ 2?",
+    "options": [
+      "4(x + 2)(x² + 4)",
+      "4(x - 2)(x² - 4)",
+      "-4(x + 2)(x² + 4)",
+      "-4(x - 2)(x² + 4)"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Factor the numerator completely using difference of squares:4x⁴ - 64 = 4(x⁴ - 16) = 4(x² - 4)(x² + 4) = 4(x - 2)(x + 2)(x² + 4).Divide by (2 - x) = -(x - 2) for x ≠ 2:[4(x - 2)(x + 2)(x² + 4)] / [-(x - 2)] = -4(x + 2)(x² + 4)."
+  },
+  {
+    "questionNumber": 55,
+    "grade": "Grade 12",
+    "topic": "Unit 1: Sequences and Series (Compound Interest Application)",
+    "difficulty": "medium",
+    "prompt": "If Birr 20,000 is deposited in a bank at a rate of 12% interest compounded monthly, how long will it take to double the amount?",
+    "options": [
+      "7.59 years",
+      "6 years",
+      "5.81 years",
+      "5 years"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Using the compound interest formula A = P(1 + r/n)^(nt), where A = 2P, r = 0.12, and n = 12 months/year:2 = (1 + 0.12 / 12)^(12t) = (1.01)^(12t).Take the natural logarithm on both sides:ln(2) = 12t · ln(1.01)t = ln(2) / (12 × ln(1.01)) ≈ 0.69315 / (12 × 0.00995) ≈ 5.81 years."
+  },
+  {
+    "questionNumber": 56,
+    "grade": "Grade 11",
+    "topic": "Unit 5: Determinants and Their Properties (Minors and Cofactors)",
+    "difficulty": "medium",
+    "prompt": "Which one of the following is true about the matrix [[1, 3, 5], [6, 4, 2], [9, 7, 0]]?",
+    "options": [
+      "The minor of the entry 3 is 18.",
+      "The cofactor of the entry 5 is -6.",
+      "The minor of the entry 0 is 14.",
+      "The cofactor of the entry 1 is -14."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Check each minor M_ij and cofactor C_ij = (-1)^(i+j) M_ij:• Entry 1 (position 1,1): C₁₁ = (+1) det([[4, 2], [7, 0]]) = 4(0) - 2(7) = -14. [True]• Entry 3 (position 1,2): M₁₂ = det([[6, 2], [9, 0]]) = 0 - 18 = -18 ≠ 18.• Entry 5 (position 1,3): C₁₃ = (+1) det([[6, 4], [9, 7]]) = 42 - 36 = 6 ≠ -6.• Entry 0 (position 3,3): M₃₃ = det([[1, 3], [6, 4]]) = 4 - 18 = -14 ≠ 14."
+  },
+  {
+    "questionNumber": 57,
+    "grade": "Grade 11",
+    "topic": "Unit 8: Vectors and Transformation of the Plane",
+    "difficulty": "easy",
+    "prompt": "Consider the points A(-2, 1), B(3, 0), C(3, -1) and D(1, 1) in the xy-plane. If u = AB and v = CD, then which one of the following is equal to u - v?",
+    "options": [
+      "(3, 1)",
+      "(-7, 3)",
+      "(-3, 1)",
+      "(7, -3)"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Find the position vectors of u = AB and v = CD:• u = AB = B - A = (3 - (-2), 0 - 1) = (5, -1).• v = CD = D - C = (1 - 3, 1 - (-1)) = (-2, 2).Subtract v from u:u - v = (5 - (-2), -1 - 2) = (7, -3)."
+  },
+  {
+    "questionNumber": 58,
+    "grade": "Grade 10",
+    "topic": "Unit 4: Coordinate Geometry (Centroid of a Triangle)",
+    "difficulty": "easy",
+    "prompt": "What is the point of intersection of the medians of ΔABC whose vertices are given by A(0, 0), B(6, 0) and C(0, 4)?",
+    "options": [
+      "(2, 4/3)",
+      "(1, 2/3)",
+      "(9/5, 6/5)",
+      "(6/5, 4/5)"
+    ],
+    "correctAnswer": "A",
+    "explanation": "The point of intersection of the medians of a triangle is its centroid G, given by the average of the vertex coordinates:G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3) = ((0 + 6 + 0)/3, (0 + 0 + 4)/3) = (2, 4/3)."
+  },
+  {
+    "questionNumber": 59,
+    "grade": "Grade 11",
+    "topic": "Unit 8: Vectors and Transformation of the Plane (Rotation)",
+    "difficulty": "hard",
+    "prompt": "What is the image of the circle with equation (x + 2)² + (y - 2)² = 1, when it is rotated through π/6 about the origin?",
+    "options": [
+      "(x + (√3 - 1))² + (y - (√3 + 1))² = 1",
+      "(x - (√3 + 1))² + (y + (√3 - 1))² = 1",
+      "(x + (√3 + 1))² + (y - (√3 - 1))² = 1",
+      "(x - (√3 - 1))² + (y + (√3 + 1))² = 1"
+    ],
+    "correctAnswer": "C",
+    "explanation": "A rotation preserves the radius r = 1 of the circle; we only need to rotate its center C(-2, 2) through θ = π/6 (30°) about the origin:x' = x cos(π/6) - y sin(π/6) = -2(√3/2) - 2(1/2) = -√3 - 1 = -(√3 + 1).y' = x sin(π/6) + y cos(π/6) = -2(1/2) + 2(√3/2) = -1 + √3 = √3 - 1.The image circle has center C'(-(√3 + 1), √3 - 1) and radius 1:(x + (√3 + 1))² + (y - (√3 - 1))² = 1."
+  },
+  {
+    "questionNumber": 60,
+    "grade": "Grade 11",
+    "topic": "Unit 8: Vectors and Transformation of the Plane (Scalar Product)",
+    "difficulty": "easy",
+    "prompt": "What is the dot (scalar) product of the vectors u = i + 2j and v = -2i + 4j?",
+    "options": [
+      "-8",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctAnswer": "C",
+    "explanation": "For u = (1, 2) and v = (-2, 4), the dot product is:u · v = (1)(-2) + (2)(4) = -2 + 8 = 6."
+  },
+  {
+    "questionNumber": 61,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Introduction to Integral Calculus (Partial Fractions)",
+    "difficulty": "hard",
+    "prompt": "∫ [(x³ + x² - x) / (x² + x - 2)] dx is equal to:",
+    "options": [
+      "x²/2 + (1/3)ln|x - 1| + (2/3)ln|x + 2| + c",
+      "x²/2 - (1/3)ln|x - 1| - (2/3)ln|x + 2| + c",
+      "x²/2 - (1/3)ln|x - 1| + (2/3)ln|x + 2| + c",
+      "x²/2 + (1/3)ln|x - 1| - (2/3)ln|x + 2| + c"
+    ],
+    "correctAnswer": "A",
+    "explanation": "1. Perform polynomial long division since deg(numerator) ≥ deg(denominator):x³ + x² - x = x(x² + x - 2) + x.So (x³ + x² - x) / (x² + x - 2) = x + x / [(x - 1)(x + 2)].2. Decompose x / [(x - 1)(x + 2)] = A/(x - 1) + B/(x + 2):x = A(x + 2) + B(x - 1)• At x = 1: 1 = 3A  ⇒  A = 1/3.• At x = -2: -2 = -3B  ⇒  B = 2/3.3. Integrate term-by-term:∫ [x + (1/3)/(x - 1) + (2/3)/(x + 2)] dx = x²/2 + (1/3)ln|x - 1| + (2/3)ln|x + 2| + c."
+  },
+  {
+    "questionNumber": 62,
+    "grade": "Grade 10",
+    "topic": "Unit 2: Polynomial Functions (Vieta's Formulas)",
+    "difficulty": "medium",
+    "prompt": "If r₁ and r₂ are the roots of the equation 3x² + 9x + 16 = 0, which one of the following is true?",
+    "options": [
+      "r₁ + r₂ = 3",
+      "r₁ · r₂ = -16/3",
+      "r₁² + r₂² = -5/3",
+      "1/r₁ + 1/r₂ = 9/16"
+    ],
+    "correctAnswer": "C",
+    "explanation": "By Vieta's Formulas for ax² + bx + c = 0 (a = 3, b = 9, c = 16):• Sum of roots: r₁ + r₂ = -b/a = -9/3 = -3.• Product of roots: r₁ · r₂ = c/a = 16/3.Now evaluate r₁² + r₂²:r₁² + r₂² = (r₁ + r₂)² - 2r₁r₂ = (-3)² - 2(16/3) = 9 - 32/3 = (27 - 32)/3 = -5/3."
+  },
+  {
+    "questionNumber": 63,
+    "grade": "Grade 11",
+    "topic": "Unit 9: Further on Statistics (Quartiles of Grouped Data)",
+    "difficulty": "medium",
+    "prompt": "The following is the distribution of the marks of students obtained in a Mathematics test out of 50:  Range of marks:  20–25 (f = 10),  26–31 (f = 30),  32–37 (f = 15),  38–43 (f = 20),  44–49 (f = 25).What is the first quartile (Q₁) of the distribution?",
+    "options": [
+      "28",
+      "26",
+      "26.5",
+      "27.5"
+    ],
+    "correctAnswer": "A",
+    "explanation": "1. Total frequency N = 10 + 30 + 15 + 20 + 25 = 100.2. Position of Q₁: N / 4 = 100 / 4 = 25th item.3. Cumulative frequencies: cf₁ = 10 (for 20–25), cf₂ = 10 + 30 = 40 (for 26–31). Thus, the Q₁ class is 26–31.4. Class boundaries and parameters for 26–31: L = 25.5, w = 6, f_{Q₁} = 30, cf_{prev} = 10.5. Formula: Q₁ = L + [(N/4 - cf_{prev}) / f_{Q₁}] × wQ₁ = 25.5 + [(25 - 10) / 30] × 6 = 25.5 + (15 / 30) × 6 = 25.5 + 3 = 28."
+  },
+  {
+    "questionNumber": 64,
+    "grade": "Grade 11",
+    "topic": "Unit 10: Mathematical Logic (Tautologies)",
+    "difficulty": "easy",
+    "prompt": "Let p and q be propositions. Which of the following compound statements is a tautology?",
+    "options": [
+      "(p ∨ q) ⇔ p",
+      "(p ⇒ q) ⇒ p",
+      "(p ∧ q) ⇔ p",
+      "(p ⇒ q) ⇔ (¬p ∨ q)"
+    ],
+    "correctAnswer": "D",
+    "explanation": "By the standard logical equivalence for material implication, p ⇒ q is logically equivalent to ¬p ∨ q for all truth values of p and q. Therefore, the biconditional (p ⇒ q) ⇔ (¬p ∨ q) is always True (a tautology)."
+  },
+  {
+    "questionNumber": 65,
+    "grade": "Grade 11",
+    "topic": "Unit 2: Rational Expressions and Rational Functions (Asymptotes)",
+    "difficulty": "hard",
+    "prompt": "Which one of the following is NOT true about the graph of f(x) = 5 + |x| / (x + 1)?",
+    "options": [
+      "y = 5 + x is its oblique asymptote.",
+      "y = 6 is a horizontal asymptote of f.",
+      "y = 4 is a horizontal asymptote of f.",
+      "x = -1 is a vertical asymptote of f."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Analyze the asymptotes of f(x) = 5 + |x| / (x + 1):• Vertical asymptote: As x → -1, |x| → 1 and x + 1 → 0, so x = -1 is a vertical asymptote (D is true).• Horizontal asymptote as x → +∞: |x| = x, so lim_{x→+∞} [5 + x/(x+1)] = 5 + 1 = 6  ⇒  y = 6 is a horizontal asymptote (B is true).• Horizontal asymptote as x → -∞: |x| = -x, so lim_{x→-∞} [5 - x/(x+1)] = 5 - 1 = 4  ⇒  y = 4 is a horizontal asymptote (C is true).• Since f(x) approaches finite horizontal asymptotes at both ±∞, it has NO oblique asymptote (A is NOT true)."
+  }
+]

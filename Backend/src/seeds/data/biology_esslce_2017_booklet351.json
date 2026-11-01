@@ -1,0 +1,1702 @@
+[
+  {
+    "questionNumber": 1,
+    "grade": "Grade 9",
+    "topic": "Unit 1: Introduction to Biology & Biodiversity Conservation",
+    "unit": "Unit 1: Biology and Technology (Grade 9)",
+    "difficulty": "easy",
+    "prompt": "Which one of the following Ethiopian biological research institutes is known for housing a major gene bank in Africa?",
+    "options": [
+      "Addis Ababa University Biology Department",
+      "Institute of Biodiversity Conservation",
+      "Aklilu Lemma Institute of Pathobiology",
+      "Armauer Hansen Research Institute"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The Institute of Biodiversity Conservation (IBC) in Ethiopia is mandated to conserve the country's biodiversity and houses one of the major gene banks in Africa.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 2,
+    "grade": "Grade 9",
+    "topic": "Unit 2: Cell Biology (Microscopy)",
+    "unit": "Unit 2: Cell Biology (Grade 9)",
+    "difficulty": "medium",
+    "prompt": "A grade 12 student marked two dots close to each other using a pen on a piece of paper and observed them under a microscope. The two dots appeared well separated under the microscope. This was due to",
+    "options": [
+      "resolution",
+      "magnification.",
+      "staining",
+      "mounting."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Resolution is the ability to distinguish between two separate points that are close together as distinct entities, which makes the two dots appear well separated.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 3,
+    "grade": "Grade 9",
+    "topic": "Unit 2: Cell Biology",
+    "unit": "Unit 2: Cell Biology (Grade 9)",
+    "difficulty": "easy",
+    "prompt": "From the following alternatives select the common features that are found both in animal and plant cells.",
+    "options": [
+      "Cell membrane, nucleus, cytoplasm, lysosome and Golgi apparatus",
+      "Cell membrane, nucleus, cytoplasm, mitochondria and endoplasmic reticulum",
+      "Cell membrane, nucleus, cytoplasm, chloroplast and Golgi apparatus",
+      "Cell membrane, nucleus, cytoplasm, large vacuole and Golgi apparatus"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Both plant and animal cells share basic eukaryotic organelles including cell membrane, nucleus, cytoplasm, mitochondria, and endoplasmic reticulum. Chloroplasts and large central vacuoles are unique to plant cells, while typical prominent lysosomes are more common in animal cells.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 4,
+    "grade": "Grade 9",
+    "topic": "Unit 2: Cell Biology (Osmosis and Water Relations)",
+    "unit": "Unit 2: Cell Biology (Grade 9)",
+    "difficulty": "medium",
+    "prompt": "A biology teacher grouped his students in to two groups and ordered group I to place a slice of potato in hypertonic solution and group II in hypotonic solution. What will happen to the potato slice in group I and group II?",
+    "options": [
+      "turgid while for group II it will be flaccid.",
+      "haemolyzed while for group II it will be flaccid.",
+      "flaccid while for group II it will be turgid.",
+      "turgid while for group II there will be no change."
+    ],
+    "correctAnswer": "C",
+    "explanation": "In a hypertonic solution (Group I), water moves out of the potato cells by osmosis, making the tissue flaccid/plasmolyzed. In a hypotonic solution (Group II), water moves into the cells, making them turgid.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 5,
+    "grade": "Grade 9",
+    "topic": "Unit 3: Human Nutrition",
+    "unit": "Unit 3: Human Biology and Health (Grade 9)",
+    "difficulty": "medium",
+    "prompt": "A man eats only vegetables, beans, banana and orange for one week continuously in his lunch and dinner. For this man, what nutrients are most likely missed in his meal to be a balanced diet?",
+    "options": [
+      "Carbohydrates",
+      "Lipids",
+      "Proteins",
+      "Minerals"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Vegetables, beans, bananas, and oranges provide carbohydrates (bananas, vegetables), proteins and minerals (beans, vegetables), and vitamins (fruits), but lack concentrated sources of lipids/fats.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 6,
+    "grade": "Grade 9",
+    "topic": "Unit 3: Human Nutrition",
+    "unit": "Unit 3: Human Biology and Health (Grade 9)",
+    "difficulty": "medium",
+    "prompt": "Which of the following is correct about the process of digestion or absorption of food in the small intestine?",
+    "options": [
+      "Proteins are converted into amino acids by the action of hydrochloric acid and amylase.",
+      "Bile emulsifies fats to increase the surface area to make it easier for lipase.",
+      "Water is reabsorbed into the small intestine and metabolic wastes are excreted.",
+      "Glucose and non-hydrolyzed starch molecules are absorbed through the lacteal."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Bile salts emulsify large lipid droplets into smaller micelles, greatly increasing the surface area for pancreatic lipase to digest fats.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 7,
+    "grade": "Grade 9",
+    "topic": "Unit 3: Human Nutrition (Enzyme Digestion)",
+    "unit": "Unit 3: Human Biology and Health (Grade 10)",
+    "difficulty": "medium",
+    "prompt": "In an experiment, students wanted to prove that enzymatic digestion begins in the mouth using certain chewed food coated with their own saliva. In order to get a positive result for their experiment, what type of food sample and testing solution should the students use?",
+    "options": [
+      "Potato and iodine solution",
+      "Meat and Benedict's solution",
+      "Fish and sodium hydroxide solution",
+      "Bread and copper sulphate solution"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Salivary amylase digests starch into maltose. Testing starchy foods like potato or bread with iodine before and after salivary action demonstrates starch breakdown (loss of blue-black iodine color).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 8,
+    "grade": "Grade 9",
+    "topic": "Unit 4: Human Respiration",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "Compared to the inhaled air what are the percentage of nitrogen, oxygen and carbon dioxide gases in exhaled air, respectively?",
+    "options": [
+      "80%, 16% and 4%",
+      "80%, 4% and 16%",
+      "16%, 4% and 80%",
+      "4%, 16% and 80%"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Exhaled air contains approximately 78-80% nitrogen (unchanged), ~16% oxygen (lower than inhaled 21%), and ~4% carbon dioxide (higher than inhaled 0.04%).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 9,
+    "grade": "Grade 9",
+    "topic": "Unit 4: Human Respiration",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "Three students carried out different experiments in exhaled air: Student I uses cold glass and blue cobalt chloride paper; Student II uses ice cubes; Student III uses tube containing lime solution and straw. Based on their setup, which student plans to demonstrate the presence of water vapour and carbon dioxide, respectively?",
+    "options": [
+      "II and III",
+      "I and II",
+      "II and I",
+      "I and III"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Cobalt chloride paper turns from blue to pink in the presence of water vapor (Student I), and lime water turns milky in the presence of carbon dioxide (Student III).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 10,
+    "grade": "Grade 9",
+    "topic": "Unit 5: Transport Systems in Organisms (Human Heart)",
+    "unit": "Unit 3: Human Biology and Health (Grade 9)",
+    "difficulty": "medium",
+    "prompt": "Consider the structure of the human heart (showing chambers and valves: I = Right atrium, II = Right ventricle, III = Left ventricle, IV = Left atrium, V = Aorta). Which part is used for forcing oxygenated blood out of the heart and around the body?",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Part III represents the left ventricle, which has thick muscular walls to pump oxygenated blood at high pressure into the aorta and around the systemic circulation.",
+    "imageUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMzAwIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjMwMCI+CiAgICA8cmVjdCB3aWR0aD0iNTIwIiBoZWlnaHQ9IjMwMCIgcng9IjE0IiBmaWxsPSIjRjhGQUZDIiBzdHJva2U9IiNDQkQ1RTEiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMjYwIiB5PSIyOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzBGMTcyQSI+SHVtYW4gSGVhcnQg4oCUIENoYW1iZXJzICZhbXA7IE1ham9yIFZlc3NlbHM8L3RleHQ+CiAgICA8IS0tIEFvcnRhIEFyY2ggKFYpIC0tPgogICAgPHBhdGggZD0iTSAyNzUgMTEwIEMgMjc1IDQ4LCAzNDUgNDgsIDM0NSA5NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjREMyNjI2IiBzdHJva2Utd2lkdGg9IjE4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgIDx0ZXh0IHg9IjMxNSIgeT0iNDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNCOTFDMUMiPlYgKEFvcnRhKTwvdGV4dD4KICAgIDwhLS0gUmlnaHQgQXRyaXVtIChJKSAtLT4KICAgIDxyZWN0IHg9IjExNSIgeT0iODUiIHdpZHRoPSIxMTUiIGhlaWdodD0iNzUiIHJ4PSIxNiIgZmlsbD0iI0RCRUFGRSIgc3Ryb2tlPSIjMjU2M0VCIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogICAgPHRleHQgeD0iMTcyIiB5PSIxMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxRTQwQUYiPkk8L3RleHQ+CiAgICA8dGV4dCB4PSIxNzIiIHk9IjEzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSIjMUUzQThBIj5SaWdodCBBdHJpdW08L3RleHQ+CiAgICA8dGV4dCB4PSIxNzIiIHk9IjE1MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkuNSIgZmlsbD0iIzQ3NTU2OSI+KERlb3h5Z2VuYXRlZCk8L3RleHQ+CiAgICA8IS0tIExlZnQgQXRyaXVtIChJVikgLS0+CiAgICA8cmVjdCB4PSIyNjAiIHk9Ijg1IiB3aWR0aD0iMTE1IiBoZWlnaHQ9Ijc1IiByeD0iMTYiIGZpbGw9IiNGRUUyRTIiIHN0cm9rZT0iI0RDMjYyNiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICAgIDx0ZXh0IHg9IjMxNyIgeT0iMTE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjQjkxQzFDIj5JVjwvdGV4dD4KICAgIDx0ZXh0IHg9IjMxNyIgeT0iMTM4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiM5OTFCMUIiPkxlZnQgQXRyaXVtPC90ZXh0PgogICAgPHRleHQgeD0iMzE3IiB5PSIxNTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5LjUiIGZpbGw9IiM0NzU1NjkiPihGcm9tIEx1bmdzKTwvdGV4dD4KICAgIDwhLS0gUmlnaHQgVmVudHJpY2xlIChJSSkgLS0+CiAgICA8cGF0aCBkPSJNIDExNSAxNzAgTCAyMzAgMTcwIEwgMjMwIDI2NSBMIDEzNSAyNDUgWiIgZmlsbD0iI0JGREJGRSIgc3Ryb2tlPSIjMUQ0RUQ4IiBzdHJva2Utd2lkdGg9IjIuNSIvPgogICAgPHRleHQgeD0iMTgwIiB5PSIyMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxRTQwQUYiPklJPC90ZXh0PgogICAgPHRleHQgeD0iMTgwIiB5PSIyMjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzFFM0E4QSI+UmlnaHQgVmVudHJpY2xlPC90ZXh0PgogICAgPCEtLSBTZXB0dW0gLS0+CiAgICA8cmVjdCB4PSIyMzUiIHk9Ijk1IiB3aWR0aD0iMjAiIGhlaWdodD0iMTcwIiByeD0iNCIgZmlsbD0iIzY0NzQ4QiIvPgogICAgPCEtLSBMZWZ0IFZlbnRyaWNsZSAoSUlJKSAtLT4KICAgIDxwYXRoIGQ9Ik0gMjYwIDE3MCBMIDM4NSAxNzAgTCAzNTUgMjY4IEwgMjYwIDI2NSBaIiBmaWxsPSIjRkVDQUNBIiBzdHJva2U9IiNCOTFDMUMiIHN0cm9rZS13aWR0aD0iNCIvPgogICAgPHRleHQgeD0iMzE1IiB5PSIyMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM5OTFCMUIiPklJSTwvdGV4dD4KICAgIDx0ZXh0IHg9IjMxNSIgeT0iMjI4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjN0YxRDFEIj5MZWZ0IFZlbnRyaWNsZTwvdGV4dD4KICAgIDx0ZXh0IHg9IjMxNSIgeT0iMjQ0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOS41IiBmaWxsPSIjOTkxQjFCIj4oVGhpY2sgTXVzY3VsYXIgV2FsbCk8L3RleHQ+CiAgPC9zdmc+"
+  },
+  {
+    "questionNumber": 11,
+    "grade": "Grade 9",
+    "topic": "Unit 3 & 5: Nutrition and Transport",
+    "unit": "Unit 3: Human Biology and Health (Grade 9)",
+    "difficulty": "easy",
+    "prompt": "If your body cannot make enough red blood cells, which one of the following mineral rich foods can correct this problem?",
+    "options": [
+      "Iron-rich food",
+      "Calcium-rich food",
+      "Iodine-rich food",
+      "Sodium-rich food"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Iron is an essential constituent of hemoglobin in red blood cells. Iron deficiency leads to anemia and reduced red blood cell production.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 12,
+    "grade": "Grade 9",
+    "topic": "Unit 6: Classification of Organisms",
+    "unit": "Unit 5: Classification (Grade 9)",
+    "difficulty": "medium",
+    "prompt": "A biology teacher provided common names of three organisms (human being, dog, housefly). In which of the following ways should students write the correct scientific binomial nomenclature?",
+    "options": [
+      "Homo Sapiens, Canis Familiaris and Musca Domestica",
+      "Homo sapiens, Canis familiaris and Musca domestica",
+      "homo sapiens, Canis familiaris and Musca domestica",
+      "Homo sapiens, Canis familiaris and musca domestica"
+    ],
+    "correctAnswer": "B",
+    "explanation": "In binomial nomenclature, the genus name begins with a capital letter and the specific epithet begins with a lowercase letter, and both are italicized (or underlined when handwritten).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 13,
+    "grade": "Grade 9",
+    "topic": "Unit 6: Plant Diversity",
+    "unit": "Unit 4: Food Making and Growth in Plants (Grade 10)",
+    "difficulty": "easy",
+    "prompt": "Identify the typical examples for division Gymnospermae and Angiospermae, respectively?",
+    "options": [
+      "Mosses and ferns",
+      "Liverworts and palm trees",
+      "Grasses and legumes",
+      "Juniper and roses"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Juniper is a gymnosperm (conifer with naked seeds), while roses are angiosperms (flowering plants with enclosed seeds).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 14,
+    "grade": "Grade 9",
+    "topic": "Unit 6: Plant Diversity (Monocots)",
+    "unit": "Unit 4: Food Making and Growth in Plants (Grade 10)",
+    "difficulty": "medium",
+    "prompt": "A student collected plants having flowers and seeds, single seed leaf embryo, long and thin parallel-veined leaves, and scattered vascular bundles in stem. Which option contains plants categorized under his collection?",
+    "options": [
+      "Grasses, orchids, teff and roses",
+      "Grasses, orchids, teff and beans",
+      "Grasses, sunflowers, teff and maize",
+      "Grasses, orchids, teff and maize"
+    ],
+    "correctAnswer": "D",
+    "explanation": "The characteristics described (single cotyledon, parallel leaf venation, scattered vascular bundles) define monocotyledonous plants. Grasses, orchids, teff, and maize are all monocots.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 15,
+    "grade": "Grade 9",
+    "topic": "Unit 7: Ecosystems and Ecology",
+    "unit": "Unit 6: Environment (Grade 9)",
+    "difficulty": "medium",
+    "prompt": "Consider the pyramid of biomass (Tiers I, II, III, IV). Which statement is correct about the pyramid of biomass?",
+    "options": [
+      "The whole organisms at first trophic level is eaten by the organisms above.",
+      "When organisms in stage II eat the producers, most of the producer's materials are turned into new secondary consumers.",
+      "Much of the biomass from stage II is used by stage III to release energy for living.",
+      "At each stage of trophic level, the amount of biomass, which is passed on, supports a large amount of organism in the stage above."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Energy and biomass are lost at each trophic level due to respiration, heat loss, and metabolic processes. Consumers in stage III utilize the biomass of stage II for respiration and life processes.",
+    "imageUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMjYwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI2MCI+CiAgICA8cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI2MCIgcng9IjE0IiBmaWxsPSIjRjhGQUZDIiBzdHJva2U9IiNDQkQ1RTEiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMjUwIiB5PSIyOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzBGMTcyQSI+RWNvbG9naWNhbCBQeXJhbWlkIG9mIEJpb21hc3MgKFRyb3BoaWMgU3RhZ2VzIEnigJNJVik8L3RleHQ+CiAgICA8cmVjdCB4PSIxOTUiIHk9IjQ4IiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjQwIiByeD0iNiIgZmlsbD0iI0ZFRTJFMiIgc3Ryb2tlPSIjREMyNjI2IiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDx0ZXh0IHg9IjI1MCIgeT0iNzIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM5OTFCMUIiPlN0YWdlIElWIChUb3AgQ2Fybml2b3Jlcyk8L3RleHQ+CiAgICA8cmVjdCB4PSIxNTAiIHk9Ijk0IiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjQyIiByeD0iNiIgZmlsbD0iI0ZFRjNDNyIgc3Ryb2tlPSIjRDk3NzA2IiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDx0ZXh0IHg9IjI1MCIgeT0iMTE5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjOTI0MDBFIj5TdGFnZSBJSUkgKFNlY29uZGFyeSBDb25zdW1lcnMpPC90ZXh0PgogICAgPHJlY3QgeD0iMTAwIiB5PSIxNDIiIHdpZHRoPSIzMDAiIGhlaWdodD0iNDQiIHJ4PSI2IiBmaWxsPSIjREJFQUZFIiBzdHJva2U9IiMyNTYzRUIiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMjUwIiB5PSIxNjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxRTQwQUYiPlN0YWdlIElJIChQcmltYXJ5IENvbnN1bWVycyAvIEhlcmJpdm9yZXMpPC90ZXh0PgogICAgPHJlY3QgeD0iNDUiIHk9IjE5MiIgd2lkdGg9IjQxMCIgaGVpZ2h0PSI0OCIgcng9IjYiIGZpbGw9IiNEQ0ZDRTciIHN0cm9rZT0iIzE2QTM0QSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8dGV4dCB4PSIyNTAiIHk9IjIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzE2NjUzNCI+U3RhZ2UgSSAoUHJpbWFyeSBQcm9kdWNlcnMg4oCUIE1heGltdW0gQmlvbWFzcyk8L3RleHQ+CiAgPC9zdmc+"
+  },
+  {
+    "questionNumber": 16,
+    "grade": "Grade 9",
+    "topic": "Unit 7: Ecology (Food Webs and Trophic Cascades)",
+    "unit": "Unit 6: Environment (Grade 9)",
+    "difficulty": "easy",
+    "prompt": "Based on the food chain: Leaves -> Grasshoppers -> Rodents -> Leopards. What will happen if the number of rodents significantly decrease?",
+    "options": [
+      "an increase in the number of leopards.",
+      "fewer grasshoppers in the chain.",
+      "no change in the number of leopard.",
+      "an increase in the number of grasshoppers."
+    ],
+    "correctAnswer": "D",
+    "explanation": "If rodents (predators of grasshoppers) decrease, predation pressure on grasshoppers is removed, leading to an increase in the grasshopper population.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 17,
+    "grade": "Grade 9",
+    "topic": "Unit 7: Ecology (Biogeochemical Cycles)",
+    "unit": "Unit 6: Environment (Grade 9)",
+    "difficulty": "easy",
+    "prompt": "Which of the following is NOT a key process involved in carbon cycle?",
+    "options": [
+      "Evaporation",
+      "Cellular respiration",
+      "Photosynthesis",
+      "Decomposition"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Evaporation is part of the hydrological (water) cycle, not the carbon cycle. Photosynthesis, respiration, and decomposition directly cycle carbon.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 18,
+    "grade": "Grade 10",
+    "topic": "Unit 1: Cell Division (Mitosis)",
+    "unit": "Unit 4: Cell Biology (Grade 11)",
+    "difficulty": "easy",
+    "prompt": "Which of the following is correct about mitosis?",
+    "options": [
+      "It is a division of somatic cells to make daughter cells with half chromosome.",
+      "It is a division of sex cells to make identical daughter cells with doubled chromosome.",
+      "It is a division of somatic cells to make identical daughter cells.",
+      "It is a division of sex cells to make different daughter cells."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Mitosis is the division of somatic cells producing two genetically identical diploid daughter cells.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 19,
+    "grade": "Grade 10",
+    "topic": "Unit 1: Cell Division",
+    "unit": "Unit 4: Cell Biology (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "Which one of the following features is common for mitosis and meiosis?",
+    "options": [
+      "replication of DNA and the formation of daughter cells.",
+      "production of daughter cells identical to the parent cell.",
+      "formation of cells with the same chromosome number as parent cell.",
+      "spermatogenesis and oogenesis processes in males and females."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both mitotic and meiotic cell divisions are preceded by interphase where DNA replication occurs, and both result in the formation of daughter cells.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 20,
+    "grade": "Grade 10",
+    "topic": "Unit 2: Plant Anatomy and Physiology",
+    "unit": "Unit 4: Food Making and Growth in Plants (Grade 10)",
+    "difficulty": "medium",
+    "prompt": "Which tissues of plant leaves are involved in waterproofing, major photosynthetic and major gas exchange activities, respectively?",
+    "options": [
+      "Guard cells, palisade mesophyll and epidermis",
+      "Guard cells, palisade mesophyll and spongy mesophyll",
+      "Waxy cuticle, palisade mesophyll and spongy mesophyll",
+      "Waxy cuticle, palisade mesophyll and epidermis"
+    ],
+    "correctAnswer": "C",
+    "explanation": "The waxy cuticle provides waterproofing, the palisade mesophyll carries out major photosynthesis, and the spongy mesophyll with air spaces facilitates major gas exchange.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 21,
+    "grade": "Grade 10",
+    "topic": "Unit 2: Plant Water Transport",
+    "unit": "Unit 4: Food Making and Growth in Plants (Grade 10)",
+    "difficulty": "medium",
+    "prompt": "Which of the following is correct about the movement of water in plants?",
+    "options": [
+      "moves against a water potential gradient.",
+      "across the phloem tissue by diffusion.",
+      "across the tissues of a plant by osmosis.",
+      "by using energy until it reaches to the xylem."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Water moves from cell to cell across plant tissues down a water potential gradient primarily by osmosis.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 22,
+    "grade": "Grade 10",
+    "topic": "Unit 2: Plant Hormones (Apical Dominance)",
+    "unit": "Unit 4: Food Making and Growth in Plants (Grade 10)",
+    "difficulty": "medium",
+    "prompt": "What will happen to the growth of the plant when you remove indole-acetic acid (IAA) from the main shoot part of the plant?",
+    "options": [
+      "The plant will bush out.",
+      "It stimulates dropping of leaves.",
+      "The main shoot of the plant elongates.",
+      "The growth of side shoots will slow down."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Auxin (IAA) produced in the apical bud suppresses lateral bud growth (apical dominance). Removing the main shoot removes auxin, releasing lateral buds and causing the plant to bush out.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 23,
+    "grade": "Grade 10",
+    "topic": "Unit 3: Animal Biology & Characteristics",
+    "unit": "Unit 3: Human Biology and Health (Grade 10)",
+    "difficulty": "easy",
+    "prompt": "In which one of the following alternatives the whole list contains characteristics of animals?",
+    "options": [
+      "Respire, excrete, autotrophic and reproduce",
+      "Unicellular, excrete, heterotrophic and motility",
+      "Heterotrophic, excrete, motility and grow",
+      "Respire, multicellular, autotrophic and reproduce"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Animals are heterotrophic, carry out excretion, exhibit motility at some stage, and grow. Autotrophic nutrition (A, D) is characteristic of plants and algae.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 24,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Animal Diversity (Mollusca - Cephalopods)",
+    "unit": "Unit 5: Classification (Grade 9)",
+    "difficulty": "hard",
+    "prompt": "A grade 11 student observed and identified some animals group having closed circulatory system, centralized nervous system with brain and sensory organs. Select the animal that belongs to this group:",
+    "options": [
+      "Snails",
+      "Earthworm",
+      "Squid",
+      "Snake"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Unlike most molluscs (like snails with open circulatory systems), cephalopods like squids possess an advanced closed circulatory system, a well-developed centralized brain, and complex camera-like eyes.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 25,
+    "grade": "Grade 10",
+    "topic": "Unit 3: Animal Physiology (Thermoregulation)",
+    "unit": "Unit 5: Classification (Grade 9)",
+    "difficulty": "easy",
+    "prompt": "What does it mean if an animal is poikilothermic?",
+    "options": [
+      "changes its body temperature with environmental condition.",
+      "increases its metabolic rate during cold and hot conditions.",
+      "keeps its body temperature constant regardless of external changes.",
+      "produces heat when temperature falls by activating the hypothalamus."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Poikilotherms (ectotherms) have body temperatures that fluctuate with environmental changes.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 26,
+    "grade": "Grade 11",
+    "topic": "Unit 1: Enzymology & Metabolism",
+    "unit": "Unit 3: Enzymes (Grade 11)",
+    "difficulty": "easy",
+    "prompt": "Which one of the following statements is correct about the catalytic activities of enzymes?",
+    "options": [
+      "change the overall nature of the products.",
+      "allow reactions in cells to take place quickly.",
+      "alter themselves at the end of biochemical reactions.",
+      "increase the energy required to start a reaction."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Enzymes are biological catalysts that lower activation energy and accelerate biochemical reactions without being consumed.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 27,
+    "grade": "Grade 11",
+    "topic": "Unit 1: Biochemistry (Protein Structure)",
+    "unit": "Unit 3: Enzymes (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "Four students draw protein structure posters. Student I: alpha-helix, beta-sheet, hydrogen bonds. Student II: amino acid sequence, peptide bonds. Student III: multi-subunit complex, haem group. Student IV: 3D shape, side chain interactions. Which student drew secondary and quaternary structures, respectively?",
+    "options": [
+      "I and IV",
+      "II and III",
+      "I and III",
+      "II and IV"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Student I describes secondary structure (alpha-helix, beta-pleated sheets stabilized by hydrogen bonds). Student III describes quaternary structure (multiple polypeptide subunits and prosthetic groups like haem).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 28,
+    "grade": "Grade 11",
+    "topic": "Unit 1: Enzymology",
+    "unit": "Unit 3: Enzymes (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "How does the induced-fit model explain enzyme specificity?",
+    "options": [
+      "change the shape of active site slightly to fit substrates precisely.",
+      "have a rigid active site that can just bind to single substrate.",
+      "have multiple active sites that can fit to different substrates.",
+      "bind to whatever the shape of substrate that fits to allosteric site."
+    ],
+    "correctAnswer": "A",
+    "explanation": "According to the induced-fit model, the active site of an enzyme is flexible and molds slightly around the substrate for a precise fit.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 29,
+    "grade": "Grade 11",
+    "topic": "Unit 1: Enzymology (Enzyme Inhibition)",
+    "unit": "Unit 3: Enzymes (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "What happens to the substrate molecule when competitive inhibitor binds with an enzyme?",
+    "options": [
+      "undergoes conformational change.",
+      "cannot bind with the active site.",
+      "binds to the allosteric site temporarily.",
+      "easily binds with the active site."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Competitive inhibitors structurally resemble the substrate and bind to the active site, blocking the actual substrate from binding.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 30,
+    "grade": "Grade 11",
+    "topic": "Unit 1: Enzymology (Allosteric Regulation)",
+    "unit": "Unit 3: Enzymes (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "What will happen to the reaction if you add a certain inhibitor or activator to the substrate having allosteric enzyme set up?",
+    "options": [
+      "Inhibitor binds to active site to speed up the reaction.",
+      "Inhibitor binds to regulatory site to increase rate of reaction.",
+      "Activator binds to active site to initiate the reaction.",
+      "Activator binds to regulatory site to activate the reaction."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Allosteric activators bind to regulatory (allosteric) sites, stabilizing the active conformation of the enzyme and enhancing catalytic activity.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 31,
+    "grade": "Grade 11",
+    "topic": "Unit 1: Enzymology (Enzyme Classification)",
+    "unit": "Unit 3: Enzymes (Grade 11)",
+    "difficulty": "hard",
+    "prompt": "Which one of the following classes of enzyme and type of reactions they catalyze is correctly matched?",
+    "options": [
+      "Oxidoreductases - transfer functional groups from donor to acceptor",
+      "Transferases - transfer of electrons from one molecule to another",
+      "Ligases - cleave bonds by other means rather than hydrolysis",
+      "Lyases - catalyze the hydrolysis of various bonds"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Enzyme commission classes categorize enzymes by reaction type (Oxidoreductases: redox; Transferases: group transfer; Hydrolases: hydrolysis; Lyases: non-hydrolytic bond cleavage/formation; Ligases: joining molecules using ATP).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 32,
+    "grade": "Grade 11",
+    "topic": "Unit 1: Enzymology",
+    "unit": "Unit 3: Enzymes (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "If a given enzyme works only at temperature range of 20 and 45°C and pH range of 4 to 9. Which one works best during optimization of these two factors for enzyme activity?",
+    "options": [
+      "Adjusting temperature below 20°C makes enzyme more active...",
+      "Adjusting pH above 9 increases collisions...",
+      "Adjusting temperature between 20°C and 45°C results in little denaturation and increased number of collisions.",
+      "The optimum pH under which this enzyme is most active is found below 4."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Within the functional thermal range (20-45°C), kinetic energy and collision frequency increase without causing thermal denaturation.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 33,
+    "grade": "Grade 11",
+    "topic": "Unit 2: Genetics (Chromosomes & Genes)",
+    "unit": "Unit 3: Genetics (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "All of the following features define a chromosome EXCEPT",
+    "options": [
+      "contains hundreds to thousands of genes.",
+      "exists in pairs in diploid organisms.",
+      "made up of DNA and protein.",
+      "functional unit of inheritance."
+    ],
+    "correctAnswer": "D",
+    "explanation": "The gene is the functional unit of inheritance, whereas a chromosome is a macromolecular structure composed of DNA and proteins containing many genes.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 34,
+    "grade": "Grade 11",
+    "topic": "Unit 2: Molecular Biology (Nucleic Acids)",
+    "unit": "Unit 3: Genetics (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "Which structural and functional difference is observed between DNA and RNA?",
+    "options": [
+      "Both DNA and RNA have the same nitrogenous bases but differ in pentose sugar.",
+      "RNA produces DNA through the process of transcription.",
+      "RNA stores the genetic material while DNA involves in protein synthesis.",
+      "DNA is very stable molecule while RNA is degraded quickly."
+    ],
+    "correctAnswer": "A",
+    "explanation": "DNA contains deoxyribose sugar and thymine, while RNA contains ribose sugar and uracil.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 35,
+    "grade": "Grade 11",
+    "topic": "Unit 2: Meiosis",
+    "unit": "Unit 3: Genetics (Grade 12)",
+    "difficulty": "easy",
+    "prompt": "All of the following events occur during telophase I of meiosis I cell division EXCEPT",
+    "options": [
+      "crossing over takes place.",
+      "each of the spindle fibers disappears.",
+      "set of chromosomes come together.",
+      "nuclear envelope reforms."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Crossing over occurs during prophase I (pachytene stage), not during telophase I.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 36,
+    "grade": "Grade 11",
+    "topic": "Unit 3: Mendelian Genetics",
+    "unit": "Unit 3: Genetics (Grade 12)",
+    "difficulty": "hard",
+    "prompt": "Suppose there was a cross between pea plants with flower positions axial (AA) and terminal (aa) and produced F1 generation. What will be the most probable number of heterozygous dominant individuals obtained if 1000 offspring were produced by self-crossing of F1 generation?",
+    "options": [
+      "200",
+      "750",
+      "500",
+      "250"
+    ],
+    "correctAnswer": "C",
+    "explanation": "F1 (Aa) self-crosses produce F2 genotypes in ratio 1 AA : 2 Aa : an aa. Thus, 50% (0.50) or 500 out of 1000 offspring will be heterozygous dominant (Aa).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 37,
+    "grade": "Grade 11",
+    "topic": "Unit 3: Mendelian Genetics (Test Cross)",
+    "unit": "Unit 3: Genetics (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "If you have a pea plant of unknown genotype with a green pod color, you obtained all green pod colors of offspring phenotype after a test cross. What was the unknown genotype of the parent?",
+    "options": [
+      "homozygous dominant.",
+      "homozygous recessive.",
+      "heterozygous dominant.",
+      "incomplete dominant."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Crossing an unknown dominant phenotype with a homozygous recessive parent yielding 100% dominant offspring proves the unknown parent is homozygous dominant (GG).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 38,
+    "grade": "Grade 11",
+    "topic": "Unit 3: Non-Mendelian Inheritance",
+    "unit": "Unit 3: Genetics (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "Consider examples: 1. Inflated/pinched pods. 2. Red cow and white bull have roan calf. 3. AB blood type. 4. Pink roses from red and white. Which are exemplary for non-Mendelian inheritance?",
+    "options": [
+      "1, 2, 3",
+      "1, 3, 4",
+      "1, 2, 4",
+      "2, 3, 4"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Example 1 is complete dominance (Mendelian). Example 2 (codominance in roan cattle), Example 3 (codominance/multiple alleles in ABO blood groups), and Example 4 (incomplete dominance in snapdragon/rose color) are non-Mendelian.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 39,
+    "grade": "Grade 11",
+    "topic": "Unit 3: Sex-Linked Inheritance & Pedigree Analysis",
+    "unit": "Unit 3: Genetics (Grade 12)",
+    "difficulty": "hard",
+    "prompt": "Based on the pedigree diagram for color blindness (X-linked recessive), if the family in the second generation has children, what is the probability that they will have carrier female and color blind male, respectively?",
+    "options": [
+      "1/4 and 1/4",
+      "1/2 and 1/2",
+      "1/4 and 1/2",
+      "1/2 and 1/4"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Analysis of carrier female (X^B X^b) crossed with normal/affected male determines offspring probabilities for specific phenotypes.",
+    "imageUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjcwIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjI3MCI+CiAgICA8cmVjdCB3aWR0aD0iNTIwIiBoZWlnaHQ9IjI3MCIgcng9IjE0IiBmaWxsPSIjRjhGQUZDIiBzdHJva2U9IiNDQkQ1RTEiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMjYwIiB5PSIyNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzBGMTcyQSI+UGVkaWdyZWUgRGlhZ3JhbSDigJQgWC1MaW5rZWQgUmVjZXNzaXZlIENvbG9yIEJsaW5kbmVzczwvdGV4dD4KICAgIDwhLS0gR2VuIEkgLS0+CiAgICA8dGV4dCB4PSIzNSIgeT0iNzUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM0NzU1NjkiPkdlbiBJPC90ZXh0PgogICAgPGNpcmNsZSBjeD0iMTkwIiBjeT0iNzAiIHI9IjIwIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMwRjE3MkEiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgICA8cGF0aCBkPSJNIDE5MCA1MCBBIDIwIDIwIDAgMCAxIDE5MCA5MCBaIiBmaWxsPSIjOTNDNUZEIi8+CiAgICA8dGV4dCB4PSIxOTAiIHk9IjEwNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFFM0E4QSI+Q2FycmllciDimYAgKFjhtK5Y4bWHKTwvdGV4dD4KICAgIDxsaW5lIHgxPSIyMTAiIHkxPSI3MCIgeDI9IjMxMCIgeTI9IjcwIiBzdHJva2U9IiMwRjE3MkEiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgICA8cmVjdCB4PSIzMTAiIHk9IjUwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9IiMxRTI5M0IiIHN0cm9rZT0iIzBGMTcyQSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICAgIDx0ZXh0IHg9IjMzMCIgeT0iMTA2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMEYxNzJBIj5Db2xvci1ibGluZCDimYIgKFjhtYdZKTwvdGV4dD4KICAgIDwhLS0gRGVzY2VudCBsaW5lIHRvIEdlbiBJSSAtLT4KICAgIDxsaW5lIHgxPSIyNjAiIHkxPSI3MCIgeDI9IjI2MCIgeTI9IjEzNSIgc3Ryb2tlPSIjMEYxNzJBIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogICAgPCEtLSBHZW4gSUkgLS0+CiAgICA8dGV4dCB4PSIzNSIgeT0iMTY1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjNDc1NTY5Ij5HZW4gSUk8L3RleHQ+CiAgICA8Y2lyY2xlIGN4PSIyNjAiIGN5PSIxNTUiIHI9IjIwIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMyNTYzRUIiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgICA8cGF0aCBkPSJNIDI2MCAxMzUgQSAyMCAyMCAwIDAgMSAyNjAgMTc1IFoiIGZpbGw9IiM5M0M1RkQiLz4KICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTYwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMUU0MEFGIj5DYXJyaWVyIOKZgCAoWOG0rljhtYcpPC90ZXh0PgogICAgPGxpbmUgeDE9IjI4MCIgeTE9IjE1NSIgeDI9IjM1MCIgeTI9IjE1NSIgc3Ryb2tlPSIjMEYxNzJBIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogICAgPHJlY3QgeD0iMzUwIiB5PSIxMzUiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iI0ZGRkZGRiIgc3Ryb2tlPSIjMEYxNzJBIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogICAgPHRleHQgeD0iNDAwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMwRjE3MkEiPk5vcm1hbCDimYIgKFjhtK5ZKTwvdGV4dD4KICAgIDwhLS0gR2VuIElJSSBPZmZzcHJpbmcgLS0+CiAgICA8bGluZSB4MT0iMzE1IiB5MT0iMTU1IiB4Mj0iMzE1IiB5Mj0iMjA1IiBzdHJva2U9IiMyNTYzRUIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iNCAzIi8+CiAgICA8cmVjdCB4PSIxMTUiIHk9IjIwNSIgd2lkdGg9IjMyMCIgaGVpZ2h0PSI0NiIgcng9IjgiIGZpbGw9IiNFRkY2RkYiIHN0cm9rZT0iIzkzQzVGRCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgIDx0ZXh0IHg9IjI3NSIgeT0iMjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEuNSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxRTNBOEEiPkNyb3NzOiBY4bSuWOG1hyDDlyBY4bSuWSDihpIgRGF1Z2h0ZXJzOiAxLzIgWOG0rljhtK4sIDEvMiBY4bSuWOG1hyAoQ2Fycmllcik8L3RleHQ+CiAgICA8dGV4dCB4PSIyNzUiIHk9IjI0MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExLjUiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMUQ0RUQ4Ij5Tb25zOiAxLzIgWOG0rlkgKE5vcm1hbCksIDEvMiBY4bWHWSAoQ29sb3ItYmxpbmQpPC90ZXh0PgogIDwvc3ZnPg=="
+  },
+  {
+    "questionNumber": 40,
+    "grade": "Grade 11",
+    "topic": "Unit 3: Selective Breeding & Agriculture",
+    "unit": "Unit 3: Genetics (Grade 12)",
+    "difficulty": "easy",
+    "prompt": "Farmers want to maintain their sheep with long tails for the next generation through similar sheep from their locality. What process do these farmers apply to keep desired traits?",
+    "options": [
+      "Inbreeding",
+      "Crossbreeding",
+      "Genetic engineering",
+      "Cloning"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Breeding individuals with similar desirable traits within a local population is selective breeding or inbreeding.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 41,
+    "grade": "Grade 12",
+    "topic": "Unit 1: Human Reproduction & Endocrine Control",
+    "unit": "Unit 3: Human Biology and Health (Grade 10)",
+    "difficulty": "medium",
+    "prompt": "If progesterone remains high after ovulation, what will be the most likely outcome?",
+    "options": [
+      "FSH will be produced rapidly leading to a new cycle.",
+      "Oestrogen will be decreased, closing down the lining of the uterus.",
+      "Uterus lining will be maintained and prepared for pregnancy.",
+      "Corpus luteum will be regenerated, inhibiting hormone production."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Progesterone maintains the secretory endometrium of the uterus and inhibits new follicular development during the luteal phase / early pregnancy.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 42,
+    "grade": "Grade 12",
+    "topic": "Unit 1: Reproductive Health & Contraception",
+    "unit": "Unit 3: Human Biology and Health (Grade 10)",
+    "difficulty": "easy",
+    "prompt": "The most reliable contraceptive method that prevents travelling of ovum from ovaries through fallopian tubes, but requires surgery is",
+    "options": [
+      "contraceptive injection.",
+      "spermicide.",
+      "intrauterine device.",
+      "sterilization."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Surgical sterilization (tubal ligation in females or vasectomy in males) permanently prevents gamete transport and is the most reliable contraceptive method.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 43,
+    "grade": "Grade 12",
+    "topic": "Unit 1: Public Health & STIs",
+    "unit": "Unit 3: Human Biology and Health (Grade 10)",
+    "difficulty": "easy",
+    "prompt": "Among the following, which one increases the risk to be infected by sexually transmitted infections?",
+    "options": [
+      "Have no history of sexually transmitted infections",
+      "Misuse of drugs that inhibit your judgment",
+      "Protective sexual contact and medical treatment",
+      "Consistent use of condoms during intercourse"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Substance abuse impairs decision-making and increases risky sexual behaviors, elevating STI transmission risk.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 44,
+    "grade": "Grade 12",
+    "topic": "Unit 1: Contraceptive Methods",
+    "unit": "Unit 3: Human Biology and Health (Grade 10)",
+    "difficulty": "medium",
+    "prompt": "Woman I: fitted material in uterus prevents sperm-egg fertilization. Woman II: contraceptive prevents hormone production and egg release. Which type of contraceptive methods did woman I and II use, respectively?",
+    "options": [
+      "Sterilization and Injectable contraceptives Depo-Provera",
+      "Post pill and copper-coated intrauterine device",
+      "Contraceptive injection and contraceptive implant",
+      "Copper-coated intrauterine device and contraceptive injection"
+    ],
+    "correctAnswer": "D",
+    "explanation": "An intrauterine device (IUD) placed in the uterus prevents fertilization, while hormonal injectables/implants inhibit ovulation and hormone production.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 45,
+    "grade": "Grade 12",
+    "topic": "Unit 1: Social Health & Harmful Traditional Practices",
+    "unit": "Unit 3: Human Biology and Health (Grade 10)",
+    "difficulty": "easy",
+    "prompt": "Village 1: forcing underage girls to get married, sexual abuse. Village 2: abduction to make a girl an unwilling wife. Which option is correct?",
+    "options": [
+      "In village 1, gender-based violence, kidnapping and FGM are common.",
+      "In village 1, gender-based violence and early marriage are common.",
+      "In village 2, kidnapping and female genital mutilation are common.",
+      "In village 2, gender-based violence and female genital mutilation are common."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Underage forced marriage and sexual abuse constitute early marriage and gender-based violence.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 46,
+    "grade": "Grade 12",
+    "topic": "Unit 1: HIV/AIDS Prevention",
+    "unit": "Unit 3: Human Biology and Health (Grade 10)",
+    "difficulty": "easy",
+    "prompt": "How can drinking alcohol contribute to HIV transmission?",
+    "options": [
+      "improving decision making ability",
+      "driving more willingly to participate in risky behaviors",
+      "impotency or loss of sexual drive",
+      "increasing retrovirus multiplication capacity"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Alcohol intoxication impairs judgment and increases the likelihood of engaging in unprotected and risky sexual behaviors.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 47,
+    "grade": "Grade 12",
+    "topic": "Unit 2: Environmental Science & Natural Resources",
+    "unit": "Unit 2: Ecology (Grade 12)",
+    "difficulty": "easy",
+    "prompt": "Select the option that contains the whole list of renewable natural resources.",
+    "options": [
+      "Coal, oil, natural gas and minerals",
+      "Coal, wind, hydro power and biomass",
+      "Sunlight, wind, hydro power and biomass",
+      "Sunlight, wind, hydro power and natural gas"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Sunlight, wind, hydroelectric power, and biomass are naturally replenishing renewable resources, whereas fossil fuels (coal, oil, natural gas) are non-renewable.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 48,
+    "grade": "Grade 12",
+    "topic": "Unit 2: Conservation Biology",
+    "unit": "Unit 2: Ecology (Grade 12)",
+    "difficulty": "easy",
+    "prompt": "List of activities: I. Establishing national parks, II. Wild sanctuaries, III. Preparing wildlife reserves, IV. Practicing overgrazing. Which activity CANNOT be used for wildlife conservation?",
+    "options": [
+      "II",
+      "I",
+      "III",
+      "IV"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Overgrazing degrades habitats and destroys vegetation, hindering rather than aiding wildlife conservation.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 49,
+    "grade": "Grade 12",
+    "topic": "Unit 2: Pollution & Environmental Impact",
+    "unit": "Unit 2: Ecology (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "Identify the air pollutants that can cause acid rain and its effects, respectively.",
+    "options": [
+      "Carbon dioxide and methane - melting of ice caps",
+      "Sulphur dioxides and nitrogen dioxides - damaging plants and water bodies",
+      "Perfluorocarbons - skin cancer",
+      "Chlorofluorocarbons - increasing UV rays"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Sulfur dioxide (SO2) and nitrogen oxides (NOx) react with atmospheric moisture to form acid rain, lowering pH in aquatic ecosystems and damaging forests.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 50,
+    "grade": "Grade 12",
+    "topic": "Unit 2: Climate Change & Global Warming",
+    "unit": "Chapter 6: Climate Change",
+    "difficulty": "medium",
+    "prompt": "Which of the following is the cause and effect of global warming, respectively?",
+    "options": [
+      "Greenhouse gases and dropping of sea levels",
+      "Greenhouse gases and loss of biodiversity",
+      "Burning of fossil fuels and increase in species diversity",
+      "Burning of fossil fuels and dropping of sea level"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Accumulation of greenhouse gases drives global warming, leading to habitat destruction, climatic shifts, and loss of biodiversity.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 51,
+    "grade": "Grade 12",
+    "topic": "Unit 3: Biotechnology & Genetic Engineering",
+    "unit": "Chapter 1: Application of Biology",
+    "difficulty": "medium",
+    "prompt": "What is the primary purpose of creating transgenic organisms?",
+    "options": [
+      "generate pathogenic organisms...",
+      "produce organisms that mimic human beings...",
+      "promote expression of desired genes that improve nutritional quality or traits of organisms",
+      "produce novel organisms that can affect reproduction across different species"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Transgenic organisms are engineered to express beneficial recombinant genes for agriculture, medicine, and nutritional enhancement (e.g., golden rice).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 52,
+    "grade": "Grade 12",
+    "topic": "Unit 3: Applied Biology & Forensics",
+    "unit": "Chapter 1: Application of Biology",
+    "difficulty": "easy",
+    "prompt": "What is the role of biology in the investigation of a criminal case?",
+    "options": [
+      "detect flavor compounds in food...",
+      "examine potential sources of evidence using blood, saliva and hair",
+      "sense pathogens and herbicides...",
+      "determine production of complex organic compounds..."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Forensic biology utilizes DNA profiling and biological evidence such as blood, semen, saliva, and hair strands to investigate crimes.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 53,
+    "grade": "Grade 12",
+    "topic": "Unit 3: Industrial Biotechnology & Enzymes",
+    "unit": "Chapter 1: Application of Biology",
+    "difficulty": "medium",
+    "prompt": "How does biological washing powder save energy?",
+    "options": [
+      "use lipase enzyme without other combination...",
+      "are effective in cleaning clothes at lower temperatures without boiling water",
+      "are effective in removing dirty ores...",
+      "use protease enzyme without other combination..."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Biological detergents contain microbial enzymes (proteases, lipases, amylases) that effectively break down stains at low washing temperatures, saving thermal energy.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 54,
+    "grade": "Grade 12",
+    "topic": "Unit 3: Applied Biology & Biosecurity",
+    "unit": "Chapter 1: Application of Biology",
+    "difficulty": "easy",
+    "prompt": "What is biological warfare?",
+    "options": [
+      "use of selective genes to produce GMOs",
+      "cloning technique to make exact copies",
+      "bacteria, fungi and viruses as biological agent to control pests",
+      "use of infectious agents with the intent to kill humans, animals or plants"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Biological warfare involves the intentional dissemination of pathogens or biological toxins to cause disease or death in humans, livestock, or crops.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 55,
+    "grade": "Grade 10 / 11",
+    "topic": "Unit 4: Microbiology & Bacteria",
+    "unit": "Unit 1: Microorganisms (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "Which of the following correctly describes the general features of bacteria?",
+    "options": [
+      "unicellular microbes with true nucleus...",
+      "unicellular microbes with rigid cell wall and a diverse mode of nutrition",
+      "unicellular microbes with mitochondria...",
+      "unicellular microbes with Golgi bodies..."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Bacteria are prokaryotic unicellular microorganisms possessing peptidoglycan cell walls and exhibiting diverse metabolic and nutritional modes (autotrophic, heterotrophic).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 56,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Archaea & Extremophiles",
+    "unit": "Unit 1: Microorganisms (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "Which group of archaea are found in volcanic vents and hot vapors that contain either obligate aerobes, facultative aerobes or obligate anaerobes?",
+    "options": [
+      "Hyperthermophiles",
+      "Acidophiles",
+      "Halophiles",
+      "Psychrophiles"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Hyperthermophiles thrive in extremely high-temperature environments such as hydrothermal vents and volcanic springs.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 57,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Fungal Pathogens",
+    "unit": "Unit 1: Microorganisms (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "From the fungal diseases given below, which one is transmitted sexually?",
+    "options": [
+      "Candidiasis",
+      "Aspergillosis",
+      "Tineas",
+      "[Option D / other fungal infection]"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Candidiasis (caused by Candida albicans) can be transmitted sexually as well as through opportunistic overgrowth.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 58,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Protista (Protozoa Nutrition)",
+    "unit": "Unit 1: Microorganisms (Grade 12)",
+    "difficulty": "hard",
+    "prompt": "Protozoans can employ what feeding habits: I. Dissolved nutrients in surrounding medium, II. Photosynthesis, III. Depending on other plants/animals.",
+    "options": [
+      "I only",
+      "I and II only",
+      "II and III only",
+      "I, II and III"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Protozoa exhibit diverse nutritional modes including osmotrophy (dissolved nutrients), photoautotrophy (e.g., Euglena), and holozoic/heterotrophic ingestion.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 59,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Infectious Diseases & Virology",
+    "unit": "Unit 1: Microorganisms (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "Which one of the following diseases is correctly matched with its symptoms and method of transmission?",
+    "options": [
+      "Chickenpox - runny and stuffy nose - respiratory droplets",
+      "Measles - paralysis and hydrophobia - animal bite",
+      "Polio - commonly no sign and symptoms - fecal-oral-route",
+      "Rabies - swollen parotid glands - saliva"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Poliovirus transmits via the fecal-oral route, and the majority of infections are asymptomatic or cause minor non-specific symptoms.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 60,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Microbiology (Koch's Postulates)",
+    "unit": "Unit 1: Microorganisms (Grade 12)",
+    "difficulty": "hard",
+    "prompt": "Koch used mouse as experimental animal to link anthrax. What was his first postulate related with this procedure?",
+    "options": [
+      "The same microorganisms are present in every case of the diseases.",
+      "The isolated microorganisms can cause the same disease to susceptible animal.",
+      "The same pathogens are isolated and re-cultivated...",
+      "Microorganisms are isolated from tissue of a dead animal..."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Koch's postulates establish microbial causation of disease. Postulate 1 states the microorganism must be found in abundance in all organisms suffering from the disease.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 61,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Parasitology & Vector-borne Diseases",
+    "unit": "Unit 1: Microorganisms (Grade 12)",
+    "difficulty": "easy",
+    "prompt": "Sleeping sickness is transmitted by",
+    "options": [
+      "biting of tsetse flies.",
+      "sexual intercourse.",
+      "eating contaminated food.",
+      "droplet infection."
+    ],
+    "correctAnswer": "A",
+    "explanation": "African trypanosomiasis (sleeping sickness) is caused by Trypanosoma brucei and transmitted by the bite of infected tsetse flies (Glossina species).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 62,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Importance of Microorganisms",
+    "unit": "Unit 1: Microorganisms (Grade 12)",
+    "difficulty": "easy",
+    "prompt": "Considering diverse applications of microorganisms, which best evaluates their overall importance?",
+    "options": [
+      "abundant benefits that are essential for life on Earth.",
+      "a great disadvantage and limited advantage.",
+      "limited impact on the environment.",
+      "few applications in biotechnology and medicine."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Microorganisms drive biogeochemical cycling, decomposition, nitrogen fixation, digestion, and underpin ecological and biotechnological processes essential for life.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 63,
+    "grade": "Grade 12",
+    "topic": "Unit 3 / 4: Sterilization & Disposal",
+    "unit": "Unit 1: Microorganisms (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "Suppose a clinical nurse used a needle to treat a person with HIV/AIDS. What would be the most appropriate method of controlling such microbial infection?",
+    "options": [
+      "Incineration",
+      "Tyndallization",
+      "Sanitization",
+      "Preservation"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Contaminated sharps and medical needles are safely disposed of and sterilized by high-temperature incineration to prevent bloodborne pathogen transmission.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 64,
+    "grade": "Grade 11",
+    "topic": "Unit 4: Microbiology Techniques",
+    "unit": "Unit 1: Microorganisms (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "As a clinical microbiologist, suppose you want to collect microbes from a food sample and isolate them via serial dilution. How do you determine the isolated colonies that grow on artificial media?",
+    "options": [
+      "counting the number of strains",
+      "cross checking with preserved specimens",
+      "observing their morphological features",
+      "inoculating into infected animals"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Colony morphology (shape, color, elevation, margin) on agar plates is used to identify and differentiate isolated microbial colonies.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 65,
+    "grade": "Grade 11",
+    "topic": "Unit 5: Cellular Metabolism",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "easy",
+    "prompt": "What is the main difference between anabolism and catabolism in cellular metabolic pathways?",
+    "options": [
+      "Anabolism absorbs energy while catabolism releases energy.",
+      "Anabolism is destructive while catabolism is constructive.",
+      "Anabolism occurs during respiration while catabolism in photosynthesis.",
+      "Anabolism breaks down macromolecules while catabolism builds them."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Anabolism refers to endergonic (energy-requiring) synthesis pathways, whereas catabolism refers to exergonic (energy-releasing) degradation pathways.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 66,
+    "grade": "Grade 11",
+    "topic": "Unit 5: Photosynthesis & Earth's Biosphere",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "easy",
+    "prompt": "In a hypothetical scenario where photosynthesis ceased to occur on the earth, the long-term consequences on the continuity of life would be",
+    "options": [
+      "remained unaffected...",
+      "collapsed that could lead to mass extinction.",
+      "balanced between CO2 and O2...",
+      "disordered although animal life would flourish."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Photosynthesis forms the primary energetic foundation of almost all biospheric food webs and maintains atmospheric oxygen; its cessation would cause total ecological collapse.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 67,
+    "grade": "Grade 11",
+    "topic": "Unit 5: Photosynthesis (Chloroplast Structure)",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "What are the roles of grana and stroma in the process of photosynthesis?",
+    "options": [
+      "cyclic pathway / stroma non-cyclic",
+      "Grana is a site for photolysis of water while stroma is a site for carbon fixation.",
+      "generation of sugar / stroma photolysis",
+      "production of NADPH / stroma chemiosmosis"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Light-dependent reactions (including photolysis of water and ATP/NADPH generation) occur in the thylakoid membranes (grana), while light-independent reactions (Calvin cycle carbon fixation) occur in the stroma.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 68,
+    "grade": "Grade 11",
+    "topic": "Unit 5: Photophosphorylation",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "Which one of the following comparisons between cyclic and non-cyclic photophosphorylation is correct?",
+    "options": [
+      "produces ATP, NADPH and O2...",
+      "uses oxygen as final electron acceptor...",
+      "uses photosystem I as electron donor...",
+      "Non-cyclic involves both photosystems I and II, but cyclic uses only photosystem I."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Non-cyclic photophosphorylation utilizes both PSII and PSI and generates ATP, NADPH, and O2. Cyclic photophosphorylation involves only PSI and generates ATP only.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 69,
+    "grade": "Grade 11",
+    "topic": "Unit 5: Calvin Cycle",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "All of the following events happen in the reduction stages of the Calvin cycle EXCEPT",
+    "options": [
+      "combining of CO2 with RuBP.",
+      "utilization of ATP and NADPH molecules.",
+      "conversion of 3-PGA into a sugar molecule.",
+      "donating of electrons to a 3C-intermediates to form G3P."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Combining CO2 with RuBP is carbon fixation (catalyzed by Rubisco), which precedes the reduction stage of the Calvin cycle.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 70,
+    "grade": "Grade 11",
+    "topic": "Unit 5: Photorespiration",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "hard",
+    "prompt": "What happens in the mitochondrion during the reactions of photorespiration?",
+    "options": [
+      "Glycine is converted to serine with the release of CO2 and NH3.",
+      "Glycolate is converted to glyoxylate...",
+      "Glycerate is converted to GP...",
+      "Phosphoglycolate is converted..."
+    ],
+    "correctAnswer": "A",
+    "explanation": "During photorespiration, glycolate is processed through chloroplasts, peroxisomes, and mitochondria where two glycine molecules are converted into serine, releasing CO2 and NH3.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 71,
+    "grade": "Grade 11",
+    "topic": "Unit 5: Photosynthesis & Biosphere",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "easy",
+    "prompt": "How does photosynthesis ensure the continuity of life?",
+    "options": [
+      "constantly adding carbon dioxide...",
+      "maintaining carbon dioxide and oxygen balance in the atmosphere",
+      "constantly removing oxygen...",
+      "adding natural gas..."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Photosynthesis removes carbon dioxide and releases oxygen, maintaining the atmospheric gas balance necessary for aerobic respiration.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 72,
+    "grade": "Grade 11",
+    "topic": "Unit 6: Cellular Respiration",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "Which of the following is the difference between substrate level phosphorylation and oxidative phosphorylation?",
+    "options": [
+      "inner mitochondrial membrane vs cytosol...",
+      "Substrate level phosphorylation occurs during glycolysis and Kreb's cycle while oxidative phosphorylation occurs during electron transport chain.",
+      "[Option C]",
+      "[Option D]"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Substrate-level phosphorylation involves direct transfer of a phosphate group to ADP during glycolysis and the Krebs cycle. Oxidative phosphorylation occurs via chemiosmosis across the mitochondrial membrane driven by the electron transport chain.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 73,
+    "grade": "Grade 11",
+    "topic": "Unit 6: Cellular Respiration (Glycolysis)",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "easy",
+    "prompt": "Which metabolic pathway is common for both aerobic and anaerobic respiration?",
+    "options": [
+      "Krebs cycle",
+      "Glycolysis",
+      "Oxidative phosphorylation",
+      "Fermentation"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Glycolysis is the universal initial pathway of glucose catabolism that occurs in the cytoplasm and is shared by both aerobic and anaerobic respiration.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 74,
+    "grade": "Grade 11",
+    "topic": "Unit 6: Electron Transport Chain",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "medium",
+    "prompt": "Which statement describes an event of the electron transport system correctly?",
+    "options": [
+      "Oxygen serves as a terminal electron acceptor in the production of ATP.",
+      "Thirteen ATP molecules are invested...",
+      "More than 90% produced by substrate-level...",
+      "It happens due to difference in pH..."
+    ],
+    "correctAnswer": "A",
+    "explanation": "In aerobic respiration, molecular oxygen acts as the final electron acceptor at the end of the electron transport chain, forming water.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 75,
+    "grade": "Grade 11",
+    "topic": "Unit 6: Cellular Respiration Energetics",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "hard",
+    "prompt": "In a complete oxidation of glucose molecule, how many net ATP molecules are produced by substrate level phosphorylation?",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "10"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Substrate-level phosphorylation yields 2 ATP in glycolysis and 2 ATP in the Krebs cycle (GTP/ATP), totaling 4 ATP produced directly by substrate-level phosphorylation per glucose.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 76,
+    "grade": "Grade 11",
+    "topic": "Unit 6: Cellular Respiration",
+    "unit": "Unit 5: Energy Transformation (Grade 11)",
+    "difficulty": "easy",
+    "prompt": "What is the difference between aerobic and anaerobic respirations?",
+    "options": [
+      "ends with different products...",
+      "proteins are main substrate...",
+      "Aerobic respiration produces much more energy than anaerobic respiration.",
+      "Glycolysis is first for aerobic..."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Aerobic respiration completely oxidizes glucose to yield ~30-38 ATP, whereas anaerobic respiration/fermentation yields only 2 ATP.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 77,
+    "grade": "Grade 12",
+    "topic": "Unit 4: Evolution (Origin of Life)",
+    "unit": "Chapter 4: Evolution",
+    "difficulty": "medium",
+    "prompt": "Which statement disproves spontaneous generation theory based on step-wise experimental work?",
+    "options": [
+      "Life is inherent property...",
+      "Life forms created within six days...",
+      "Both macro and micro-organisms could arise from pre-existing organisms.",
+      "Life reached Earth in spores..."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Experiments by Redi, Spallanzani, and Pasteur disproved spontaneous generation, demonstrating biogenesis (life arises from pre-existing life).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 78,
+    "grade": "Grade 12",
+    "topic": "Unit 4: Evolution & Phylogeny",
+    "unit": "Chapter 4: Evolution",
+    "difficulty": "easy",
+    "prompt": "Based on comparative anatomy/biochemistry, chimpanzee is the closest relative to humans because of similarities in their",
+    "options": [
+      "haemoglobin sequence.",
+      "fossil remains.",
+      "DNA sequence.",
+      "pentadactyl limb."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Comparative genomics shows that humans and chimpanzees share approximately 98.7% of their genomic DNA sequence, reflecting closest common ancestry.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 79,
+    "grade": "Grade 12",
+    "topic": "Unit 4: Speciation & Polyploidy",
+    "unit": "Chapter 4: Evolution",
+    "difficulty": "hard",
+    "prompt": "Which cause of variation allows infertile hybrids to become fertile in plant evolution?",
+    "options": [
+      "Reproductive isolation",
+      "Sympatric speciation",
+      "Polyploidy cell",
+      "Geographical separation"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Allopolyploidy (chromosome doubling in sterile interspecific hybrids) restores normal homologous pairing during meiosis, instantly conferring fertility and establishing a new plant species.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 80,
+    "grade": "Grade 12",
+    "topic": "Unit 4: Human Evolution Timeline",
+    "unit": "Chapter 4: Evolution",
+    "difficulty": "medium",
+    "prompt": "Course of human evolution markers: 1. Use of fire/tools, 2. Increase in brain size, 3. Emergence of Homo sapiens, 4. Bipedal walking and arboreal life. What is the correct chronological order?",
+    "options": [
+      "2, 1, 3, 4",
+      "1, 3, 4, 2",
+      "3, 2, 4, 1",
+      "4, 2, 1, 3"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Evolutionary progression started with early bipedalism/arboreal traits (4), followed by encephalization/brain size increase (2), mastery of fire and advanced tools (1), and finally the emergence of anatomically modern Homo sapiens (3).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 81,
+    "grade": "Grade 11 / 12",
+    "topic": "Unit 2 / 4: Genetics (Mutations)",
+    "unit": "Unit 3: Genetics (Grade 12)",
+    "difficulty": "medium",
+    "prompt": "Based on the nucleotide mutation diagram (Original: GAC GGG ATT GAG GAG -> Mutated: GAC GGG ATG GAG GAG), the type of mutation is",
+    "options": [
+      "deletion.",
+      "inversion.",
+      "addition.",
+      "substitution."
+    ],
+    "correctAnswer": "D",
+    "explanation": "A single nucleotide change in the codon (e.g., ATT to ATG) represents a point mutation / substitution.",
+    "imageUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjEwIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjIxMCI+CiAgICA8cmVjdCB3aWR0aD0iNTIwIiBoZWlnaHQ9IjIxMCIgcng9IjE0IiBmaWxsPSIjRjhGQUZDIiBzdHJva2U9IiNDQkQ1RTEiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMjYwIiB5PSIyOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzBGMTcyQSI+RE5BIE51Y2xlb3RpZGUgU2VxdWVuY2UgQ29tcGFyaXNvbiAoUG9pbnQgTXV0YXRpb24pPC90ZXh0PgogICAgPHRleHQgeD0iMzAiIHk9Ijc1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMzM0MTU1Ij5PcmlnaW5hbCBTdHJhbmQ6PC90ZXh0PgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ1LCA1MikiIGZvbnQtZmFtaWx5PSJDb3VyaWVyIE5ldywgbW9ub3NwYWNlIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iYm9sZCI+CiAgICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIzNCIgcng9IjYiIGZpbGw9IiNFMkU4RjAiLz48dGV4dCB4PSIzMCIgeT0iMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwRjE3MkEiPkdBQzwvdGV4dD4KICAgICAgPHJlY3QgeD0iNzAiIHk9IjAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIzNCIgcng9IjYiIGZpbGw9IiNFMkU4RjAiLz48dGV4dCB4PSIxMDAiIHk9IjIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMEYxNzJBIj5HR0c8L3RleHQ+CiAgICAgIDxyZWN0IHg9IjE0MCIgeT0iMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjM0IiByeD0iNiIgZmlsbD0iI0RCRUFGRSIgc3Ryb2tlPSIjMjU2M0VCIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIxNzAiIHk9IjIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMUQ0RUQ4Ij5BVFQ8L3RleHQ+CiAgICAgIDxyZWN0IHg9IjIxMCIgeT0iMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjM0IiByeD0iNiIgZmlsbD0iI0UyRThGMCIvPjx0ZXh0IHg9IjI0MCIgeT0iMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwRjE3MkEiPkdBRzwvdGV4dD4KICAgICAgPHJlY3QgeD0iMjgwIiB5PSIwIiB3aWR0aD0iNjAiIGhlaWdodD0iMzQiIHJ4PSI2IiBmaWxsPSIjRTJFOEYwIi8+PHRleHQgeD0iMzEwIiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzBGMTcyQSI+R0FHPC90ZXh0PgogICAgPC9nPgogICAgPHBhdGggZD0iTSAzMTUgOTIgTCAzMTUgMTIyIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iMi41IiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgogICAgPHRleHQgeD0iMzMwIiB5PSIxMTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNEQzI2MjYiPkJhc2UgVCDihpIgRzwvdGV4dD4KICAgIDx0ZXh0IHg9IjMwIiB5PSIxNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMzMzQxNTUiPk11dGF0ZWQgU3RyYW5kOjwvdGV4dD4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0NSwgMTI3KSIgZm9udC1mYW1pbHk9IkNvdXJpZXIgTmV3LCBtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtd2VpZ2h0PSJib2xkIj4KICAgICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjM0IiByeD0iNiIgZmlsbD0iI0UyRThGMCIvPjx0ZXh0IHg9IjMwIiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzBGMTcyQSI+R0FDPC90ZXh0PgogICAgICA8cmVjdCB4PSI3MCIgeT0iMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjM0IiByeD0iNiIgZmlsbD0iI0UyRThGMCIvPjx0ZXh0IHg9IjEwMCIgeT0iMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwRjE3MkEiPkdHRzwvdGV4dD4KICAgICAgPHJlY3QgeD0iMTQwIiB5PSIwIiB3aWR0aD0iNjAiIGhlaWdodD0iMzQiIHJ4PSI2IiBmaWxsPSIjRkVFMkUyIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHRleHQgeD0iMTcwIiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0I5MUMxQyI+QVRHPC90ZXh0PgogICAgICA8cmVjdCB4PSIyMTAiIHk9IjAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIzNCIgcng9IjYiIGZpbGw9IiNFMkU4RjAiLz48dGV4dCB4PSIyNDAiIHk9IjIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMEYxNzJBIj5HQUc8L3RleHQ+CiAgICAgIDxyZWN0IHg9IjI4MCIgeT0iMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjM0IiByeD0iNiIgZmlsbD0iI0UyRThGMCIvPjx0ZXh0IHg9IjMxMCIgeT0iMjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwRjE3MkEiPkdBRzwvdGV4dD4KICAgIDwvZz4KICAgIDx0ZXh0IHg9IjI2MCIgeT0iMTkwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEuNSIgZmlsbD0iIzQ3NTU2OSI+VG90YWwgbGVuZ3RoIHVuY2hhbmdlZCAoMTUgYmFzZXMpIOKAoiBDb2RvbiAzIGNoYW5nZWQgZnJvbSBBVFQgdG8gQVRHPC90ZXh0PgogIDwvc3ZnPg=="
+  },
+  {
+    "questionNumber": 82,
+    "grade": "Grade 11 / 12",
+    "topic": "Unit 2: Genetics (Mutagens)",
+    "unit": "Unit 3: Genetics (Grade 12)",
+    "difficulty": "easy",
+    "prompt": "Which of the following is NOT a common cause of genetic mutation?",
+    "options": [
+      "Exposure to UV radiation",
+      "Errors in DNA replication",
+      "Extensive physical exercise",
+      "Chemical substances"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Physical exercise does not cause direct DNA mutations. UV radiation, replication errors, and chemical mutagens (carcinogens) are known mutigenic agents.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 83,
+    "grade": "Grade 12",
+    "topic": "Unit 4: Population Genetics (Genetic Drift)",
+    "unit": "Chapter 4: Evolution",
+    "difficulty": "medium",
+    "prompt": "Which genetic phenomenon is common for both bottleneck and founder effects?",
+    "options": [
+      "High mutation rate...",
+      "Genetic drift that reduces diversity in the population",
+      "Gene flow that increases inbreed...",
+      "Natural selection..."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Both bottleneck and founder effects are forms of genetic drift that result in a drastic reduction in genetic variation within a population.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 84,
+    "grade": "Grade 12",
+    "topic": "Unit 4: Population Genetics & Gene Flow",
+    "unit": "Chapter 4: Evolution",
+    "difficulty": "medium",
+    "prompt": "In a scenario where a male black lion population joined a white female lion population in an isolated island, there would be a",
+    "options": [
+      "decrease in black lion population...",
+      "genetic variation due to immigration...",
+      "random introduction of new alleles into the island population.",
+      "change in allele frequencies..."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Migration (gene flow) introduces new alleles into the isolated island gene pool, altering allele frequencies.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 85,
+    "grade": "Grade 12",
+    "topic": "Unit 2 / 4: Conservation & Human Impact",
+    "unit": "Chapter 4: Evolution",
+    "difficulty": "easy",
+    "prompt": "Which of the following is an example of an anthropogenic driving factor contributing to species extinction?",
+    "options": [
+      "Earthquake",
+      "Volcanic eruption",
+      "Expansions of agriculture",
+      "Outbreak of wildfire"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Anthropogenic factors are human-induced. Agricultural expansion causes habitat fragmentation and loss, driving species extinction.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 86,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Nervous System",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "easy",
+    "prompt": "Which statement is correct about the nervous system?",
+    "options": [
+      "takes air into and out of body...",
+      "uses blood vessels...",
+      "consists of cells that secrete chemicals into blood...",
+      "receives and processes sensory information from internal and external parts of the body."
+    ],
+    "correctAnswer": "D",
+    "explanation": "The nervous system coordinates sensory input, integration, and motor output across internal and external environments.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 87,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Neurophysiology (Action Potential)",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "medium",
+    "prompt": "What is the best justification for the role of voltage-gated ion channels in nerve impulse transmission?",
+    "options": [
+      "actively respond to membrane potential changes, leading to depolarization.",
+      "block ion movement...",
+      "allow potassium ions diffuse...",
+      "produce energy..."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Voltage-gated sodium channels open in response to threshold depolarization, causing a rapid influx of Na+ ions that drives the rising phase of the action potential.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 88,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Synaptic Transmission",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "medium",
+    "prompt": "Which ions are used to facilitate the release of neurotransmitters to the synaptic cleft before binding to postsynaptic receptor?",
+    "options": [
+      "Calcium ions",
+      "Magnesium ions",
+      "Potassium ions",
+      "Sodium ions"
+    ],
+    "correctAnswer": "A",
+    "explanation": "When an action potential reaches the axon terminal, voltage-gated calcium channels open, and Ca2+ influx triggers exocytosis of neurotransmitter-containing vesicles.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 89,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Reflex Arc",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "medium",
+    "prompt": "Find the correct pathway of a reflex arc that prevents physical damage upon suddenly touching a hot plate.",
+    "options": [
+      "Interneuron -> receptor -> motor neuron -> effector",
+      "Sensory neuron -> motor neuron -> spinal cord -> effector",
+      "Sensory neuron -> spinal cord -> motor neuron -> effector",
+      "Interneuron -> spinal cord -> motor neuron -> effector"
+    ],
+    "correctAnswer": "C",
+    "explanation": "A somatic reflex pathway flows from sensory receptor -> sensory neuron -> integration center (spinal cord / interneuron) -> motor neuron -> effector (muscle).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 90,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Sensory Systems (Human Eye)",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "medium",
+    "prompt": "Based on the human eye anatomy diagram, which labeled part is responsible for controlling the diameter of the pupil according to the light source?",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV (Iris/Pupil mechanism)"
+    ],
+    "correctAnswer": "C",
+    "explanation": "The iris contains circular and radial muscles that regulate pupil diameter in response to light intensity.",
+    "imageUrl": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMjcwIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjI3MCI+CiAgICA8cmVjdCB3aWR0aD0iNTIwIiBoZWlnaHQ9IjI3MCIgcng9IjE0IiBmaWxsPSIjRjhGQUZDIiBzdHJva2U9IiNDQkQ1RTEiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMjYwIiB5PSIyNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzBGMTcyQSI+SHVtYW4gRXllIENyb3NzLVNlY3Rpb24g4oCUIExhYmVsZWQgUGFydHMgSSwgSUksIElJSSwgSVY8L3RleHQ+CiAgICA8IS0tIFNjbGVyYSAvIEV5ZWJhbGwgLS0+CiAgICA8Y2lyY2xlIGN4PSIyNzUiIGN5PSIxNDUiIHI9Ijg4IiBmaWxsPSIjRUZGNkZGIiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPCEtLSBDb3JuZWEgYnVsZ2UgLS0+CiAgICA8cGF0aCBkPSJNIDE5NSAxMDAgQyAxNjIgMTIwLCAxNjIgMTcwLCAxOTUgMTkwIiBmaWxsPSIjREJFQUZFIiBzdHJva2U9IiMyNTYzRUIiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPCEtLSBJcmlzIChJSUkpIHRvcCBhbmQgYm90dG9tIC0tPgogICAgPHJlY3QgeD0iMTk2IiB5PSIxMDIiIHdpZHRoPSIxMCIgaGVpZ2h0PSIyOCIgcng9IjMiIGZpbGw9IiMwMjg0QzciIHN0cm9rZT0iIzAzNjlBMSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgIDxyZWN0IHg9IjE5NiIgeT0iMTYwIiB3aWR0aD0iMTAiIGhlaWdodD0iMjgiIHJ4PSIzIiBmaWxsPSIjMDI4NEM3IiBzdHJva2U9IiMwMzY5QTEiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8IS0tIExlbnMgKElJKSAtLT4KICAgIDxlbGxpcHNlIGN4PSIyMjIiIGN5PSIxNDUiIHJ4PSIxMiIgcnk9IjMyIiBmaWxsPSIjQkFFNkZEIiBzdHJva2U9IiMwMjg0QzciIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPCEtLSBSZXRpbmEgKElWKSAtLT4KICAgIDxwYXRoIGQ9Ik0gMjc1IDYyIEEgODMgODMgMCAwIDEgMjc1IDIyOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjREMyNjI2IiBzdHJva2Utd2lkdGg9IjQiLz4KICAgIDwhLS0gT3B0aWMgTmVydmUgLS0+CiAgICA8cGF0aCBkPSJNIDM1OCAxMzUgTCA0MTUgMTM1IE0gMzU4IDE1NSBMIDQxNSAxNTUiIHN0cm9rZT0iIzQ3NTU2OSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8IS0tIExhYmVscyAtLT4KICAgIDxsaW5lIHgxPSIxNzIiIHkxPSIxMjAiIHgyPSIxMDUiIHkyPSI4NSIgc3Ryb2tlPSIjMUUyOTNCIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogICAgPHRleHQgeD0iMTAwIiB5PSI4OCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzBGMTcyQSI+SSAoQ29ybmVhKTwvdGV4dD4KICAgIDxsaW5lIHgxPSIyMjIiIHkxPSIxNDUiIHgyPSIxMDUiIHkyPSIxNDUiIHN0cm9rZT0iIzFFMjkzQiIgc3Ryb2tlLXdpZHRoPSIxLjgiLz4KICAgIDx0ZXh0IHg9IjEwMCIgeT0iMTQ5IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMEYxNzJBIj5JSSAoQ3J5c3RhbGxpbmUgTGVucyk8L3RleHQ+CiAgICA8bGluZSB4MT0iMjAxIiB5MT0iMTc1IiB4Mj0iMTE1IiB5Mj0iMjEwIiBzdHJva2U9IiMwMjg0QzciIHN0cm9rZS13aWR0aD0iMi4yIi8+CiAgICA8dGV4dCB4PSIxMTAiIHk9IjIxNCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyLjUiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMDM2OUExIj5JSUkgKElyaXMg4oCUIHJlZ3VsYXRlcyBwdXBpbCk8L3RleHQ+CiAgICA8bGluZSB4MT0iMzU1IiB5MT0iMTAwIiB4Mj0iNDE1IiB5Mj0iODAiIHN0cm9rZT0iI0RDMjYyNiIgc3Ryb2tlLXdpZHRoPSIxLjgiLz4KICAgIDx0ZXh0IHg9IjQyMCIgeT0iODQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNCOTFDMUMiPklWIChSZXRpbmEpPC90ZXh0PgogIDwvc3ZnPg=="
+  },
+  {
+    "questionNumber": 91,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Sensory Systems (Ear)",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "easy",
+    "prompt": "Select the option that contains the correct match of human ear structure and its function.",
+    "options": [
+      "Eustachian tube - balancing air pressure of the middle ear and throat",
+      "Semicircular canals - concerned with production of nerve impulse...",
+      "Ear ossicles - concerned with motion detection...",
+      "Cochlea - transmits sound from incus..."
+    ],
+    "correctAnswer": "A",
+    "explanation": "The Eustachian tube connects the middle ear to the nasopharynx, equalizing air pressure across the tympanic membrane.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 92,
+    "grade": "Grade 12",
+    "topic": "Unit 5: Auditory Pathway",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "medium",
+    "prompt": "Events of hearing: I. Transmission of amplified sound to ossicles, II. Movement of sensory hair in cochlea, III. Transmission of nerve impulse to brain, IV. Pinna directs sound waves into eardrum. What is the correct sequence?",
+    "options": [
+      "IV -> I -> II -> III",
+      "I -> IV -> II -> III",
+      "IV -> II -> I -> III",
+      "II -> I -> IV -> III"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Pinna channels sound to eardrum (IV), ossicles amplify vibrations (I), cochlear fluid and hair cells transduce vibration (II), and auditory nerve transmits impulses to the brain (III).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 93,
+    "grade": "Grade 12",
+    "topic": "Unit 6: Endocrine System",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "medium",
+    "prompt": "Suppose low metabolic rate, cretinism and retarded mental and physical development are common problems of infants and childhood in a village. Which endocrine condition results in these?",
+    "options": [
+      "Extreme hypothyroidism",
+      "Malfunction of adrenal cortex",
+      "Overproduction of parathyroid hormone",
+      "Lack of adrenalin production"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Congenital hypothyroidism (cretinism) results from a deficiency of thyroid hormones during infancy, causing stunted physical growth and intellectual disability.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 94,
+    "grade": "Grade 12",
+    "topic": "Unit 6: Endocrine System (Oxytocin)",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "easy",
+    "prompt": "If a woman is admitted to hospital for giving birth, which hormone is helping her in the delivery of her baby and releasing of milk?",
+    "options": [
+      "Vasopressin",
+      "Aldosterone",
+      "Oxytocin",
+      "Progesterone"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Oxytocin stimulates powerful uterine contractions during childbirth and triggers milk ejection during lactation.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 95,
+    "grade": "Grade 12",
+    "topic": "Unit 6: Excretory System (Kidney Ultrafiltration)",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "medium",
+    "prompt": "How does ultrafiltration take place in the human kidney?",
+    "options": [
+      "increasing concentration of urine...",
+      "building the pressure of the knot of blood vessels in the Bowman's capsule",
+      "diffusing glucose molecules...",
+      "reabsorbing water..."
+    ],
+    "correctAnswer": "B",
+    "explanation": "High hydrostatic pressure in the glomerular capillaries (due to the difference in diameter between afferent and efferent arterioles) forces water and small solutes across the filtration barrier into Bowman's capsule.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 96,
+    "grade": "Grade 12",
+    "topic": "Unit 6: Homeostasis & Blood Glucose Regulation",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "medium",
+    "prompt": "Assume a patient with type II diabetes gets advice to practice regular exercise to raise insulin receptors. How does insulin regulate blood glucose level if it is high?",
+    "options": [
+      "stimulates glycolysis...",
+      "stimulates glycogenesis, which converts glucose into glycogen.",
+      "stimulates lipolysis...",
+      "stimulates gluconeogenesis..."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Insulin lowers high blood glucose by promoting cellular uptake and stimulating glycogenesis (conversion of glucose to glycogen in liver and muscles).",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 97,
+    "grade": "Grade 12",
+    "topic": "Unit 6: Osmoregulation & ADH",
+    "unit": "Chapter 5: Human Body System",
+    "difficulty": "medium",
+    "prompt": "Imagine water content of blood is low when taking much salt. What happens in your kidney? Osmoreceptor stimulates the",
+    "options": [
+      "adrenal gland to release adrenalin...",
+      "hypothalamus that release aldosterone...",
+      "pituitary gland to release ADH to reabsorb water back into the blood.",
+      "ADH to release cortisone..."
+    ],
+    "correctAnswer": "C",
+    "explanation": "High blood osmolarity (low water content) stimulates hypothalamic osmoreceptors, signaling the posterior pituitary to release Antidiuretic Hormone (ADH), which increases water reabsorption in the kidney collecting ducts.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 98,
+    "grade": "Grade 12",
+    "topic": "Unit 2 / 6: Climate Change & Greenhouse Gases",
+    "unit": "Chapter 6: Climate Change",
+    "difficulty": "easy",
+    "prompt": "Very large quantities of greenhouse gases added to atmosphere due to human activities. What would be the most likely responsible gas and its major sources, respectively?",
+    "options": [
+      "Methane - aluminum smelting...",
+      "Carbon dioxide - fossil fuel combustion, deforestation, oil and gas usage",
+      "Sulphur hexafluoride - landfills...",
+      "Perfluorocarbons - electric transmission..."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Carbon dioxide is the primary anthropogenic greenhouse gas, primarily emitted through fossil fuel combustion and deforestation.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 99,
+    "grade": "Grade 12",
+    "topic": "Unit 2: Climate Change & Agriculture",
+    "unit": "Chapter 6: Climate Change",
+    "difficulty": "medium",
+    "prompt": "The effect of increased climate change on agricultural productivity is associated with",
+    "options": [
+      "land use change and expansion of monoculture...",
+      "agroforestry system...",
+      "drought that triggers wild fire...",
+      "reduction of available water that leads to decrease in biological resources."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Climate change alters precipitation patterns and increases drought frequency, reducing water availability and agricultural productivity.",
+    "imageUrl": null
+  },
+  {
+    "questionNumber": 100,
+    "grade": "Grade 12",
+    "topic": "Unit 2: Environmental Action & Green Legacy in Ethiopia",
+    "unit": "Chapter 6: Climate Change",
+    "difficulty": "easy",
+    "prompt": "Which local community practice in Ethiopia is considered as an environmental action that addresses climate change mitigation?",
+    "options": [
+      "respecting humanity that promotes eco-tourism",
+      "negotiating mechanism led by elders",
+      "planting millions of seedlings following the green legacy initiative",
+      "treating different diseases with herbal remedies"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Massive afforestation and tree planting campaigns (such as Ethiopia's Green Legacy Initiative) actively sequester carbon dioxide, aiding climate change mitigation.",
+    "imageUrl": null
+  }
+]

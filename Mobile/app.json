@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "EthioPrep",
+    "slug": "ethioprep",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.ethioprep.mobile"
+    },
+    "ios": {
+      "bundleIdentifier": "com.ethioprep.mobile"
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-font",
+      "expo-status-bar"
+    ]
+  }
+}

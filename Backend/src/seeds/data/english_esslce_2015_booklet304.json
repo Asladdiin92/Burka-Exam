@@ -1,0 +1,1922 @@
+[
+  {
+    "questionNumber": 1,
+    "grade": "Grade 11",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 11 - Unit 4: Narrative & Coherent Writing",
+    "difficulty": "medium",
+    "prompt": "Choose the correct sentence order to form a coherent paragraph:a. However, communal living can be a choice to reduce your rent.b. You can do that in two different ways: communally or individually.c. If you don't have financial worries, you can opt for the individual one.d. That enables you enjoy more freedom with what to do in your own room.",
+    "options": [
+      "b c d a",
+      "a b c d",
+      "c d a b",
+      "d b c a"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The logical sequence starts with (a) introducing communal living as a rent-reduction choice, followed by (b) expanding options, (c) addressing individual option without financial worries, and (d) concluding with personal freedom."
+  },
+  {
+    "questionNumber": 2,
+    "grade": "Grade 11",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 11 - Unit 4: Narrative & Coherent Writing",
+    "difficulty": "medium",
+    "prompt": "Choose the correct sentence order to form a coherent paragraph:a. However, they may not detect incorrect or misused words.b. They may not also catch other language errors in our writing.c. Our computers are made to alert us when we make spelling mistakes.d. So, we don't have to hesitate to look up anything that we suspect is wrong.",
+    "options": [
+      "b c d a",
+      "a b c d",
+      "c a b d",
+      "d c a b"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Sentence (c) introduces computer spell checking. Sentences (a) and (b) present contrastive limitations. Sentence (d) draws the concluding recommendation based on these limitations."
+  },
+  {
+    "questionNumber": 3,
+    "grade": "Grade 11",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 11 - Unit 4: Narrative & Coherent Writing",
+    "difficulty": "hard",
+    "prompt": "Choose the correct sentence order to form a coherent paragraph:a. A typical example is what happened in the late 1990s.b. Dependence on coffee has thrown a lot of nations into crisis.c. This usually happens when the world commodity price falls.d. Coffee farmers' unions should be set up to resist the problem.",
+    "options": [
+      "d b c a",
+      "b c a d",
+      "c d a b",
+      "b d c a"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Sentence (b) states core premise, (c) explains price drop conditions, (a) offers 1990s temporal example, and (d) proposes union solutions."
+  },
+  {
+    "questionNumber": 4,
+    "grade": "Grade 11",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 11 - Unit 4: Narrative & Coherent Writing",
+    "difficulty": "medium",
+    "prompt": "Choose the correct sentence order to form a coherent paragraph:a. Most of the rise occurred in the 1990s.b. There is a lot of evidence that the climate is changing.c. In many parts of the world temperatures have risen by 0.7°C.d. However, it is happening faster in some countries than in others.",
+    "options": [
+      "b c a d",
+      "d a b c",
+      "c b d a",
+      "c d b a"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Sentence (b) establishes main topic, (c) gives quantitative proof, (a) adds 1990s timeline, and (d) provides geographic contrast."
+  },
+  {
+    "questionNumber": 5,
+    "grade": "Grade 10",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 10 - Unit 2: Sentence Structure & Word Order",
+    "difficulty": "easy",
+    "prompt": "Rearrange into a correct English sentence:'is their students like passing who actually failed in killing have a generation exams.'",
+    "options": [
+      "Passing a generation is like killing students who have actually failed in their exams.",
+      "Passing students who have actually failed in their exams is like killing a generation.",
+      "Killing a generation is like passing students in their exams who have actually failed.",
+      "Passing students in their exams is like a generation who have actually failed killing."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Option B correctly uses the gerund phrase 'Passing students who have actually failed in their exams' as subject, followed by 'is like killing a generation'."
+  },
+  {
+    "questionNumber": 6,
+    "grade": "Grade 10",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 10 - Unit 2: Sentence Structure & Word Order",
+    "difficulty": "easy",
+    "prompt": "Rearrange into a correct English sentence:'be who stories learn there about are to many couldn't how rich people.'",
+    "options": [
+      "There are many stories about people who couldn't learn how to be rich.",
+      "Many rich people are there who couldn't learn about how to be stories.",
+      "Stories are there about many rich people who couldn't learn how to be.",
+      "Stories about how many people are there who couldn't learn to be rich."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Option A correctly follows existential 'There are' structure followed by noun phrase 'many stories about people' and relative clause 'who couldn't learn how to be rich'."
+  },
+  {
+    "questionNumber": 7,
+    "grade": "Grade 10",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 10 - Unit 2: Sentence Structure & Word Order",
+    "difficulty": "easy",
+    "prompt": "Rearrange into a correct English sentence:'the take Bikila first to Abebe gold ever an was Olympic home African medal.'",
+    "options": [
+      "The first African Abebe Bikila was ever to take home an Olympic gold medal.",
+      "Abebe Bikila ever take an Olympic gold medal to home was the first African.",
+      "Abebe Bikila was ever the first African gold to take home an Olympic medal.",
+      "Abebe Bikila was the first African to ever take home an Olympic gold medal."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Option D follows standard Subject-Verb-Complement structure: 'Abebe Bikila' (Subject) + 'was' (Verb) + 'the first African to ever take home an Olympic gold medal'."
+  },
+  {
+    "questionNumber": 8,
+    "grade": "Grade 11",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 11 - Unit 1: Formal & Informal Writing",
+    "difficulty": "easy",
+    "prompt": "What is your opening sentence in a formal letter supposed to do?",
+    "options": [
+      "Greet the person you are writing the letter to.",
+      "State clearly why you are writing the letter.",
+      "Make your address known to the person you are writing to.",
+      "Introduce yourself to the person you are writing to."
+    ],
+    "correctAnswer": "B",
+    "explanation": "In formal letter writing, the opening paragraph immediately states the explicit purpose of writing."
+  },
+  {
+    "questionNumber": 9,
+    "grade": "Grade 11",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 11 - Unit 1: Formal & Informal Writing",
+    "difficulty": "easy",
+    "prompt": "When do we use 'Dear Sir/Madam' in a formal letter?",
+    "options": [
+      "When we want to show respect to the person we are writing to.",
+      "When we want to write about something that is very serious.",
+      "When the person we are writing to is the head of an organization.",
+      "When we do not know the name of the person to whom we write."
+    ],
+    "correctAnswer": "D",
+    "explanation": "'Dear Sir/Madam' is standard formal salutation when the recipient's name is unknown."
+  },
+  {
+    "questionNumber": 10,
+    "grade": "Grade 11",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 11 - Unit 1: Formal & Informal Writing",
+    "difficulty": "medium",
+    "prompt": "Which of the following could be a typical ending to your letter of complaint to a company?",
+    "options": [
+      "Many thanks,",
+      "Yours truly,",
+      "Yours faithfully,",
+      "Kind regards,"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Formal complaints addressed using 'Dear Sir/Madam' conclude with 'Yours faithfully,'."
+  },
+  {
+    "questionNumber": 11,
+    "grade": "Grade 9",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 9 - Unit 3: Mechanics of Writing",
+    "difficulty": "medium",
+    "prompt": "Select the correctly punctuated and capitalized sentence:",
+    "options": [
+      "We used to stay at the Hilton Hotel and dine at Kokeb restaurant.",
+      "We used to stay at the Hilton hotel and dine at Kokeb Restaurant.",
+      "We used to stay at the Hilton Hotel and dine at Kokeb Restaurant.",
+      "We used to stay at the Hilton hotel and dine at Kokeb restaurant."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Proper names of specific commercial establishments (Hilton Hotel, Kokeb Restaurant) require capitalization for both specific and category nouns."
+  },
+  {
+    "questionNumber": 12,
+    "grade": "Grade 9",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 9 - Unit 3: Mechanics of Writing",
+    "difficulty": "medium",
+    "prompt": "Select the correctly punctuated and capitalized sentence:",
+    "options": [
+      "We bought them blankets, bed sheets, cloths and some rice.",
+      "We bought them blankets, bed sheets, cloths and, some rice.",
+      "We bought them, blankets, bed sheets, cloths and some rice.",
+      "We bought them blankets, bed sheets, cloths, and some rice."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Option D correctly uses standard listing commas including the Oxford (serial) comma before 'and'."
+  },
+  {
+    "questionNumber": 13,
+    "grade": "Grade 9",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 9 - Unit 3: Mechanics of Writing",
+    "difficulty": "medium",
+    "prompt": "Select the correctly punctuated and capitalized sentence:",
+    "options": [
+      "At St. Paul Hospital, they train doctors in a variety of fields, eg., cardiology, neurology, etc.",
+      "At St Paul Hospital, they train doctors in a variety of fields, e.g., cardiology, neurology, etc.",
+      "At St. Paul Hospital, they train doctors in a variety of fields, e.g., cardiology, neurology, etc.",
+      "At St. Paul Hospital, they train doctors in a variety of fields, e.g, cardiology, neurology, etc."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Abbreviation periods are required for title honorifics ('St.') and Latin abbreviations ('e.g.'), followed by a comma."
+  },
+  {
+    "questionNumber": 14,
+    "grade": "Grade 9",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 9 - Unit 3: Mechanics of Writing",
+    "difficulty": "hard",
+    "prompt": "Select the correctly punctuated sentence featuring complex list items:",
+    "options": [
+      "They donated money; gave out food; clothing and medication, and pledged a lot more.",
+      "They donated money; gave out food; clothing and medication; and pledged a lot more.",
+      "They donated money; gave out food, clothing and medication; and pledged a lot more.",
+      "They donated money gave out food clothing and medication and pledged a lot more."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Semicolons separate major complex list items that themselves contain internal comma listings."
+  },
+  {
+    "questionNumber": 15,
+    "grade": "Grade 9",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 9 - Unit 1: Vocabulary & Orthography",
+    "difficulty": "easy",
+    "prompt": "Which of the following words is correctly spelled?",
+    "options": [
+      "consession",
+      "recession",
+      "compasion",
+      "divission"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'Recession' is spelled correctly with double 's'. Misspellings: concession, compassion, division."
+  },
+  {
+    "questionNumber": 16,
+    "grade": "Grade 9",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 9 - Unit 1: Vocabulary & Orthography",
+    "difficulty": "easy",
+    "prompt": "Which of the following words is correctly spelled?",
+    "options": [
+      "thaught",
+      "tought",
+      "wraught",
+      "sought"
+    ],
+    "correctAnswer": "D",
+    "explanation": "'Sought' (past tense of seek) is correctly spelled. Misspellings: taught, wrought."
+  },
+  {
+    "questionNumber": 17,
+    "grade": "Grade 11",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 11 - Unit 5: Rhetorical Modes",
+    "difficulty": "medium",
+    "prompt": "Which one of the following sentences is most likely taken from a descriptive paragraph?",
+    "options": [
+      "Paul was such a quiet chap who was always silent regardless of the bitter injustice.",
+      "Paul says injustice kills your work spirit and demoralizes those who work hard.",
+      "Paul understands that injustice is a practice that everybody should fight and eliminate.",
+      "Paul finally convinced himself that he should rebel and then went straight to his boss."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Option A focuses on sensory/character traits ('quiet chap who was always silent'), characteristic of descriptive writing."
+  },
+  {
+    "questionNumber": 18,
+    "grade": "Grade 11",
+    "unit": "Unit 1: Writing Skills (Letter Writing, Coherence, Mechanics & Spelling)",
+    "topic": "Grade 11 - Unit 5: Rhetorical Modes",
+    "difficulty": "medium",
+    "prompt": "Which one of the following sentences is most likely taken from a paragraph developed using cause-effect method?",
+    "options": [
+      "Whenever she gets nervous and depressed, I try to calm her down.",
+      "There are lots of things that make life in the area very difficult.",
+      "Every morning, we clean the compound and make everything very neat.",
+      "Robots are one of the most amazing inventions of the human mind."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Option A presents a trigger condition ('Whenever she gets nervous...') and the resulting effect ('I try to calm her down')."
+  },
+  {
+    "questionNumber": 19,
+    "grade": "Grade 12",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 12 - Unit 1: Correlative Structures & Conditionals",
+    "difficulty": "medium",
+    "prompt": "The more we help him, ______ sense of dependency he would develop. So, handle things cautiously.",
+    "options": [
+      "more",
+      "less",
+      "the most",
+      "the more"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Correlative comparative structure: 'The + comparative..., the + comparative...' -> 'The more we help him, the more sense of dependency...'"
+  },
+  {
+    "questionNumber": 20,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 4: Relative Clauses",
+    "difficulty": "easy",
+    "prompt": "You don't seem to have ever seen the creature ______ I told you about. It looked nothing like a kangaroo except in the way it walked.",
+    "options": [
+      "one",
+      "who",
+      "whom",
+      "which"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Relative pronoun 'which' is used for non-human entities/creatures acting as the object of preposition 'about'."
+  },
+  {
+    "questionNumber": 21,
+    "grade": "Grade 12",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 12 - Unit 3: Conditionals & Present Facts",
+    "difficulty": "medium",
+    "prompt": "If one doesn't sleep for days in a row, one ______ getting disturbed psychologically and may even die. Sleep is very important for normal functions of life.",
+    "options": [
+      "will start",
+      "starts",
+      "is going to start",
+      "may start"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Zero conditional expressing universal biological truth: 'If + Present Simple, Present Simple' -> 'starts'."
+  },
+  {
+    "questionNumber": 22,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 2: Adjective Order",
+    "difficulty": "hard",
+    "prompt": "Mulugeta always adored the ______ Toyota car that his father drove at the beginning of the 80's.",
+    "options": [
+      "red ugly old small",
+      "old small red ugly",
+      "ugly old small red",
+      "small red ugly old"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Standard English Adjective Order: Opinion (ugly) -> Age (old) -> Size (small) -> Color (red)."
+  },
+  {
+    "questionNumber": 23,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 5: Collocations",
+    "difficulty": "easy",
+    "prompt": "They asked us to ______ them a favour of disclosing the company's secret but that was unacceptable to us.",
+    "options": [
+      "bestow",
+      "give",
+      "make",
+      "do"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Correct fixed verb phrase collocation is 'do (someone) a favour'."
+  },
+  {
+    "questionNumber": 24,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 3: Quantifiers & Determiners",
+    "difficulty": "easy",
+    "prompt": "______ the pilot and his crew recognized the plane had a problem. However, they didn't say anything lest disturbing the passengers.",
+    "options": [
+      "Together",
+      "Either",
+      "All",
+      "Both"
+    ],
+    "correctAnswer": "D",
+    "explanation": "'Both' connects two specific entities joined by 'and' ('the pilot and his crew')."
+  },
+  {
+    "questionNumber": 25,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 1: Conversational Functional English",
+    "difficulty": "easy",
+    "prompt": "You've been coughing the whole afternoon. ______",
+    "options": [
+      "Is syrup good for that",
+      "Why do you do that",
+      "Is that problem very common",
+      "Why don't you see your doctor"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Giving advice using 'Why don't you...?' fits the health context."
+  },
+  {
+    "questionNumber": 26,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 6: Verb Patterns (Gerunds/Infinitives)",
+    "difficulty": "easy",
+    "prompt": "If you enjoy ______, you can register with us and trek around the city every Sunday in the afternoon.",
+    "options": [
+      "walking",
+      "to walk",
+      "to have a walk",
+      "to be walking"
+    ],
+    "correctAnswer": "A",
+    "explanation": "The verb 'enjoy' is strictly followed by a gerund (-ing form): 'enjoy walking'."
+  },
+  {
+    "questionNumber": 27,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 3: Causative & Bare Infinitives",
+    "difficulty": "medium",
+    "prompt": "We don't have to ______ them make off with such an irreplaceable heritage of the nation.",
+    "options": [
+      "allow",
+      "let",
+      "concede",
+      "permit"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'Let' takes a bare infinitive verb without 'to' ('make off'), whereas 'allow' and 'permit' require full infinitives."
+  },
+  {
+    "questionNumber": 28,
+    "grade": "Grade 12",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 12 - Unit 2: Subjunctive & Wishes",
+    "difficulty": "medium",
+    "prompt": "They have been clearing the forest for three days. ______ intervened to stop them.",
+    "options": [
+      "Someone need",
+      "I want someone",
+      "How about you",
+      "I wish someone"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Expressing past/present desire for action: 'I wish someone [had] intervened'."
+  },
+  {
+    "questionNumber": 29,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 7: Modal Expressions",
+    "difficulty": "easy",
+    "prompt": "He has been paralyzed for months and was literally bed-ridden. Thanks God, he is ______ walk around in the house.",
+    "options": [
+      "interested to",
+      "able to",
+      "turning able to",
+      "feeling able to"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'Able to' expresses restored physical ability/capacity."
+  },
+  {
+    "questionNumber": 30,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 6: Modals of Obligation",
+    "difficulty": "easy",
+    "prompt": "There are thousands of displaced people... Don't you think we ______ help them?",
+    "options": [
+      "ought to",
+      "shall",
+      "could",
+      "might"
+    ],
+    "correctAnswer": "A",
+    "explanation": "'Ought to' expresses moral obligation or duty."
+  },
+  {
+    "questionNumber": 31,
+    "grade": "Grade 9",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 9 - Unit 4: Articles & Determiners",
+    "difficulty": "easy",
+    "prompt": "______ gentleman we saw at the gate as we were coming in is the new school director.",
+    "options": [
+      "Which",
+      "Some",
+      "The",
+      "A"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Definite article 'The' is required because 'gentleman' is specifically identified by relative clause 'we saw at the gate'."
+  },
+  {
+    "questionNumber": 32,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 3: Correlative Conjunctions",
+    "difficulty": "easy",
+    "prompt": "______ Berhe ______ Unod tampered with this computer. I haven't seen them around and I think they were out of office the whole day.",
+    "options": [
+      "Either...or",
+      "Neither...nor",
+      "Not only...but also",
+      "Both...and"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Negative elimination: since both were out, 'Neither Berhe nor Unod' tampered with it."
+  },
+  {
+    "questionNumber": 33,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 5: Past Tense Aspects",
+    "difficulty": "medium",
+    "prompt": "When Debela arrived, she ______ doro wot. But he didn't have the time to wait and enjoy it.",
+    "options": [
+      "had been making",
+      "has been making",
+      "was making",
+      "is making"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Past Continuous ('was making') expresses action in progress when another past event occurred."
+  },
+  {
+    "questionNumber": 34,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 4: Conditional & Prepositional Connectors",
+    "difficulty": "medium",
+    "prompt": "______ it gets late, give me a call and I'll see what I can do.",
+    "options": [
+      "Probably",
+      "Unless",
+      "When",
+      "In case"
+    ],
+    "correctAnswer": "D",
+    "explanation": "'In case' introduces a precautionary condition."
+  },
+  {
+    "questionNumber": 35,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 2: Past Perfect Aspect",
+    "difficulty": "medium",
+    "prompt": "When the police arrived, the burglars ______ away with the money.",
+    "options": [
+      "are already making",
+      "have been making",
+      "have already made",
+      "had already made"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Past Perfect ('had already made') denotes action completed prior to past reference time ('When the police arrived')."
+  },
+  {
+    "questionNumber": 36,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 5: Purpose Clauses",
+    "difficulty": "easy",
+    "prompt": "They took off early morning ______ make it in time. Otherwise, they would be late.",
+    "options": [
+      "in order that",
+      "so as to",
+      "with the intention of",
+      "in the interest of to"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'So as to' is followed by base verb ('make') to express purpose."
+  },
+  {
+    "questionNumber": 37,
+    "grade": "Grade 12",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 12 - Unit 1: Concession Clause",
+    "difficulty": "easy",
+    "prompt": "______ prices are still on the rise, we hope they will come down in the near future.",
+    "options": [
+      "Although",
+      "Even if",
+      "Nevertheless",
+      "In contrast to"
+    ],
+    "correctAnswer": "A",
+    "explanation": "'Although' introduces subordinate clause of concession."
+  },
+  {
+    "questionNumber": 38,
+    "grade": "Grade 12",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 12 - Unit 4: Transition Words",
+    "difficulty": "medium",
+    "prompt": "She was packing all morning... ______ her husband was arranging stuff in his office.",
+    "options": [
+      "Contrarily",
+      "Meanwhile",
+      "What is more",
+      "Supposedly"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'Meanwhile' indicates two simultaneous actions in different locations."
+  },
+  {
+    "questionNumber": 39,
+    "grade": "Grade 12",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 12 - Unit 1: Concessive Prepositional Phrases",
+    "difficulty": "medium",
+    "prompt": "______ it has drastically changed the world in many positive ways, modernization has also spoiled the cultures...",
+    "options": [
+      "However",
+      "In spite of",
+      "In comparison",
+      "Despite the fact that"
+    ],
+    "correctAnswer": "D",
+    "explanation": "'Despite the fact that' functions as complex conjunction introducing full clause."
+  },
+  {
+    "questionNumber": 40,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 6: Causative Verbs",
+    "difficulty": "medium",
+    "prompt": "Never borrow money from this group of loaners. They'll ______ you pay back double.",
+    "options": [
+      "make",
+      "do",
+      "force",
+      "let"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Causative verb 'make' is followed by object + bare infinitive ('you pay')."
+  },
+  {
+    "questionNumber": 41,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 4: Modals of Possibility",
+    "difficulty": "easy",
+    "prompt": "You shouldn't expect us exactly at 6:00 pm. We ______ make it but if we happen to be a bit late...",
+    "options": [
+      "shall",
+      "must",
+      "could",
+      "can"
+    ],
+    "correctAnswer": "C",
+    "explanation": "'Could' indicates modal possibility/probability regarding arrival time."
+  },
+  {
+    "questionNumber": 42,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 2: Adverbs of Manner & Suddenness",
+    "difficulty": "easy",
+    "prompt": "She was telling me the story... Then she ______ burst into tears and screams...",
+    "options": [
+      "silently",
+      "suddenly",
+      "romantically",
+      "sensibly"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'Suddenly' correctly describes abrupt emotional outburst."
+  },
+  {
+    "questionNumber": 43,
+    "grade": "Grade 12",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 12 - Unit 3: Third Conditional",
+    "difficulty": "medium",
+    "prompt": "Had she arrived a day earlier, she ______ met him and enjoyed a bit of time with him.",
+    "options": [
+      "must have",
+      "will have",
+      "could have",
+      "should have"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Inverted Third Conditional ('Had she arrived...'): apodosis requires modal + have + past participle ('could have met')."
+  },
+  {
+    "questionNumber": 44,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 5: Conjunctions of Purpose",
+    "difficulty": "easy",
+    "prompt": "Everybody understands that most of you worked very hard ______ you would pass this test.",
+    "options": [
+      "despite",
+      "so that",
+      "as a result of which",
+      "which means"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'So that' is conjunction of purpose followed by modal clause ('you would pass')."
+  },
+  {
+    "questionNumber": 45,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 3: Future Tense Expressions",
+    "difficulty": "easy",
+    "prompt": "If what you are telling me is true, then I ______ straight away and register with them.",
+    "options": [
+      "will go",
+      "am going to go",
+      "must go",
+      "am going"
+    ],
+    "correctAnswer": "A",
+    "explanation": "First conditional main clause expressing spontaneous decision made at moment of speaking uses 'will go'."
+  },
+  {
+    "questionNumber": 46,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 7: Semi-Modals of Advice",
+    "difficulty": "medium",
+    "prompt": "You ______ had your essay edited. I know how serious the instructor is with deadlines...",
+    "options": [
+      "had better",
+      "ought to",
+      "would",
+      "might"
+    ],
+    "correctAnswer": "A",
+    "explanation": "'Had better' gives strong recommendation/warning about essential action."
+  },
+  {
+    "questionNumber": 47,
+    "grade": "Grade 11",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 11 - Unit 2: Passive Voice",
+    "difficulty": "medium",
+    "prompt": "The house ______ into last night and they have already reported it to the police.",
+    "options": [
+      "was being broken",
+      "was broken",
+      "has broken",
+      "has been broken"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Simple Past Passive ('was broken into') is used for completed action at specific past time ('last night')."
+  },
+  {
+    "questionNumber": 48,
+    "grade": "Grade 12",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 12 - Unit 3: Conditional Past Perfect",
+    "difficulty": "medium",
+    "prompt": "If it ______ for at least a month or so... their cattle would have resisted the drought...",
+    "options": [
+      "has rained",
+      "had rained",
+      "had been raining",
+      "did rain"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Third conditional protasis requires Past Perfect ('had rained')."
+  },
+  {
+    "questionNumber": 49,
+    "grade": "Grade 9",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 9 - Unit 2: Adverbs vs Adjectives",
+    "difficulty": "easy",
+    "prompt": "Her father walks very ______ is like a tortoise. She saunters very slowly.",
+    "options": [
+      "urgently",
+      "quick",
+      "fastly",
+      "fast"
+    ],
+    "correctAnswer": "D",
+    "explanation": "'Fast' functions as both adjective and adverb (there is no standard word 'fastly')."
+  },
+  {
+    "questionNumber": 50,
+    "grade": "Grade 12",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 12 - Unit 2: Wish & Subjunctive Structures",
+    "difficulty": "medium",
+    "prompt": "I wish that we ______ today. It is really freezing and wet.",
+    "options": [
+      "didn't need to work",
+      "have not worked",
+      "will not need to work",
+      "are not working"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Unreal present wish requires Past Simple verb form ('didn't need to work')."
+  },
+  {
+    "questionNumber": 51,
+    "grade": "Grade 9",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 9 - Unit 4: Articles & Fund Quantifiers",
+    "difficulty": "easy",
+    "prompt": "They offered ______ reasonable fund for helping them organize the competition...",
+    "options": [
+      "much",
+      "the",
+      "an",
+      "a"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Indefinite article 'a' precedes singular countable noun starting with consonant sound ('a reasonable fund')."
+  },
+  {
+    "questionNumber": 52,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 1: Temporal Adverbs & Conjunctions",
+    "difficulty": "easy",
+    "prompt": "______ she came home, I made her coffee. Then we sat together...",
+    "options": [
+      "While",
+      "When",
+      "Suddenly",
+      "Prior"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'When' introduces completed event in time that triggers subsequent event."
+  },
+  {
+    "questionNumber": 53,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 4: Possessive Pronouns",
+    "difficulty": "easy",
+    "prompt": "Can anyone tell me ______ book this is? It has been lying here for months.",
+    "options": [
+      "of who",
+      "which",
+      "what about",
+      "whose"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Possessive interrogative pronoun 'whose' asks about ownership of the book."
+  },
+  {
+    "questionNumber": 54,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 6: Expressing Similarity & Agreement",
+    "difficulty": "medium",
+    "prompt": "She likes chatting with children and ______. We actually have a lot in common...",
+    "options": [
+      "so do I",
+      "I too like",
+      "also do I",
+      "also I like"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Inverted agreement tag for positive sentences: 'So + auxiliary verb + subject' -> 'so do I'."
+  },
+  {
+    "questionNumber": 55,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 5: Simple Past Tense",
+    "difficulty": "easy",
+    "prompt": "The school director sent you a message but apparently, your sister ______ to tell you.",
+    "options": [
+      "is forgetting",
+      "has forgot",
+      "forgot",
+      "forgets"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Simple Past tense 'forgot' describes completed past failure of action."
+  },
+  {
+    "questionNumber": 56,
+    "grade": "Grade 10",
+    "unit": "Unit 5: Grammar and Usage (Conditionals, Tenses, Modals & Connectors)",
+    "topic": "Grade 10 - Unit 1: Time Clause Conjunctions",
+    "difficulty": "easy",
+    "prompt": "He was doing the washing up ______ she was cleaning the house.",
+    "options": [
+      "during",
+      "for",
+      "since",
+      "while"
+    ],
+    "correctAnswer": "D",
+    "explanation": "'While' introduces background continuous clause occurring simultaneously with another action."
+  },
+  {
+    "questionNumber": 57,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "medium",
+    "prompt": "Chuchu: Your friend has got a good job, hasn't she?Meklit: ______",
+    "options": [
+      "Yes, she's got a job. I heard it is out of town.",
+      "Getting a job is not very easy these days.",
+      "I feel that the offer is rather too low, birr 2500 a month.",
+      "She graduated about five years back, you know."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Option C directly addresses and qualifies whether job is 'good' by evaluating salary offer."
+  },
+  {
+    "questionNumber": 58,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Eyob: What is your grandma like?Sisu: ______",
+    "options": [
+      "She likes eating shiro wot.",
+      "She's now been ill for a year.",
+      "She's very old and weak. She is 92.",
+      "She had a checkup yesterday. Right move!"
+    ],
+    "correctAnswer": "C",
+    "explanation": "'What is X like?' asks for character/physical description ('She's very old and weak')."
+  },
+  {
+    "questionNumber": 59,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Teacher: Where is the boy sitting over there?Fola: ______",
+    "options": [
+      "He always fights with people and no one likes him.",
+      "He is locked up. What I mean is, he is jailed.",
+      "His name is Zekarias. I don't know his father's name.",
+      "He is very intelligent. You don't know that, do you?"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Identifies the person referenced by teacher's question."
+  },
+  {
+    "questionNumber": 60,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Telila: Why didn't you come to my party?Aster: ______",
+    "options": [
+      "Was it held at your home or ...?",
+      "Did everyone else come?",
+      "I apologize for that. I was on-duty.",
+      "I could imagine it was so lavish."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Offers direct apology and valid explanation ('I was on-duty')."
+  },
+  {
+    "questionNumber": 61,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "medium",
+    "prompt": "Haji: Why don't we visit Chebera Churchura?Gorge: ______",
+    "options": [
+      "I think the biggest problem is where to stay. There is no hotel there.",
+      "Is the administration under the SNNPR or the federal government?",
+      "I've seen it on TV and they're now almost finishing it. Great achievement!",
+      "We have contributed money, though I don't know exactly how much"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Responds logically to travel suggestion by raising practical logistical considerations."
+  },
+  {
+    "questionNumber": 62,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "medium",
+    "prompt": "Mimi: I guess our driver was thrown out. Anyway, it was predictable.Kuku: ______",
+    "options": [
+      "I'm sorry I didn't follow what you said.",
+      "I don't understand what he threw out.",
+      "It was a serious accident and he lost a hand.",
+      "I think he and his boss were great friends."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Standard conversational clarification request when ambiguous phrasing ('thrown out') causes confusion."
+  },
+  {
+    "questionNumber": 63,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Oumer: Shall I pay you when I come back in June?Mensur: ______",
+    "options": [
+      "Never lend anyone your money. They don't pay you back.",
+      "No! I will have already left for Spain by the end of May.",
+      "Are you flying or taking a bus? How long will you be there?",
+      "I know you have hundreds and thousands in the bank. Bravo!"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Provides specific timeline conflict preventing requested June payment arrangement."
+  },
+  {
+    "questionNumber": 64,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Tesfaye: What advantage do I have in joining the union?Bereket: ______",
+    "options": [
+      "You're always against such new ideas, aren't you, brother?",
+      "Come on! Many of our close friends have joined it already.",
+      "Someone from the union was talking about its details yesterday.",
+      "Lots! For instance, you can get a loan of at least birr 50,000."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Directly answers query about benefits by providing concrete example ('loan of at least birr 50,000')."
+  },
+  {
+    "questionNumber": 65,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Colleague: We're going out for dinner tonight, aren't we?You: ______",
+    "options": [
+      "I'm not coming, if you don't mind.",
+      "That restaurant is always busy.",
+      "Are you a member of the Social Committee?",
+      "How much money do we have for that?"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Polite decline to an invitation: 'I'm not coming, if you don't mind.'"
+  },
+  {
+    "questionNumber": 66,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Amesu: When is your sister going to the university?Yonas: ______",
+    "options": [
+      "Addis Ababa University is her favorite choice.",
+      "In my opinion, she is not going to do that. She is not interested.",
+      "None of the universities will start within a month. They are not ready.",
+      "She wants to go to Dubai and work. They have bought her a ticket."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Directly addresses college plans by stating she does not intend to attend."
+  },
+  {
+    "questionNumber": 67,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "medium",
+    "prompt": "Journalist: Why is it that you always avoid coming out on mass media such as TV?Psychologist: ______",
+    "options": [
+      "In fact, mass media plays a big role in raising awareness on the issue.",
+      "The reason I don't want to do that is very personal. You know,",
+      "You know many people who call themselves elites like TVs and radios.",
+      "After all, mass media in this country should be doing their proper jobs."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Direct response to a 'Why' question regarding personal behavior."
+  },
+  {
+    "questionNumber": 68,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Christian: Sir! ______Mr. Sharma: That is my field of studies, but basically it is...",
+    "options": [
+      "Is it true that you're one of the best astronomers in India?",
+      "Your presentation finished just on time. Good job!",
+      "Would you like to say something about Artificial Intelligence?",
+      "Some people say you have published over fifty one books so far."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Prompts Mr. Sharma on subject matter ('Artificial Intelligence') that he confirms as his academic field."
+  },
+  {
+    "questionNumber": 69,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Almaz: This plate fell off the cabinet but it didn't break.Husband: ______",
+    "options": [
+      "Please, keep the pieces in a safe place.",
+      "These days, plates are not like that.",
+      "You are being rather too careless these days.",
+      "How nice! It seems to be made of porcelain."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Expresses relief and attributes durability to quality material."
+  },
+  {
+    "questionNumber": 70,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Tesfaye: The security guard tells me his wife has been hospitalized.You: ______",
+    "options": [
+      "Really? Health care is very expensive these days.",
+      "You know, I have never met his wife, have you?",
+      "Perhaps we could contribute some money and help.",
+      "What a pity! Who takes care of the children then?"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Offers supportive action proposal for colleague in trouble."
+  },
+  {
+    "questionNumber": 71,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Woltaji: Where is the office of the National Farmers Union?Mbobo: ______",
+    "options": [
+      "I have been to that office only two days ago. It is on a beautiful building.",
+      "You don't need any bus or taxi for that. Are you a stranger around?",
+      "Office of the National Farmers Union? They're easing food prices in this country.",
+      "Up there. When you see a tall building with blue glasses, you should turn left."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Gives clear directional instructions in response to 'Where is...' inquiry."
+  },
+  {
+    "questionNumber": 72,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Director: We are going to suspend that student who broke the window.Unit leader: ______",
+    "options": [
+      "I agree. That would be an essential measure.",
+      "Such misconducts are becoming a fashion.",
+      "Amazing! Why do some students like to misbehave?",
+      "Which section does he belong to? Section 4?"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Expresses administrative agreement with disciplinary decision."
+  },
+  {
+    "questionNumber": 73,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Shashe: I wanted to buy a TV but I couldn't decide the brand.Melat: ______",
+    "options": [
+      "Most TV programs are really boring.",
+      "The best these days is Sony TLC.",
+      "I know someone who sells electronic stuff.",
+      "Good TVs cost over 50,000 birr now."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Provides direct brand recommendation to resolve indecision."
+  },
+  {
+    "questionNumber": 74,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "You: He wouldn't give me back my computer. What should I do?Sister: ______",
+    "options": [
+      "Is that the computer they gave you from your office?",
+      "Unless you pay him back his money, he won't do it.",
+      "It is very difficult to do assignments without a computer.",
+      "Doesn't he know that computers make life very easy?"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Explains underlying condition/reason for withholding property."
+  },
+  {
+    "questionNumber": 75,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Leul: I hear they have all been trapped in a tunnel.Brother: ______",
+    "options": [
+      "When do they come out, you think?",
+      "I know tunnels could be dangerous.",
+      "In fact, tunnels should have been out of use.",
+      "No, no! What can be done to save them?"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Expresses urgent concern and prioritizes rescue efforts."
+  },
+  {
+    "questionNumber": 76,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Kebede: Do you think their plan is going to work out?Nigist: ______",
+    "options": [
+      "Who knows? Let's wait and see.",
+      "Good plans can sometimes fail.",
+      "By the way, who has masterminded it?",
+      "Plans should be carefully discussed."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Appropriate conversational expression of uncertainty regarding future outcomes."
+  },
+  {
+    "questionNumber": 77,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Interviewer: Was that your first time starring in a film?Bamlak: ______",
+    "options": [
+      "No, I don't remember the films I starred in.",
+      "No, I had acted in another film before that.",
+      "No, I acted in a film in English - No Good Deal.",
+      "Never, I was involved in three films after that."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Directly clarifies past acting experience preceding event in question."
+  },
+  {
+    "questionNumber": 78,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Interviewer: ______Jorgie: Actually, my interest is in fashion designing.",
+    "options": [
+      "Did I hear you like fashion designing?",
+      "Do you like fashion designing?",
+      "Why are you interested in fashion designing?",
+      "Could you tell me about your interest?"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Open question soliciting general career interests."
+  },
+  {
+    "questionNumber": 79,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "medium",
+    "prompt": "Driver: What do you mean? How can a robot replace me?You: ______",
+    "options": [
+      "To give you an idea, robots can do anything we do.",
+      "Robots are products of modern technology.",
+      "I have seen robots on TV and they are really very smart.",
+      "Haven't you seen robots helping people cross roads?"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Directly explains capability underlying automation replacement."
+  },
+  {
+    "questionNumber": 80,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Farah: Is that boy Ali, your classmate?Nisra: ______",
+    "options": [
+      "I didn't know you knew Ali.",
+      "Ali is very gentle and polite.",
+      "No, Ali is not as tall as this one.",
+      "No, Ali is from around Babile."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Correctly refutes identification based on physical height disparity."
+  },
+  {
+    "questionNumber": 81,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Student: Sir, We've won the inter-school competition. Our school stood first.Director: ______",
+    "options": [
+      "Wasn't the competition stiff as such?",
+      "This is our first time to participate.",
+      "What great news! I'm pleased to hear that.",
+      "Really? I actually knew two of the judges."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Expresses appropriate joy and praise for achievement."
+  },
+  {
+    "questionNumber": 82,
+    "grade": "Grade 11",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 11 - Unit 1: Social Interactions",
+    "difficulty": "easy",
+    "prompt": "Teacher: I always see Mimi and Bultum studying. They're working hard.Colleague: ______",
+    "options": [
+      "Bultum is one of the very hardworking students in class.",
+      "Maybe, they'll also need to do other things in between.",
+      "You know, I teach them two subjects - Biology and Chemistry.",
+      "Great! There is a good chance they'll pass the national exam."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Logical positive deduction based on observing dedicated study habits."
+  },
+  {
+    "questionNumber": 83,
+    "grade": "Grade 12",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 12 - Unit 2: Advanced Reading Comprehension",
+    "difficulty": "hard",
+    "prompt": "Select the option closest in meaning: 'The rapid spread of HIV and AIDS is a consequence of mass denial and social disgrace of persons living with the virus.'",
+    "options": [
+      "Denying the existence of HIV/AIDS leads to eventual disgrace of victims.",
+      "The main cause of HIV/AIDS is denial and social disgrace.",
+      "The existence of HIV/AIDS and disgrace of people living with the virus aggravates the spread of the virus.",
+      "The spread of HIV/AIDS gets worse when people deny infection and also alienate victims."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Option D accurately captures both key causal mechanisms (mass denial and social alienation) escalating virus spread."
+  },
+  {
+    "questionNumber": 84,
+    "grade": "Grade 12",
+    "unit": "Unit 2: Communicative Activities & Functional Dialogue",
+    "topic": "Grade 12 - Unit 2: Advanced Reading Comprehension",
+    "difficulty": "medium",
+    "prompt": "Select the option closest in meaning: 'Abusing drugs can only provide a temporary escape from the world of reality.'",
+    "options": [
+      "Drugs are used by people who live in an elusive world.",
+      "Drug abuse can effectively solve temporary problems.",
+      "Drug abuse is a means of avoiding unpleasant facts of life.",
+      "Drug abuse creates a world free of worries and sufferings."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Option C correctly paraphrases 'temporary escape from reality' as avoiding unpleasant facts of life."
+  },
+  {
+    "questionNumber": 85,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 4: Reading - Higher Education",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Adults Returning to Higher Education]\nThis passage discusses adults who return to university education later in life. It covers their motivations, advantages (clearer purpose, stronger work ethic, better writing skills), challenges (social alienation, insecurity, unfamiliarity), and the friction between older and younger students in university settings. The passage references Professor Mike Rollo at the University of Florida and student Juliet Margolin's experience with dorm life.\n\nQuestion 85: Why do adult learners write better than most of the best young students?",
+    "options": [
+      "Because their teachers preferred teaching them.",
+      "Because they liked writing more than they did student leadership.",
+      "Because during their days, the system had placed more emphasis on writing skills.",
+      "Because today's students attach more importance to leadership skills."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Paragraph 2 states adults went to school when learning to write was emphasized more."
+  },
+  {
+    "questionNumber": 86,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 4: Reading - Higher Education",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage I — Adults Returning to Higher Education]\nThis passage discusses adults who return to university education later in life. It covers their motivations, advantages (clearer purpose, stronger work ethic, better writing skills), challenges (social alienation, insecurity, unfamiliarity), and the friction between older and younger students in university settings. The passage references Professor Mike Rollo at the University of Florida and student Juliet Margolin's experience with dorm life.\n\nQuestion 86: Why do university professors prefer teaching adults to teaching young people?",
+    "options": [
+      "Adult learners have a clear purpose for being on campus.",
+      "Eighteen year-olds join universities with foggiest ideas.",
+      "Adults work much harder than their younger classmates.",
+      "Younger students are much more careless about studies."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Paragraph 1 notes adults frequently work harder and have a clear purpose for being at university."
+  },
+  {
+    "questionNumber": 87,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 4: Reading - Higher Education",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Adults Returning to Higher Education]\nThis passage discusses adults who return to university education later in life. It covers their motivations, advantages (clearer purpose, stronger work ethic, better writing skills), challenges (social alienation, insecurity, unfamiliarity), and the friction between older and younger students in university settings. The passage references Professor Mike Rollo at the University of Florida and student Juliet Margolin's experience with dorm life.\n\nQuestion 87: What makes adult students feel insecure?",
+    "options": [
+      "Friends and family members may dislike or not understand their new status.",
+      "Younger students sometimes swear at them.",
+      "Some of the students may envy their performance.",
+      "Socially, it is hard to compete with younger students."
+    ],
+    "correctAnswer": "A",
+    "explanation": "Paragraph 3 explicitly states: 'Friends and family may not like or understand their new status.'"
+  },
+  {
+    "questionNumber": 88,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 4: Reading - Higher Education",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Adults Returning to Higher Education]\nThis passage discusses adults who return to university education later in life. It covers their motivations, advantages (clearer purpose, stronger work ethic, better writing skills), challenges (social alienation, insecurity, unfamiliarity), and the friction between older and younger students in university settings. The passage references Professor Mike Rollo at the University of Florida and student Juliet Margolin's experience with dorm life.\n\nQuestion 88: Comparatively, why do older students tend to get their work done in time?",
+    "options": [
+      "Some of them have sick children whom they have to look after.",
+      "They do not want to be rushed up when it is too late.",
+      "It is to have time for unforeseen situations that may unexpectedly keep them away.",
+      "The old school system shaped them in a way that does not procrastinate duties."
+    ],
+    "correctAnswer": "C",
+    "explanation": "Paragraph 2 quotes a student planning ahead in case she stays home with a sick child."
+  },
+  {
+    "questionNumber": 89,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 4: Reading - Higher Education",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Adults Returning to Higher Education]\nThis passage discusses adults who return to university education later in life. It covers their motivations, advantages (clearer purpose, stronger work ethic, better writing skills), challenges (social alienation, insecurity, unfamiliarity), and the friction between older and younger students in university settings. The passage references Professor Mike Rollo at the University of Florida and student Juliet Margolin's experience with dorm life.\n\nQuestion 89: What, according to Mike Rollo, was the problem at the University of Florida?",
+    "options": [
+      "Younger girls embarrass older women calling them 'mother'.",
+      "Older students feel so unfit to the context.",
+      "Older students account for only about one-fifth of the student community.",
+      "The University administration is new to handling older students."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Paragraph 3 states Mike Rollo's confession: 'because we're not used to dealing with them.'"
+  },
+  {
+    "questionNumber": 90,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 4: Reading - Higher Education",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage I — Adults Returning to Higher Education]\nThis passage discusses adults who return to university education later in life. It covers their motivations, advantages (clearer purpose, stronger work ethic, better writing skills), challenges (social alienation, insecurity, unfamiliarity), and the friction between older and younger students in university settings. The passage references Professor Mike Rollo at the University of Florida and student Juliet Margolin's experience with dorm life.\n\nQuestion 90: 'I thought I left my mother at home' (Paragraph 3). 'My mother' in this sentence refers to:",
+    "options": [
+      "The speaker's mom",
+      "Women classmates",
+      "Older women in the group",
+      "Elderly women on campus"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Refers to older adult female classmates whose presence reminds younger students of parental supervision."
+  },
+  {
+    "questionNumber": 91,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 4: Reading - Higher Education",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Adults Returning to Higher Education]\nThis passage discusses adults who return to university education later in life. It covers their motivations, advantages (clearer purpose, stronger work ethic, better writing skills), challenges (social alienation, insecurity, unfamiliarity), and the friction between older and younger students in university settings. The passage references Professor Mike Rollo at the University of Florida and student Juliet Margolin's experience with dorm life.\n\nQuestion 91: What does 'The feeling can be mutual' mean (Paragraph 4)?",
+    "options": [
+      "Both the grownups and their roommates feel the same way.",
+      "Both groups think it is hard to live with the other.",
+      "Both the university and the youngsters think those grownups are unfit.",
+      "Both the university administration and older students feel uncomfortable with each other."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Indicates that just as university administration struggles, older students also feel out of place."
+  },
+  {
+    "questionNumber": 92,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 4: Reading - Higher Education",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage I — Adults Returning to Higher Education]\nThis passage discusses adults who return to university education later in life. It covers their motivations, advantages (clearer purpose, stronger work ethic, better writing skills), challenges (social alienation, insecurity, unfamiliarity), and the friction between older and younger students in university settings. The passage references Professor Mike Rollo at the University of Florida and student Juliet Margolin's experience with dorm life.\n\nQuestion 92: '... because we're not used to dealing with them' (Paragraph 3). What does 'them' refer to?",
+    "options": [
+      "Younger students",
+      "Older students",
+      "The student community",
+      "Places like Florida"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Pronoun 'them' refers back to older students."
+  },
+  {
+    "questionNumber": 93,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 4: Reading - Higher Education",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage I — Adults Returning to Higher Education]\nThis passage discusses adults who return to university education later in life. It covers their motivations, advantages (clearer purpose, stronger work ethic, better writing skills), challenges (social alienation, insecurity, unfamiliarity), and the friction between older and younger students in university settings. The passage references Professor Mike Rollo at the University of Florida and student Juliet Margolin's experience with dorm life.\n\nQuestion 93: What is the central idea of the last paragraph?",
+    "options": [
+      "Youngsters do not like to see older students on university campus.",
+      "It is not very wise for older students to go back to university.",
+      "University is a place where distinctions should not be made because of age.",
+      "It is very hard to have young and old students together in a university due to social alienation."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Paragraph details social mismatch, dorm friction, and older students seeking separate support groups."
+  },
+  {
+    "questionNumber": 94,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 4: Reading - Higher Education",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage I — Adults Returning to Higher Education]\nThis passage discusses adults who return to university education later in life. It covers their motivations, advantages (clearer purpose, stronger work ethic, better writing skills), challenges (social alienation, insecurity, unfamiliarity), and the friction between older and younger students in university settings. The passage references Professor Mike Rollo at the University of Florida and student Juliet Margolin's experience with dorm life.\n\nQuestion 94: Why did Juliet Margolin eventually decide to evacuate her dorm?",
+    "options": [
+      "She wanted to live with someone more matured.",
+      "The little dorm mates made her feel very old.",
+      "She didn't like the ketchup her dorm mates were using.",
+      "She couldn't bear the immature behavior of dorm mates."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Paragraph 4 explains she was appalled by ketchup on showers and jelly on mirrors in communal bathrooms."
+  },
+  {
+    "questionNumber": 95,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 6: Reading - Ethics & Academic Integrity",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — Academic and Non-Academic Plagiarism]\nThis passage examines cheating and plagiarism in educational and non-educational contexts. It discusses statistics (almost 80% of college students admit to cheating), motivations (getting better grades without effort), types (academic vs non-academic), similarities and differences, consequences (disciplinary actions, legal penalties, psychological trauma), and how plagiarism affects politicians and public figures.\n\nQuestion 95: What is the main topic of Reading Passage Two?",
+    "options": [
+      "Statistical analysis of high school failure rates.",
+      "Academic and non-academic plagiarism, causes, and consequences.",
+      "Psychological therapy for college students.",
+      "How to write university research papers."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Text comprehensively analyzes cheating/plagiarism across academic and non-academic contexts."
+  },
+  {
+    "questionNumber": 96,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 6: Reading - Ethics & Academic Integrity",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — Academic and Non-Academic Plagiarism]\nThis passage examines cheating and plagiarism in educational and non-educational contexts. It discusses statistics (almost 80% of college students admit to cheating), motivations (getting better grades without effort), types (academic vs non-academic), similarities and differences, consequences (disciplinary actions, legal penalties, psychological trauma), and how plagiarism affects politicians and public figures.\n\nQuestion 96: According to paragraph one, which one of the following is true about cheating?",
+    "options": [
+      "Recently, cheating has become part of every student's life in the US.",
+      "Almost 80% of college students admit to cheating at least once.",
+      "Cheating is more severe among university students than high school students.",
+      "The statistics of 2018 show that cheating is very common among students."
+    ],
+    "correctAnswer": "B",
+    "explanation": "Paragraph 1 explicitly notes almost 80% of college students admit to cheating at least once."
+  },
+  {
+    "questionNumber": 97,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 6: Reading - Ethics & Academic Integrity",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — Academic and Non-Academic Plagiarism]\nThis passage examines cheating and plagiarism in educational and non-educational contexts. It discusses statistics (almost 80% of college students admit to cheating), motivations (getting better grades without effort), types (academic vs non-academic), similarities and differences, consequences (disciplinary actions, legal penalties, psychological trauma), and how plagiarism affects politicians and public figures.\n\nQuestion 97: What is the primary motivation behind students' decision to plagiarize?",
+    "options": [
+      "Laziness and making little effort",
+      "Lack of self-confidence",
+      "The feeling of dependence on others",
+      "The interest to score good grades without effort"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Paragraph 2 states the most important reason is getting better grades without enough effort."
+  },
+  {
+    "questionNumber": 98,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 6: Reading - Ethics & Academic Integrity",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage II — Academic and Non-Academic Plagiarism]\nThis passage examines cheating and plagiarism in educational and non-educational contexts. It discusses statistics (almost 80% of college students admit to cheating), motivations (getting better grades without effort), types (academic vs non-academic), similarities and differences, consequences (disciplinary actions, legal penalties, psychological trauma), and how plagiarism affects politicians and public figures.\n\nQuestion 98: Which of the following is NOT among the similarities between academic and non-academic plagiarism?",
+    "options": [
+      "The way the act is committed",
+      "The actors of plagiarism",
+      "The specific interest behind the act",
+      "The anticipated rewards of the act"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The actors differ (students in academic settings vs artists/cooks/public in non-academic settings)."
+  },
+  {
+    "questionNumber": 99,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 6: Reading - Ethics & Academic Integrity",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — Academic and Non-Academic Plagiarism]\nThis passage examines cheating and plagiarism in educational and non-educational contexts. It discusses statistics (almost 80% of college students admit to cheating), motivations (getting better grades without effort), types (academic vs non-academic), similarities and differences, consequences (disciplinary actions, legal penalties, psychological trauma), and how plagiarism affects politicians and public figures.\n\nQuestion 99: Which one of the following belongs to non-academic plagiarism?",
+    "options": [
+      "Using fake signatures in applications for financial aid",
+      "Using others' lab reports for submission in a course",
+      "Stealing others' research plans and designs to write a thesis",
+      "Stealing someone's food recipe or artwork for personal gain"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Paragraph 2 defines non-academic plagiarism as stealing quotes, arts, recipes, and ideas outside coursework."
+  },
+  {
+    "questionNumber": 100,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 6: Reading - Ethics & Academic Integrity",
+    "difficulty": "easy",
+    "prompt": "[Reading Passage II — Academic and Non-Academic Plagiarism]\nThis passage examines cheating and plagiarism in educational and non-educational contexts. It discusses statistics (almost 80% of college students admit to cheating), motivations (getting better grades without effort), types (academic vs non-academic), similarities and differences, consequences (disciplinary actions, legal penalties, psychological trauma), and how plagiarism affects politicians and public figures.\n\nQuestion 100: What does 'they' in '... obviously, they will result in negative effects' refer to (Paragraph 2)?",
+    "options": [
+      "Students behind the act of cheating",
+      "Reasons and methods of cheating",
+      "Both academic and non-academic cheating",
+      "College and high school institutions"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Refers directly back to antecedent 'reasons and methods' in preceding sentence clause."
+  },
+  {
+    "questionNumber": 101,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 6: Reading - Ethics & Academic Integrity",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage II — Academic and Non-Academic Plagiarism]\nThis passage examines cheating and plagiarism in educational and non-educational contexts. It discusses statistics (almost 80% of college students admit to cheating), motivations (getting better grades without effort), types (academic vs non-academic), similarities and differences, consequences (disciplinary actions, legal penalties, psychological trauma), and how plagiarism affects politicians and public figures.\n\nQuestion 101: What is the main purpose of taking disciplinary measures against cheaters in a university environment?",
+    "options": [
+      "To safeguard the academic community and institution integrity",
+      "To discourage undeserved merits",
+      "To protect students' safety and integrity",
+      "To teach new behaviors to the cheaters"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Paragraph 3 concludes sanctions are to protect university community/integrity."
+  },
+  {
+    "questionNumber": 102,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 6: Reading - Ethics & Academic Integrity",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage II — Academic and Non-Academic Plagiarism]\nThis passage examines cheating and plagiarism in educational and non-educational contexts. It discusses statistics (almost 80% of college students admit to cheating), motivations (getting better grades without effort), types (academic vs non-academic), similarities and differences, consequences (disciplinary actions, legal penalties, psychological trauma), and how plagiarism affects politicians and public figures.\n\nQuestion 102: What, according to Paragraph 3, is the most undesirable consequence of academic cheating?",
+    "options": [
+      "A disciplinary note recorded on an academic transcript",
+      "Suspension from the University for one or more terms",
+      "A five-year hold and pending remark on the cheater's records",
+      "The psychological and mental trauma inflicted on the cheater"
+    ],
+    "correctAnswer": "D",
+    "explanation": "Paragraph 3 states the worst result is psychological and mental impact remaining for years."
+  },
+  {
+    "questionNumber": 103,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 6: Reading - Ethics & Academic Integrity",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage II — Academic and Non-Academic Plagiarism]\nThis passage examines cheating and plagiarism in educational and non-educational contexts. It discusses statistics (almost 80% of college students admit to cheating), motivations (getting better grades without effort), types (academic vs non-academic), similarities and differences, consequences (disciplinary actions, legal penalties, psychological trauma), and how plagiarism affects politicians and public figures.\n\nQuestion 103: If a court sends a plagiarist to jail for one-year service, what type of consequence is it?",
+    "options": [
+      "Ethical",
+      "Legal",
+      "Professional",
+      "Personal"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Imprisonment imposed by judicial authorities represents a legal consequence."
+  },
+  {
+    "questionNumber": 104,
+    "grade": "Grade 12",
+    "unit": "Unit 4: Reading Comprehension & Passage Analysis",
+    "topic": "Grade 12 - Unit 6: Reading - Ethics & Academic Integrity",
+    "difficulty": "medium",
+    "prompt": "[Reading Passage II — Academic and Non-Academic Plagiarism]\nThis passage examines cheating and plagiarism in educational and non-educational contexts. It discusses statistics (almost 80% of college students admit to cheating), motivations (getting better grades without effort), types (academic vs non-academic), similarities and differences, consequences (disciplinary actions, legal penalties, psychological trauma), and how plagiarism affects politicians and public figures.\n\nQuestion 104: Which sentence is true about politicians in relation to plagiarism?",
+    "options": [
+      "Confirmed presentations tempt politicians and push them to plagiarize.",
+      "Politicians avoid plagiarism due to fear of pressure from the public.",
+      "Consequences of plagiarism could be comparatively less harsh on politicians.",
+      "Politicians may resort to plagiarism as a means of covering up their laziness."
+    ],
+    "correctAnswer": "D",
+    "explanation": "Public figures/politicians plagiarize speeches or writings often to mask lack of personal effort."
+  },
+  {
+    "questionNumber": 105,
+    "grade": "Grade 11",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 11 - Unit 3: Contextual Synonyms",
+    "difficulty": "easy",
+    "prompt": "Select the synonym for the underlined word MAIN: 'The MAIN factor that led to the disbanding...'",
+    "options": [
+      "direct",
+      "simple",
+      "principal",
+      "lead"
+    ],
+    "correctAnswer": "C",
+    "explanation": "'Principal' is the direct synonym for 'main' in this sentence context."
+  },
+  {
+    "questionNumber": 106,
+    "grade": "Grade 11",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 11 - Unit 3: Contextual Synonyms",
+    "difficulty": "easy",
+    "prompt": "Select the synonym for the underlined word DISAGREEMENT: 'The DISAGREEMENT between the warring parties...'",
+    "options": [
+      "dispute",
+      "hatred",
+      "contempt",
+      "assault"
+    ],
+    "correctAnswer": "A",
+    "explanation": "'Dispute' is a direct contextual synonym for 'disagreement'."
+  },
+  {
+    "questionNumber": 107,
+    "grade": "Grade 11",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 11 - Unit 3: Contextual Synonyms",
+    "difficulty": "easy",
+    "prompt": "Select the synonym for the underlined word HUGE: 'There is a HUGE increase in the number of newly built secondary schools...'",
+    "options": [
+      "massive",
+      "bulky",
+      "comprehensive",
+      "progressive"
+    ],
+    "correctAnswer": "A",
+    "explanation": "'Massive' is synonymous with 'huge' when describing numerical expansion."
+  },
+  {
+    "questionNumber": 108,
+    "grade": "Grade 11",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 11 - Unit 3: Contextual Synonyms",
+    "difficulty": "medium",
+    "prompt": "Select the synonym for the underlined word FAILURE: 'We cannot be talking about FAILURE of plans every year.'",
+    "options": [
+      "impracticality",
+      "shallowness",
+      "miscarriage",
+      "collapse"
+    ],
+    "correctAnswer": "D",
+    "explanation": "'Collapse' or breakdown refers directly to total failure of organizational plans."
+  },
+  {
+    "questionNumber": 109,
+    "grade": "Grade 11",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 11 - Unit 3: Contextual Synonyms",
+    "difficulty": "easy",
+    "prompt": "Select the synonym for the underlined word MODEST: 'Most of us are not MODEST enough to learn from others.'",
+    "options": [
+      "humble",
+      "inferior",
+      "submissive",
+      "polite"
+    ],
+    "correctAnswer": "A",
+    "explanation": "'Humble' is the exact synonym for 'modest'."
+  },
+  {
+    "questionNumber": 110,
+    "grade": "Grade 11",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 11 - Unit 3: Contextual Synonyms",
+    "difficulty": "medium",
+    "prompt": "Select the synonym for the underlined word DUAL: '... the results are almost always DUAL. So, we work hard to be in the pass group...'",
+    "options": [
+      "binary",
+      "both",
+      "teamed",
+      "paired"
+    ],
+    "correctAnswer": "A",
+    "explanation": "'Binary' (two-state: pass/fail) corresponds directly to 'dual' examination outcomes."
+  },
+  {
+    "questionNumber": 111,
+    "grade": "Grade 11",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 11 - Unit 3: Contextual Synonyms",
+    "difficulty": "medium",
+    "prompt": "Select the synonym for the underlined word VESTED: '... needs joint negotiations among groups with VESTED interest.'",
+    "options": [
+      "common",
+      "popular",
+      "multisectoral",
+      "multilateral"
+    ],
+    "correctAnswer": "A",
+    "explanation": "'Common' or underlying specific personal interest in an outcome."
+  },
+  {
+    "questionNumber": 112,
+    "grade": "Grade 11",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 11 - Unit 3: Contextual Synonyms",
+    "difficulty": "easy",
+    "prompt": "Select the synonym for the underlined word ELIMINATE: 'If we cannot ELIMINATE malaria, we are going to pay dearly.'",
+    "options": [
+      "fight",
+      "remove",
+      "eradicate",
+      "dismiss"
+    ],
+    "correctAnswer": "C",
+    "explanation": "'Eradicate' means to completely eliminate or wipe out a disease."
+  },
+  {
+    "questionNumber": 113,
+    "grade": "Grade 10",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 10 - Unit 4: Vocabulary in Context",
+    "difficulty": "easy",
+    "prompt": "Teachers should ______ the attitude of honesty and integrity in the minds of their learners.",
+    "options": [
+      "cultivate",
+      "inflict",
+      "consolidate",
+      "impart"
+    ],
+    "correctAnswer": "A",
+    "explanation": "'Cultivate' (foster/nurture over time) collocates with developing positive attitudes in learners."
+  },
+  {
+    "questionNumber": 114,
+    "grade": "Grade 10",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 10 - Unit 4: Vocabulary in Context",
+    "difficulty": "easy",
+    "prompt": "It is ______ that he committed suicide. They said he was a very successful politician.",
+    "options": [
+      "apparent",
+      "vivid",
+      "incredible",
+      "unjust"
+    ],
+    "correctAnswer": "C",
+    "explanation": "'Incredible' (unbelievable/surprising) fits the shock of unexpected news about a successful figure."
+  },
+  {
+    "questionNumber": 115,
+    "grade": "Grade 10",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 10 - Unit 4: Vocabulary in Context",
+    "difficulty": "easy",
+    "prompt": "We will need to ______ what they are doing and how they are doing it so as to give our testimonies.",
+    "options": [
+      "visualize",
+      "observe",
+      "overhear",
+      "report"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'Observe' means to watch attentively in order to provide first-hand testimony."
+  },
+  {
+    "questionNumber": 116,
+    "grade": "Grade 10",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 10 - Unit 4: Vocabulary in Context",
+    "difficulty": "easy",
+    "prompt": "If we are not able to ______ ideas accurately, misunderstanding would naturally crop up.",
+    "options": [
+      "enunciate",
+      "inform",
+      "propagate",
+      "communicate"
+    ],
+    "correctAnswer": "D",
+    "explanation": "'Communicate ideas' is the standard verb-noun pairing for conveying thoughts."
+  },
+  {
+    "questionNumber": 117,
+    "grade": "Grade 10",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 10 - Unit 4: Vocabulary in Context",
+    "difficulty": "medium",
+    "prompt": "We all need to work hard to reverse the ongoing moral ______ in this country and breathe life into it.",
+    "options": [
+      "challenge",
+      "decay",
+      "plunge",
+      "state"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'Moral decay' (decline in ethical standards) is the established collocation."
+  },
+  {
+    "questionNumber": 118,
+    "grade": "Grade 10",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 10 - Unit 4: Vocabulary in Context",
+    "difficulty": "easy",
+    "prompt": "That twenty of their friends died in a crash came to everybody as a ______.",
+    "options": [
+      "worry",
+      "shock",
+      "calamity",
+      "chance"
+    ],
+    "correctAnswer": "B",
+    "explanation": "'Came as a shock' is the idiomatic phrase for surprising tragic news."
+  },
+  {
+    "questionNumber": 119,
+    "grade": "Grade 10",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 10 - Unit 4: Vocabulary in Context",
+    "difficulty": "easy",
+    "prompt": "What all the police could find were ______ of glasses from the building...",
+    "options": [
+      "signs",
+      "parts",
+      "fragments",
+      "evidences"
+    ],
+    "correctAnswer": "C",
+    "explanation": "'Fragments of glass' is the precise physical noun phrase for broken glass pieces."
+  },
+  {
+    "questionNumber": 120,
+    "grade": "Grade 10",
+    "unit": "Unit 3: Sentence Comprehension & Vocabulary",
+    "topic": "Grade 10 - Unit 4: Vocabulary in Context",
+    "difficulty": "easy",
+    "prompt": "As the company is new, we will need to produce some kind of ______ to be distributed to the community around.",
+    "options": [
+      "poster",
+      "notice",
+      "newspaper",
+      "leaflet"
+    ],
+    "correctAnswer": "D",
+    "explanation": "'Leaflet' (informational flyer) is designed specifically for local community distribution."
+  }
+]
