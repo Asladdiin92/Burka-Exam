@@ -56,20 +56,18 @@ app.use("/api/analytics", analyticsRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/ai", aiRoutes);
 
-if (fs.existsSync(webDistDir)) {
-  app.use((req, res, next) => {
-    if (req.path === "/sw.js") {
-      res.setHeader("Content-Type", "application/javascript; charset=utf-8");
-      res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-      res.setHeader("Service-Worker-Allowed", "/");
-    } else if (req.path === "/manifest.webmanifest") {
-      res.setHeader("Content-Type", "application/manifest+json; charset=utf-8");
-      res.setHeader("Cache-Control", "no-cache");
-    }
-    next();
-  });
-  app.use(express.static(webDistDir));
-}
+app.use((req, res, next) => {
+  if (req.path === "/sw.js") {
+    res.setHeader("Content-Type", "application/javascript; charset=utf-8");
+    res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    res.setHeader("Service-Worker-Allowed", "/");
+  } else if (req.path === "/manifest.webmanifest") {
+    res.setHeader("Content-Type", "application/manifest+json; charset=utf-8");
+    res.setHeader("Cache-Control", "no-cache");
+  }
+  next();
+});
+app.use(express.static(webDistDir));
 
 app.get("/{*splat}", (request, response, next) => {
   if (request.path.startsWith("/api")) {

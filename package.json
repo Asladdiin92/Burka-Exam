@@ -9,7 +9,7 @@
     "Web"
   ],
   "scripts": {
-    "dev": "npm run build && node Backend/src/server.js",
+    "dev": "node Backend/src/server.js",
     "build": "npm --workspace=Web run build",
     "start": "node Backend/src/server.js",
     "web:dev": "npm --workspace=Web run dev",

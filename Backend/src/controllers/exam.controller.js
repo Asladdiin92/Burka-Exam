@@ -492,7 +492,7 @@ export async function startExamAttempt(request, response) {
     }
 
     const [questionsRaw, allChapters, allSubjects] = await Promise.all([
-      Question.find(questionFilter).select("-correctAnswer").lean(),
+      Question.find(questionFilter).lean(),
       Chapter.find().select("_id title order subjectId").lean(),
       Subject.find().select("_id name code gradeLevel").lean()
     ]);
@@ -514,6 +514,8 @@ export async function startExamAttempt(request, response) {
         const bookletOrder = bookletOrderMap.has(String(q._id)) ? bookletOrderMap.get(String(q._id)) : 99999;
         return {
           ...q,
+          correctAnswer: q.correctAnswer || "A",
+          explanation: q.explanation || "",
           prompt: parsedText.prompt,
           stem: parsedText.stem,
           passage: parsedText.passage,

@@ -45,9 +45,9 @@ async function tryRefreshWebAccessToken() {
   return webRefreshPromise;
 }
 
-const WEB_API_BACKUP_PREFIX = "ethioprep_web_api_cache_v4:";
+const WEB_API_BACKUP_PREFIX = "ethioprep_web_api_cache_v5:";
 
-// Purge any legacy v1/v2/v3 cached API backups and stale Service Worker caches
+// Purge any legacy v1/v2/v3/v4 cached API backups and stale Service Worker caches
 if (typeof window !== "undefined") {
   try {
     const keysToRemove = [];
@@ -58,7 +58,8 @@ if (typeof window !== "undefined") {
         ((k.startsWith("ethioprep_web_api_cache_") && !k.startsWith(WEB_API_BACKUP_PREFIX)) ||
           k === "ethioprep_offline_bundle_v1" ||
           k === "ethioprep_offline_bundle_v2" ||
-          k === "ethioprep_offline_bundle_v3")
+          k === "ethioprep_offline_bundle_v3" ||
+          k === "ethioprep_offline_bundle_v4")
       ) {
         keysToRemove.push(k);
       }
@@ -72,7 +73,7 @@ if (typeof window !== "undefined") {
       .keys()
       .then((names) => {
         names.forEach((name) => {
-          if (name.startsWith("ethioprep-") && !name.endsWith("-v4")) {
+          if (name.startsWith("ethioprep-") && !name.endsWith("-v5")) {
             window.caches.delete(name).catch(() => {});
           }
         });

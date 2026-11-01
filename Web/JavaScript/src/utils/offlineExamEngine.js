@@ -281,3 +281,115 @@ export function gradeOfflineExamAttempt(questions = [], submittedAnswers = [], p
     questionResults
   };
 }
+
+/**
+ * Resolves per-question answer feedback based on the student's chosen answer display mode
+ * ("after_finishing" vs "right_away") and current exam state.
+ *
+ * @param {object} params
+ * @param {object} params.question - Question object with _id, correctAnswer, options, explanation
+ * @param {string} [params.selectedKey] - Option key currently selected by the student (e.g. "A")
+ * @param {object} [params.examResult] - Submitted exam result object (if exam is finished)
+ * @param {"after_finishing" | "right_away"} [params.showAnswerMode="after_finishing"] - When to show correct answers
+ * @returns {{
+ *   showFeedback: boolean,
+ *   isCorrect: boolean,
+ *   correctKey: string,
+ *   selectedAnswerText: string,
+ *   correctAnswerText: string,
+ *   explanation: string,
+ *   review: object | null
+ * }}
+ */
+export function resolveQuestionFeedback({
+  question,
+  selectedKey = "",
+  examResult = null,
+  showAnswerMode = "after_finishing"
+} = {}) {
+  const safeQuestion = question || {};
+  const options = Array.isArray(safeQuestion.options) ? safeQuestion.options : [];
+  const submittedReview = Array.isArray(examResult?.questionResults)
+    ? examResult.questionResults.find((r) => String(r.questionId) === String(safeQuestion._id))
+    : null;
+
+  const rawCorrect =
+    submittedReview?.correctAnswer ||
+    (Array.isArray(safeQuestion.correctAnswers)
+      ? safeQuestion.correctAnswers[0]
+      : safeQuestion.correctAnswer) ||
+    "A";
+  const correctKey = String(rawCorrect).trim();
+  const cleanSelected = String(selectedKey || submittedReview?.selectedAnswer || "").trim();
+
+  const formatOptionLabel = (key) => {
+    if (!key) return "";
+    const idx = options.findIndex((opt, i) =>
+      typeof opt === "object" && opt !== null && opt.key
+        ? String(opt.key).trim().toUpperCase() === String(key).trim().toUpperCase()
+        : String.fromCharCode(65 + i) === String(key).trim().toUpperCase()
+    );
+    if (idx < 0) return String(key);
+    const found = options[idx];
+    const optKey =
+      typeof found === "object" && found !== null && found.key
+        ? String(found.key)
+        : String.fromCharCode(65 + idx);
+    const optText =
+      typeof found === "object" && found !== null
+        ? found.text || found.label || ""
+        : String(found);
+    return optText ? `${optKey}. ${optText}` : optKey;
+  };
+
+  const hasExamFinished = Boolean(examResult);
+  const isRightAwayTriggered = showAnswerMode === "right_away" && cleanSelected !== "";
+  const showFeedback = hasExamFinished || isRightAwayTriggered;
+
+  if (!showFeedback) {
+    return {
+      showFeedback: false,
+      isCorrect: true,
+      correctKey,
+      selectedAnswerText: "",
+      correctAnswerText: "",
+      explanation: safeQuestion.explanation || "",
+      review: null
+    };
+  }
+
+  const isCorrect = submittedReview
+    ? Boolean(submittedReview.isCorrect)
+    : cleanSelected !== "" && cleanSelected.toUpperCase() === correctKey.toUpperCase();
+
+  const selectedAnswerText =
+    submittedReview?.selectedAnswerText ||
+    (cleanSelected ? formatOptionLabel(cleanSelected) : "Not answered");
+  const correctAnswerText =
+    submittedReview?.correctAnswerText || formatOptionLabel(correctKey) || correctKey;
+  const explanation =
+    safeQuestion.explanation || submittedReview?.explanation || "";
+
+  const review = submittedReview || {
+    questionId: safeQuestion._id,
+    selectedKey: cleanSelected,
+    selectedAnswer: cleanSelected,
+    selectedAnswerText,
+    correctKey,
+    correctAnswer: correctKey,
+    correctAnswerText,
+    isCorrect,
+    explanation
+  };
+
+  return {
+    showFeedback: true,
+    isCorrect,
+    correctKey,
+    selectedAnswerText,
+    correctAnswerText,
+    explanation,
+    review
+  };
+}
+

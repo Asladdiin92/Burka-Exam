@@ -272,7 +272,15 @@ function formatShortGrade(gradeLevel) {
   return match ? `G${match[1]}` : String(gradeLevel).toUpperCase();
 }
 
-export function ExamActiveScreen({ examData, onSubmit, onExit, submitting, onAskAi }) {
+export function ExamActiveScreen({
+  examData,
+  onSubmit,
+  onExit,
+  submitting,
+  onAskAi,
+  showAnswerMode = "after_finishing",
+  onChangeShowAnswerMode
+}) {
   const [answers, setAnswers] = useState({});
   const [result, setResult] = useState(null);
   const [favorites, setFavorites] = useState({});
@@ -369,8 +377,39 @@ export function ExamActiveScreen({ examData, onSubmit, onExit, submitting, onAsk
   // Compute question correctness and normalized Year + Topic fields
   const questionsWithStatus = questions.map((q, idx) => {
     const userSelected = answers[q._id];
-    const review = resultByQuestionId.get(String(q._id));
-    const isCorrect = review ? review.isCorrect : true;
+    const submittedReview = resultByQuestionId.get(String(q._id));
+    const expectedKey = String(
+      submittedReview?.correctAnswer ||
+        (Array.isArray(q.correctAnswers) ? q.correctAnswers[0] : q.correctAnswer) ||
+        "A"
+    ).trim();
+    const showFeedback = Boolean(result) || (showAnswerMode === "right_away" && Boolean(userSelected));
+    const isCorrect = submittedReview
+      ? Boolean(submittedReview.isCorrect)
+      : showFeedback
+      ? String(userSelected || "").trim().toUpperCase() === expectedKey.toUpperCase()
+      : true;
+    const resolveOptLabel = (key) => {
+      if (!key) return "";
+      const found = (q.options || []).find(
+        (o) => String(o?.key || "").toUpperCase() === String(key).toUpperCase()
+      );
+      return found ? `${found.key}. ${found.text || found.label || ""}` : String(key);
+    };
+    const review =
+      submittedReview ||
+      (showFeedback
+        ? {
+            questionId: q._id,
+            selectedAnswer: userSelected,
+            selectedAnswerText: userSelected ? resolveOptLabel(userSelected) : "Not answered",
+            correctAnswer: expectedKey,
+            correctKey: expectedKey,
+            correctAnswerText: resolveOptLabel(expectedKey),
+            explanation: q.explanation || "",
+            isCorrect
+          }
+        : null);
     const resolvedYear = String(q.examYear || exam?.examYear || "2016");
     const resolvedTopic = q.chapterTitle || q.topic || exam?.chapterName || "General Curriculum Topic";
     const resolvedGrade = formatShortGrade(q.gradeLevel);
@@ -378,6 +417,7 @@ export function ExamActiveScreen({ examData, onSubmit, onExit, submitting, onAsk
       ...q,
       originalIndex: idx + 1,
       userSelected,
+      showFeedback,
       isCorrect,
       review,
       resolvedYear,
@@ -509,7 +549,7 @@ export function ExamActiveScreen({ examData, onSubmit, onExit, submitting, onAsk
           </View>
         </View>
 
-        {result && (
+        {question.showFeedback && (
           <View
             style={[
               styles.statusTag,
@@ -575,8 +615,11 @@ export function ExamActiveScreen({ examData, onSubmit, onExit, submitting, onAsk
         <View style={styles.optionsList}>
           {(question.options || []).map((option) => {
             const isSelected = selected === option.key;
-            const isTheCorrectAnswer = result && question.review?.correctAnswer === option.key;
-            const isUserMistake = result && isSelected && !question.isCorrect;
+            const isTheCorrectAnswer =
+              question.showFeedback &&
+              String(question.review?.correctAnswer || "").toUpperCase() ===
+                String(option.key || "").toUpperCase();
+            const isUserMistake = question.showFeedback && isSelected && !question.isCorrect;
             const parsedOpt = parseOptionContent(option.text || option.label || "");
             const optImg = option.imageUrl || question.optionImages?.[option.key];
 
@@ -632,7 +675,7 @@ export function ExamActiveScreen({ examData, onSubmit, onExit, submitting, onAsk
           })}
         </View>
 
-        {result && question.review && !question.review.isCorrect ? (
+        {question.showFeedback && question.review && !question.review.isCorrect ? (
           <View style={styles.answerReviewBox}>
             <Text style={styles.answerReviewTitle}>Review your answer</Text>
             <MathText style={styles.incorrectAnswerText}>
@@ -644,7 +687,7 @@ export function ExamActiveScreen({ examData, onSubmit, onExit, submitting, onAsk
           </View>
         ) : null}
 
-        {result && (question.explanation || question.review?.explanation || question.explanationImageUrl) ? (
+        {question.showFeedback && (question.explanation || question.review?.explanation || question.explanationImageUrl) ? (
           <View style={styles.explanationBox}>
             <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 4 }}>
               <Text style={styles.explanationTitle}>Explanation:</Text>
@@ -709,6 +752,42 @@ export function ExamActiveScreen({ examData, onSubmit, onExit, submitting, onAsk
       </View>
 
       <Text style={styles.examTitle}>{exam?.title || "Active Examination"}</Text>
+
+      {!result && onChangeShowAnswerMode ? (
+        <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: COLORS.surface, borderWidth: 1, borderColor: COLORS.border, borderRadius: 12, padding: 8, marginBottom: 12 }}>
+          <Text style={{ fontSize: 12, fontWeight: "800", color: COLORS.textSecondary }}>
+            Show correct answer:
+          </Text>
+          <View style={{ flexDirection: "row", backgroundColor: COLORS.surfaceMuted, borderRadius: 999, padding: 3, gap: 4 }}>
+            <TouchableOpacity
+              onPress={() => onChangeShowAnswerMode("after_finishing")}
+              style={{
+                borderRadius: 999,
+                paddingHorizontal: 10,
+                paddingVertical: 5,
+                backgroundColor: showAnswerMode === "after_finishing" ? COLORS.primary : "transparent"
+              }}
+            >
+              <Text style={{ fontSize: 11, fontWeight: "800", color: showAnswerMode === "after_finishing" ? COLORS.onPrimary : COLORS.textMuted }}>
+                After finishing
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => onChangeShowAnswerMode("right_away")}
+              style={{
+                borderRadius: 999,
+                paddingHorizontal: 10,
+                paddingVertical: 5,
+                backgroundColor: showAnswerMode === "right_away" ? COLORS.primary : "transparent"
+              }}
+            >
+              <Text style={{ fontSize: 11, fontWeight: "800", color: showAnswerMode === "right_away" ? COLORS.onPrimary : COLORS.textMuted }}>
+                Right away
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      ) : null}
 
       {result && (
         <Card style={styles.resultCard}>

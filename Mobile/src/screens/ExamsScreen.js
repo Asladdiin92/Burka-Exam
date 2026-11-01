@@ -266,7 +266,7 @@ export function ExamsScreen({ exams = [], onStartExam, loadingExamId, user }) {
           style={styles.startBtn}
           variant={isPremium ? "secondary" : "primary"}
         >
-          Practise Full {year} E.C. Exam ({item.questionIds?.length || 0} Qs)
+          Practice Full {year} E.C. Exam ({item.questionIds?.length || 0} Qs)
         </Button>
       </Card>
     );

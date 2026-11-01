@@ -4,7 +4,8 @@ import {
   classifyRequestForSwCache,
   buildExamStartCacheKey,
   synthesizeOfflineExamStart,
-  gradeOfflineExamAttempt
+  gradeOfflineExamAttempt,
+  resolveQuestionFeedback
 } from "./offlineExamEngine.js";
 
 describe("offlineExamEngine", () => {
@@ -164,5 +165,64 @@ describe("offlineExamEngine", () => {
     assert.equal(q.options[0].imageUrl, "data:image/svg+xml;base64,PHN2Zz48L3N2Zz4=");
     assert.equal(q.options[1].imageUrl, "data:image/svg+xml;base64,PHN2Zz48L3N2Zz4=");
   });
+
+  it("resolves answer feedback according to after_finishing vs right_away modes", () => {
+    const question = {
+      _id: "q_bio_1",
+      correctAnswer: "C",
+      explanation: "Mitochondria are the site of aerobic cellular respiration.",
+      options: [
+        { key: "A", text: "Ribosome" },
+        { key: "B", text: "Golgi apparatus" },
+        { key: "C", text: "Mitochondrion" },
+        { key: "D", text: "Lysosome" }
+      ]
+    };
+
+    // In "after_finishing" mode before exam submission, selecting an answer does NOT reveal correctness
+    const beforeFinish = resolveQuestionFeedback({
+      question,
+      selectedKey: "A",
+      examResult: null,
+      showAnswerMode: "after_finishing"
+    });
+    assert.equal(beforeFinish.showFeedback, false);
+    assert.equal(beforeFinish.review, null);
+
+    // In "right_away" mode, before selecting an option, feedback is hidden
+    const rightAwayUnanswered = resolveQuestionFeedback({
+      question,
+      selectedKey: "",
+      examResult: null,
+      showAnswerMode: "right_away"
+    });
+    assert.equal(rightAwayUnanswered.showFeedback, false);
+
+    // In "right_away" mode, selecting a wrong option immediately reveals correct answer and explanation
+    const rightAwayWrong = resolveQuestionFeedback({
+      question,
+      selectedKey: "A",
+      examResult: null,
+      showAnswerMode: "right_away"
+    });
+    assert.equal(rightAwayWrong.showFeedback, true);
+    assert.equal(rightAwayWrong.isCorrect, false);
+    assert.equal(rightAwayWrong.correctKey, "C");
+    assert.equal(rightAwayWrong.selectedAnswerText, "A. Ribosome");
+    assert.equal(rightAwayWrong.correctAnswerText, "C. Mitochondrion");
+    assert.equal(rightAwayWrong.explanation, "Mitochondria are the site of aerobic cellular respiration.");
+
+    // In "right_away" mode, selecting the correct option immediately marks it correct
+    const rightAwayCorrect = resolveQuestionFeedback({
+      question,
+      selectedKey: "C",
+      examResult: null,
+      showAnswerMode: "right_away"
+    });
+    assert.equal(rightAwayCorrect.showFeedback, true);
+    assert.equal(rightAwayCorrect.isCorrect, true);
+    assert.equal(rightAwayCorrect.correctKey, "C");
+  });
 });
+
 

@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import bcrypt from "bcryptjs";
 import mongoose from "mongoose";
 import { env } from "./env.js";
+import { buildFallbackExamQuestions } from "../seeds/socialAndModelQuestions.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -178,7 +179,7 @@ async function seedMemoryStore() {
   for (const acc of staff) {
     const id = newId();
     if (acc.role === "admin") adminId = id;
-    const passwordHash = await bcrypt.hash(acc.password, 10);
+    const passwordHash = bcrypt.hashSync(acc.password, 4);
     usersCol.set(id, {
       _id: id,
       id,
@@ -389,73 +390,43 @@ async function seedMemoryStore() {
       }
     }
 
+    if (!Array.isArray(rawItems) || rawItems.length === 0) {
+      rawItems = buildFallbackExamQuestions(seedsDataDir, exDef);
+    }
+
     const examQuestionIds = [];
     const examChapterIdsSet = new Set();
 
-    if (Array.isArray(rawItems) && rawItems.length > 0) {
-      rawItems.forEach((item, idx) => {
-        const gradeCode = resolveGradeCode(
-          exDef.discipline,
-          item.grade || item.gradeLevel || item.unit || item.topic,
-          idx
-        );
-        const qSubject = subjectByCode.get(gradeCode) || anchorSubject;
-        const qChapter = resolveChapterForSubject(qSubject.code, item.unit || item.topic || item.section, idx);
-        const qId = newId();
-        if (qChapter) examChapterIdsSet.add(qChapter._id);
+    rawItems.forEach((item, idx) => {
+      const gradeCode = resolveGradeCode(
+        exDef.discipline,
+        item.grade || item.gradeLevel || item.unit || item.topic,
+        idx
+      );
+      const qSubject = subjectByCode.get(gradeCode) || anchorSubject;
+      const qChapter = resolveChapterForSubject(qSubject.code, item.unit || item.topic || item.section, idx);
+      const qId = newId();
+      if (qChapter) examChapterIdsSet.add(qChapter._id);
 
-        questionsCol.set(qId, {
-          _id: qId,
-          subjectId: qSubject._id,
-          chapterId: qChapter?._id,
-          prompt: item.prompt,
-          imageUrl: item.imageUrl || undefined,
-          options: Array.isArray(item.options) ? item.options : ["Option A", "Option B", "Option C", "Option D"],
-          correctAnswer: String(item.correctAnswer || "A").trim(),
-          explanation: item.explanation || "",
-          difficulty: ["easy", "medium", "hard"].includes(item.difficulty) ? item.difficulty : "medium",
-          questionType: "multiple_choice",
-          tags: ["esslce", String(exDef.year), qSubject.code.toLowerCase()],
-          isActive: true,
-          createdBy: adminId,
-          createdAt: now,
-          updatedAt: now
-        });
-        examQuestionIds.push(qId);
+      questionsCol.set(qId, {
+        _id: qId,
+        subjectId: qSubject._id,
+        chapterId: qChapter?._id,
+        prompt: item.prompt,
+        imageUrl: item.imageUrl || undefined,
+        options: Array.isArray(item.options) ? item.options : ["Option A", "Option B", "Option C", "Option D"],
+        correctAnswer: String(item.correctAnswer || "A").trim(),
+        explanation: item.explanation || "",
+        difficulty: ["easy", "medium", "hard"].includes(item.difficulty) ? item.difficulty : "medium",
+        questionType: "multiple_choice",
+        tags: ["esslce", String(exDef.year), qSubject.code.toLowerCase()],
+        isActive: true,
+        createdBy: adminId,
+        createdAt: now,
+        updatedAt: now
       });
-    } else {
-      for (let idx = 0; idx < exDef.count; idx++) {
-        const gradeCode = resolveGradeCode(exDef.discipline, null, idx);
-        const qSubject = subjectByCode.get(gradeCode) || anchorSubject;
-        const qChapter = resolveChapterForSubject(qSubject.code, null, idx);
-        const qId = newId();
-        if (qChapter) examChapterIdsSet.add(qChapter._id);
-
-        const unitTitle = qChapter?.title || `${qSubject.name} Curriculum`;
-        questionsCol.set(qId, {
-          _id: qId,
-          subjectId: qSubject._id,
-          chapterId: qChapter?._id,
-          prompt: `Which of the following statements accurately reflects the fundamental principle studied in this unit?`,
-          options: [
-            `Core analytical principle and empirical relationship established in ${unitTitle}`,
-            "An assumption that contradicts standard boundary conditions",
-            "An unrelated secondary observation outside the unit scope",
-            "A reversal of the primary cause-and-effect relationship"
-          ],
-          correctAnswer: ["A", "B", "C", "D"][idx % 4],
-          explanation: `This question assesses ${qSubject.name} (${unitTitle}) from the ${exDef.year} E.C. examination blueprint.`,
-          difficulty: ["easy", "medium", "hard"][idx % 3],
-          questionType: "multiple_choice",
-          tags: ["esslce", String(exDef.year), qSubject.code.toLowerCase()],
-          isActive: true,
-          createdBy: adminId,
-          createdAt: now,
-          updatedAt: now
-        });
-        examQuestionIds.push(qId);
-      }
-    }
+      examQuestionIds.push(qId);
+    });
 
     const examId = newId();
     examsCol.set(examId, {
@@ -782,6 +753,7 @@ function getEffectiveUri(uri) {
 
 export async function connectDatabase() {
   installInMemoryFallback();
+  await seedMemoryStore();
 
   mongoose.connection.on("connected", () => {
     console.info("MongoDB connected.");
@@ -792,24 +764,22 @@ export async function connectDatabase() {
   });
 
   if (!process.env.MONGODB_URI) {
-    await seedMemoryStore();
     console.warn("[AI Studio] MONGODB_URI not set — running with pre-seeded in-memory database.");
     return;
   }
 
   const uriToUse = getEffectiveUri(env.mongodbUri);
 
-  try {
-    await mongoose.connect(uriToUse, {
-      serverSelectionTimeoutMS: 8000,
-      connectTimeoutMS: 8000,
+  mongoose
+    .connect(uriToUse, {
+      serverSelectionTimeoutMS: 5000,
+      connectTimeoutMS: 5000,
       socketTimeoutMS: 20000,
       maxPoolSize: 10
+    })
+    .catch((err) => {
+      console.warn("[AI Studio] MongoDB not connected — using pre-seeded in-memory fallback:", err.message);
     });
-  } catch (err) {
-    await seedMemoryStore();
-    console.warn("[AI Studio] MongoDB not connected — using pre-seeded in-memory fallback:", err.message);
-  }
 }
 
 export async function disconnectDatabase() {

@@ -1,34 +1,64 @@
 import dns from "node:dns";
+import fs from "node:fs";
+import { spawn } from "node:child_process";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
 try {
   dns.setDefaultResultOrder("ipv4first");
 } catch {
   // ignore
 }
+
 import { app } from "./app.js";
 import { connectDatabase, disconnectDatabase } from "./config/database.js";
 import { env } from "./config/env.js";
 import { verifyEmailTransport } from "./config/email.js";
 
+const currentDir = dirname(fileURLToPath(import.meta.url));
+const webIndexHtml = resolve(currentDir, "../../Web/dist/index.html");
+
 let server;
-let previewServer;
+let shuttingDown = false;
+
+function ensureWebDistBuilt() {
+  if (fs.existsSync(webIndexHtml)) return;
+  const rootDir = resolve(currentDir, "../..");
+  const child = spawn("npm", ["run", "build"], {
+    cwd: rootDir,
+    stdio: "ignore",
+    detached: false
+  });
+  child.on("error", () => {});
+  child.unref();
+}
+
+function listenWithRetry(port, host = "0.0.0.0", retries = 12, delayMs = 250) {
+  return new Promise((resolvePromise) => {
+    const attempt = (remaining) => {
+      const srv = app.listen(port, host, () => {
+        console.info(`EthioPrep API & Web listening on http://${host}:${port}`);
+        resolvePromise(srv);
+      });
+      srv.on("error", (err) => {
+        if (err.code === "EADDRINUSE" && remaining > 0 && !shuttingDown) {
+          setTimeout(() => attempt(remaining - 1), delayMs).unref();
+          return;
+        }
+        console.error(`Port ${port} error:`, err.message);
+        resolvePromise(srv);
+      });
+    };
+    attempt(retries);
+  });
+}
 
 async function start() {
-  const primaryPort = 3000;
-  server = app.listen(primaryPort, "0.0.0.0", () => {
-    console.info(`EthioPrep API & Web listening on http://0.0.0.0:${primaryPort}`);
-  });
-  server.on("error", (err) => {
-    console.error(`Port ${primaryPort} error:`, err.message);
-  });
-
-  if (env.port && env.port !== primaryPort) {
-    previewServer = app.listen(env.port, "0.0.0.0", () => {
-      console.info(`EthioPrep API & Web mirror listening on http://0.0.0.0:${env.port}`);
-    });
-    previewServer.on("error", () => {});
-  }
-
+  ensureWebDistBuilt();
   await connectDatabase();
+
+  const primaryPort = 3000;
+  server = await listenWithRetry(primaryPort, "0.0.0.0");
 
   if (env.emailUser && env.emailPassword) {
     verifyEmailTransport().catch(() => {});
@@ -36,15 +66,16 @@ async function start() {
 }
 
 async function shutdown(signal) {
+  if (shuttingDown) return;
+  shuttingDown = true;
   console.info(`${signal} received. Shutting down.`);
-  if (previewServer) {
-    previewServer.close(() => {});
-  }
   if (server) {
+    server.closeAllConnections?.();
     server.close(async () => {
       await disconnectDatabase();
       process.exit(0);
     });
+    setTimeout(() => process.exit(0), 1500).unref();
   } else {
     await disconnectDatabase();
     process.exit(0);
@@ -53,5 +84,11 @@ async function shutdown(signal) {
 
 process.on("SIGINT", () => shutdown("SIGINT"));
 process.on("SIGTERM", () => shutdown("SIGTERM"));
+process.on("uncaughtException", (err) => {
+  console.error("Uncaught exception:", err?.message || err);
+});
+process.on("unhandledRejection", (reason) => {
+  console.error("Unhandled rejection:", reason?.message || reason);
+});
 
 start();

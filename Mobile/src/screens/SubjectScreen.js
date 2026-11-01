@@ -467,7 +467,7 @@ export function SubjectScreen({
                       style={styles.fullExamBtn}
                       variant="outline"
                     >
-                      Practise Full {activeYear} Exam ({activeExam.questionIds?.length || 0} Qs)
+                      Practice Full {activeYear} Exam ({activeExam.questionIds?.length || 0} Qs)
                     </Button>
 
                     {activeExam.accessLevel === "premium" && (

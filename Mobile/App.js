@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
+  Modal,
   ScrollView,
   StyleSheet,
   Text,
@@ -60,6 +61,8 @@ function MainDashboard({ user, onLogout }) {
 
   // Active exam session
   const [activeExamSession, setActiveExamSession] = useState(null);
+  const [showAnswerMode, setShowAnswerMode] = useState("after_finishing");
+  const [pendingExamPrompt, setPendingExamPrompt] = useState(null);
   const [loadingExamId, setLoadingExamId] = useState(null);
   const [submittingExam, setSubmittingExam] = useState(false);
   const [savingNote, setSavingNote] = useState(false);
@@ -142,7 +145,20 @@ function MainDashboard({ user, onLogout }) {
     }
   }
 
+  function handlePromptStartExam(examItem, options = {}) {
+    if (!examItem) return;
+    if (options?.showAnswerMode) {
+      handleStartExam(examItem, options);
+      return;
+    }
+    setPendingExamPrompt({ examItem, options });
+  }
+
   async function handleStartExam(examItem, options = {}) {
+    if (options?.showAnswerMode) {
+      setShowAnswerMode(options.showAnswerMode);
+    }
+    setPendingExamPrompt(null);
     const loadingKey = options?.chapterId
       ? `${examItem._id}_${options.chapterId}${options.allYears ? "_all" : ""}`
       : examItem._id;
@@ -301,6 +317,67 @@ function MainDashboard({ user, onLogout }) {
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
       <StatusBar style="light" />
+      <Modal
+        animationType="fade"
+        transparent
+        visible={Boolean(pendingExamPrompt)}
+        onRequestClose={() => setPendingExamPrompt(null)}
+      >
+        <View style={styles.modalBackdrop}>
+          <View style={styles.modalCard}>
+            <Text style={styles.modalPill}>Practice Full Exam</Text>
+            <Text style={styles.modalTitle}>When to show correct answer?</Text>
+            <Text style={styles.modalSub}>
+              Choose when you want to see correct answers and explanations for{" "}
+              {pendingExamPrompt?.examItem?.title || "this exam"}:
+            </Text>
+
+            <TouchableOpacity
+              onPress={() =>
+                handleStartExam(pendingExamPrompt.examItem, {
+                  ...pendingExamPrompt.options,
+                  showAnswerMode: "after_finishing"
+                })
+              }
+              style={[
+                styles.modeOptionBtn,
+                showAnswerMode === "after_finishing" && styles.modeOptionBtnActive
+              ]}
+            >
+              <Text style={styles.modeOptionTitle}>🏁 After finishing</Text>
+              <Text style={styles.modeOptionDesc}>
+                Answer all questions first, then see your score, correct answers, and explanations after submitting.
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() =>
+                handleStartExam(pendingExamPrompt.examItem, {
+                  ...pendingExamPrompt.options,
+                  showAnswerMode: "right_away"
+                })
+              }
+              style={[
+                styles.modeOptionBtn,
+                showAnswerMode === "right_away" && styles.modeOptionBtnActive
+              ]}
+            >
+              <Text style={styles.modeOptionTitle}>⚡ Right away</Text>
+              <Text style={styles.modeOptionDesc}>
+                Reveal the correct answer and detailed explanation immediately as soon as you select an option.
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() => setPendingExamPrompt(null)}
+              style={styles.modalCancelBtn}
+            >
+              <Text style={styles.modalCancelText}>Cancel</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+
       {(tab === "ai" || tab === "practice") && !activeExamSession ? (
         <View style={styles.flexContainer}>
           <View style={{ paddingHorizontal: SPACING.lg, paddingTop: SPACING.md }}>
@@ -346,8 +423,10 @@ function MainDashboard({ user, onLogout }) {
             <ExamActiveScreen
               examData={activeExamSession}
               onAskAi={handleAskAi}
+              onChangeShowAnswerMode={setShowAnswerMode}
               onExit={() => setActiveExamSession(null)}
               onSubmit={handleSubmitExam}
+              showAnswerMode={showAnswerMode}
               submitting={submittingExam}
             />
           ) : (
@@ -372,7 +451,7 @@ function MainDashboard({ user, onLogout }) {
                     setSelectedSubject(null);
                     setTab("payments");
                   }}
-                  onStartExam={handleStartExam}
+                  onStartExam={handlePromptStartExam}
                   subject={selectedSubject}
                   subjects={subjects}
                   user={currentUser}
@@ -389,7 +468,7 @@ function MainDashboard({ user, onLogout }) {
                 <ExamsScreen
                   exams={exams}
                   loadingExamId={loadingExamId}
-                  onStartExam={handleStartExam}
+                  onStartExam={handlePromptStartExam}
                   user={currentUser}
                 />
               )}
@@ -543,5 +622,79 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     letterSpacing: -0.6,
     color: COLORS.text
+  },
+  modalBackdrop: {
+    flex: 1,
+    backgroundColor: "rgba(15, 23, 42, 0.72)",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: SPACING.lg
+  },
+  modalCard: {
+    width: "100%",
+    maxWidth: 380,
+    backgroundColor: COLORS.surface,
+    borderRadius: RADIUS.lg,
+    padding: SPACING.lg,
+    borderWidth: 1,
+    borderColor: COLORS.border
+  },
+  modalPill: {
+    alignSelf: "flex-start",
+    backgroundColor: COLORS.primaryBg,
+    color: COLORS.primaryDark,
+    fontSize: 11,
+    fontWeight: "800",
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    borderRadius: 999,
+    marginBottom: 6
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: "900",
+    color: COLORS.text,
+    marginBottom: 6
+  },
+  modalSub: {
+    fontSize: 13,
+    color: COLORS.textMuted,
+    marginBottom: 14,
+    lineHeight: 18
+  },
+  modeOptionBtn: {
+    borderWidth: 2,
+    borderColor: COLORS.border,
+    borderRadius: RADIUS.md,
+    padding: 12,
+    marginBottom: 10,
+    backgroundColor: COLORS.surface
+  },
+  modeOptionBtnActive: {
+    borderColor: COLORS.primary,
+    backgroundColor: COLORS.primaryBg
+  },
+  modeOptionTitle: {
+    fontSize: 15,
+    fontWeight: "800",
+    color: COLORS.text,
+    marginBottom: 4
+  },
+  modeOptionDesc: {
+    fontSize: 12,
+    color: COLORS.textSecondary,
+    lineHeight: 17
+  },
+  modalCancelBtn: {
+    marginTop: 4,
+    paddingVertical: 10,
+    borderRadius: RADIUS.sm,
+    backgroundColor: COLORS.surfaceMuted,
+    alignItems: "center"
+  },
+  modalCancelText: {
+    fontSize: 13,
+    fontWeight: "700",
+    color: COLORS.textSecondary
   }
 });

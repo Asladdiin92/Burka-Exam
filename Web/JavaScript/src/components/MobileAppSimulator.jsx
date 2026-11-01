@@ -6,6 +6,7 @@ import {
   parseQuestionSegments,
   splitPassageAndQuestion
 } from "../utils/questionContentParser.js";
+import { resolveQuestionFeedback } from "../utils/offlineExamEngine.js";
 import { PracticeModeSimulator } from "./PracticeModeSimulator.jsx";
 
 const COLORS = {
@@ -488,6 +489,8 @@ export function MobileAppSimulator({ onBackToPortal }) {
   const [examResult, setExamResult] = useState(null);
   const [filterMistakesOnly, setFilterMistakesOnly] = useState(false);
   const [zoomedUri, setZoomedUri] = useState(null);
+  const [showAnswerMode, setShowAnswerMode] = useState("after_finishing"); // "after_finishing" | "right_away"
+  const [pendingExamPrompt, setPendingExamPrompt] = useState(null); // { examItem, options } | null
 
   // AI Tutor state
   const [aiMessages, setAiMessages] = useState([
@@ -578,7 +581,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
       }
       try {
         const prof = await apiRequest("/auth/profile");
-        if (prof?.user) {
+        if (prof?.user && prof.user.role === "student") {
           setCurrentUser((prev) => ({ ...prev, ...prof.user }));
         }
       } catch {
@@ -986,8 +989,17 @@ export function MobileAppSimulator({ onBackToPortal }) {
 
   const allYears = useMemo(() => yearGroups.map((g) => g.year), [yearGroups]);
 
+  function handlePromptStartExam(examItem, options = {}) {
+    if (!examItem) return;
+    setPendingExamPrompt({ examItem, options });
+  }
+
   // Actions matching Mobile/App.js
   async function handleStartExam(examItem, options = {}) {
+    if (options?.showAnswerMode) {
+      setShowAnswerMode(options.showAnswerMode);
+    }
+    setPendingExamPrompt(null);
     const loadingKey = options?.chapterId ? `${examItem._id}_${options.chapterId}` : examItem._id;
     setLoadingExamId(loadingKey);
     setNotice(null);
@@ -1388,7 +1400,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
 
         <button
           type="button"
-          onClick={() => handleStartExam(item)}
+          onClick={() => handlePromptStartExam(item)}
           disabled={loadingExamId === item._id}
           style={{
             width: "100%",
@@ -1404,7 +1416,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
         >
           {loadingExamId === item._id
             ? "Opening..."
-            : `Practise Full ${year} E.C. Exam (${item.questionIds?.length || 0} Qs)`}
+            : `Practice Full ${year} E.C. Exam (${item.questionIds?.length || 0} Qs)`}
         </button>
       </div>
     );
@@ -1420,7 +1432,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
       {onBackToPortal && (
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", maxWidth: 430, margin: "0 auto 14px" }}>
           <span style={{ fontSize: 13, fontWeight: 700, color: "var(--text-2)" }}>
-            EthioPrep Mobile App (`Mobile/App.js`)
+            EthioPrep Student Mobile App
           </span>
           <button type="button" className="btn btn-secondary btn-sm" onClick={onBackToPortal}>
             Staff Portal Sign In →
@@ -1510,6 +1522,210 @@ export function MobileAppSimulator({ onBackToPortal }) {
             </div>
           )}
 
+          {/* ── Answer Mode Choice Modal ("When to show correct answer?") ── */}
+          {pendingExamPrompt && (
+            <div
+              onClick={() => setPendingExamPrompt(null)}
+              style={{
+                position: "fixed",
+                inset: 0,
+                background: "rgba(15, 23, 42, 0.72)",
+                zIndex: 9998,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: 16
+              }}
+            >
+              <div
+                role="dialog"
+                aria-modal="true"
+                aria-label="When to show correct answer"
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                  background: COLORS.surface,
+                  borderRadius: 20,
+                  padding: 20,
+                  maxWidth: 380,
+                  width: "100%",
+                  border: `1px solid ${COLORS.border}`,
+                  boxShadow: "0 20px 45px rgba(15, 23, 42, 0.35)"
+                }}
+              >
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8, marginBottom: 8 }}>
+                  <div>
+                    <span
+                      style={{
+                        display: "inline-block",
+                        background: COLORS.primaryBg,
+                        color: COLORS.primaryDark,
+                        fontSize: 11,
+                        fontWeight: 800,
+                        padding: "3px 9px",
+                        borderRadius: 999,
+                        marginBottom: 6
+                      }}
+                    >
+                      Practice Full Exam
+                    </span>
+                    <div style={{ fontSize: 18, fontWeight: 900, color: COLORS.text, lineHeight: 1.25 }}>
+                      When to show correct answer?
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setPendingExamPrompt(null)}
+                    aria-label="Close modal"
+                    style={{
+                      background: COLORS.surfaceMuted,
+                      border: "none",
+                      borderRadius: 999,
+                      width: 28,
+                      height: 28,
+                      fontSize: 13,
+                      fontWeight: 800,
+                      color: COLORS.textMuted,
+                      cursor: "pointer"
+                    }}
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <div style={{ fontSize: 13, color: COLORS.textMuted, lineHeight: 1.45, marginBottom: 14 }}>
+                  Choose when you want to see correct answers and explanations for{" "}
+                  <strong style={{ color: COLORS.text }}>{pendingExamPrompt.examItem?.title || "this exam"}</strong>:
+                </div>
+
+                <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 14 }}>
+                  <button
+                    type="button"
+                    data-testid="choose-answer-mode-after-finishing"
+                    onClick={() =>
+                      handleStartExam(pendingExamPrompt.examItem, {
+                        ...pendingExamPrompt.options,
+                        showAnswerMode: "after_finishing"
+                      })
+                    }
+                    style={{
+                      textAlign: "left",
+                      padding: "13px 14px",
+                      borderRadius: 14,
+                      border: `2px solid ${showAnswerMode === "after_finishing" ? COLORS.primary : COLORS.border}`,
+                      background: showAnswerMode === "after_finishing" ? COLORS.primaryBg : COLORS.surface,
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 12
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 34,
+                        height: 34,
+                        borderRadius: 10,
+                        background: COLORS.primary,
+                        color: COLORS.onPrimary,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: 16,
+                        flexShrink: 0,
+                        marginTop: 2
+                      }}
+                    >
+                      🏁
+                    </span>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                        <span style={{ fontSize: 15, fontWeight: 800, color: COLORS.text }}>
+                          After finishing
+                        </span>
+                        <span style={{ fontSize: 11, fontWeight: 800, color: COLORS.primaryDark }}>
+                          Exam Mode →
+                        </span>
+                      </div>
+                      <div style={{ fontSize: 12, color: COLORS.textSecondary, lineHeight: 1.4, marginTop: 3 }}>
+                        Answer all questions first, then see your score, correct answers, and explanations after submitting.
+                      </div>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    data-testid="choose-answer-mode-right-away"
+                    onClick={() =>
+                      handleStartExam(pendingExamPrompt.examItem, {
+                        ...pendingExamPrompt.options,
+                        showAnswerMode: "right_away"
+                      })
+                    }
+                    style={{
+                      textAlign: "left",
+                      padding: "13px 14px",
+                      borderRadius: 14,
+                      border: `2px solid ${showAnswerMode === "right_away" ? COLORS.primary : COLORS.border}`,
+                      background: showAnswerMode === "right_away" ? COLORS.primaryBg : COLORS.surface,
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 12
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 34,
+                        height: 34,
+                        borderRadius: 10,
+                        background: COLORS.secondary,
+                        color: COLORS.onPrimary,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: 16,
+                        flexShrink: 0,
+                        marginTop: 2
+                      }}
+                    >
+                      ⚡
+                    </span>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                        <span style={{ fontSize: 15, fontWeight: 800, color: COLORS.text }}>
+                          Right away
+                        </span>
+                        <span style={{ fontSize: 11, fontWeight: 800, color: COLORS.secondary }}>
+                          Instant Feedback →
+                        </span>
+                      </div>
+                      <div style={{ fontSize: 12, color: COLORS.textSecondary, lineHeight: 1.4, marginTop: 3 }}>
+                        Reveal the correct answer and detailed explanation immediately as soon as you select an option.
+                      </div>
+                    </div>
+                  </button>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setPendingExamPrompt(null)}
+                  style={{
+                    width: "100%",
+                    padding: "9px 12px",
+                    borderRadius: 10,
+                    border: `1px solid ${COLORS.border}`,
+                    background: COLORS.surfaceMuted,
+                    color: COLORS.textSecondary,
+                    fontSize: 12,
+                    fontWeight: 700,
+                    cursor: "pointer"
+                  }}
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* ── Active Exam View (ExamActiveScreen.js) ── */}
           {activeExamSession ? (
             <div>
@@ -1581,9 +1797,72 @@ export function MobileAppSimulator({ onBackToPortal }) {
                 </span>
               </div>
 
-              <div style={{ fontSize: 20, fontWeight: 800, color: COLORS.text, marginBottom: 12 }}>
+              <div style={{ fontSize: 20, fontWeight: 800, color: COLORS.text, marginBottom: 10 }}>
                 {activeExamSession.exam?.title || "Active Examination"}
               </div>
+
+              {!examResult && (
+                <div
+                  style={{
+                    background: COLORS.surface,
+                    border: `1px solid ${COLORS.border}`,
+                    borderRadius: 12,
+                    padding: "8px 10px",
+                    marginBottom: 12,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: 8,
+                    flexWrap: "wrap"
+                  }}
+                >
+                  <span style={{ fontSize: 12, fontWeight: 800, color: COLORS.textSecondary }}>
+                    Show correct answer:
+                  </span>
+                  <div
+                    style={{
+                      display: "inline-flex",
+                      background: COLORS.surfaceMuted,
+                      borderRadius: 999,
+                      padding: 3,
+                      gap: 4
+                    }}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setShowAnswerMode("after_finishing")}
+                      style={{
+                        border: "none",
+                        borderRadius: 999,
+                        padding: "5px 10px",
+                        fontSize: 11,
+                        fontWeight: 800,
+                        cursor: "pointer",
+                        background: showAnswerMode === "after_finishing" ? COLORS.primary : "transparent",
+                        color: showAnswerMode === "after_finishing" ? COLORS.onPrimary : COLORS.textMuted
+                      }}
+                    >
+                      After finishing
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowAnswerMode("right_away")}
+                      style={{
+                        border: "none",
+                        borderRadius: 999,
+                        padding: "5px 10px",
+                        fontSize: 11,
+                        fontWeight: 800,
+                        cursor: "pointer",
+                        background: showAnswerMode === "right_away" ? COLORS.primary : "transparent",
+                        color: showAnswerMode === "right_away" ? COLORS.onPrimary : COLORS.textMuted
+                      }}
+                    >
+                      Right away
+                    </button>
+                  </div>
+                </div>
+              )}
 
               {examResult && (
                 <div
@@ -1659,13 +1938,16 @@ export function MobileAppSimulator({ onBackToPortal }) {
               )}
 
               {(activeExamSession.exam?.questions || []).map((question, idx) => {
-                const review = (examResult?.questionResults || []).find(
-                  (r) => String(r.questionId) === String(question._id)
-                );
-                const isCorrect = review ? review.isCorrect : true;
+                const selected = answers[question._id];
+                const feedback = resolveQuestionFeedback({
+                  question,
+                  selectedKey: selected,
+                  examResult,
+                  showAnswerMode
+                });
+                const { showFeedback, isCorrect, correctKey, review } = feedback;
                 if (examResult && filterMistakesOnly && isCorrect) return null;
 
-                const selected = answers[question._id];
                 const isFav = Boolean(favoritesMap[question._id || question.prompt]);
                 const resolvedYear = String(question.examYear || activeExamSession.exam?.examYear || "2016");
                 const resolvedTopic = question.chapterTitle || question.topic || "General Curriculum Topic";
@@ -1791,7 +2073,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
                       </div>
                     </div>
 
-                    {examResult && (
+                    {showFeedback && (
                       <div
                         style={{
                           display: "inline-flex",
@@ -1887,8 +2169,10 @@ export function MobileAppSimulator({ onBackToPortal }) {
                     <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                       {(question.options || []).map((option) => {
                         const isSelected = selected === option.key;
-                        const isTheCorrectAnswer = examResult && review?.correctAnswer === option.key;
-                        const isUserMistake = examResult && isSelected && !isCorrect;
+                        const isTheCorrectAnswer =
+                          showFeedback &&
+                          String(correctKey).toUpperCase() === String(option.key).toUpperCase();
+                        const isUserMistake = showFeedback && isSelected && !isCorrect;
                         const parsedOpt = parseOptionContent(option.text || option.label || "");
                         const optImg = option.imageUrl || question.optionImages?.[option.key];
 
@@ -2009,7 +2293,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
                       })}
                     </div>
 
-                    {examResult && review && !review.isCorrect && (
+                    {showFeedback && review && !review.isCorrect && (
                       <div
                         style={{
                           marginTop: 12,
@@ -2030,7 +2314,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
                       </div>
                     )}
 
-                    {examResult && (question.explanation || review?.explanation) && (
+                    {showFeedback && (question.explanation || review?.explanation) && (
                       <div
                         style={{
                           marginTop: 12,
@@ -2364,7 +2648,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
 
                                 <button
                                   type="button"
-                                  onClick={() => handleStartExam(activeExam)}
+                                  onClick={() => handlePromptStartExam(activeExam)}
                                   style={{
                                     width: "100%",
                                     padding: "11px 14px",
@@ -2378,7 +2662,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
                                     marginTop: 4
                                   }}
                                 >
-                                  Practise Full {activeYear} Exam ({activeExam.questionIds?.length || 0} Qs)
+                                  Practice Full {activeYear} Exam ({activeExam.questionIds?.length || 0} Qs)
                                 </button>
                               </div>
 
@@ -2626,7 +2910,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
                     </div>
                   </div>
 
-                  <div style={{ display: "flex", gap: 8, overflowX: "auto", paddingBottom: 12 }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 6, paddingBottom: 12 }}>
                     {GRADES.map((grade) => {
                       const active = selectedGrade === grade;
                       return (
@@ -2638,12 +2922,13 @@ export function MobileAppSimulator({ onBackToPortal }) {
                             background: active ? COLORS.primary : COLORS.surface,
                             border: `1px solid ${active ? COLORS.primary : COLORS.border}`,
                             borderRadius: 999,
-                            padding: "11px 19px",
+                            padding: "10px 6px",
                             color: active ? COLORS.onPrimary : COLORS.textMuted,
-                            fontSize: 14,
+                            fontSize: 13,
                             fontWeight: 800,
                             cursor: "pointer",
-                            whiteSpace: "nowrap"
+                            whiteSpace: "nowrap",
+                            textAlign: "center"
                           }}
                         >
                           Grade {grade}
@@ -3693,7 +3978,7 @@ export function MobileAppSimulator({ onBackToPortal }) {
                         </div>
                       </div>
 
-                      <div style={{ display: "flex", gap: 8, overflowX: "auto", paddingBottom: 12 }}>
+                      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 6, paddingBottom: 12 }}>
                         {GRADES.map((grade) => {
                           const active = selectedNoteGrade === grade;
                           return (
@@ -3705,12 +3990,13 @@ export function MobileAppSimulator({ onBackToPortal }) {
                                 background: active ? COLORS.primary : COLORS.surface,
                                 border: `1px solid ${active ? COLORS.primary : COLORS.border}`,
                                 borderRadius: 999,
-                                padding: "11px 19px",
+                                padding: "10px 6px",
                                 color: active ? COLORS.onPrimary : COLORS.textMuted,
-                                fontSize: 14,
+                                fontSize: 13,
                                 fontWeight: 800,
                                 cursor: "pointer",
-                                whiteSpace: "nowrap"
+                                whiteSpace: "nowrap",
+                                textAlign: "center"
                               }}
                             >
                               Grade {grade}

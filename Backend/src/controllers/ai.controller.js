@@ -338,11 +338,15 @@ export async function chatWithTutor(request, response) {
             config
           });
 
-          const timeoutPromise = new Promise((_, reject) =>
-            setTimeout(() => reject(new Error(`${currentModel} call timed out`)), 10000)
-          );
+          let timerId;
+          const timeoutPromise = new Promise((_, reject) => {
+            timerId = setTimeout(() => reject(new Error(`${currentModel} call timed out`)), 10000);
+            timerId.unref?.();
+          });
 
-          const result = await Promise.race([callPromise, timeoutPromise]);
+          const result = await Promise.race([callPromise, timeoutPromise]).finally(() => {
+            clearTimeout(timerId);
+          });
           if (result?.text) {
             return response.json({
               reply: result.text,
