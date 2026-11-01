@@ -43,6 +43,21 @@ export class ConflictError extends AppError {
 
 // Centralized error handler middleware
 export function errorHandler(error, request, response, next) {
+  if (
+    error.name === "MongooseError" ||
+    error.name === "MongoNetworkError" ||
+    (error.message && error.message.includes("buffering timed out"))
+  ) {
+    logger.warn("[AI Studio] Database offline — returning fallback response", {
+      path: request.path,
+      method: request.method
+    });
+    if (request.method === "GET") {
+      return response.json(request.path.endsWith("s") || request.path.endsWith("s/") ? [] : {});
+    }
+    return response.status(503).json({ error: "Service temporarily unavailable (database offline)" });
+  }
+
   const statusCode = error.statusCode || 500;
   const isOperational = error.isOperational || false;
 
