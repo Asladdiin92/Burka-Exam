@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from "react-native";
+import { Linking, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from "react-native";
 import { Button } from "../components/Button.js";
 import { Input } from "../components/Input.js";
 import { Notice } from "../components/Notice.js";
@@ -185,6 +185,19 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
               <Text style={styles.fieldLabel}>Phone</Text>
               <Text style={styles.fieldValue}>{user?.phoneNumber || "Not set"}</Text>
             </View>
+
+            {user?.profile?.telegramLink && (
+              <TouchableOpacity
+                onPress={() => Linking.openURL(user.profile.telegramLink).catch(() => {})}
+                style={styles.field}
+              >
+                <Text style={styles.fieldLabel}>Join Our Telegram Channel</Text>
+                <Text style={[styles.fieldValue, { color: COLORS.primary, textDecorationLine: 'underline' }]}>
+                  📱 Tap here to join
+                </Text>
+                <Text style={styles.fieldNote}>Get updates, resources, and exam tips</Text>
+              </TouchableOpacity>
+            )}
             <View style={styles.field}>
               <Text style={styles.fieldLabel}>Telegram Link (Communication)</Text>
               <Text style={styles.fieldValue}>{user?.profile?.telegramLink || "Not set"}</Text>

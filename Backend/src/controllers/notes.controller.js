@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+﻿import mongoose from "mongoose";
 import { Note } from "../models/Note.js";
 import { LearningProgress } from "../models/LearningProgress.js";
 import { SyncChange } from "../models/SyncChange.js";
@@ -13,11 +13,22 @@ export async function listNotes(request, response) {
     if (request.query.topicId) filter.chapterId = request.query.topicId;
 
     if (!isStaff) {
-      // Students see all public study notes (PDF, PPT, DOCX) plus their own notebook entries
-      filter.$or = [
-        { isPublic: true },
-        { userId: request.user._id }
-      ];
+      // FREE users: only non-premium notes | PREMIUM users: all notes
+      const isPremiumUser = request.user.isPremium === true;
+      
+      if (isPremiumUser) {
+        // Premium students: all public notes + own private notes
+        filter.$or = [
+          { isPublic: true },
+          { userId: request.user._id }
+        ];
+      } else {
+        // Free students: only non-premium public notes + own private notes
+        filter.$or = [
+          { isPublic: true, isPremium: false },
+          { userId: request.user._id }
+        ];
+      }
     }
 
     const notes = await Note.find(filter)
@@ -339,3 +350,4 @@ async function applyPaymentChange(userId, change) {
     status: "pending"
   });
 }
+
