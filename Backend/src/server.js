@@ -1,4 +1,4 @@
-import dns from "node:dns";
+﻿import dns from "node:dns";
 import fs from "node:fs";
 import { spawn } from "node:child_process";
 import { dirname, resolve } from "node:path";
@@ -37,7 +37,7 @@ function listenWithRetry(port, host = "0.0.0.0", retries = 12, delayMs = 250) {
   return new Promise((resolvePromise) => {
     const attempt = (remaining) => {
       const srv = app.listen(port, host, () => {
-        console.info(`EthioPrep API & Web listening on http://${host}:${port}`);
+        console.info(`Burka Exam API & Web listening on http://${host}:${port}`);
         resolvePromise(srv);
       });
       srv.on("error", (err) => {
