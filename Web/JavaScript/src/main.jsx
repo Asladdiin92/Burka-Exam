@@ -1527,6 +1527,7 @@ function StaffNotesPage({ user }) {
   const [msg, setMsg] = useState({ text: "", type: "success" });
   const [showModal, setShowModal] = useState(false);
   const [viewingNote, setViewingNote] = useState(null);
+  const [editingNote, setEditingNote] = useState(null);
   const [saving, setSaving] = useState(false);
   const [form, setForm] = useState({
     title: "",
@@ -1579,8 +1580,7 @@ function StaffNotesPage({ user }) {
         body: JSON.stringify(form)
       });
       setMsg({ text: "Educational study material created successfully.", type: "success" });
-      setShowModal(false);
-      setForm({ title: "", subjectId: "", chapterId: "", fileType: "pdf", fileUrl: "", body: "", isPublic: true, isPremium: false });
+      closeModal();
       load();
     } catch (err) {
       setMsg({ text: err.message, type: "error" });
@@ -1600,7 +1600,46 @@ function StaffNotesPage({ user }) {
     }
   }
 
-  return (
+ 
+  function openEditModal(note) {
+    setEditingNote(note);
+    setForm({
+      title: note.title || "",
+      subjectId: note.subjectId?._id || note.subjectId || "",
+      chapterId: note.chapterId?._id || note.chapterId || "",
+      fileType: note.fileType || "pdf",
+      fileUrl: note.fileUrl || "",
+      body: note.body || "",
+      isPublic: note.isPublic !== false,
+      isPremium: note.isPremium === true
+    });
+    setShowModal(true);
+  }
+
+  function closeModal() {
+    setShowModal(false);
+    setEditingNote(null);
+    setForm({ title: "", subjectId: "", chapterId: "", fileType: "pdf", fileUrl: "", body: "", isPublic: true, isPremium: false });
+  }
+
+  async function updateNote(e) {
+    e.preventDefault();
+    setSaving(true);
+    try {
+      await apiRequest(`/notes/${editingNote._id}`, {
+        method: "PUT",
+        body: JSON.stringify(form)
+      });
+      setMsg({ text: "Study note updated successfully.", type: "success" });
+      closeModal();
+      load();
+    } catch (err) {
+      setMsg({ text: err.message, type: "error" });
+    } finally {
+      setSaving(false);
+    }
+  }
+ return (
     <>
       <div className="page-header">
         <div className="breadcrumb"><span>Content</span><span className="sep">›</span><span>Study Notes</span></div>
@@ -1691,6 +1730,9 @@ function StaffNotesPage({ user }) {
                             <button className="btn btn-sm btn-secondary" onClick={() => setViewingNote(n)}>
                               Read
                             </button>
+                            <button className="btn btn-sm btn-primary" onClick={() => openEditModal(n)}>
+                              Edit
+                            </button>
                             <button className="btn btn-sm btn-danger" onClick={() => deleteNote(n._id)}>
                               Delete
                             </button>
@@ -1706,8 +1748,8 @@ function StaffNotesPage({ user }) {
         </div>
       </div>
 
-      <Modal show={showModal} onClose={() => setShowModal(false)} title="Upload / Create Study Note">
-        <form onSubmit={createNote}>
+      <Modal show={showModal} onClose={closeModal} title={editingNote ? "Edit Study Note" : "Upload / Create Study Note"}>
+        <form onSubmit={editingNote ? updateNote : createNote}>
           <div className="field">
             <label>Title *</label>
             <input
@@ -1777,11 +1819,11 @@ function StaffNotesPage({ user }) {
           </div>
 
           <div style={{ display: "flex", justifyContent: "flex-end", gap: 10, marginTop: 20 }}>
-            <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>
+            <button type="button" className="btn btn-secondary" onClick={closeModal}>
               Cancel
             </button>
             <button type="submit" className="btn btn-primary" disabled={saving}>
-              {saving ? "Publishing…" : "Publish Study Note"}
+              {saving ? (editingNote ? "Updating…" : "Publishing…") : (editingNote ? "Update Study Note" : "Publish Study Note")}
             </button>
           </div>
         </form>
