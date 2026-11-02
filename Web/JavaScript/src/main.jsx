@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+﻿import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
   ArrowLeftIcon,
@@ -2547,7 +2547,7 @@ function App() {
     }
   });
 
-  const [showMobileSim, setShowMobileSim] = useState(true);
+  const [showMobileSim, setShowMobileSim] = useState(false);
 
   if (showMobileSim) {
     return (
