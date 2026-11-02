@@ -2,19 +2,40 @@
   "expo": {
     "name": "Burka Exam",
     "slug": "burka-exam",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a1a"
+    },
     "android": {
-      "package": "com.burkaexam.mobile"
+      "package": "com.burkaexam.mobile",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a1a"
+      },
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
     },
     "ios": {
-      "bundleIdentifier": "com.burkaexam.mobile"
+      "bundleIdentifier": "com.burkaexam.mobile",
+      "supportsTablet": true
     },
     "plugins": [
       "expo-asset",
       "expo-font",
       "expo-status-bar"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-will-be-added-by-eas"
+      }
+    }
   }
 }
