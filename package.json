@@ -1,8 +1,8 @@
-{
+﻿{
   "name": "burka-exam",
   "version": "0.1.0",
   "private": true,
-  "description": "Burka-Exam entrance exam preparation platform",
+  "description": "Burka Exam entrance exam preparation platform",
   "type": "module",
   "workspaces": [
     "Backend",

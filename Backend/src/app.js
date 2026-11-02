@@ -1,4 +1,4 @@
-import cors from "cors";
+﻿import cors from "cors";
 import express from "express";
 import helmet from "helmet";
 import fs from "node:fs";
@@ -77,7 +77,7 @@ app.get("/{*splat}", (request, response, next) => {
     return response.sendFile(webIndexHtml);
   }
   return response.json({
-    name: "EthioPrep API",
+    name: "Burka Exam API",
     version: "0.1.0",
     documentation: "/api/health"
   });

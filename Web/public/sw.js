@@ -1,14 +1,14 @@
-/* eslint-disable no-restricted-globals */
+﻿/* eslint-disable no-restricted-globals */
 /**
- * EthioPrep Service Worker (sw.js)
+ * Burka Exam Service Worker (sw.js)
  * Caches static application shell assets and key ESSLCE / Regional Model exam data
  * so the application and interactive exam practice remain functional when offline.
  */
 
 const CACHE_VERSION = "v4";
-const STATIC_CACHE = `ethioprep-static-${CACHE_VERSION}`;
-const API_CACHE = `ethioprep-api-data-${CACHE_VERSION}`;
-const EXAM_SESSION_CACHE = `ethioprep-exam-sessions-${CACHE_VERSION}`;
+const STATIC_CACHE = `Burka Exam-static-${CACHE_VERSION}`;
+const API_CACHE = `Burka Exam-api-data-${CACHE_VERSION}`;
+const EXAM_SESSION_CACHE = `Burka Exam-exam-sessions-${CACHE_VERSION}`;
 
 const CORE_PRECACHE_URLS = [
   "/",
@@ -92,7 +92,7 @@ self.addEventListener("activate", (event) => {
       const keys = await caches.keys();
       await Promise.all(
         keys.map((key) => {
-          if (key.startsWith("ethioprep-") && !expectedCaches.has(key)) {
+          if (key.startsWith("Burka Exam-") && !expectedCaches.has(key)) {
             return caches.delete(key);
           }
           return Promise.resolve();
@@ -118,7 +118,7 @@ function createJsonResponse(payload, status = 200, extraHeaders = {}) {
     status,
     headers: {
       "Content-Type": "application/json",
-      "X-EthioPrep-Cache": "HIT-OFFLINE",
+      "X-Burka Exam-Cache": "HIT-OFFLINE",
       ...extraHeaders
     }
   });
@@ -368,7 +368,7 @@ self.addEventListener("fetch", (event) => {
         const cachedSession = await sessionCache.match(cacheKey, { ignoreVary: true });
         if (cachedSession) {
           const payload = await cachedSession.json();
-          return createJsonResponse(payload, 200, { "X-EthioPrep-Cache": "HIT-EXAM-SESSION" });
+          return createJsonResponse(payload, 200, { "X-Burka Exam-Cache": "HIT-EXAM-SESSION" });
         }
 
         const synthesized = await synthesizeOfflineExamSessionFromCache(examId, {
@@ -377,7 +377,7 @@ self.addEventListener("fetch", (event) => {
         });
         if (synthesized) {
           const synthResponse = createJsonResponse(synthesized, 201, {
-            "X-EthioPrep-Cache": "HIT-OFFLINE-SYNTHESIZED"
+            "X-Burka Exam-Cache": "HIT-OFFLINE-SYNTHESIZED"
           });
           await sessionCache.put(cacheKey, synthResponse.clone());
           return synthResponse;
@@ -411,7 +411,7 @@ self.addEventListener("fetch", (event) => {
           }
         }
         const gradedPayload = await gradeAttemptFromCache(attemptId, bodyData.answers || []);
-        return createJsonResponse(gradedPayload, 200, { "X-EthioPrep-Cache": "HIT-OFFLINE-GRADED" });
+        return createJsonResponse(gradedPayload, 200, { "X-Burka Exam-Cache": "HIT-OFFLINE-GRADED" });
       })()
     );
     return;
@@ -443,7 +443,7 @@ self.addEventListener("fetch", (event) => {
             user: {
               _id: "offline_student",
               displayName: "Abebe Kebede",
-              email: "student@ethioprep.com",
+              email: "student@Burka Exam.com",
               role: "student",
               stream: "natural",
               gradeLevel: "grade-12",
@@ -486,7 +486,7 @@ self.addEventListener("fetch", (event) => {
             status: 200,
             headers: {
               "Content-Type": "application/json",
-              "X-EthioPrep-Cache": "HIT-OFFLINE"
+              "X-Burka Exam-Cache": "HIT-OFFLINE"
             }
           });
         }

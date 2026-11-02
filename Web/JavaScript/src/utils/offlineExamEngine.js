@@ -1,5 +1,5 @@
-/**
- * Pure offline exam & service-worker cache engine for EthioPrep.
+﻿/**
+ * Pure offline exam & service-worker cache engine for Burka Exam.
  * Shared across the Service Worker, client API fallback, and unit tests.
  */
 

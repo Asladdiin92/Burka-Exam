@@ -1,7 +1,7 @@
-/*
- * EthioPrep MongoDB schema.
- * Run from mongosh against the ethioprep database:
- *   mongosh "mongodb://localhost:27017/ethioprep" mongodb-schema.js
+﻿/*
+ * Burka Exam MongoDB schema.
+ * Run from mongosh against the Burka Exam database:
+ *   mongosh "mongodb://localhost:27017/Burka Exam" mongodb-schema.js
  */
 
 const common = {
@@ -305,4 +305,4 @@ collection("auditLogs", ["actorId", "action", "resourceType", "resourceId", "cre
   { key: { createdAt: 1 }, options: { expireAfterSeconds: 63072000 } }
 ]);
 
-print("EthioPrep MongoDB schema configured successfully.");
+print("Burka Exam MongoDB schema configured successfully.");

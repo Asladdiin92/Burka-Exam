@@ -1,4 +1,4 @@
-﻿# Burka-Exam Deployment Guide
+﻿# Burka Exam Deployment Guide
 
 Complete step-by-step guide to deploy your application to production.
 
@@ -123,7 +123,7 @@ Complete step-by-step guide to deploy your application to production.
 4. **Commit and Push**:
    ```powershell
    git add .
-   git commit -m "Initial commit - Burka-Exam application"
+   git commit -m "Initial commit - Burka Exam application"
    ```
 
 5. **Create GitHub repository**:
@@ -278,7 +278,7 @@ Complete step-by-step guide to deploy your application to production.
      <head>
        <meta charset="UTF-8" />
        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-       <title>Burka-Exam Admin Dashboard</title>
+       <title>Burka Exam Admin Dashboard</title>
        <link rel="stylesheet" href="/CSS/styles.css" />
      </head>
      <body>
@@ -328,7 +328,7 @@ Replace `YOUR_USERNAME` with your actual GitHub username.
    
    @"
    EXPO_PUBLIC_API_URL=https://burka-exam-backend.onrender.com/api
-   EXPO_PUBLIC_APP_NAME=Burka-Exam
+   EXPO_PUBLIC_APP_NAME=Burka Exam
    EXPO_PUBLIC_APP_VERSION=1.0.0
    "@ | Out-File -FilePath ".env" -Encoding UTF8
    ```
@@ -366,7 +366,7 @@ Replace `YOUR_USERNAME` with your actual GitHub username.
    ```json
    {
      "expo": {
-       "name": "Burka-Exam",
+       "name": "Burka Exam",
        "slug": "burka-exam",
        "version": "1.0.0",
        "orientation": "portrait",
@@ -455,7 +455,7 @@ Option 1: Using MongoDB Atlas UI:
    ```json
    {
      "name": "Admin User",
-     "email": "admin@burka-exam.com",
+     "email": "admin@burkaexam.com",
      "password": "$2a$12$YOUR_HASHED_PASSWORD",
      "role": "admin",
      "status": "active",
@@ -625,13 +625,13 @@ eas update --branch production --message "Bug fixes"
 ## 9. Custom Domain (Optional)
 
 ### For Backend (Render):
-1. Purchase domain (e.g., api.burka-exam.com)
+1. Purchase domain (e.g., api.burkaexam.com)
 2. Render Dashboard → Settings → Custom Domain
 3. Add domain and follow DNS instructions
 
 ### For Web (GitHub Pages):
-1. Purchase domain (e.g., burka-exam.com)
-2. Create CNAME file in Web/public: `burka-exam.com`
+1. Purchase domain (e.g., burkaexam.com)
+2. Create CNAME file in Web/public: `burkaexam.com`
 3. Update DNS records as per GitHub instructions
 4. GitHub repo Settings → Pages → Custom domain
 
@@ -649,7 +649,7 @@ eas update --branch production --message "Bug fixes"
 
 ## Support
 
-For issues specific to Burka-Exam deployment, check:
+For issues specific to Burka Exam deployment, check:
 - Render logs for backend errors
 - Browser console for frontend errors
 - Expo logs for mobile errors

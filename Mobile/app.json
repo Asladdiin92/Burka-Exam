@@ -1,15 +1,15 @@
-{
+﻿{
   "expo": {
     "name": "Burka Exam",
-    "slug": "ethioprep",
+    "slug": "burka-exam",
     "version": "0.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "android": {
-      "package": "com.ethioprep.mobile"
+      "package": "com.burkaexam.mobile"
     },
     "ios": {
-      "bundleIdentifier": "com.ethioprep.mobile"
+      "bundleIdentifier": "com.burkaexam.mobile"
     },
     "plugins": [
       "expo-asset",

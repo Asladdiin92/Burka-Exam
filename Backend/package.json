@@ -1,8 +1,8 @@
-{
-  "name": "ethioprep-backend",
+﻿{
+  "name": "burka-exam-backend",
   "version": "0.1.0",
   "private": true,
-  "description": "EthioPrep Express and MongoDB Atlas backend",
+  "description": "Burka Exam Express and MongoDB Atlas backend",
   "type": "module",
   "scripts": {
     "dev": "node --watch src/server.js",

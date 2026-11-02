@@ -1,5 +1,5 @@
-/**
- * Pure parser and formatter for EthioPrep exam questions, scientific/math notation,
+﻿/**
+ * Pure parser and formatter for Burka Exam exam questions, scientific/math notation,
  * structured tables, and diagram metadata.
  * Shared across Web Mobile Simulator, Web Question Bank, and Unit Tests.
  */

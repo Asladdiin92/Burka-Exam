@@ -1,6 +1,6 @@
-# Burka-Exam
+﻿# Burka Exam
 
-Burka-Exam is an Ethiopian entrance exam preparation platform built with:
+Burka Exam is an Ethiopian entrance exam preparation platform built with:
 
 - Node.js
 - Express.js
