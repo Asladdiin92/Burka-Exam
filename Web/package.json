@@ -1,12 +1,15 @@
-{
+﻿{
   "name": "burka-exam-web",
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "homepage": "https://burkakoo.github.io/Burka-Exam",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.460.0",
@@ -17,6 +20,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.1",
+    "gh-pages": "^6.2.0",
     "vite": "^7.1.7"
   }
 }
