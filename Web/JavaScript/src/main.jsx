@@ -46,7 +46,6 @@ import { SkeletonStats, SkeletonTable } from "./components/Spinner.jsx";
 import { Notice } from "./components/Notice.jsx";
 import { Modal } from "./components/Modal.jsx";
 import { WeeklyPerformanceChart } from "./components/WeeklyPerformanceChart.jsx";
-import { MobileAppSimulator } from "./components/MobileAppSimulator.jsx";
 import { Overview } from "./pages/Overview.jsx";
 import { fmtDate, getGreeting } from "./utils/helpers.js";
 import { formatMathText, splitPassageAndQuestion } from "./utils/questionContentParser.js";
@@ -99,7 +98,7 @@ function ThemeToggleSwitch({ theme, onToggle, compact = false }) {
    AUTH
    ════════════════════════════════════════════════════════════════ */
 
-function Auth({ onLogin, theme, onToggleTheme, onOpenMobileSimulator }) {
+function Auth({ onLogin, theme, onToggleTheme }) {
   const [step, setStep] = useState("login"); // "login" | "verify"
   const [loginForm, setLoginForm] = useState({ email: "", password: "" });
   const [verifyEmail, setVerifyEmail] = useState("");
@@ -361,18 +360,6 @@ function Auth({ onLogin, theme, onToggleTheme, onOpenMobileSimulator }) {
         }}>
           <SmartphoneIcon size={14} style={{ verticalAlign: "-2px", marginRight: 4 }} /><strong>Are you an entrance examination student?</strong><br />
           Students must use the <strong>Burka Exam Mobile Application</strong> to practice questions, study offline, take mock exams, and rank on the leaderboard.
-          {onOpenMobileSimulator && (
-            <div style={{ marginTop: 10 }}>
-              <button
-                type="button"
-                className="btn btn-secondary btn-sm btn-full"
-                onClick={onOpenMobileSimulator}
-                style={{ borderColor: "rgba(16, 185, 129, 0.4)", color: "#10b981" }}
-              >
-                <SmartphoneIcon size={15} /> Launch Interactive Mobile Student App
-              </button>
-            </div>
-          )}
         </div>
       </div>
     </div>
@@ -2413,8 +2400,6 @@ function Dashboard({ user, onLogout, theme, onToggleTheme }) {
       { id: "users",     label: "Users",          icon: <UsersIcon size={18} strokeWidth={2} /> },
       { id: "analytics", label: "Analytics",      icon: <BarChart3Icon size={18} strokeWidth={2} /> },
     ] : []),
-    { section: "Student Experience" },
-    { id: "mobile-app", label: "Mobile Student App", icon: <SmartphoneIcon size={18} strokeWidth={2} /> },
   ];
 
   function renderPage() {
@@ -2428,7 +2413,6 @@ function Dashboard({ user, onLogout, theme, onToggleTheme }) {
       case "payments":   return <PaymentsPage user={user} />;
       case "users":      return <UsersPage />;
       case "analytics":  return <AnalyticsPage />;
-      case "mobile-app": return <MobileAppSimulator />;
       default:           return <Overview user={user} stats={stats} />;
     }
   }
@@ -2547,23 +2531,13 @@ function App() {
     }
   });
 
-  const [showMobileSim, setShowMobileSim] = useState(false);
-
-  if (showMobileSim) {
-    return (
-      <div className="app-shell" style={{ display: "block", padding: 24, maxWidth: 1280, margin: "0 auto" }}>
-        <MobileAppSimulator onBackToPortal={() => setShowMobileSim(false)} />
-      </div>
-    );
-  }
-
   if (!user || user.role === "student") {
     return (
       <Auth
         onLogin={setUser}
         theme={theme}
         onToggleTheme={toggleTheme}
-        onOpenMobileSimulator={() => setShowMobileSim(true)}
+        
       />
     );
   }
