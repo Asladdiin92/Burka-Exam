@@ -1,6 +1,6 @@
 ﻿{
   "name": "Burka Exam",
-  "description": "Ethiopian entrance exam preparation platform with ESSLCE past exams, curriculum units, analytics, and AI tutoring master coach.",
+  "description": "Ethiopian entrance exam preparation platform. Web portal for staff/admin (all devices), Mobile app for students (Android/iOS) with offline support, ESSLCE past exams, and AI tutoring.",
   "capabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
   ]

@@ -2,6 +2,24 @@
 
 Complete step-by-step guide to deploy your application to production.
 
+## Application Architecture
+
+**Burka Exam** consists of two distinct portals:
+
+### 🖥️ Web Portal (Staff & Admin)
+- **Users**: Administrators, Teachers, Content Managers, Cash Managers
+- **Deployment**: GitHub Pages (or any static hosting)
+- **Access**: Responsive - works on all devices (desktop, tablet, mobile browsers)
+- **Purpose**: Staff management, content creation, analytics
+
+### 📱 Mobile App (Student Portal)  
+- **Users**: Students only
+- **Deployment**: Android (APK/Google Play) & iOS (App Store)
+- **Technology**: React Native (Expo) cross-platform
+- **Purpose**: Exam practice, offline study, progress tracking
+
+Both portals connect to the same Backend API deployed on Render.
+
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
 2. [Deploy Backend to Render](#deploy-backend-to-render)

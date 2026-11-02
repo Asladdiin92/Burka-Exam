@@ -1,10 +1,36 @@
 ﻿# Burka Exam Development Guide
 
 ## Project Overview
-Burka Exam is a full-stack Ethiopian entrance exam preparation platform with:
-- Backend: Node.js/Express API with MongoDB Atlas
-- Web: React.js admin/management dashboard
-- Mobile: React Native (Expo) student application with offline support
+
+Burka Exam is a full-stack Ethiopian entrance exam preparation platform with **two distinct portals**:
+
+### 🖥️ **Web Portal - Staff & Admin Dashboard**
+- **Users**: Administrators, Teachers, Content Managers, Cash Managers
+- **Technology**: React.js web application (responsive design)
+- **Access**: All devices - desktop, tablet, and mobile browsers
+- **Purpose**: 
+  - Content management (question bank, chapters, subjects)
+  - Exam creation and publishing
+  - User management and role assignment
+  - Payment verification
+  - Analytics and reporting
+  - Staff notes and progress tracking
+
+### 📱 **Mobile App - Student Portal**
+- **Users**: Students only
+- **Technology**: React Native (Expo) cross-platform mobile app
+- **Platforms**: Android & iOS
+- **Purpose**:
+  - Exam practice (ESSLCE & Regional Model exams)
+  - Offline support with sync
+  - Progress tracking and bookmarks
+  - Study notes
+  - Chapter-based and year-based practice modes
+
+### 🔧 **Backend API**
+- **Technology**: Node.js/Express with MongoDB Atlas
+- **Purpose**: Unified REST API serving both Web and Mobile portals
+- **Features**: Authentication, authorization, data management, offline sync
 
 ## Development Commands
 
