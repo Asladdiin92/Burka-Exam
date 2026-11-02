@@ -17,11 +17,7 @@
       "bundleIdentifier": "com.burkaexam.mobile",
       "supportsTablet": true
     },
-    "plugins": [
-      "expo-asset",
-      "expo-font",
-      "expo-status-bar"
-    ],
+    "plugins": [],
     "extra": {
       "eas": {
         "projectId": "cda4b880-ca35-4f71-9db9-d7ad932e2614"
