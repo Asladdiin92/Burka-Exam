@@ -57,7 +57,7 @@ async function start() {
   ensureWebDistBuilt();
   await connectDatabase();
 
-  const primaryPort = 3000;
+  const primaryPort = env.port;
   server = await listenWithRetry(primaryPort, "0.0.0.0");
 
   if (env.emailUser && env.emailPassword) {
