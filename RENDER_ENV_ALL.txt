@@ -1,0 +1,9 @@
+﻿NODE_ENV=production
+PORT=5000
+MONGODB_URI=mongodb+srv://Burkakoo:burqaaman%2412@cluster1.t7t6gsx.mongodb.net/ethioprep?compressors=zlib&retryWrites=true&w=majority
+JWT_SECRET=R4P+sd38yYmXdIDCUwKG2MuwUZIEPTZ8pb0uihF69YbNli25YQ6ZdGx7/cPlr/I0
+BCRYPT_SALT_ROUNDS=12
+CLIENT_ORIGIN=https://burkakoo.github.io
+CLIENT_ORIGINS=https://burkakoo.github.io,https://burka-exam-backend.onrender.com
+EMAIL_USER=burkamuhammed3@gmail.com
+EMAIL_PASSWORD=okdh iddu lqax vdqh
