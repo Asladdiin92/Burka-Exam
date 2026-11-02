@@ -1,6 +1,6 @@
-# EthioPrep
+# Burka-Exam
 
-EthioPrep is an Ethiopian entrance exam preparation platform built with:
+Burka-Exam is an Ethiopian entrance exam preparation platform built with:
 
 - Node.js
 - Express.js
@@ -46,7 +46,7 @@ own terminal.
 ### Terminal 1: Backend API
 
 ```powershell
-cd D:\ETHIOPREP_APP\Backend
+cd D:\Burka-Exam\Backend
 npm install
 npm run dev
 ```
@@ -56,7 +56,7 @@ The backend API runs at `http://localhost:5000`.
 ### Terminal 2: Web frontend
 
 ```powershell
-cd D:\ETHIOPREP_APP\Web
+cd D:\Burka-Exam\Web
 npm install
 npm run dev
 ```
@@ -67,7 +67,7 @@ Open the web application at
 ### Terminal 3: Mobile application
 
 ```powershell
-cd D:\ETHIOPREP_APP\Mobile
+cd D:\Burka-Exam\Mobile
 npm install
 npm start
 ```
@@ -81,7 +81,7 @@ testing on a physical device.
 
 ### Optional root convenience commands
 
-From `D:\ETHIOPREP_APP`, these commands run the projects through the root
+From `D:\Burka-Exam`, these commands run the projects through the root
 package scripts:
 
 ```powershell
@@ -210,11 +210,11 @@ querySrv EBADNAME _mongodb._tcp.<cluster>.mongodb.net
 ```
 
 the root `.env` file still contains the example placeholder. In
-`D:\ETHIOPREP_APP\.env`, replace the entire `MONGODB_URI` value with the
+`D:\Burka-Exam\.env`, replace the entire `MONGODB_URI` value with the
 connection string copied from MongoDB Atlas:
 
 ```dotenv
-MONGODB_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@your-real-cluster.mongodb.net/ethioprep?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@your-real-cluster.mongodb.net/Burka-Exam?retryWrites=true&w=majority
 ```
 
 Use the actual cluster hostname from MongoDB Atlas; do not leave
@@ -232,7 +232,7 @@ resolver is blocking Node.js SRV queries. In that case, copy the Atlas
 standard connection string or convert the SRV records to this format:
 
 ```dotenv
-MONGODB_URI=mongodb://USERNAME:PASSWORD@ac-peav5lw-shard-00-00.gcnjkxr.mongodb.net:27017,ac-peav5lw-shard-00-01.gcnjkxr.mongodb.net:27017,ac-peav5lw-shard-00-02.gcnjkxr.mongodb.net:27017/ethioprep?tls=true&replicaSet=atlas-13btnf-shard-0&authSource=admin&retryWrites=true&w=majority
+MONGODB_URI=mongodb://USERNAME:PASSWORD@ac-peav5lw-shard-00-00.gcnjkxr.mongodb.net:27017,ac-peav5lw-shard-00-01.gcnjkxr.mongodb.net:27017,ac-peav5lw-shard-00-02.gcnjkxr.mongodb.net:27017/Burka-Exam?tls=true&replicaSet=atlas-13btnf-shard-0&authSource=admin&retryWrites=true&w=majority
 ```
 
 Keep your existing username and URL-encoded password. Atlas hostnames and
@@ -248,7 +248,7 @@ In MongoDB Atlas, also confirm that:
 After saving `.env`, restart the backend:
 
 ```powershell
-cd D:\ETHIOPREP_APP\Backend
+cd D:\Burka-Exam\Backend
 npm run dev
 ```
 

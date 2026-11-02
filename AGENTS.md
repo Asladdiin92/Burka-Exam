@@ -1,7 +1,7 @@
-# EthioPrep Development Guide
+# Burka-Exam Development Guide
 
 ## Project Overview
-EthioPrep is a full-stack Ethiopian entrance exam preparation platform with:
+Burka-Exam is a full-stack Ethiopian entrance exam preparation platform with:
 - Backend: Node.js/Express API with MongoDB Atlas
 - Web: React.js admin/management dashboard
 - Mobile: React Native (Expo) student application with offline support
