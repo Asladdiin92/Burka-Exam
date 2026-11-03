@@ -71,6 +71,7 @@ function MainDashboard({ user, onLogout }) {
   const [dashboardLoading, setDashboardLoading] = useState(true);
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [aiContext, setAiContext] = useState(null);
+  const [isPracticeActive, setIsPracticeActive] = useState(false);
 
   function handleAskAi(ctx) {
     if (activeExamSession) {
@@ -315,7 +316,7 @@ function MainDashboard({ user, onLogout }) {
   );
 
   return (
-    <SafeAreaView style={styles.safeArea} edges={["top"]}>
+    <SafeAreaView style={styles.safeArea} edges={["top", "bottom"]}>
       <StatusBar style="light" />
       <Modal
         animationType="fade"
@@ -380,16 +381,18 @@ function MainDashboard({ user, onLogout }) {
 
       {(tab === "ai" || tab === "practice") && !activeExamSession ? (
         <View style={styles.flexContainer}>
-          <View style={{ paddingHorizontal: SPACING.lg, paddingTop: SPACING.md }}>
-            <Header
-              onLogout={onLogout}
-              onNavigateProfile={() => setTab("profile")}
-              queueCount={queueCount}
-              user={currentUser}
-            />
-            <Notice message={notice?.message} type={notice?.type} />
-            {renderTabBar()}
-          </View>
+          {!(tab === "practice" && isPracticeActive) && (
+            <View style={{ paddingHorizontal: SPACING.lg, paddingTop: SPACING.md }}>
+              <Header
+                onLogout={onLogout}
+                onNavigateProfile={() => setTab("profile")}
+                queueCount={queueCount}
+                user={currentUser}
+              />
+              <Notice message={notice?.message} type={notice?.type} />
+              {renderTabBar()}
+            </View>
+          )}
           <View style={{ flex: 1 }}>
             {tab === "ai" ? (
               <ChatTutorScreen
@@ -402,6 +405,7 @@ function MainDashboard({ user, onLogout }) {
                 exams={exams}
                 onAskAi={handleAskAi}
                 onSaveProgress={handleSaveProgress}
+                onSessionActiveChange={setIsPracticeActive}
                 subjects={subjects}
                 user={currentUser}
               />

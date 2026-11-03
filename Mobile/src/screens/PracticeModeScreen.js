@@ -4,6 +4,7 @@ import {
   Dimensions,
   Image,
   Modal,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -11,6 +12,7 @@ import {
   View
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Icon } from "../components/Icon.js";
 import { request } from "../services/api.js";
 import { COLORS, RADIUS, SPACING } from "../utils/theme.js";
@@ -50,10 +52,17 @@ export function PracticeModeScreen({
   subjects = [],
   user,
   onAskAi,
-  onSaveProgress
+  onSaveProgress,
+  onSessionActiveChange
 }) {
+  const insets = useSafeAreaInsets();
+  const bottomInset = Math.max(insets.bottom, Platform.OS === "android" ? 28 : 16);
   // Setup state
   const [sessionActive, setSessionActive] = useState(false);
+
+  useEffect(() => {
+    onSessionActiveChange?.(sessionActive && !sessionCompleted);
+  }, [sessionActive, sessionCompleted, onSessionActiveChange]);
   const [loadingQuestions, setLoadingQuestions] = useState(false);
   const [selectedSubjectId, setSelectedSubjectId] = useState("");
   const [selectedExamId, setSelectedExamId] = useState("");
@@ -1150,11 +1159,11 @@ export function PracticeModeScreen({
           )}
 
           {/* Spacing for bottom floating bar */}
-          <View style={{ height: 110 }} />
+          <View style={{ height: 120 + bottomInset }} />
         </ScrollView>
 
         {/* Ergonomic Floating Bottom Navigation Bar for Mobile */}
-        <View style={styles.bottomNavContainer}>
+        <View style={[styles.bottomNavContainer, { paddingBottom: bottomInset + 8 }]}>
           {/* Quick Skip & Navigation Controls */}
           <View style={styles.bottomNavRow}>
             {/* Prev Button */}
@@ -1959,12 +1968,13 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: COLORS.border,
     paddingHorizontal: SPACING.md,
-    paddingVertical: SPACING.sm,
-    shadowColor: "#000",
-    shadowOpacity: 0.08,
-    shadowRadius: 6,
-    shadowOffset: { width: 0, height: -2 },
-    elevation: 4
+    paddingTop: 10,
+    shadowColor: "#0F172A",
+    shadowOpacity: 0.12,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: -4 },
+    elevation: 10,
+    zIndex: 99
   },
   bottomNavRow: {
     flexDirection: "row",
@@ -1973,7 +1983,7 @@ const styles = StyleSheet.create({
   },
   navNavButton: {
     flex: 1,
-    minHeight: 46,
+    minHeight: 50,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -1992,8 +2002,8 @@ const styles = StyleSheet.create({
     color: COLORS.text
   },
   skipButton: {
-    flex: 1.4,
-    minHeight: 46,
+    flex: 1.35,
+    minHeight: 50,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -2009,8 +2019,8 @@ const styles = StyleSheet.create({
     color: "#B45309"
   },
   nextButton: {
-    flex: 1.2,
-    minHeight: 46,
+    flex: 1.35,
+    minHeight: 50,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
