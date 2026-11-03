@@ -23,7 +23,10 @@ export const env = {
   bcryptSaltRounds: Number(required("BCRYPT_SALT_ROUNDS", "12")),
   jwtSecret: required("JWT_SECRET", "ethioprep-dev-secret-key-min-32-chars"),
   emailUser: process.env.EMAIL_USER || "",
-  emailPassword: process.env.EMAIL_PASSWORD || ""
+  emailPassword: process.env.EMAIL_PASSWORD || "",
+  resendApiKey: process.env.RESEND_API_KEY || "",
+  brevoApiKey: process.env.BREVO_API_KEY || "",
+  requireEmailVerification: process.env.REQUIRE_EMAIL_VERIFICATION === "true"
 };
 
 if (
