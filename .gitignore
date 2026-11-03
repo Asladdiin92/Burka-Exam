@@ -1,6 +1,7 @@
 node_modules/
 .env
 *.log
+*.apk
 coverage/
 dist/
 .DS_Store
