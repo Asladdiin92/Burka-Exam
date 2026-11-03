@@ -1,4 +1,4 @@
-﻿{
+{
   "expo": {
     "name": "Burka Exam",
     "slug": "burka-exam",
@@ -13,7 +13,8 @@
     },
     "android": {
       "package": "com.burkaexam.mobile",
-      "versionCode": 2,
+      "versionCode": 3,
+      "usesCleartextTraffic": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0A2463"
