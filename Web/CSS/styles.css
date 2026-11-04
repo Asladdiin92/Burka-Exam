@@ -152,6 +152,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   flex-shrink: 0;
 }
 
+img.logo-mark {
+  background: transparent !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 16px rgba(0,200,150,0.35);
+}
+img.sidebar-logo {
+  background: transparent !important;
+  border-radius: 50% !important;
+  box-shadow: 0 3px 12px rgba(0,200,150,0.3);
+}
 .auth-logo-text { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
 .auth-logo-text span { color: var(--green); }
 

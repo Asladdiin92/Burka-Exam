@@ -1,4 +1,4 @@
-﻿import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
   ArrowLeftIcon,
@@ -192,7 +192,7 @@ function Auth({ onLogin, theme, onToggleTheme }) {
       <div className="auth-panel">
         <div className="auth-logo" style={{ justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div className="logo-mark">B</div>
+            <img src="/pwa-192x192.png" alt="Burka Exam Logo" className="logo-mark" style={{ objectFit: "contain", borderRadius: "50%", background: "transparent" }} />
             <div>
               <div className="auth-logo-text">Burka <span>Exam</span></div>
               <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 1 }}>Staff &amp; Management Portal</div>
@@ -2467,7 +2467,7 @@ function Dashboard({ user, onLogout, theme, onToggleTheme }) {
           <MenuIcon size={20} />
         </button>
         <div className="mobile-brand">
-          <div className="sidebar-logo">B</div>
+          <img src="/pwa-192x192.png" alt="Burka Exam Logo" className="sidebar-logo" style={{ objectFit: "contain", borderRadius: "50%", background: "transparent" }} />
           <span>Burka <b>Exam</b></span>
         </div>
         <ThemeToggleSwitch theme={theme} onToggle={onToggleTheme} compact />
@@ -2478,7 +2478,7 @@ function Dashboard({ user, onLogout, theme, onToggleTheme }) {
       {/* ── Sidebar ── */}
       <aside className={`sidebar ${navOpen ? "open" : ""}`} aria-label="Main navigation">
         <div className="sidebar-header">
-          <div className="sidebar-logo">B</div>
+          <img src="/pwa-192x192.png" alt="Burka Exam Logo" className="sidebar-logo" style={{ objectFit: "contain", borderRadius: "50%", background: "transparent" }} />
           <div>
             <div className="sidebar-title">Burka Exam</div>
             <div className="sidebar-subtitle">Staff Portal</div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Button } from "../components/Button.js";
 import { Input } from "../components/Input.js";
 import { Notice } from "../components/Notice.js";
@@ -96,6 +96,13 @@ export function AuthScreen({ onLoginSuccess }) {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
+        <View style={{ alignItems: "center", marginBottom: SPACING.sm }}>
+          <Image
+            source={require("../../assets/icon.png")}
+            style={{ width: 76, height: 76, borderRadius: 38 }}
+            resizeMode="contain"
+          />
+        </View>
         <Text style={styles.brand}>Burka Exam</Text>
         <Text style={styles.subtitle}>
           {isRegister ? "Create your preparation account" : "Sign in to continue your preparation"}
