@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+﻿import React, { useEffect, useMemo, useState } from "react";
 import { Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Button } from "../components/Button.js";
@@ -240,7 +240,13 @@ export function NotesScreen({
   }
 
   return (
-    <View style={styles.container}>
+    <View style={styles.flexOne}>
+      <ScrollView
+        contentContainerStyle={styles.container}
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={true}
+        style={styles.scrollWrapper}
+      >
       {selectedSubject ? (
         <View>
           <TouchableOpacity
@@ -464,6 +470,7 @@ export function NotesScreen({
           )}
         </View>
       )}
+      </ScrollView>
 
       {/* ── Protected Offline In-App Reader Modal ── */}
       <Modal
@@ -557,8 +564,15 @@ export function NotesScreen({
 }
 
 const styles = StyleSheet.create({
+  flexOne: {
+    flex: 1
+  },
+  scrollWrapper: {
+    flex: 1
+  },
   container: {
-    paddingBottom: SPACING.xl
+    padding: SPACING.md,
+    paddingBottom: SPACING.xl * 2
   },
   intro: {
     marginBottom: SPACING.md

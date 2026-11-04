@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+﻿import React, { useMemo, useState } from "react";
 import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { Button } from "../components/Button.js";
 import { Card } from "../components/Card.js";
@@ -280,7 +280,12 @@ export function ExamsScreen({ exams = [], onStartExam, loadingExamId, user, isPr
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      contentContainerStyle={styles.container}
+      keyboardShouldPersistTaps="handled"
+      showsVerticalScrollIndicator={true}
+      style={styles.scrollWrapper}
+    >
       {/* Screen Header */}
       <Text style={styles.header}>
         <Icon color={COLORS.primary} name={isNatural ? "flask-outline" : "library-outline"} size={20} />{"  "}
@@ -553,13 +558,17 @@ export function ExamsScreen({ exams = [], onStartExam, loadingExamId, user, isPr
           )}
         </>
       )}
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollWrapper: {
+    flex: 1
+  },
   container: {
-    paddingBottom: SPACING.xl
+    padding: SPACING.md,
+    paddingBottom: SPACING.xl * 2
   },
   header: {
     fontSize: 20,

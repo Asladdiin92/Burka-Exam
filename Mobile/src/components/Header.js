@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Icon } from "./Icon.js";
 import { COLORS, RADIUS, SPACING, TOUCH_TARGET } from "../utils/theme.js";
@@ -8,31 +8,7 @@ export function Header({ user, onLogout, onNavigateProfile, queueCount = 0 }) {
 
   return (
     <View style={styles.header}>
-      <TouchableOpacity
-        accessibilityLabel="Open profile"
-        activeOpacity={0.7}
-        onPress={onNavigateProfile}
-        style={styles.userInfo}
-      >
-        <View style={styles.avatar}>
-          <Text style={styles.avatarText}>{initial}</Text>
-        </View>
-        <View style={styles.userText}>
-          <Text style={styles.brand}>
-            Burka <Text style={styles.brandAccent}>Exam</Text>
-          </Text>
-          <Text numberOfLines={1} style={styles.userRole}>
-            {user?.displayName || "Student"} · {user?.role || "student"}
-          </Text>
-        </View>
-      </TouchableOpacity>
-      <View style={styles.actions}>
-        {queueCount > 0 && (
-          <View style={styles.badge}>
-            <Icon color={COLORS.warning} name="cloud-upload-outline" size={13} />
-            <Text style={styles.badgeText}>{queueCount}</Text>
-          </View>
-        )}
+      <View style={styles.leftSection}>
         <TouchableOpacity
           accessibilityLabel="Open navigation drawer"
           activeOpacity={0.7}
@@ -41,6 +17,34 @@ export function Header({ user, onLogout, onNavigateProfile, queueCount = 0 }) {
         >
           <Icon color={COLORS.text} name="menu-outline" size={24} />
         </TouchableOpacity>
+
+        <TouchableOpacity
+          accessibilityLabel="Open profile"
+          activeOpacity={0.7}
+          onPress={onNavigateProfile}
+          style={styles.userInfo}
+        >
+          <View style={styles.avatar}>
+            <Text style={styles.avatarText}>{initial}</Text>
+          </View>
+          <View style={styles.userText}>
+            <Text style={styles.brand}>
+              Burka <Text style={styles.brandAccent}>Exam</Text>
+            </Text>
+            <Text numberOfLines={1} style={styles.userRole}>
+              {user?.displayName || "Student"} · {user?.role || "student"}
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.actions}>
+        {queueCount > 0 && (
+          <View style={styles.badge}>
+            <Icon color={COLORS.warning} name="cloud-upload-outline" size={13} />
+            <Text style={styles.badgeText}>{queueCount}</Text>
+          </View>
+        )}
       </View>
     </View>
   );
@@ -55,6 +59,12 @@ const styles = StyleSheet.create({
     paddingBottom: SPACING.md,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.border
+  },
+  leftSection: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: SPACING.sm + 2
   },
   userInfo: {
     flex: 1,

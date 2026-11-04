@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+﻿import React, { useEffect, useRef } from "react";
 import {
   Animated,
   Dimensions,
@@ -25,7 +25,7 @@ export function ProfileDrawer({
   isPremium = false,
   onNavigatePayments
 }) {
-  const slideAnim = useRef(new Animated.Value(DRAWER_WIDTH)).current;
+  const slideAnim = useRef(new Animated.Value(-DRAWER_WIDTH)).current;
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -50,7 +50,7 @@ export function ProfileDrawer({
           useNativeDriver: true
         }),
         Animated.timing(slideAnim, {
-          toValue: DRAWER_WIDTH,
+          toValue: -DRAWER_WIDTH,
           duration: 220,
           useNativeDriver: true
         })
@@ -66,7 +66,7 @@ export function ProfileDrawer({
         useNativeDriver: true
       }),
       Animated.timing(slideAnim, {
-        toValue: DRAWER_WIDTH,
+        toValue: -DRAWER_WIDTH,
         duration: 200,
         useNativeDriver: true
       })
@@ -98,7 +98,7 @@ export function ProfileDrawer({
           <Animated.View style={[styles.backdrop, { opacity: fadeAnim }]} />
         </TouchableWithoutFeedback>
 
-        {/* Sliding drawer panel */}
+        {/* Sliding drawer panel (Left-Side) */}
         <Animated.View
           style={[
             styles.drawerContainer,
@@ -164,15 +164,15 @@ const styles = StyleSheet.create({
   drawerContainer: {
     position: "absolute",
     top: 0,
-    right: 0,
+    left: 0,
     bottom: 0,
     width: DRAWER_WIDTH,
     backgroundColor: COLORS.background,
-    borderLeftWidth: 1,
-    borderLeftColor: COLORS.border,
+    borderRightWidth: 1,
+    borderRightColor: COLORS.border,
     elevation: 16,
     shadowColor: "#000",
-    shadowOffset: { width: -4, height: 0 },
+    shadowOffset: { width: 4, height: 0 },
     shadowOpacity: 0.35,
     shadowRadius: 12
   },
@@ -222,4 +222,3 @@ const styles = StyleSheet.create({
     flex: 1
   }
 });
-

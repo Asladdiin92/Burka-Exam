@@ -1,4 +1,4 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
+﻿import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useMemo, useState } from "react";
 import { Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -333,7 +333,12 @@ export function SubjectScreen({
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      contentContainerStyle={styles.container}
+      keyboardShouldPersistTaps="handled"
+      showsVerticalScrollIndicator={true}
+      style={styles.scrollWrapper}
+    >
       <TouchableOpacity
         accessibilityLabel="Back to subjects"
         onPress={onBack}
@@ -706,13 +711,17 @@ export function SubjectScreen({
           )}
         </View>
       )}
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollWrapper: {
+    flex: 1
+  },
   container: {
-    paddingBottom: SPACING.xl
+    padding: SPACING.md,
+    paddingBottom: SPACING.xl * 2
   },
   back: {
     alignItems: "center",

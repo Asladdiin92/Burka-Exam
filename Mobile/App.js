@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+﻿import React, { useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
   BackHandler,
@@ -133,31 +133,35 @@ function MainDashboard({ user, onLogout }) {
 
   const renderFullScreenBar = (title) => (
     <View style={styles.fullScreenTopBar}>
-      <TouchableOpacity
-        accessibilityLabel="Back to Home"
-        activeOpacity={0.7}
-        onPress={() => {
-          setSelectedSubject(null);
-          setTab("home");
-        }}
-        style={styles.fullScreenBackBtn}
-      >
-        <Icon color={COLORS.primaryDark} name="arrow-back" size={18} />
-        <Text style={styles.fullScreenBackText}>Home</Text>
-      </TouchableOpacity>
+      <View style={styles.fullScreenLeftActions}>
+        <TouchableOpacity
+          accessibilityLabel="Open profile drawer"
+          activeOpacity={0.7}
+          onPress={() => setProfileDrawerOpen(true)}
+          style={styles.fullScreenProfileBtn}
+        >
+          <Icon color={COLORS.text} name="menu-outline" size={22} />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          accessibilityLabel="Back to Home"
+          activeOpacity={0.7}
+          onPress={() => {
+            setSelectedSubject(null);
+            setTab("home");
+          }}
+          style={styles.fullScreenBackBtn}
+        >
+          <Icon color={COLORS.primaryDark} name="arrow-back" size={18} />
+          <Text style={styles.fullScreenBackText}>Home</Text>
+        </TouchableOpacity>
+      </View>
 
       <Text numberOfLines={1} style={styles.fullScreenTitle}>
         {title}
       </Text>
 
-      <TouchableOpacity
-        accessibilityLabel="Open profile drawer"
-        activeOpacity={0.7}
-        onPress={() => setProfileDrawerOpen(true)}
-        style={styles.fullScreenProfileBtn}
-      >
-        <Icon color={COLORS.text} name="menu-outline" size={22} />
-      </TouchableOpacity>
+      <View style={{ width: 40 }} />
     </View>
   );
 
@@ -1062,6 +1066,11 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: "700",
     color: COLORS.textSecondary
+  },
+  fullScreenLeftActions: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: SPACING.xs + 2
   },
   fullScreenTopBar: {
     flexDirection: "row",

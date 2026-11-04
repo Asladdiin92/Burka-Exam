@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from "react";
-import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+﻿import React, { useState, useCallback } from "react";
+import { ActivityIndicator, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import * as Clipboard from "expo-clipboard";
 import { Button } from "../components/Button.js";
@@ -213,7 +213,12 @@ export function PaymentScreen({ payments = [], onSubmitPayment, submitting, user
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      contentContainerStyle={styles.container}
+      keyboardShouldPersistTaps="handled"
+      showsVerticalScrollIndicator={true}
+      style={styles.scrollWrapper}
+    >
       {/* Plan Header Card */}
       <Card style={styles.planCard}>
         <View style={styles.planHeader}>
@@ -697,13 +702,17 @@ export function PaymentScreen({ payments = [], onSubmitPayment, submitting, user
           );
         })
       )}
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollWrapper: {
+    flex: 1
+  },
   container: {
-    paddingBottom: SPACING.xl
+    padding: SPACING.md,
+    paddingBottom: SPACING.xl * 2
   },
   planCard: {
     backgroundColor: COLORS.primary,
