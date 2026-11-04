@@ -12,3 +12,4 @@ export function isUserPremium(user, payments = []) {
   }
   return false;
 }
+

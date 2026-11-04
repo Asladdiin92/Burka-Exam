@@ -307,7 +307,7 @@ export function SubjectScreen({
   const [personalBody, setPersonalBody] = useState("");
   const [personalError, setPersonalError] = useState("");
 
-  const isPremium = subject.accessLevel === "premium";
+  const isSubjectPremium = subject.accessLevel === "premium";
 
   async function handleCreatePersonalNote() {
     setPersonalError("");
@@ -352,7 +352,7 @@ export function SubjectScreen({
           </Text>
         </View>
         <View style={styles.accessPill}>
-          <Text style={styles.accessText}>{isPremium ? "Premium" : "Free"}</Text>
+          <Text style={styles.accessText}>{isSubjectPremium ? "Premium" : "Free"}</Text>
         </View>
       </View>
 
