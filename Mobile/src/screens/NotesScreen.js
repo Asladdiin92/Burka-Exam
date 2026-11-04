@@ -102,7 +102,16 @@ function getNotesForGradeSubject(notes = [], subject, grade, allSubjects = []) {
     .sort((a, b) => (a.chapterId?.order ?? 999) - (b.chapterId?.order ?? 999));
 }
 
-export function NotesScreen({ notes = [], subjects = [], onSaveNote, saving, user, onAskAi }) {
+export function NotesScreen({
+  notes = [],
+  subjects = [],
+  onSaveNote,
+  saving,
+  user,
+  onAskAi,
+  isPremium = false,
+  onNavigatePayments
+}) {
   const [selectedGrade, setSelectedGrade] = useState(9);
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [selectedNote, setSelectedNote] = useState(null);
@@ -181,6 +190,53 @@ export function NotesScreen({ notes = [], subjects = [], onSaveNote, saving, use
     } catch (err) {
       setPersonalError(err.message || "Failed to save note.");
     }
+  }
+
+  if (!isPremium) {
+    return (
+      <ScrollView contentContainerStyle={styles.lockedScrollPad} style={styles.container}>
+        <View style={styles.lockedHeroCard}>
+          <View style={styles.lockedHeroIcon}>
+            <Icon color={COLORS.gold} name="lock-closed" size={38} />
+          </View>
+          <View style={styles.lockedPill}>
+            <Text style={styles.lockedPillText}>PREMIUM ACCESS REQUIRED</Text>
+          </View>
+          <Text style={styles.lockedHeroTitle}>Study Notes are Locked</Text>
+          <Text style={styles.lockedHeroSub}>
+            Comprehensive Grade 9–12 chapter summaries, formulas, and revision materials written by top educators are exclusive to Premium students.
+          </Text>
+
+          <View style={styles.lockedBenefitList}>
+            <View style={styles.lockedBenefitRow}>
+              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 8, marginTop: 2 }} />
+              <Text style={styles.lockedBenefitText}>Complete Grade 9–12 revision notes for Natural & Social Science</Text>
+            </View>
+            <View style={styles.lockedBenefitRow}>
+              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 8, marginTop: 2 }} />
+              <Text style={styles.lockedBenefitText}>Chapter-by-chapter summaries & formula quick-references</Text>
+            </View>
+            <View style={styles.lockedBenefitRow}>
+              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 8, marginTop: 2 }} />
+              <Text style={styles.lockedBenefitText}>Personal note synchronization across devices</Text>
+            </View>
+            <View style={styles.lockedBenefitRow}>
+              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 8, marginTop: 2 }} />
+              <Text style={styles.lockedBenefitText}>Study anytime offline without mobile data</Text>
+            </View>
+          </View>
+
+          <TouchableOpacity
+            activeOpacity={0.85}
+            onPress={onNavigatePayments}
+            style={styles.lockedUpgradeBtn}
+          >
+            <Icon name="card-outline" size={20} color="#fff" style={{ marginRight: 8 }} />
+            <Text style={styles.lockedUpgradeBtnText}>Unlock Study Notes (200 ETB)</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    );
   }
 
   return (
@@ -911,5 +967,88 @@ const styles = StyleSheet.create({
     color: COLORS.onPrimary,
     fontSize: 11,
     fontWeight: "800"
+  },
+  lockedScrollPad: {
+    paddingBottom: 40
+  },
+  lockedHeroCard: {
+    backgroundColor: COLORS.surface,
+    borderRadius: RADIUS.lg,
+    padding: SPACING.xl,
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "rgba(240, 160, 48, 0.35)",
+    elevation: 3,
+    marginTop: SPACING.md
+  },
+  lockedHeroIcon: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    backgroundColor: "rgba(240, 160, 48, 0.14)",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: SPACING.md
+  },
+  lockedPill: {
+    backgroundColor: "rgba(240, 160, 48, 0.18)",
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: RADIUS.sm,
+    marginBottom: SPACING.sm
+  },
+  lockedPillText: {
+    fontSize: 11,
+    fontWeight: "900",
+    color: COLORS.gold,
+    letterSpacing: 0.5
+  },
+  lockedHeroTitle: {
+    fontSize: 22,
+    fontWeight: "900",
+    color: COLORS.text,
+    textAlign: "center",
+    marginBottom: SPACING.xs
+  },
+  lockedHeroSub: {
+    fontSize: 13,
+    color: COLORS.textMuted,
+    textAlign: "center",
+    lineHeight: 19,
+    marginBottom: SPACING.lg
+  },
+  lockedBenefitList: {
+    width: "100%",
+    backgroundColor: COLORS.background,
+    borderRadius: RADIUS.md,
+    padding: SPACING.md,
+    marginBottom: SPACING.lg,
+    gap: 10
+  },
+  lockedBenefitRow: {
+    flexDirection: "row",
+    alignItems: "flex-start"
+  },
+  lockedBenefitText: {
+    fontSize: 13,
+    color: COLORS.text,
+    fontWeight: "600",
+    flex: 1,
+    lineHeight: 18
+  },
+  lockedUpgradeBtn: {
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: COLORS.primary,
+    paddingVertical: 14,
+    borderRadius: RADIUS.md,
+    elevation: 2
+  },
+  lockedUpgradeBtnText: {
+    fontSize: 15,
+    fontWeight: "800",
+    color: "#fff"
   }
 });

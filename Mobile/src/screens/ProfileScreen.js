@@ -140,10 +140,6 @@ export function ProfileScreen({ user, isPremium = false, onNavigatePayments, onU
   }
 
   async function handleDownloadOffline() {
-    if (!isPremium) {
-      if (onNavigatePayments) onNavigatePayments();
-      return;
-    }
     setError("");
     setSuccess("");
     setDownloadingOffline(true);
@@ -300,69 +296,44 @@ export function ProfileScreen({ user, isPremium = false, onNavigatePayments, onU
           <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: SPACING.xs }}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <Icon
-                name={isPremium ? "cloud-download-outline" : "lock-closed"}
+                name="cloud-download-outline"
                 size={22}
-                color={isPremium ? COLORS.primary : COLORS.gold}
+                color={COLORS.primary}
                 style={{ marginRight: SPACING.xs }}
               />
               <Text style={[styles.title, { marginBottom: 0 }]}>Offline Study & Practice</Text>
             </View>
-            {!isPremium && (
-              <View style={styles.lockBadgePill}>
-                <Icon name="lock-closed" size={11} color={COLORS.gold} style={{ marginRight: 4 }} />
-                <Text style={styles.lockBadgePillText}>PREMIUM ONLY</Text>
-              </View>
-            )}
+            <View style={styles.offlineReadyPill}>
+              <Icon name="cloud-done-outline" size={12} color={COLORS.primary} style={{ marginRight: 4 }} />
+              <Text style={styles.offlineReadyPillText}>ALL STUDENTS</Text>
+            </View>
           </View>
 
           <Text style={{ fontSize: 13, color: COLORS.textMuted, marginBottom: SPACING.md, lineHeight: 18 }}>
-            {isPremium
-              ? "Download entrance exam questions, answers, and study notes so you can practice anytime without an active internet connection."
-              : "Offline study downloading is exclusive to Premium students. Upgrade your account to download all entrance exam questions, answers, and study notes for offline use with zero mobile data."}
+            Download entrance exam questions, answers, and study notes so you can practice anytime without an active internet connection.
           </Text>
 
-          {isPremium ? (
-            <>
-              {offlineStatus ? (
-                <View style={styles.offlineStatusBox}>
-                  <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 6 }} />
-                  <Text style={styles.offlineStatusText}>
-                    Ready Offline: {offlineStatus.questionCount} questions across {offlineStatus.examCount} exams cached.
-                  </Text>
-                </View>
-              ) : null}
-
-              <Button
-                loading={downloadingOffline}
-                onPress={handleDownloadOffline}
-                style={styles.offlineButton}
-                icon="cloud-download-outline"
-              >
-                {downloadingOffline
-                  ? downloadProgress || "Downloading..."
-                  : offlineStatus
-                  ? "Update Offline Content"
-                  : "Download Offline Content"}
-              </Button>
-            </>
-          ) : (
-            <View>
-              <View style={styles.lockedNoticeBox}>
-                <Icon name="lock-closed" size={18} color={COLORS.gold} style={{ marginRight: 8 }} />
-                <Text style={styles.lockedNoticeText}>
-                  Offline download is locked for Free users.
-                </Text>
-              </View>
-              <Button
-                icon="card-outline"
-                onPress={onNavigatePayments}
-                style={styles.offlineButton}
-                variant="secondary"
-              >
-                Unlock Offline Study (Upgrade to Premium)
-              </Button>
+          {offlineStatus ? (
+            <View style={styles.offlineStatusBox}>
+              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 6 }} />
+              <Text style={styles.offlineStatusText}>
+                Ready Offline: {offlineStatus.questionCount} questions across {offlineStatus.examCount} exams cached.
+              </Text>
             </View>
-          )}
+          ) : null}
+
+          <Button
+            loading={downloadingOffline}
+            onPress={handleDownloadOffline}
+            style={styles.offlineButton}
+            icon="cloud-download-outline"
+          >
+            {downloadingOffline
+              ? downloadProgress || "Downloading..."
+              : offlineStatus
+              ? "Update Offline Content"
+              : "Download Offline Content"}
+          </Button>
         </View>
       )}
 
@@ -618,5 +589,21 @@ const styles = StyleSheet.create({
     color: COLORS.gold,
     fontWeight: "700",
     flex: 1
+  },
+  offlineReadyPill: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 168, 132, 0.12)",
+    borderColor: "rgba(0, 168, 132, 0.35)",
+    borderWidth: 1,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: RADIUS.full
+  },
+  offlineReadyPillText: {
+    fontSize: 10,
+    fontWeight: "900",
+    color: COLORS.primary,
+    letterSpacing: 0.5
   }
 });

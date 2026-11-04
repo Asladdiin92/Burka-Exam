@@ -307,7 +307,7 @@ export function SubjectScreen({
   const [personalBody, setPersonalBody] = useState("");
   const [personalError, setPersonalError] = useState("");
 
-  const isSubjectPremium = subject.accessLevel === "premium";
+
 
   async function handleCreatePersonalNote() {
     setPersonalError("");
@@ -351,9 +351,7 @@ export function SubjectScreen({
             {subject.stream === "social" ? "Social Science" : "Natural Science"}
           </Text>
         </View>
-        <View style={styles.accessPill}>
-          <Text style={styles.accessText}>{isSubjectPremium ? "Premium" : "Free"}</Text>
-        </View>
+
       </View>
 
       {/* Buttons used to display exam by Year and Chapters */}
@@ -490,7 +488,7 @@ export function SubjectScreen({
                         : `Practice Full ${activeYear} Exam (${activeExam.questionIds?.length || 0} Qs)`}
                     </Button>
 
-                    {activeExam.accessLevel === "premium" && (
+                    {activeExam.accessLevel === "premium" && !isPremium && (
                       <View style={styles.premiumBannerRow}>
                         <Icon color={COLORS.primaryDark} name="lock-closed" size={13} />
                         <Text style={styles.premiumBannerText}>

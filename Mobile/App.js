@@ -459,7 +459,7 @@ function MainDashboard({ user, onLogout }) {
     <View style={styles.tabBar}>
       {TABS.map((t) => {
         const active = tab === t.id;
-        const isLockedTab = !isPremium && t.id === "practice";
+        const isLockedTab = !isPremium && (t.id === "practice" || t.id === "notes");
         return (
           <TouchableOpacity
             accessibilityLabel={t.label}
@@ -472,7 +472,9 @@ function MainDashboard({ user, onLogout }) {
                 setTab("payments");
                 setNotice({
                   type: "info",
-                  message: "🔒 Practice Mode is a Premium feature. Upgrade to unlock full practice access."
+                  message: t.id === "notes"
+                    ? "🔒 Study Notes is a Premium feature. Upgrade to unlock comprehensive revision notes."
+                    : "🔒 Practice Mode is a Premium feature. Upgrade to unlock full practice access."
                 });
                 return;
               }
@@ -676,8 +678,10 @@ function MainDashboard({ user, onLogout }) {
 
               {!dashboardLoading && tab === "notes" && (
                 <NotesScreen
+                  isPremium={isPremium}
                   notes={notes}
                   onAskAi={handleAskAi}
+                  onNavigatePayments={() => setTab("payments")}
                   onSaveNote={handleSaveNote}
                   saving={savingNote}
                   subjects={subjects}
