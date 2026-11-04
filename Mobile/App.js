@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
+  BackHandler,
   Modal,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
+  ToastAndroid,
   TouchableOpacity,
   View
 } from "react-native";
@@ -814,7 +817,7 @@ function MainDashboard({ user, onLogout }) {
 }
 
 class ErrorBoundary extends React.Component {
-  state = { hasError: false, error: null };
+  state = { hasError: false, error: null, showDetails: false };
 
   static getDerivedStateFromError(error) {
     return { hasError: true, error };
@@ -828,15 +831,27 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.background, justifyContent: "center", alignItems: "center", padding: SPACING.xl }}>
-          <Icon name="alert-circle-outline" size={56} color={COLORS.danger} />
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onLongPress={() => this.setState({ showDetails: !this.state.showDetails })}
+          >
+            <Icon name="alert-circle-outline" size={56} color={COLORS.danger} />
+          </TouchableOpacity>
           <Text style={{ fontSize: 18, fontWeight: "900", color: COLORS.text, marginTop: SPACING.md, textAlign: "center" }}>
             Something went wrong
           </Text>
-          <Text style={{ fontSize: 13, color: COLORS.textMuted, marginTop: SPACING.xs, textAlign: "center", marginBottom: SPACING.xl, lineHeight: 18 }}>
+          <Text style={{ fontSize: 13, color: COLORS.textMuted, marginTop: SPACING.xs, textAlign: "center", marginBottom: SPACING.lg, lineHeight: 18 }}>
             An unexpected error occurred in this screen. You can reload the app to continue practicing.
           </Text>
+          {this.state.showDetails && this.state.error && (
+            <ScrollView style={{ maxHeight: 120, width: "100%", backgroundColor: COLORS.surface, padding: SPACING.sm, borderRadius: RADIUS.sm, marginBottom: SPACING.lg }}>
+              <Text style={{ fontSize: 11, color: COLORS.danger, fontFamily: Platform.OS === "android" ? "monospace" : "Courier" }}>
+                {String(this.state.error?.message || this.state.error)}
+              </Text>
+            </ScrollView>
+          )}
           <TouchableOpacity
-            onPress={() => this.setState({ hasError: false, error: null })}
+            onPress={() => this.setState({ hasError: false, error: null, showDetails: false })}
             style={{ backgroundColor: COLORS.primary, paddingHorizontal: SPACING.xl, paddingVertical: SPACING.md, borderRadius: RADIUS.md }}
           >
             <Text style={{ color: COLORS.onPrimary, fontWeight: "800", fontSize: 15 }}>
