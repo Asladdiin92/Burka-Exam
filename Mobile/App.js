@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Header } from "./src/components/Header.js";
@@ -679,6 +679,43 @@ function MainDashboard({ user, onLogout }) {
   );
 }
 
+class ErrorBoundary extends React.Component {
+  state = { hasError: false, error: null };
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("ErrorBoundary caught:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.background, justifyContent: "center", alignItems: "center", padding: SPACING.xl }}>
+          <Icon name="alert-circle-outline" size={56} color={COLORS.danger} />
+          <Text style={{ fontSize: 18, fontWeight: "900", color: COLORS.text, marginTop: SPACING.md, textAlign: "center" }}>
+            Something went wrong
+          </Text>
+          <Text style={{ fontSize: 13, color: COLORS.textMuted, marginTop: SPACING.xs, textAlign: "center", marginBottom: SPACING.xl, lineHeight: 18 }}>
+            An unexpected error occurred in this screen. You can reload the app to continue practicing.
+          </Text>
+          <TouchableOpacity
+            onPress={() => this.setState({ hasError: false, error: null })}
+            style={{ backgroundColor: COLORS.primary, paddingHorizontal: SPACING.xl, paddingVertical: SPACING.md, borderRadius: RADIUS.md }}
+          >
+            <Text style={{ color: COLORS.onPrimary, fontWeight: "800", fontSize: 15 }}>
+              Try Again
+            </Text>
+          </TouchableOpacity>
+        </SafeAreaView>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 export default function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -699,22 +736,30 @@ export default function App() {
 
   if (loading) {
     return (
-      <View style={styles.loadingContainer}>
-        <View style={styles.loadingLogo}>
-          <Text style={styles.loadingLogoText}>E</Text>
+      <SafeAreaProvider>
+        <View style={styles.loadingContainer}>
+          <View style={styles.loadingLogo}>
+            <Text style={styles.loadingLogoText}>E</Text>
+          </View>
+          <Text style={styles.loadingBrand}>
+            Ethio<Text style={{ color: COLORS.primary }}>Prep</Text>
+          </Text>
+          <ActivityIndicator color={COLORS.primary} style={{ marginTop: SPACING.lg }} />
         </View>
-        <Text style={styles.loadingBrand}>
-          Ethio<Text style={{ color: COLORS.primary }}>Prep</Text>
-        </Text>
-        <ActivityIndicator color={COLORS.primary} style={{ marginTop: SPACING.lg }} />
-      </View>
+      </SafeAreaProvider>
     );
   }
 
-  return user ? (
-    <MainDashboard onLogout={handleLogout} user={user} />
-  ) : (
-    <AuthScreen onLoginSuccess={setUser} />
+  return (
+    <SafeAreaProvider>
+      <ErrorBoundary>
+        {user ? (
+          <MainDashboard onLogout={handleLogout} user={user} />
+        ) : (
+          <AuthScreen onLoginSuccess={setUser} />
+        )}
+      </ErrorBoundary>
+    </SafeAreaProvider>
   );
 }
 

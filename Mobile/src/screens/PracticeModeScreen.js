@@ -59,10 +59,7 @@ export function PracticeModeScreen({
   const bottomInset = Math.max(insets.bottom, Platform.OS === "android" ? 28 : 16);
   // Setup state
   const [sessionActive, setSessionActive] = useState(false);
-
-  useEffect(() => {
-    onSessionActiveChange?.(sessionActive && !sessionCompleted);
-  }, [sessionActive, sessionCompleted, onSessionActiveChange]);
+  const [sessionCompleted, setSessionCompleted] = useState(false);
   const [loadingQuestions, setLoadingQuestions] = useState(false);
   const [selectedSubjectId, setSelectedSubjectId] = useState("");
   const [selectedExamId, setSelectedExamId] = useState("");
@@ -87,7 +84,6 @@ export function PracticeModeScreen({
   const [zoomedImage, setZoomedImage] = useState(null);
 
   // Result state
-  const [sessionCompleted, setSessionCompleted] = useState(false);
   const [resultsSummary, setResultsSummary] = useState(null);
   const [reviewFilter, setReviewFilter] = useState("all"); // 'all' | 'mistakes' | 'skipped'
 
@@ -95,6 +91,11 @@ export function PracticeModeScreen({
   const timerRef = useRef(null);
   const qStartTimeRef = useRef(Date.now());
   const paletteScrollRef = useRef(null);
+
+  // Notify parent of active practice session to hide global navigation/headers
+  useEffect(() => {
+    onSessionActiveChange?.(sessionActive && !sessionCompleted);
+  }, [sessionActive, sessionCompleted, onSessionActiveChange]);
 
   // Active question memo
   const currentQuestion = questions[currentIndex] || null;
