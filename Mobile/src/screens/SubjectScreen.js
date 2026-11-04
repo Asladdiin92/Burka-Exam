@@ -45,7 +45,8 @@ export function SubjectScreen({
   onNavigatePayments,
   onSaveNote,
   savingNote,
-  user
+  user,
+  isPremium = false
 }) {
   const [examViewMode, setExamViewMode] = useState("year"); // "year" | "chapter"
   const [selectedExamYearIndex, setSelectedExamYearIndex] = useState(0);
@@ -478,12 +479,15 @@ export function SubjectScreen({
 
                     {/* Option to start full exam */}
                     <Button
+                      icon={activeExam.accessLevel === "premium" && !isPremium ? "lock-closed" : undefined}
                       loading={loadingExamId === activeExam._id}
-                      onPress={() => onStartExam(activeExam)}
+                      onPress={() => activeExam.accessLevel === "premium" && !isPremium && onNavigatePayments ? onNavigatePayments() : onStartExam(activeExam)}
                       style={styles.fullExamBtn}
-                      variant="outline"
+                      variant={activeExam.accessLevel === "premium" && !isPremium ? "secondary" : "outline"}
                     >
-                      Practice Full {activeYear} Exam ({activeExam.questionIds?.length || 0} Qs)
+                      {activeExam.accessLevel === "premium" && !isPremium
+                        ? `Unlock Practice (${activeExam.questionIds?.length || 0} Qs)`
+                        : `Practice Full ${activeYear} Exam (${activeExam.questionIds?.length || 0} Qs)`}
                     </Button>
 
                     {activeExam.accessLevel === "premium" && (
@@ -566,13 +570,15 @@ export function SubjectScreen({
                             <TouchableOpacity
                               activeOpacity={0.8}
                               disabled={isChLoading}
-                              onPress={() => onStartExam(activeExam, { chapterId: ch.chapterId })}
+                              onPress={() => activeExam.accessLevel === "premium" && !isPremium && onNavigatePayments ? onNavigatePayments() : onStartExam(activeExam, { chapterId: ch.chapterId })}
                               style={styles.chapterStartBtn}
                             >
-                              <Icon color={COLORS.onPrimary} name="play" size={13} />
+                              <Icon color={COLORS.onPrimary} name={activeExam.accessLevel === "premium" && !isPremium ? "lock-closed" : "play"} size={13} />
                               <Text style={styles.chapterStartBtnText}>
                                 {isChLoading
                                   ? "Opening..."
+                                  : activeExam.accessLevel === "premium" && !isPremium
+                                  ? "Unlock"
                                   : `Practise ${ch.questionCount ? `(${ch.questionCount} Qs)` : "Unit"}`}
                               </Text>
                             </TouchableOpacity>
@@ -671,13 +677,15 @@ export function SubjectScreen({
                             <TouchableOpacity
                               activeOpacity={0.8}
                               disabled={isMatchLoading}
-                              onPress={() => onStartExam(match.exam, { chapterId: match.chapterId || chId })}
+                              onPress={() => match.exam?.accessLevel === "premium" && !isPremium && onNavigatePayments ? onNavigatePayments() : onStartExam(match.exam, { chapterId: match.chapterId || chId })}
                               style={styles.chapterStartBtn}
                             >
-                              <Icon color={COLORS.onPrimary} name="play" size={12} />
+                              <Icon color={COLORS.onPrimary} name={match.exam?.accessLevel === "premium" && !isPremium ? "lock-closed" : "play"} size={12} />
                               <Text style={styles.chapterStartBtnText}>
                                 {isMatchLoading
                                   ? "Opening..."
+                                  : match.exam?.accessLevel === "premium" && !isPremium
+                                  ? "Unlock"
                                   : `Practise ${match.year}`}
                               </Text>
                             </TouchableOpacity>

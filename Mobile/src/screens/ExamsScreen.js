@@ -51,7 +51,7 @@ function getExamTitleBase(exam) {
   return cleaned || exam.subjectId?.name || raw || "Entrance Exam";
 }
 
-export function ExamsScreen({ exams = [], onStartExam, loadingExamId, user }) {
+export function ExamsScreen({ exams = [], onStartExam, loadingExamId, user, isPremium = false, onNavigatePayments }) {
   const userStream = user?.stream || "natural";
   const isNatural = userStream === "natural";
 
@@ -171,7 +171,8 @@ export function ExamsScreen({ exams = [], onStartExam, loadingExamId, user }) {
   }, [yearGroups]);
 
   function renderExamCard(item, showYearBadge = false) {
-    const isPremium = item.accessLevel === "premium";
+    const isExamPremium = item.accessLevel === "premium";
+    const isLocked = isExamPremium && !isPremium;
     const year = getYear(item);
     const examChapters = getExamChapters(item);
 
@@ -182,16 +183,19 @@ export function ExamsScreen({ exams = [], onStartExam, loadingExamId, user }) {
             <View
               style={[
                 styles.accessBadge,
-                isPremium ? styles.premiumBadge : styles.freeBadge
+                isExamPremium ? styles.premiumBadge : styles.freeBadge
               ]}
             >
+              {isExamPremium && (
+                <Icon name="lock-closed" size={11} color={COLORS.gold} style={{ marginRight: 3 }} />
+              )}
               <Text
                 style={[
                   styles.accessBadgeText,
-                  isPremium ? styles.premiumBadgeText : styles.freeBadgeText
+                  isExamPremium ? styles.premiumBadgeText : styles.freeBadgeText
                 ]}
               >
-                {isPremium ? "PREMIUM" : "FREE ACCESS"}
+                {isExamPremium ? "PREMIUM" : "FREE ACCESS"}
               </Text>
             </View>
 
@@ -236,10 +240,10 @@ export function ExamsScreen({ exams = [], onStartExam, loadingExamId, user }) {
                 return (
                   <TouchableOpacity
                     key={ch.id || idx}
-                    onPress={() => onStartExam(item, { chapterId: ch.id })}
+                    onPress={() => isLocked && onNavigatePayments ? onNavigatePayments() : onStartExam(item, { chapterId: ch.id })}
                     style={styles.cardChapterBtn}
                   >
-                    <Icon color={COLORS.primary} name="play-circle-outline" size={13} />
+                    <Icon color={isLocked ? COLORS.gold : COLORS.primary} name={isLocked ? "lock-closed" : "play-circle-outline"} size={13} />
                     <Text style={styles.cardChapterBtnText}>
                       {gPrefix ? `${gPrefix} • ` : ""}{shortUnit}
                       {ch.questionCount ? ` (${ch.questionCount} Qs)` : ""}
@@ -261,12 +265,15 @@ export function ExamsScreen({ exams = [], onStartExam, loadingExamId, user }) {
         </View>
 
         <Button
+          icon={isLocked ? "lock-closed" : undefined}
           loading={loadingExamId === item._id}
-          onPress={() => onStartExam(item)}
+          onPress={() => isLocked && onNavigatePayments ? onNavigatePayments() : onStartExam(item)}
           style={styles.startBtn}
-          variant={isPremium ? "secondary" : "primary"}
+          variant={isLocked ? "secondary" : "primary"}
         >
-          Practice Full {year} E.C. Exam ({item.questionIds?.length || 0} Qs)
+          {isLocked
+            ? `Unlock Practice (${item.questionIds?.length || 0} Qs)`
+            : `Practice Full ${year} E.C. Exam (${item.questionIds?.length || 0} Qs)`}
         </Button>
       </Card>
     );

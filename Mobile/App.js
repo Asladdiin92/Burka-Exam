@@ -30,6 +30,7 @@ import {
   requestWithOfflineQueue
 } from "./src/services/api.js";
 import { getQueue, queueMutation } from "./src/services/offlineQueue.js";
+import { isUserPremium } from "./src/utils/auth.js";
 import { COLORS, RADIUS, SPACING } from "./src/utils/theme.js";
 
 const TABS = [
@@ -72,6 +73,7 @@ function MainDashboard({ user, onLogout }) {
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [aiContext, setAiContext] = useState(null);
   const [isPracticeActive, setIsPracticeActive] = useState(false);
+  const isPremium = isUserPremium(currentUser, payments);
 
   function handleAskAi(ctx) {
     if (activeExamSession) {
@@ -163,6 +165,14 @@ function MainDashboard({ user, onLogout }) {
 
   async function handleStartExam(examItem, options = {}) {
     if (!examItem) return;
+    if (examItem.accessLevel === "premium" && !isPremium) {
+      setTab("payments");
+      setNotice({
+        type: "info",
+        message: "🔒 Premium access required. Please upgrade your account to practice entrance exams."
+      });
+      return;
+    }
     if (options?.showAnswerMode) {
       setShowAnswerMode(options.showAnswerMode);
     }
@@ -449,21 +459,46 @@ function MainDashboard({ user, onLogout }) {
     <View style={styles.tabBar}>
       {TABS.map((t) => {
         const active = tab === t.id;
+        const isLockedTab = !isPremium && t.id === "practice";
         return (
           <TouchableOpacity
             accessibilityLabel={t.label}
             accessibilityRole="tab"
             accessibilityState={{ selected: active }}
             key={t.id}
-            onPress={() => { setSelectedSubject(null); setTab(t.id); }}
+            onPress={() => {
+              setSelectedSubject(null);
+              if (isLockedTab) {
+                setTab("payments");
+                setNotice({
+                  type: "info",
+                  message: "🔒 Practice Mode is a Premium feature. Upgrade to unlock full practice access."
+                });
+                return;
+              }
+              setTab(t.id);
+            }}
             style={[styles.tabItem, active && styles.activeTabItem]}
           >
-            <Icon
-              color={active ? COLORS.onPrimary : COLORS.textMuted}
-              name={active ? t.icon : `${t.icon}-outline`}
-              size={18}
-            />
-            <Text style={[styles.tabText, active && styles.activeTabText]}>
+            <View style={{ position: "relative" }}>
+              <Icon
+                color={active ? COLORS.onPrimary : isLockedTab ? COLORS.gold : COLORS.textMuted}
+                name={isLockedTab ? "lock-closed" : active ? t.icon : `${t.icon}-outline`}
+                size={18}
+              />
+              {isLockedTab && (
+                <View style={styles.lockBadgeDot}>
+                  <Icon name="lock-closed" size={7} color="#fff" />
+                </View>
+              )}
+            </View>
+            <Text
+              style={[
+                styles.tabText,
+                active && styles.activeTabText,
+                isLockedTab && { color: COLORS.gold, fontWeight: "800" }
+              ]}
+            >
               {t.label}
             </Text>
           </TouchableOpacity>
@@ -560,7 +595,9 @@ function MainDashboard({ user, onLogout }) {
             ) : (
               <PracticeModeScreen
                 exams={exams}
+                isPremium={isPremium}
                 onAskAi={handleAskAi}
+                onNavigatePayments={() => setTab("payments")}
                 onSaveProgress={handleSaveProgress}
                 onSessionActiveChange={setIsPracticeActive}
                 subjects={subjects}
@@ -605,6 +642,7 @@ function MainDashboard({ user, onLogout }) {
               {!dashboardLoading && selectedSubject ? (
                 <SubjectScreen
                   exams={exams}
+                  isPremium={isPremium}
                   loadingExamId={loadingExamId}
                   onAskAi={handleAskAi}
                   onBack={() => setSelectedSubject(null)}
@@ -628,7 +666,9 @@ function MainDashboard({ user, onLogout }) {
               {!dashboardLoading && tab === "exams" && (
                 <ExamsScreen
                   exams={exams}
+                  isPremium={isPremium}
                   loadingExamId={loadingExamId}
+                  onNavigatePayments={() => setTab("payments")}
                   onStartExam={handlePromptStartExam}
                   user={currentUser}
                 />
@@ -666,7 +706,9 @@ function MainDashboard({ user, onLogout }) {
 
               {tab === "profile" && (
                 <ProfileScreen
+                  isPremium={isPremium}
                   onLogout={onLogout}
+                  onNavigatePayments={() => setTab("payments")}
                   onUpdateUser={setCurrentUser}
                   user={currentUser}
                 />
@@ -791,6 +833,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: 3,
     borderRadius: RADIUS.sm
+  },
+  lockBadgeDot: {
+    position: "absolute",
+    top: -4,
+    right: -7,
+    backgroundColor: COLORS.gold,
+    borderRadius: 6,
+    width: 12,
+    height: 12,
+    alignItems: "center",
+    justifyContent: "center"
   },
   activeTabItem: {
     backgroundColor: COLORS.primary

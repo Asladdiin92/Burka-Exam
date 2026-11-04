@@ -51,6 +51,8 @@ export function PracticeModeScreen({
   exams = [],
   subjects = [],
   user,
+  isPremium = false,
+  onNavigatePayments,
   onAskAi,
   onSaveProgress,
   onSessionActiveChange
@@ -641,6 +643,56 @@ export function PracticeModeScreen({
       correctAnswer: review?.correctAnswer || q.correctAnswer,
       explanation: review?.explanation || q.explanation
     });
+  }
+
+  // --------------------------------------------------------------------------
+  // RENDER: LOCKED PAYWALL SCREEN FOR FREE USERS
+  // --------------------------------------------------------------------------
+  if (!isPremium) {
+    return (
+      <ScrollView contentContainerStyle={[styles.setupScrollPad, { paddingBottom: bottomInset + 40 }]} style={styles.container}>
+        <View style={styles.lockedHeroCard}>
+          <View style={styles.lockedHeroIcon}>
+            <Icon color={COLORS.gold} name="lock-closed" size={38} />
+          </View>
+          <View style={styles.lockedPill}>
+            <Text style={styles.lockedPillText}>PREMIUM ACCESS REQUIRED</Text>
+          </View>
+          <Text style={styles.lockedHeroTitle}>Practice Mode is Locked</Text>
+          <Text style={styles.lockedHeroSub}>
+            Interactive Practice with instant answers, topic drills, and detailed step-by-step solutions is exclusive to Premium students.
+          </Text>
+
+          <View style={styles.lockedBenefitList}>
+            <View style={styles.lockedBenefitRow}>
+              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 8, marginTop: 2 }} />
+              <Text style={styles.lockedBenefitText}>All 3,750+ Grade 9–12 ESSLCE entrance exam questions</Text>
+            </View>
+            <View style={styles.lockedBenefitRow}>
+              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 8, marginTop: 2 }} />
+              <Text style={styles.lockedBenefitText}>Instant answer verification & pedagogical solutions</Text>
+            </View>
+            <View style={styles.lockedBenefitRow}>
+              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 8, marginTop: 2 }} />
+              <Text style={styles.lockedBenefitText}>Unit-by-unit and topic-by-topic practice drills</Text>
+            </View>
+            <View style={styles.lockedBenefitRow}>
+              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 8, marginTop: 2 }} />
+              <Text style={styles.lockedBenefitText}>Offline practice mode with zero mobile data</Text>
+            </View>
+          </View>
+
+          <TouchableOpacity
+            activeOpacity={0.85}
+            onPress={onNavigatePayments}
+            style={styles.lockedUpgradeBtn}
+          >
+            <Icon name="card-outline" size={20} color="#fff" style={{ marginRight: 8 }} />
+            <Text style={styles.lockedUpgradeBtnText}>Unlock Practice Mode (200 ETB)</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    );
   }
 
   // --------------------------------------------------------------------------
@@ -2336,5 +2388,85 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "800",
     color: COLORS.primary
+  },
+  lockedHeroCard: {
+    backgroundColor: COLORS.surface,
+    borderRadius: RADIUS.lg,
+    padding: SPACING.xl,
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "rgba(240, 160, 48, 0.35)",
+    elevation: 3,
+    marginTop: SPACING.md
+  },
+  lockedHeroIcon: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    backgroundColor: "rgba(240, 160, 48, 0.14)",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: SPACING.md
+  },
+  lockedPill: {
+    backgroundColor: "rgba(240, 160, 48, 0.18)",
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: RADIUS.sm,
+    marginBottom: SPACING.sm
+  },
+  lockedPillText: {
+    fontSize: 11,
+    fontWeight: "900",
+    color: COLORS.gold,
+    letterSpacing: 0.5
+  },
+  lockedHeroTitle: {
+    fontSize: 22,
+    fontWeight: "900",
+    color: COLORS.text,
+    textAlign: "center",
+    marginBottom: SPACING.xs
+  },
+  lockedHeroSub: {
+    fontSize: 13,
+    color: COLORS.textMuted,
+    textAlign: "center",
+    lineHeight: 19,
+    marginBottom: SPACING.lg
+  },
+  lockedBenefitList: {
+    width: "100%",
+    backgroundColor: COLORS.background,
+    borderRadius: RADIUS.md,
+    padding: SPACING.md,
+    marginBottom: SPACING.lg,
+    gap: 10
+  },
+  lockedBenefitRow: {
+    flexDirection: "row",
+    alignItems: "flex-start"
+  },
+  lockedBenefitText: {
+    fontSize: 13,
+    color: COLORS.text,
+    fontWeight: "600",
+    flex: 1,
+    lineHeight: 18
+  },
+  lockedUpgradeBtn: {
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: COLORS.primary,
+    paddingVertical: 14,
+    borderRadius: RADIUS.md,
+    elevation: 2
+  },
+  lockedUpgradeBtnText: {
+    color: COLORS.onPrimary,
+    fontSize: 15,
+    fontWeight: "900"
   }
 });

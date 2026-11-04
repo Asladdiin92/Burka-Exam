@@ -149,6 +149,20 @@ export async function listPublishedExams(request, response) {
 
 export async function getOfflineExamBundle(request, response) {
   try {
+    const isStaff = ["admin", "teacher", "content_manager", "cash_manager"].includes(request.user?.role);
+    const isUserPremium = Boolean(request.user?.isPremium);
+    const hasSubscription = await Subscription.exists({
+      userId: request.user?._id,
+      status: "active",
+      endsAt: { $gt: new Date() }
+    });
+
+    if (!isStaff && !isUserPremium && !hasSubscription) {
+      return response.status(403).json({
+        error: "Offline study bundle is a Premium feature. Please upgrade your account to download exams and study offline."
+      });
+    }
+
     const reqStream = request.query?.stream ? String(request.query.stream).toLowerCase() : null;
     const reqSubjectId = request.query?.subjectId;
 

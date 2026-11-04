@@ -11,7 +11,7 @@ import { COLORS, RADIUS, SPACING } from "../utils/theme.js";
 
 const DEFAULT_TELEGRAM_LINK = "https://t.me/Ethio_student_preparetion";
 
-export function ProfileScreen({ user, onUpdateUser, onLogout }) {
+export function ProfileScreen({ user, isPremium = false, onNavigatePayments, onUpdateUser, onLogout }) {
   const [isEditing, setIsEditing] = useState(false);
   const [isChangingPassword, setIsChangingPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -140,6 +140,10 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
   }
 
   async function handleDownloadOffline() {
+    if (!isPremium) {
+      if (onNavigatePayments) onNavigatePayments();
+      return;
+    }
     setError("");
     setSuccess("");
     setDownloadingOffline(true);
@@ -293,31 +297,72 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
 
       {!isEditing && (
         <View style={styles.card}>
-          <View style={{ flexDirection: "row", alignItems: "center", marginBottom: SPACING.xs }}>
-            <Icon name="cloud-download-outline" size={22} color={COLORS.primary} style={{ marginRight: SPACING.xs }} />
-            <Text style={[styles.title, { marginBottom: 0 }]}>Offline Study & Practice</Text>
+          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: SPACING.xs }}>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <Icon
+                name={isPremium ? "cloud-download-outline" : "lock-closed"}
+                size={22}
+                color={isPremium ? COLORS.primary : COLORS.gold}
+                style={{ marginRight: SPACING.xs }}
+              />
+              <Text style={[styles.title, { marginBottom: 0 }]}>Offline Study & Practice</Text>
+            </View>
+            {!isPremium && (
+              <View style={styles.lockBadgePill}>
+                <Icon name="lock-closed" size={11} color={COLORS.gold} style={{ marginRight: 4 }} />
+                <Text style={styles.lockBadgePillText}>PREMIUM ONLY</Text>
+              </View>
+            )}
           </View>
+
           <Text style={{ fontSize: 13, color: COLORS.textMuted, marginBottom: SPACING.md, lineHeight: 18 }}>
-            Download entrance exam questions, answers, and study notes so you can practice anytime without an active internet connection.
+            {isPremium
+              ? "Download entrance exam questions, answers, and study notes so you can practice anytime without an active internet connection."
+              : "Offline study downloading is exclusive to Premium students. Upgrade your account to download all entrance exam questions, answers, and study notes for offline use with zero mobile data."}
           </Text>
 
-          {offlineStatus ? (
-            <View style={styles.offlineStatusBox}>
-              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 6 }} />
-              <Text style={styles.offlineStatusText}>
-                Ready Offline: {offlineStatus.questionCount} questions across {offlineStatus.examCount} exams cached.
-              </Text>
-            </View>
-          ) : null}
+          {isPremium ? (
+            <>
+              {offlineStatus ? (
+                <View style={styles.offlineStatusBox}>
+                  <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 6 }} />
+                  <Text style={styles.offlineStatusText}>
+                    Ready Offline: {offlineStatus.questionCount} questions across {offlineStatus.examCount} exams cached.
+                  </Text>
+                </View>
+              ) : null}
 
-          <Button
-            loading={downloadingOffline}
-            onPress={handleDownloadOffline}
-            style={styles.offlineButton}
-            icon="cloud-download-outline"
-          >
-            {downloadingOffline ? downloadProgress || "Downloading..." : offlineStatus ? "Update Offline Content" : "Download Offline Content"}
-          </Button>
+              <Button
+                loading={downloadingOffline}
+                onPress={handleDownloadOffline}
+                style={styles.offlineButton}
+                icon="cloud-download-outline"
+              >
+                {downloadingOffline
+                  ? downloadProgress || "Downloading..."
+                  : offlineStatus
+                  ? "Update Offline Content"
+                  : "Download Offline Content"}
+              </Button>
+            </>
+          ) : (
+            <View>
+              <View style={styles.lockedNoticeBox}>
+                <Icon name="lock-closed" size={18} color={COLORS.gold} style={{ marginRight: 8 }} />
+                <Text style={styles.lockedNoticeText}>
+                  Offline download is locked for Free users.
+                </Text>
+              </View>
+              <Button
+                icon="card-outline"
+                onPress={onNavigatePayments}
+                style={styles.offlineButton}
+                variant="secondary"
+              >
+                Unlock Offline Study (Upgrade to Premium)
+              </Button>
+            </View>
+          )}
         </View>
       )}
 
@@ -541,5 +586,37 @@ const styles = StyleSheet.create({
   },
   offlineButton: {
     marginTop: SPACING.xs
+  },
+  lockBadgePill: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(240, 160, 48, 0.14)",
+    borderColor: "rgba(240, 160, 48, 0.35)",
+    borderWidth: 1,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: RADIUS.sm
+  },
+  lockBadgePillText: {
+    color: COLORS.gold,
+    fontSize: 10,
+    fontWeight: "900",
+    letterSpacing: 0.5
+  },
+  lockedNoticeBox: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(240, 160, 48, 0.10)",
+    borderColor: "rgba(240, 160, 48, 0.30)",
+    borderWidth: 1,
+    borderRadius: RADIUS.md,
+    padding: SPACING.sm,
+    marginBottom: SPACING.md
+  },
+  lockedNoticeText: {
+    fontSize: 12,
+    color: COLORS.gold,
+    fontWeight: "700",
+    flex: 1
   }
 });
