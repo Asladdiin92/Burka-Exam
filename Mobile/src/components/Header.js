@@ -26,14 +26,22 @@ export function Header({ user, onLogout, onNavigateProfile, queueCount = 0 }) {
           </Text>
         </View>
       </TouchableOpacity>
-      {queueCount > 0 && (
-        <View style={styles.actions}>
+      <View style={styles.actions}>
+        {queueCount > 0 && (
           <View style={styles.badge}>
             <Icon color={COLORS.warning} name="cloud-upload-outline" size={13} />
             <Text style={styles.badgeText}>{queueCount}</Text>
           </View>
-        </View>
-      )}
+        )}
+        <TouchableOpacity
+          accessibilityLabel="Open navigation drawer"
+          activeOpacity={0.7}
+          onPress={onNavigateProfile}
+          style={styles.menuBtn}
+        >
+          <Icon color={COLORS.text} name="menu-outline" size={24} />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -105,6 +113,16 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: "700",
     color: COLORS.warning
+  },
+  menuBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: RADIUS.md,
+    backgroundColor: COLORS.surface,
+    borderColor: COLORS.border,
+    borderWidth: 1,
+    alignItems: "center",
+    justifyContent: "center"
   },
   logoutBtn: {
     width: TOUCH_TARGET,

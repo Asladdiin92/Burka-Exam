@@ -78,7 +78,7 @@ export function SubjectScreen({
               const res = await request(`/question-bank/subjects/${sId}/chapters`);
               const chs = Array.isArray(res?.chapters) ? res.chapters : [];
               if (chs.length > 0) {
-                AsyncStorage.setItem(cacheKey, JSON.stringify(chs)).catch(() => {});
+                AsyncStorage.setItem(cacheKey, JSON.stringify(chs)).catch(() => { });
               }
               return chs.map((c) => ({
                 ...c,
@@ -96,7 +96,7 @@ export function SubjectScreen({
                     subjectCode: subj.code || ""
                   }));
                 }
-              } catch {}
+              } catch { }
               return [];
             }
           })
@@ -104,7 +104,7 @@ export function SubjectScreen({
         if (active) {
           setSubjectChapters(results.flat());
         }
-      } catch {}
+      } catch { }
     }
     loadDisciplineChapters();
     return () => {
@@ -576,8 +576,8 @@ export function SubjectScreen({
                                 {isChLoading
                                   ? "Opening..."
                                   : activeExam.accessLevel === "premium" && !isPremium
-                                  ? "Unlock"
-                                  : `Practise ${ch.questionCount ? `(${ch.questionCount} Qs)` : "Unit"}`}
+                                    ? "Unlock"
+                                    : `Practise ${ch.questionCount ? `(${ch.questionCount} Qs)` : "Unit"}`}
                               </Text>
                             </TouchableOpacity>
                           </View>
@@ -650,54 +650,54 @@ export function SubjectScreen({
                       </View>
 
                       <Text style={styles.chapterTitle}>{ch.title}</Text>
-                  {ch.description ? (
-                    <Text numberOfLines={2} style={styles.chapterDesc}>
-                      {ch.description}
-                    </Text>
-                  ) : null}
+                      {ch.description ? (
+                        <Text numberOfLines={2} style={styles.chapterDesc}>
+                          {ch.description}
+                        </Text>
+                      ) : null}
 
-                  {chapterYearMatches.length > 0 ? (
-                    <View style={styles.chapterYearsList}>
-                      {chapterYearMatches.map((match) => {
-                        const isMatchLoading = loadingExamId === `${match.exam._id}_${chId}`;
-                        return (
-                          <View key={match.exam._id} style={styles.chapterYearRow}>
-                            <View style={styles.chapterYearInfo}>
-                              <Text style={styles.chapterYearLabel}>
-                                {match.year} National Exam
-                              </Text>
-                              <Text style={styles.chapterYearCount}>
-                                {match.questionCount !== null
-                                  ? `${match.questionCount} questions in this chapter`
-                                  : `${match.exam.title}`}
-                              </Text>
-                            </View>
-                            <TouchableOpacity
-                              activeOpacity={0.8}
-                              disabled={isMatchLoading}
-                              onPress={() => match.exam?.accessLevel === "premium" && !isPremium && onNavigatePayments ? onNavigatePayments() : onStartExam(match.exam, { chapterId: match.chapterId || chId })}
-                              style={styles.chapterStartBtn}
-                            >
-                              <Icon color={COLORS.onPrimary} name={match.exam?.accessLevel === "premium" && !isPremium ? "lock-closed" : "play"} size={12} />
-                              <Text style={styles.chapterStartBtnText}>
-                                {isMatchLoading
-                                  ? "Opening..."
-                                  : match.exam?.accessLevel === "premium" && !isPremium
-                                  ? "Unlock"
-                                  : `Practise ${match.year}`}
-                              </Text>
-                            </TouchableOpacity>
-                          </View>
-                        );
-                      })}
-                    </View>
-                  ) : (
-                    <View style={styles.chapterEmptyExams}>
-                      <Text style={styles.chapterEmptyExamsText}>
-                        Questions from this unit are included in full exam papers under "By Year".
-                      </Text>
-                    </View>
-                  )}
+                      {chapterYearMatches.length > 0 ? (
+                        <View style={styles.chapterYearsList}>
+                          {chapterYearMatches.map((match) => {
+                            const isMatchLoading = loadingExamId === `${match.exam._id}_${chId}`;
+                            return (
+                              <View key={match.exam._id} style={styles.chapterYearRow}>
+                                <View style={styles.chapterYearInfo}>
+                                  <Text style={styles.chapterYearLabel}>
+                                    {match.year} National Exam
+                                  </Text>
+                                  <Text style={styles.chapterYearCount}>
+                                    {match.questionCount !== null
+                                      ? `${match.questionCount} questions in this chapter`
+                                      : `${match.exam.title}`}
+                                  </Text>
+                                </View>
+                                <TouchableOpacity
+                                  activeOpacity={0.8}
+                                  disabled={isMatchLoading}
+                                  onPress={() => match.exam?.accessLevel === "premium" && !isPremium && onNavigatePayments ? onNavigatePayments() : onStartExam(match.exam, { chapterId: match.chapterId || chId })}
+                                  style={styles.chapterStartBtn}
+                                >
+                                  <Icon color={COLORS.onPrimary} name={match.exam?.accessLevel === "premium" && !isPremium ? "lock-closed" : "play"} size={12} />
+                                  <Text style={styles.chapterStartBtnText}>
+                                    {isMatchLoading
+                                      ? "Opening..."
+                                      : match.exam?.accessLevel === "premium" && !isPremium
+                                        ? "Unlock"
+                                        : `Practise ${match.year}`}
+                                  </Text>
+                                </TouchableOpacity>
+                              </View>
+                            );
+                          })}
+                        </View>
+                      ) : (
+                        <View style={styles.chapterEmptyExams}>
+                          <Text style={styles.chapterEmptyExamsText}>
+                            Questions from this unit are included in full exam papers under "By Year".
+                          </Text>
+                        </View>
+                      )}
                     </Card>
                   );
                 })}

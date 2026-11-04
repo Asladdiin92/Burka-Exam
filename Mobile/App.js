@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Modal,
@@ -12,6 +12,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Header } from "./src/components/Header.js";
+import { ProfileDrawer } from "./src/components/ProfileDrawer.js";
 import { SkeletonCard } from "./src/components/Skeleton.js";
 import { Icon } from "./src/components/Icon.js";
 import { Notice } from "./src/components/Notice.js";
@@ -39,8 +40,7 @@ const TABS = [
   { id: "notes", label: "Study Notes", icon: "book" },
   { id: "ai", label: "AI Tutor", icon: "sparkles" },
   { id: "practice", label: "Practice", icon: "flash" },
-  { id: "payments", label: "Pay", icon: "card" },
-  { id: "profile", label: "Profile", icon: "person" }
+  { id: "payments", label: "Pay", icon: "card" }
 ];
 
 function generateId() {
@@ -74,6 +74,89 @@ function MainDashboard({ user, onLogout }) {
   const [aiContext, setAiContext] = useState(null);
   const [isPracticeActive, setIsPracticeActive] = useState(false);
   const isPremium = isUserPremium(currentUser, payments);
+  const [profileDrawerOpen, setProfileDrawerOpen] = useState(false);
+  const lastBackPressedRef = useRef(0);
+
+  // Android hardware back button handler
+  useEffect(() => {
+    const onBackPress = () => {
+      // 1. If right-side Profile Drawer is open, close it
+      if (profileDrawerOpen) {
+        setProfileDrawerOpen(false);
+        return true;
+      }
+
+      // 2. If Exam Prompt modal is open, close it
+      if (pendingExamPrompt) {
+        setPendingExamPrompt(null);
+        return true;
+      }
+
+      // 3. If Active Exam session is open, exit to main
+      if (activeExamSession) {
+        setActiveExamSession(null);
+        return true;
+      }
+
+      // 4. If viewing a Subject, close subject back to home
+      if (selectedSubject) {
+        setSelectedSubject(null);
+        return true;
+      }
+
+      // 5. If on any Full-Screen tab (tab !== "home"), return to Home
+      if (tab !== "home") {
+        setTab("home");
+        return true;
+      }
+
+      // 6. We are on Home Screen: double-press back to exit app
+      const now = Date.now();
+      if (now - lastBackPressedRef.current < 2000) {
+        BackHandler.exitApp();
+        return true;
+      }
+
+      lastBackPressedRef.current = now;
+      if (Platform.OS === "android") {
+        ToastAndroid.show("Press back again to exit", ToastAndroid.SHORT);
+      }
+      return true;
+    };
+
+    const subscription = BackHandler.addEventListener("hardwareBackPress", onBackPress);
+    return () => subscription.remove();
+  }, [profileDrawerOpen, pendingExamPrompt, activeExamSession, selectedSubject, tab]);
+
+  const renderFullScreenBar = (title) => (
+    <View style={styles.fullScreenTopBar}>
+      <TouchableOpacity
+        accessibilityLabel="Back to Home"
+        activeOpacity={0.7}
+        onPress={() => {
+          setSelectedSubject(null);
+          setTab("home");
+        }}
+        style={styles.fullScreenBackBtn}
+      >
+        <Icon color={COLORS.primaryDark} name="arrow-back" size={18} />
+        <Text style={styles.fullScreenBackText}>Home</Text>
+      </TouchableOpacity>
+
+      <Text numberOfLines={1} style={styles.fullScreenTitle}>
+        {title}
+      </Text>
+
+      <TouchableOpacity
+        accessibilityLabel="Open profile drawer"
+        activeOpacity={0.7}
+        onPress={() => setProfileDrawerOpen(true)}
+        style={styles.fullScreenProfileBtn}
+      >
+        <Icon color={COLORS.text} name="menu-outline" size={22} />
+      </TouchableOpacity>
+    </View>
+  );
 
   function handleAskAi(ctx) {
     if (activeExamSession) {
@@ -573,28 +656,136 @@ function MainDashboard({ user, onLogout }) {
         </View>
       </Modal>
 
-      {(tab === "ai" || tab === "practice") && !activeExamSession ? (
+      {/* Right-Side Profile Navigation Drawer */}
+      <ProfileDrawer
+        isPremium={isPremium}
+        onClose={() => setProfileDrawerOpen(false)}
+        onLogout={onLogout}
+        onNavigatePayments={() => {
+          setProfileDrawerOpen(false);
+          setTab("payments");
+        }}
+        onUpdateUser={setCurrentUser}
+        user={currentUser}
+        visible={profileDrawerOpen}
+      />
+
+      {/* 1. ACTIVE EXAM SESSION (Full-Screen) */}
+      {activeExamSession ? (
         <View style={styles.flexContainer}>
-          {!(tab === "practice" && isPracticeActive) && (
-            <View style={{ paddingHorizontal: SPACING.lg, paddingTop: SPACING.md }}>
-              <Header
-                onLogout={onLogout}
-                onNavigateProfile={() => setTab("profile")}
-                queueCount={queueCount}
-                user={currentUser}
-              />
+          <ExamActiveScreen
+            examData={activeExamSession}
+            onAskAi={handleAskAi}
+            onChangeShowAnswerMode={setShowAnswerMode}
+            onExit={() => setActiveExamSession(null)}
+            onSubmit={handleSubmitExam}
+            showAnswerMode={showAnswerMode}
+            submitting={submittingExam}
+          />
+        </View>
+      ) : selectedSubject ? (
+        /* 2. SUBJECT CHAPTERS & PRACTICE (Full-Screen) */
+        <View style={styles.flexContainer}>
+          <SubjectScreen
+            exams={exams}
+            isPremium={isPremium}
+            loadingExamId={loadingExamId}
+            onAskAi={handleAskAi}
+            onBack={() => setSelectedSubject(null)}
+            onNavigatePayments={() => {
+              setSelectedSubject(null);
+              setTab("payments");
+            }}
+            onStartExam={handlePromptStartExam}
+            subject={selectedSubject}
+            subjects={subjects}
+            user={currentUser}
+          />
+        </View>
+      ) : tab === "home" ? (
+        /* 3. HOME SCREEN (With Top Header & Top Navigation Bar) */
+        <ScrollView contentContainerStyle={styles.container}>
+          <Header
+            onLogout={onLogout}
+            onNavigateProfile={() => setProfileDrawerOpen(true)}
+            queueCount={queueCount}
+            user={currentUser}
+          />
+
+          <Notice message={notice?.message} type={notice?.type} />
+
+          {renderTabBar()}
+
+          {dashboardLoading ? (
+            <View accessibilityLabel="Loading content">
+              <SkeletonCard lines={2} />
+              <SkeletonCard lines={3} />
+              <SkeletonCard lines={2} />
+            </View>
+          ) : (
+            <HomeScreen
+              onSelectSubject={setSelectedSubject}
+              subjects={subjects}
+              user={currentUser}
+            />
+          )}
+        </ScrollView>
+      ) : (
+        /* 4. FULL-SCREEN SCREENS (Exams, Study Notes, AI Tutor, Practice, Pay) - Top Bar Hidden */
+        <View style={styles.flexContainer}>
+          {!(tab === "practice" && isPracticeActive) &&
+            renderFullScreenBar(
+              tab === "exams"
+                ? "Exams & Past Papers"
+                : tab === "notes"
+                ? "Study Notes"
+                : tab === "ai"
+                ? "AI Tutor"
+                : tab === "practice"
+                ? "Practice Mode"
+                : "Subscription & Pay"
+            )}
+
+          {notice && (
+            <View style={{ paddingHorizontal: SPACING.md, paddingTop: SPACING.xs }}>
               <Notice message={notice?.message} type={notice?.type} />
-              {renderTabBar()}
             </View>
           )}
+
           <View style={{ flex: 1 }}>
-            {tab === "ai" ? (
+            {tab === "exams" && (
+              <ExamsScreen
+                exams={exams}
+                isPremium={isPremium}
+                loadingExamId={loadingExamId}
+                onNavigatePayments={() => setTab("payments")}
+                onStartExam={handlePromptStartExam}
+                user={currentUser}
+              />
+            )}
+
+            {tab === "notes" && (
+              <NotesScreen
+                isPremium={isPremium}
+                notes={notes}
+                onAskAi={handleAskAi}
+                onNavigatePayments={() => setTab("payments")}
+                onSaveNote={handleSaveNote}
+                saving={savingNote}
+                subjects={subjects}
+                user={currentUser}
+              />
+            )}
+
+            {tab === "ai" && (
               <ChatTutorScreen
                 initialContext={aiContext}
                 onClearContext={() => setAiContext(null)}
                 user={currentUser}
               />
-            ) : (
+            )}
+
+            {tab === "practice" && (
               <PracticeModeScreen
                 exams={exams}
                 isPremium={isPremium}
@@ -606,122 +797,19 @@ function MainDashboard({ user, onLogout }) {
                 user={currentUser}
               />
             )}
+
+            {tab === "payments" && (
+              <PaymentScreen
+                onSubmitPayment={handleSubmitPayment}
+                payments={payments}
+                submitting={submittingPayment}
+                user={currentUser}
+              />
+            )}
           </View>
         </View>
-      ) : (
-        <ScrollView contentContainerStyle={styles.container}>
-          <Header
-            onLogout={onLogout}
-            onNavigateProfile={() => setTab("profile")}
-            queueCount={queueCount}
-            user={currentUser}
-          />
-
-          <Notice message={notice?.message} type={notice?.type} />
-
-          {activeExamSession ? (
-            <ExamActiveScreen
-              examData={activeExamSession}
-              onAskAi={handleAskAi}
-              onChangeShowAnswerMode={setShowAnswerMode}
-              onExit={() => setActiveExamSession(null)}
-              onSubmit={handleSubmitExam}
-              showAnswerMode={showAnswerMode}
-              submitting={submittingExam}
-            />
-          ) : (
-            <>
-              {renderTabBar()}
-
-              {dashboardLoading && tab !== "profile" && (
-                <View accessibilityLabel="Loading content">
-                  <SkeletonCard lines={2} />
-                  <SkeletonCard lines={3} />
-                  <SkeletonCard lines={2} />
-                </View>
-              )}
-
-              {!dashboardLoading && selectedSubject ? (
-                <SubjectScreen
-                  exams={exams}
-                  isPremium={isPremium}
-                  loadingExamId={loadingExamId}
-                  onAskAi={handleAskAi}
-                  onBack={() => setSelectedSubject(null)}
-                  onNavigatePayments={() => {
-                    setSelectedSubject(null);
-                    setTab("payments");
-                  }}
-                  onStartExam={handlePromptStartExam}
-                  subject={selectedSubject}
-                  subjects={subjects}
-                  user={currentUser}
-                />
-              ) : !dashboardLoading && tab === "home" && (
-                <HomeScreen
-                  onSelectSubject={setSelectedSubject}
-                  subjects={subjects}
-                  user={currentUser}
-                />
-              )}
-
-              {!dashboardLoading && tab === "exams" && (
-                <ExamsScreen
-                  exams={exams}
-                  isPremium={isPremium}
-                  loadingExamId={loadingExamId}
-                  onNavigatePayments={() => setTab("payments")}
-                  onStartExam={handlePromptStartExam}
-                  user={currentUser}
-                />
-              )}
-
-              {!dashboardLoading && tab === "notes" && (
-                <NotesScreen
-                  isPremium={isPremium}
-                  notes={notes}
-                  onAskAi={handleAskAi}
-                  onNavigatePayments={() => setTab("payments")}
-                  onSaveNote={handleSaveNote}
-                  saving={savingNote}
-                  subjects={subjects}
-                  user={currentUser}
-                />
-              )}
-
-              {!dashboardLoading && tab === "practice" && (
-                <PracticeModeScreen
-                  exams={exams}
-                  onAskAi={handleAskAi}
-                  onSaveProgress={handleSaveProgress}
-                  subjects={subjects}
-                  user={currentUser}
-                />
-              )}
-
-              {!dashboardLoading && tab === "payments" && (
-                <PaymentScreen
-                  onSubmitPayment={handleSubmitPayment}
-                  payments={payments}
-                  submitting={submittingPayment}
-                  user={currentUser}
-                />
-              )}
-
-              {tab === "profile" && (
-                <ProfileScreen
-                  isPremium={isPremium}
-                  onLogout={onLogout}
-                  onNavigatePayments={() => setTab("payments")}
-                  onUpdateUser={setCurrentUser}
-                  user={currentUser}
-                />
-              )}
-            </>
-          )}
-        </ScrollView>
       )}
-    </SafeAreaView>
+      </SafeAreaView>
   );
 }
 
@@ -959,5 +1047,48 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: "700",
     color: COLORS.textSecondary
+  },
+  fullScreenTopBar: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: SPACING.md,
+    paddingVertical: SPACING.sm + 2,
+    backgroundColor: COLORS.surface,
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.border
+  },
+  fullScreenBackBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    borderRadius: RADIUS.full,
+    backgroundColor: COLORS.primaryBg,
+    minHeight: 36
+  },
+  fullScreenBackText: {
+    fontSize: 13,
+    fontWeight: "800",
+    color: COLORS.primaryDark
+  },
+  fullScreenTitle: {
+    fontSize: 16,
+    fontWeight: "800",
+    color: COLORS.text,
+    textAlign: "center",
+    flex: 1,
+    marginHorizontal: SPACING.sm
+  },
+  fullScreenProfileBtn: {
+    width: 38,
+    height: 38,
+    borderRadius: RADIUS.md,
+    backgroundColor: COLORS.surface,
+    borderColor: COLORS.border,
+    borderWidth: 1,
+    alignItems: "center",
+    justifyContent: "center"
   }
 });
