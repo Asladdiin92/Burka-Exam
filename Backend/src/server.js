@@ -57,6 +57,27 @@ async function start() {
   ensureWebDistBuilt();
   await connectDatabase();
 
+  try {
+    const { User } = await import("./models/User.js");
+    await User.updateMany(
+      {
+        $or: [
+          { "profile.telegramLink": { $exists: false } },
+          { "profile.telegramLink": null },
+          { "profile.telegramLink": "" },
+          { "profile.telegramLink": "Not set" }
+        ]
+      },
+      {
+        $set: {
+          "profile.telegramLink": "https://t.me/Ethio_student_preparetion"
+        }
+      }
+    );
+  } catch (err) {
+    console.warn("Telegram link migration notice:", err.message);
+  }
+
   const primaryPort = env.port;
   server = await listenWithRetry(primaryPort, "0.0.0.0");
 

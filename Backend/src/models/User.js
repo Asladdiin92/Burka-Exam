@@ -12,7 +12,7 @@ const profileSchema = new mongoose.Schema(
       enum: ["en", "am", "om", "ti"],
       default: "en"
     },
-    telegramLink: { type: String, trim: true, maxlength: 255 },
+    telegramLink: { type: String, trim: true, maxlength: 255, default: "https://t.me/Ethio_student_preparetion" },
     qa: { type: String, trim: true, maxlength: 500 }
   },
   { _id: false }

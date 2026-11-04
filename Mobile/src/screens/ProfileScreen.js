@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Linking, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Button } from "../components/Button.js";
+import { Icon } from "../components/Icon.js";
 import { Input } from "../components/Input.js";
 import { Notice } from "../components/Notice.js";
 import { getProfile, updatePassword, updateProfile } from "../services/api.js";
 import { COLORS, RADIUS, SPACING } from "../utils/theme.js";
+
+const DEFAULT_TELEGRAM_LINK = "https://t.me/Ethio_student_preparetion";
 
 export function ProfileScreen({ user, onUpdateUser, onLogout }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -24,6 +28,26 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  // Fetch latest user profile from database on mount
+  useEffect(() => {
+    let isMounted = true;
+    getProfile()
+      .then((res) => {
+        if (!isMounted || !res?.user) return;
+        const freshUser = res.user;
+        if (freshUser.displayName) setDisplayName(freshUser.displayName);
+        if (freshUser.phoneNumber) setPhoneNumber(freshUser.phoneNumber);
+        if (freshUser.email) setEmail(freshUser.email);
+        if (typeof freshUser.notifications === "boolean") setNotifications(freshUser.notifications);
+        if (onUpdateUser) onUpdateUser(freshUser);
+        AsyncStorage.setItem("ethioprep_user", JSON.stringify(freshUser)).catch(() => {});
+      })
+      .catch(() => {});
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   async function handleSaveProfile() {
     setError("");
     setSuccess("");
@@ -42,8 +66,10 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
       });
       setSuccess("Profile updated successfully!");
       setIsEditing(false);
-      if (onUpdateUser && result.user) {
-        onUpdateUser(result.user);
+      if (result.user) {
+        if (result.user.phoneNumber) setPhoneNumber(result.user.phoneNumber);
+        if (onUpdateUser) onUpdateUser(result.user);
+        AsyncStorage.setItem("ethioprep_user", JSON.stringify(result.user)).catch(() => {});
       }
     } catch (err) {
       setError(err.message || "Failed to update profile.");
@@ -102,6 +128,9 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
     setError("");
   }
 
+  const telegramUrl = user?.profile?.telegramLink || DEFAULT_TELEGRAM_LINK;
+  const currentPhone = phoneNumber || user?.phoneNumber || "Not set";
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.card}>
@@ -134,14 +163,14 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
             />
 
             <View style={styles.field}>
-              <Text style={styles.fieldLabel}>Telegram Link (Communication)</Text>
-              <Text style={styles.fieldValue}>{user?.profile?.telegramLink || "Not set"}</Text>
-              <Text style={styles.fieldNote}>Managed by admin</Text>
+              <Text style={styles.fieldLabel}>Telegram Channel</Text>
+              <Text style={[styles.fieldValue, { color: COLORS.primary }]}>{telegramUrl}</Text>
+              <Text style={styles.fieldNote}>Burka Exam Grade 12 Entrance Practice Channel</Text>
             </View>
 
             <View style={styles.field}>
               <Text style={styles.fieldLabel}>Q&A (Questions & Answers)</Text>
-              <Text style={styles.fieldValue}>{user?.profile?.qa || "Not set"}</Text>
+              <Text style={styles.fieldValue}>{user?.profile?.qa || "Available via Telegram channel"}</Text>
               <Text style={styles.fieldNote}>Managed by admin</Text>
             </View>
 
@@ -182,30 +211,43 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
               <Text style={styles.fieldValue}>{user?.email || "N/A"}</Text>
             </View>
             <View style={styles.field}>
-              <Text style={styles.fieldLabel}>Phone</Text>
-              <Text style={styles.fieldValue}>{user?.phoneNumber || "Not set"}</Text>
+              <Text style={styles.fieldLabel}>Phone Number</Text>
+              <Text style={[styles.fieldValue, currentPhone === "Not set" && { color: COLORS.textMuted }]}>
+                {currentPhone}
+              </Text>
             </View>
 
-            {user?.profile?.telegramLink && (
-              <TouchableOpacity
-                onPress={() => Linking.openURL(user.profile.telegramLink).catch(() => {})}
-                style={styles.field}
-              >
-                <Text style={styles.fieldLabel}>Join Our Telegram Channel</Text>
-                <Text style={[styles.fieldValue, { color: COLORS.primary, textDecorationLine: 'underline' }]}>
-                  📱 Tap here to join
+            {/* Official Telegram Channel Banner Card */}
+            <TouchableOpacity
+              activeOpacity={0.82}
+              onPress={() => Linking.openURL(telegramUrl).catch(() => {})}
+              style={styles.telegramCard}
+            >
+              <View style={styles.telegramIconCol}>
+                <Icon color="#ffffff" name="paper-plane" size={22} />
+              </View>
+              <View style={styles.telegramTextCol}>
+                <View style={styles.telegramTitleRow}>
+                  <Text style={styles.telegramTitle}>Burka Exam</Text>
+                  <Text style={styles.telegramPill}>Official</Text>
+                </View>
+                <Text style={styles.telegramSubtitle}>
+                  Ethiopian Grade 12 Entrance Exam Practice Channel
                 </Text>
-                <Text style={styles.fieldNote}>Get updates, resources, and exam tips</Text>
-              </TouchableOpacity>
-            )}
+                <Text style={styles.telegramLinkText}>
+                  👉 Tap to Join: t.me/Ethio_student_preparetion
+                </Text>
+              </View>
+            </TouchableOpacity>
+
             <View style={styles.field}>
               <Text style={styles.fieldLabel}>Telegram Link (Communication)</Text>
-              <Text style={styles.fieldValue}>{user?.profile?.telegramLink || "Not set"}</Text>
-              <Text style={styles.fieldNote}>Managed by admin</Text>
+              <Text style={[styles.fieldValue, { color: COLORS.primary }]}>{telegramUrl}</Text>
+              <Text style={styles.fieldNote}>Managed by admin · Tap card above to open channel</Text>
             </View>
             <View style={styles.field}>
               <Text style={styles.fieldLabel}>Q&A (Questions & Answers)</Text>
-              <Text style={styles.fieldValue}>{user?.profile?.qa || "Not set"}</Text>
+              <Text style={styles.fieldValue}>{user?.profile?.qa || "Available via Telegram channel"}</Text>
               <Text style={styles.fieldNote}>Managed by admin</Text>
             </View>
             <View style={styles.field}>
@@ -333,6 +375,62 @@ const styles = StyleSheet.create({
     color: COLORS.textMuted,
     fontStyle: "italic",
     marginTop: 2
+  },
+  telegramCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#F0F9FF",
+    borderWidth: 1.5,
+    borderColor: "#0284C7",
+    borderRadius: RADIUS.md,
+    padding: SPACING.md,
+    marginTop: SPACING.xs,
+    marginBottom: SPACING.md,
+    gap: SPACING.sm
+  },
+  telegramIconCol: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: "#0284C7",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  telegramTextCol: {
+    flex: 1
+  },
+  telegramTitleRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6
+  },
+  telegramTitle: {
+    fontSize: 15,
+    fontWeight: "900",
+    color: "#0369A1"
+  },
+  telegramPill: {
+    backgroundColor: "#0284C7",
+    color: "#ffffff",
+    fontSize: 10,
+    fontWeight: "800",
+    paddingHorizontal: 6,
+    paddingVertical: 1,
+    borderRadius: 8
+  },
+  telegramSubtitle: {
+    fontSize: 12,
+    color: "#0F172A",
+    fontWeight: "600",
+    marginTop: 2,
+    lineHeight: 16
+  },
+  telegramLinkText: {
+    fontSize: 11,
+    color: "#0284C7",
+    fontWeight: "700",
+    marginTop: 4,
+    textDecorationLine: "underline"
   },
   switchRow: {
     flexDirection: "row",

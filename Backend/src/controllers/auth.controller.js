@@ -98,11 +98,15 @@ export const registerUser = asyncHandler(async (request, response) => {
       id: user._id,
       email: user.email,
       displayName: user.displayName,
+      phoneNumber: user.phoneNumber || "",
       role: user.role,
       stream: user.stream,
       isPremium: Boolean(user.isPremium),
       status: user.status,
-      emailVerified: user.emailVerified
+      emailVerified: user.emailVerified,
+      profile: {
+        telegramLink: user.profile?.telegramLink || "https://t.me/Ethio_student_preparetion"
+      }
     }
   });
 });
@@ -170,11 +174,16 @@ export const verifyEmail = asyncHandler(async (request, response) => {
       id: user._id,
       email: user.email,
       displayName: user.displayName,
+      phoneNumber: user.phoneNumber || "",
       role: user.role,
       stream: user.stream,
       isPremium: Boolean(user.isPremium),
       status: user.status,
-      emailVerified: user.emailVerified
+      emailVerified: user.emailVerified,
+      profile: {
+        ...(user.profile?.toObject ? user.profile.toObject() : (user.profile || {})),
+        telegramLink: user.profile?.telegramLink || "https://t.me/Ethio_student_preparetion"
+      }
     }
   });
 });
@@ -390,11 +399,16 @@ export const loginUser = asyncHandler(async (request, response) => {
       id: user._id,
       email: user.email,
       displayName: user.displayName,
+      phoneNumber: user.phoneNumber || "",
       role: user.role,
       stream: user.stream || "natural",
       isPremium: Boolean(user.isPremium),
       status: user.status,
-      emailVerified: user.emailVerified
+      emailVerified: user.emailVerified,
+      profile: {
+        ...(user.profile?.toObject ? user.profile.toObject() : (user.profile || {})),
+        telegramLink: user.profile?.telegramLink || "https://t.me/Ethio_student_preparetion"
+      }
     }
   });
 });
@@ -432,6 +446,15 @@ export const getProfile = asyncHandler(async (request, response) => {
   const user = await User.findById(request.user._id).select("-passwordHash");
   if (!user) {
     throw new NotFoundError("User not found.");
+  }
+  if (!user.profile) {
+    user.profile = {};
+  }
+  if (!user.profile.telegramLink || user.profile.telegramLink === "Not set") {
+    user.profile.telegramLink = "https://t.me/Ethio_student_preparetion";
+    await User.findByIdAndUpdate(user._id, {
+      $set: { "profile.telegramLink": "https://t.me/Ethio_student_preparetion" }
+    });
   }
   return response.json({ user });
 });

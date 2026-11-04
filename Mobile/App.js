@@ -114,12 +114,13 @@ function MainDashboard({ user, onLogout }) {
 
   async function loadDashboardData() {
     try {
-      const [subjRes, examsRes, notesRes, progRes, payRes] = await Promise.allSettled([
+      const [subjRes, examsRes, notesRes, progRes, payRes, profileRes] = await Promise.allSettled([
         request("/question-bank/subjects"),
         request("/exams"),
         request("/notes"),
         request("/progress"),
-        request("/payments")
+        request("/payments"),
+        request("/auth/profile")
       ]);
 
       if (subjRes.status === "fulfilled") {
@@ -139,6 +140,11 @@ function MainDashboard({ user, onLogout }) {
       }
       if (progRes.status === "fulfilled") setProgress(progRes.value.progress || []);
       if (payRes.status === "fulfilled") setPayments(payRes.value.payments || []);
+      if (profileRes?.status === "fulfilled" && profileRes.value?.user) {
+        const u = profileRes.value.user;
+        setCurrentUser(u);
+        AsyncStorage.setItem("ethioprep_user", JSON.stringify(u)).catch(() => {});
+      }
     } catch (error) {
       setNotice({ type: "error", message: "Failed to sync remote data. Offline cache active." });
     } finally {
