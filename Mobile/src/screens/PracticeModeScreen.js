@@ -342,7 +342,7 @@ export function PracticeModeScreen({
 
       initSessionQuestions(qList);
     } catch (err) {
-      alert("Unable to start practice session: " + (err.message || "Network error."));
+      alert(err?.message || "Unable to start practice session. Please check your connection and try again.");
     } finally {
       setLoadingQuestions(false);
     }

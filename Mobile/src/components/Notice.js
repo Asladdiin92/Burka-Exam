@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Icon } from "./Icon.js";
 import { COLORS, RADIUS, SPACING } from "../utils/theme.js";
+import { getFriendlyErrorMessage } from "../services/api.js";
 
 const TYPES = {
   success: { fg: COLORS.success, bg: COLORS.successBg, icon: "checkmark-circle" },
@@ -12,6 +13,8 @@ const TYPES = {
 
 export function Notice({ type = "info", message }) {
   if (!message) return null;
+  const displayMessage = type === "error" ? getFriendlyErrorMessage(message) : message;
+  if (!displayMessage) return null;
   const t = TYPES[type] || TYPES.info;
 
   return (
@@ -21,7 +24,7 @@ export function Notice({ type = "info", message }) {
       style={[styles.container, { backgroundColor: t.bg, borderColor: t.fg }]}
     >
       <Icon color={t.fg} name={t.icon} size={18} />
-      <Text style={[styles.text, { color: t.fg }]}>{message}</Text>
+      <Text style={[styles.text, { color: t.fg }]}>{displayMessage}</Text>
     </View>
   );
 }

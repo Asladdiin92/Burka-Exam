@@ -133,7 +133,7 @@ export function PaymentScreen({ payments = [], onSubmitPayment, submitting, user
         setSelectedImagePreview(asset.uri);
       }
     } catch (err) {
-      setError("Failed to select image from device: " + (err.message || "Unknown error"));
+      setError("Failed to select image from device. Please try again.");
     } finally {
       setImagePicking(false);
     }
@@ -162,7 +162,7 @@ export function PaymentScreen({ payments = [], onSubmitPayment, submitting, user
         setSelectedImagePreview(asset.uri);
       }
     } catch (err) {
-      setError("Failed to capture image: " + (err.message || "Unknown error"));
+      setError("Failed to capture image. Please try again.");
     } finally {
       setImagePicking(false);
     }

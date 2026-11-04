@@ -5,6 +5,62 @@ const API_URL =
 
 let refreshPromise = null;
 
+export function getFriendlyErrorMessage(error, defaultMessage = "An unexpected error occurred. Please try again.") {
+  if (!error) return defaultMessage;
+  const rawMsg = typeof error === "string" ? error : error.message || "";
+  if (!rawMsg) return defaultMessage;
+
+  const lower = rawMsg.toLowerCase();
+
+  // 1. Detect Network / Offline / DNS / SSL issues
+  if (
+    lower.includes("unknownhostexception") ||
+    lower.includes("unable to resolve host") ||
+    lower.includes("no address associated with hostname") ||
+    lower.includes("network request failed") ||
+    lower.includes("fetch failed") ||
+    lower.includes("failed to fetch") ||
+    lower.includes("networkerror") ||
+    lower.includes("econnrefused") ||
+    lower.includes("enotfound") ||
+    lower.includes("etimedout") ||
+    lower.includes("timed out") ||
+    lower.includes("timeout") ||
+    lower.includes("socket hang up") ||
+    lower.includes("offline") ||
+    lower.includes("cleartext")
+  ) {
+    return "Unable to connect to the server. Please check your internet connection.";
+  }
+
+  // 2. Hide technical server leaks, hostnames, stack traces, and database errors
+  if (
+    lower.includes("onrender.com") ||
+    lower.includes("localhost") ||
+    lower.includes("10.0.2.2") ||
+    lower.includes("http://") ||
+    lower.includes("https://") ||
+    lower.includes("java.net") ||
+    lower.includes("mongo") ||
+    lower.includes("mongoose") ||
+    lower.includes("objectid") ||
+    lower.includes("casterror") ||
+    lower.includes("e11000") ||
+    lower.includes("syntaxerror") ||
+    lower.includes("typeerror") ||
+    lower.includes("internal server error") ||
+    lower.includes("buffering timed out") ||
+    lower.includes("status code 500") ||
+    lower.includes("status code 502") ||
+    lower.includes("status code 503") ||
+    lower.includes("status code 504")
+  ) {
+    return "Service temporarily unavailable. Please try again in a few moments.";
+  }
+
+  return rawMsg;
+}
+
 async function tryRefreshAccessToken() {
   if (refreshPromise) {
     return refreshPromise;
@@ -52,7 +108,18 @@ export async function request(path, options = {}, isRetry = false) {
   const headers = { "Content-Type": "application/json", ...(options.headers || {}) };
   if (token) headers.Authorization = `Bearer ${token}`;
 
-  const response = await fetch(`${API_URL}${path}`, { ...options, headers });
+  let response;
+  try {
+    response = await fetch(`${API_URL}${path}`, { ...options, headers });
+  } catch (networkError) {
+    const safeMsg = getFriendlyErrorMessage(
+      networkError,
+      "Unable to connect to the server. Please check your internet connection."
+    );
+    const err = new Error(safeMsg);
+    err.isNetworkError = true;
+    throw err;
+  }
 
   if (response.status === 401 && !isRetry && !path.startsWith("/auth/login") && !path.startsWith("/auth/refresh-token")) {
     const newAccessToken = await tryRefreshAccessToken();
@@ -62,7 +129,16 @@ export async function request(path, options = {}, isRetry = false) {
   }
 
   const body = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(body.error || "Request failed.");
+  if (!response.ok) {
+    const fallbackMsg = response.status >= 500
+      ? "Service temporarily unavailable. Please try again in a few moments."
+      : "Request failed.";
+    const safeMsg = getFriendlyErrorMessage(body.error || fallbackMsg);
+    const err = new Error(safeMsg);
+    err.status = response.status;
+    err.body = body;
+    throw err;
+  }
   return body;
 }
 
@@ -174,7 +250,15 @@ export async function requestWithOfflineQueue(path, options, change) {
   try {
     return { online: true, result: await request(path, options) };
   } catch (error) {
-    if (error instanceof TypeError) {
+    const isNetwork =
+      error?.isNetworkError ||
+      error instanceof TypeError ||
+      (error.message && (
+        error.message.includes("Unable to connect") ||
+        error.message.includes("internet connection") ||
+        error.message.includes("network")
+      ));
+    if (isNetwork) {
       const { queueMutation } = await import("./offlineQueue.js");
       return { online: false, queued: await queueMutation(change), error };
     }

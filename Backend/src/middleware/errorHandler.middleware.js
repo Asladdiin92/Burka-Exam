@@ -82,9 +82,15 @@ export function errorHandler(error, request, response, next) {
     });
   }
 
-  // Send appropriate error response
+  // Send appropriate error response: hide internal server errors in production for security
+  const isProduction = process.env.NODE_ENV === "production";
+  const clientMessage =
+    isOperational || !isProduction
+      ? error.message || "Internal server error"
+      : "Something went wrong on the server. Please try again later.";
+
   const errorResponse = {
-    error: error.message || "Internal server error",
+    error: clientMessage,
     ...(process.env.NODE_ENV === "development" && !isOperational && { stack: error.stack })
   };
 
