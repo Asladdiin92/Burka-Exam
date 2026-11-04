@@ -149,15 +149,39 @@ export async function listPublishedExams(request, response) {
 
 export async function getOfflineExamBundle(request, response) {
   try {
-    const [publishedExams, allSubjects, allChapters] = await Promise.all([
-      Exam.find({ status: "published" })
+    const reqStream = request.query?.stream ? String(request.query.stream).toLowerCase() : null;
+    const reqSubjectId = request.query?.subjectId;
+
+    const subjFilter = { isActive: true };
+    if (reqStream && ["natural", "social"].includes(reqStream)) {
+      subjFilter.stream = { $in: [reqStream, "both"] };
+    }
+    if (reqSubjectId && mongoose.isValidObjectId(reqSubjectId)) {
+      subjFilter._id = reqSubjectId;
+    }
+
+    const examFilter = { status: "published" };
+    if (reqSubjectId && mongoose.isValidObjectId(reqSubjectId)) {
+      examFilter.subjectId = reqSubjectId;
+    }
+
+    const [rawExams, allSubjects, allChapters] = await Promise.all([
+      Exam.find(examFilter)
         .populate("subjectId", "name code stream gradeLevel")
         .sort({ examYear: -1, createdAt: -1 })
         .limit(100)
         .lean(),
-      Subject.find({ isActive: true }).select("_id name code stream gradeLevel").lean(),
+      Subject.find(subjFilter).select("_id name code stream gradeLevel").lean(),
       Chapter.find({ isActive: true }).select("_id title order subjectId").lean()
     ]);
+
+    const allowedSubjectIds = new Set(allSubjects.map((s) => String(s._id)));
+    const publishedExams = reqStream && ["natural", "social"].includes(reqStream)
+      ? rawExams.filter((e) => {
+          const sId = e.subjectId?._id ? String(e.subjectId._id) : String(e.subjectId || "");
+          return allowedSubjectIds.has(sId);
+        })
+      : rawExams;
 
     const chapterById = new Map(allChapters.map((c) => [String(c._id), c]));
     const subjectById = new Map(allSubjects.map((s) => [String(s._id), s]));

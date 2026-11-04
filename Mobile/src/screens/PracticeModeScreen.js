@@ -328,9 +328,42 @@ export function PracticeModeScreen({
         }
       }
 
+      // Offline Cache Fallback: If network failed or no questions returned, check local storage
+      if (qList.length === 0 && targetSubId) {
+        try {
+          const cacheKeys = [
+            `@ethioprep_cached_practice_qs_${targetSubId}_${targetGrade}`,
+            `@ethioprep_cached_practice_qs_${targetSubId}_all`,
+            targetExam?._id ? `@ethioprep_exam_cache_${targetExam._id}` : null
+          ].filter(Boolean);
+
+          for (const key of cacheKeys) {
+            const cached = await AsyncStorage.getItem(key);
+            if (cached) {
+              const parsed = JSON.parse(cached);
+              if (Array.isArray(parsed) && parsed.length > 0) {
+                qList = parsed;
+                break;
+              }
+            }
+          }
+        } catch {
+          // ignore cache read errors
+        }
+      }
+
+      // Auto-cache questions for offline use when fetched successfully
+      if (qList.length > 0 && targetSubId) {
+        AsyncStorage.setItem(`@ethioprep_cached_practice_qs_${targetSubId}_${targetGrade}`, JSON.stringify(qList)).catch(() => {});
+        AsyncStorage.setItem(`@ethioprep_cached_practice_qs_${targetSubId}_all`, JSON.stringify(qList)).catch(() => {});
+        if (targetExam?._id) {
+          AsyncStorage.setItem(`@ethioprep_exam_cache_${targetExam._id}`, JSON.stringify(qList)).catch(() => {});
+        }
+      }
+
       if (qList.length === 0) {
         const gradeMsg = targetGrade !== "all" ? ` for Grade ${targetGrade}` : "";
-        alert(`No exam questions currently found for ${targetSub?.name || "this subject"}${gradeMsg}. Please try selecting another grade or All Grades.`);
+        alert(`No exam questions found for ${targetSub?.name || "this subject"}${gradeMsg}. Please connect to the internet once to download questions for offline practice.`);
         setLoadingQuestions(false);
         return;
       }

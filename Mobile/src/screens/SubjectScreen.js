@@ -1,3 +1,4 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useMemo, useState } from "react";
 import { Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -71,15 +72,30 @@ export function SubjectScreen({
           disciplineSubjects.map(async (subj) => {
             const sId = subj._id || subj.id;
             if (!sId) return [];
+            const cacheKey = `@ethioprep_cached_chapters_${sId}`;
             try {
               const res = await request(`/question-bank/subjects/${sId}/chapters`);
               const chs = Array.isArray(res?.chapters) ? res.chapters : [];
+              if (chs.length > 0) {
+                AsyncStorage.setItem(cacheKey, JSON.stringify(chs)).catch(() => {});
+              }
               return chs.map((c) => ({
                 ...c,
                 gradeLevel: c.gradeLevel || subj.gradeLevel || "grade-12",
                 subjectCode: subj.code || ""
               }));
             } catch {
+              try {
+                const cached = await AsyncStorage.getItem(cacheKey);
+                if (cached) {
+                  const chs = JSON.parse(cached);
+                  return chs.map((c) => ({
+                    ...c,
+                    gradeLevel: c.gradeLevel || subj.gradeLevel || "grade-12",
+                    subjectCode: subj.code || ""
+                  }));
+                }
+              } catch {}
               return [];
             }
           })

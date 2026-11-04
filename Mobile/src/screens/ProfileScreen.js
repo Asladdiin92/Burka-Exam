@@ -6,6 +6,7 @@ import { Icon } from "../components/Icon.js";
 import { Input } from "../components/Input.js";
 import { Notice } from "../components/Notice.js";
 import { getProfile, updatePassword, updateProfile } from "../services/api.js";
+import { downloadOfflineBundle, getOfflineSyncStatus } from "../services/offlineSync.js";
 import { COLORS, RADIUS, SPACING } from "../utils/theme.js";
 
 const DEFAULT_TELEGRAM_LINK = "https://t.me/Ethio_student_preparetion";
@@ -28,7 +29,12 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  // Fetch latest user profile from database on mount
+  // Offline sync state
+  const [offlineStatus, setOfflineStatus] = useState(null);
+  const [downloadingOffline, setDownloadingOffline] = useState(false);
+  const [downloadProgress, setDownloadProgress] = useState("");
+
+  // Fetch latest user profile and offline status on mount
   useEffect(() => {
     let isMounted = true;
     getProfile()
@@ -43,6 +49,11 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
         AsyncStorage.setItem("ethioprep_user", JSON.stringify(freshUser)).catch(() => {});
       })
       .catch(() => {});
+
+    getOfflineSyncStatus().then((status) => {
+      if (isMounted && status) setOfflineStatus(status);
+    });
+
     return () => {
       isMounted = false;
     };
@@ -126,6 +137,24 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
     setConfirmPassword("");
     setIsChangingPassword(false);
     setError("");
+  }
+
+  async function handleDownloadOffline() {
+    setError("");
+    setSuccess("");
+    setDownloadingOffline(true);
+    setDownloadProgress("Connecting to server...");
+    try {
+      const res = await downloadOfflineBundle(user?.stream, (msg) => setDownloadProgress(msg));
+      setSuccess(`Downloaded ${res.questionCount} questions across ${res.examCount} exams for offline practice!`);
+      const status = await getOfflineSyncStatus();
+      setOfflineStatus(status);
+    } catch (err) {
+      setError(err.message || "Failed to download offline content. Please check internet connection.");
+    } finally {
+      setDownloadingOffline(false);
+      setDownloadProgress("");
+    }
   }
 
   const telegramUrl = user?.profile?.telegramLink || DEFAULT_TELEGRAM_LINK;
@@ -261,6 +290,36 @@ export function ProfileScreen({ user, onUpdateUser, onLogout }) {
           </>
         )}
       </View>
+
+      {!isEditing && (
+        <View style={styles.card}>
+          <View style={{ flexDirection: "row", alignItems: "center", marginBottom: SPACING.xs }}>
+            <Icon name="cloud-download-outline" size={22} color={COLORS.primary} style={{ marginRight: SPACING.xs }} />
+            <Text style={[styles.title, { marginBottom: 0 }]}>Offline Study & Practice</Text>
+          </View>
+          <Text style={{ fontSize: 13, color: COLORS.textMuted, marginBottom: SPACING.md, lineHeight: 18 }}>
+            Download entrance exam questions, answers, and study notes so you can practice anytime without an active internet connection.
+          </Text>
+
+          {offlineStatus ? (
+            <View style={styles.offlineStatusBox}>
+              <Icon name="checkmark-circle" size={18} color={COLORS.primary} style={{ marginRight: 6 }} />
+              <Text style={styles.offlineStatusText}>
+                Ready Offline: {offlineStatus.questionCount} questions across {offlineStatus.examCount} exams cached.
+              </Text>
+            </View>
+          ) : null}
+
+          <Button
+            loading={downloadingOffline}
+            onPress={handleDownloadOffline}
+            style={styles.offlineButton}
+            icon="cloud-download-outline"
+          >
+            {downloadingOffline ? downloadProgress || "Downloading..." : offlineStatus ? "Update Offline Content" : "Download Offline Content"}
+          </Button>
+        </View>
+      )}
 
       {!isEditing && (
         <View style={styles.card}>
@@ -463,5 +522,24 @@ const styles = StyleSheet.create({
   },
   passwordButton: {
     marginTop: SPACING.sm
+  },
+  offlineStatusBox: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: COLORS.primary + "12",
+    borderColor: COLORS.primary + "30",
+    borderWidth: 1,
+    borderRadius: RADIUS.md,
+    padding: SPACING.sm,
+    marginBottom: SPACING.md
+  },
+  offlineStatusText: {
+    fontSize: 12,
+    color: COLORS.primary,
+    fontWeight: "700",
+    flex: 1
+  },
+  offlineButton: {
+    marginTop: SPACING.xs
   }
 });

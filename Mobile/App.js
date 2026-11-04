@@ -29,7 +29,7 @@ import {
   request,
   requestWithOfflineQueue
 } from "./src/services/api.js";
-import { getQueue } from "./src/services/offlineQueue.js";
+import { getQueue, queueMutation } from "./src/services/offlineQueue.js";
 import { COLORS, RADIUS, SPACING } from "./src/utils/theme.js";
 
 const TABS = [
@@ -162,6 +162,7 @@ function MainDashboard({ user, onLogout }) {
   }
 
   async function handleStartExam(examItem, options = {}) {
+    if (!examItem) return;
     if (options?.showAnswerMode) {
       setShowAnswerMode(options.showAnswerMode);
     }
@@ -171,6 +172,10 @@ function MainDashboard({ user, onLogout }) {
       : examItem._id;
     setLoadingExamId(loadingKey);
     setNotice(null);
+
+    const sessionCacheKey = `@ethioprep_cached_exam_session_${examItem._id}_${options?.chapterId || "all"}${options?.allYears ? "_all" : ""}`;
+    const generalExamCacheKey = `@ethioprep_exam_cache_${examItem._id}`;
+
     try {
       const params = new URLSearchParams();
       if (options?.chapterId) params.set("chapterId", options.chapterId);
@@ -179,8 +184,77 @@ function MainDashboard({ user, onLogout }) {
       const url = `/exams/${examItem._id}/start${qs ? `?${qs}` : ""}`;
       const examData = await request(url, { method: "POST" });
       setActiveExamSession(examData);
+
+      // Cache this exam session and questions for offline use
+      AsyncStorage.setItem(sessionCacheKey, JSON.stringify(examData)).catch(() => {});
+      if (examData?.exam?.questions?.length > 0) {
+        AsyncStorage.setItem(generalExamCacheKey, JSON.stringify(examData.exam.questions)).catch(() => {});
+      }
     } catch (error) {
-      setNotice({ type: "error", message: error.message || "Failed to start exam session." });
+      // Offline fallback: check cached exam session
+      try {
+        const cachedRaw = await AsyncStorage.getItem(sessionCacheKey);
+        if (cachedRaw) {
+          const cachedSession = JSON.parse(cachedRaw);
+          const offlineAttemptId = `offline_attempt_${Date.now()}`;
+          const localSession = {
+            ...cachedSession,
+            attempt: {
+              ...(cachedSession.attempt || {}),
+              _id: offlineAttemptId,
+              status: "in_progress",
+              isOffline: true
+            }
+          };
+          setActiveExamSession(localSession);
+          setNotice({
+            type: "info",
+            message: "Offline practice mode: Loaded cached exam session."
+          });
+          return;
+        }
+
+        // Secondary fallback: check general exam cache
+        const cachedQsRaw = await AsyncStorage.getItem(generalExamCacheKey);
+        if (cachedQsRaw) {
+          const cachedQs = JSON.parse(cachedQsRaw);
+          if (Array.isArray(cachedQs) && cachedQs.length > 0) {
+            let filteredQs = cachedQs;
+            if (options?.chapterId) {
+              filteredQs = cachedQs.filter((q) => String(q.chapterId) === String(options.chapterId));
+            }
+            if (filteredQs.length > 0) {
+              const offlineAttemptId = `offline_attempt_${Date.now()}`;
+              const localSession = {
+                attempt: {
+                  _id: offlineAttemptId,
+                  examId: examItem._id,
+                  chapterId: options?.chapterId || null,
+                  status: "in_progress",
+                  isOffline: true
+                },
+                exam: {
+                  ...examItem,
+                  questions: filteredQs
+                }
+              };
+              setActiveExamSession(localSession);
+              setNotice({
+                type: "info",
+                message: "Offline practice mode: Loaded cached exam questions."
+              });
+              return;
+            }
+          }
+        }
+      } catch (cacheErr) {
+        // ignore cache read errors
+      }
+
+      setNotice({
+        type: "error",
+        message: "Network offline and this exam is not cached yet. Connect once to download exams for offline practice."
+      });
     } finally {
       setLoadingExamId(null);
     }
@@ -201,6 +275,83 @@ function MainDashboard({ user, onLogout }) {
       loadDashboardData();
       return result;
     } catch (error) {
+      // Offline fallback: grade answers locally if network is offline
+      if (activeExamSession?.exam?.questions) {
+        const questions = activeExamSession.exam.questions;
+        const answersById = new Map((answers || []).map((a) => [String(a.questionId), a]));
+
+        let score = 0;
+        const questionResults = questions.map((q) => {
+          const ans = answersById.get(String(q._id));
+          const userSelected = ans?.selectedOptionKeys?.[0] ?? ans?.response;
+          const expectedKey = String(
+            q.correctAnswer || (Array.isArray(q.correctAnswers) ? q.correctAnswers[0] : "A")
+          ).trim();
+          const isCorrect = Boolean(
+            userSelected && String(userSelected).trim().toUpperCase() === expectedKey.toUpperCase()
+          );
+          if (isCorrect) score += 1;
+
+          const resolveText = (key) => {
+            if (!key) return "";
+            const found = (q.options || []).find(
+              (o) => String(o?.key || "").toUpperCase() === String(key).toUpperCase()
+            );
+            return found ? (found.text || found.label || String(key)) : String(key);
+          };
+
+          return {
+            questionId: q._id,
+            selectedAnswer: userSelected,
+            selectedAnswerText: resolveText(userSelected) || userSelected || "Not answered",
+            correctAnswer: expectedKey,
+            correctAnswerText: resolveText(expectedKey) || expectedKey,
+            explanation: q.explanation || "",
+            isCorrect
+          };
+        });
+
+        const totalMarks = questions.length || 1;
+        const percentage = Math.round((score / totalMarks) * 10000) / 100;
+        const passingScore = activeExamSession.exam?.passingScore || 50;
+        const passed = percentage >= passingScore;
+
+        const offlineResult = {
+          attempt: {
+            _id: attemptId,
+            score,
+            percentage,
+            totalMarks,
+            passed,
+            status: "submitted",
+            submittedAt: new Date().toISOString(),
+            isOffline: true,
+            questionResults
+          }
+        };
+
+        // Queue progress mutation for sync when back online
+        queueMutation({
+          operation: "submit_exam",
+          entity: "progress",
+          entityId: attemptId,
+          payload: {
+            attemptId,
+            answers,
+            score,
+            percentage,
+            passed,
+            examId: activeExamSession.exam?._id
+          }
+        }).catch(() => {});
+
+        setNotice({
+          type: "success",
+          message: `Offline mode: Exam graded locally! Score: ${percentage}%`
+        });
+        return offlineResult;
+      }
+
       setNotice({ type: "error", message: error.message || "Failed to submit exam." });
       throw error;
     } finally {
