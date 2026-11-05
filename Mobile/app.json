@@ -1,4 +1,4 @@
-﻿{
+{
   "expo": {
     "name": "Burka Exam",
     "slug": "burka-exam",
@@ -31,8 +31,9 @@
     "plugins": [],
     "extra": {
       "eas": {
-        "projectId": "cda4b880-ca35-4f71-9db9-d7ad932e2614"
+        "projectId": "702754b6-355e-4638-b3d8-2315f2ec4526"
       }
-    }
+    },
+    "owner": "burkaapps"
   }
 }
